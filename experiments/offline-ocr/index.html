@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'wasm-unsafe-eval'; worker-src 'self' blob:; connect-src 'self'; img-src 'self' data: blob:; style-src 'self'; font-src 'self' data:; object-src 'none'; base-uri 'none'">
+  <title>PDF·OCR 검증 작업대</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="./src/style.css">
+</head>
+<body>
+  <header><div><span class="eyebrow">INHERITAGE · B1 EXPERIMENT</span><h1>PDF·OCR 검증 작업대</h1></div><span class="badge">법률 검토 PENDING</span></header>
+  <p class="notice">완전 가공 자료 전용 · 추출 결과는 후보 텍스트입니다. 원문과 대조해 수정하세요.</p>
+  <section class="toolbar" aria-label="문서 도구">
+    <label class="file-label">가공 PDF 선택 <input id="file" type="file" accept="application/pdf,.pdf"></label>
+    <label>페이지 <select id="page" disabled aria-label="페이지"></select></label>
+    <button id="rotate" disabled>보기 90° 회전</button>
+    <button id="process" disabled>직접 추출 + 필요한 OCR</button>
+    <button id="full" disabled>전체 페이지 OCR</button>
+    <button id="region" disabled>선택 영역 재OCR</button>
+    <button id="retry" disabled>실패 페이지 재시도</button>
+  </section>
+  <p id="status" role="status">초기화 중. file://에서 이 문구가 계속 보이면 로컬 모듈 로드 실패일 수 있습니다.</p>
+  <p id="error" role="alert" hidden></p>
+  <main>
+    <section class="panel"><h2>원본 페이지 <small>드래그로 영역 선택</small></h2><div class="canvas-scroll"><div id="stage"><canvas id="page-canvas"></canvas><canvas id="overlay"></canvas></div></div><p id="selection">선택 영역 없음</p></section>
+    <section class="panel"><h2>후보 텍스트 <small id="method">원문 대조 필요</small></h2>
+      <label for="text">직접 수정 가능 · 수정해도 사실이 자동 확정되지 않습니다</label>
+      <textarea id="text" spellcheck="false" disabled></textarea>
+      <div class="actions"><button id="copy" disabled>후보 텍스트 복사</button><button id="select" disabled>텍스트 전체 선택</button></div>
+      <p id="copy-status" role="status"></p>
+      <details><summary>출처·좌표와 처리 기록</summary><pre id="details"></pre></details>
+    </section>
+  </main>
+  <script src="./public/vendor/tesseract/tesseract.min.js"></script>
+  <script type="module" src="./src/app.mjs"></script>
+</body>
+</html>
