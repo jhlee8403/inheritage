@@ -1,0 +1,8 @@
+node_modules/
+experiments/offline-ocr/public/vendor/
+experiments/offline-ocr/public/models/
+experiments/offline-ocr/.cache/
+experiments/offline-ocr/results/screenshots/
+experiments/offline-ocr/results/browser-profile/
+__pycache__/
+.DS_Store

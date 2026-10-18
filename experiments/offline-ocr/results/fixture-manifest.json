@@ -1,0 +1,25 @@
+{
+  "files": [
+    {
+      "path": "fixtures/scan-only.pdf",
+      "bytes": 47203,
+      "sha256": "2b1ddcf045a45a53dc73c543c5d815ea2f0ce46698290a44ee43df3614d4e372"
+    },
+    {
+      "path": "fixtures/suite.pdf",
+      "bytes": 383077,
+      "sha256": "05c5bb1c5065b909ec4e6c8e494eaafd04539b410df46c8dffec7ec5bf3dfb12"
+    },
+    {
+      "path": "fixtures/text-only.pdf",
+      "bytes": 13602,
+      "sha256": "236cdab97cb7f40ee3a546671920ff70215612cd572f65bc03b6ab96d20ccb04"
+    }
+  ],
+  "generator": {
+    "reportlab": "4.4.9",
+    "Pillow": "12.3.0",
+    "pypdf": "6.10.0"
+  },
+  "note": "text-only and scan-only are subsets, not additional unique samples"
+}

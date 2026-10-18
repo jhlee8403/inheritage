@@ -1,0 +1,190 @@
+{
+  "origin": "Ten pre-existing Poppler page PNGs of our fully invented suite.pdf. These are derivatives of the same ten samples, not ten new independent samples.",
+  "conversion": "One PNG per page; lossless PDF image stream; no text operators, resampling, deskew, sharpening or rotation correction.",
+  "pdf": "fixtures/synthetic-scan.pdf",
+  "pdfSha256": "4bc8e1f3c95383195331e29d07aa2e7b99ddf56d600d5a77e716a10c63ebedba",
+  "pdfBytes": 283919,
+  "pageCount": 10,
+  "pages": [
+    {
+      "page": 1,
+      "png": "fixtures/source-png/page-01.png",
+      "originalPreviewPath": ".cache/render/page-01.png",
+      "pngSha256": "c69437c4a5b2e541fd9cc5e37894109f930163c41a4b919e701493ad7ddf732a",
+      "pngBytes": 14536,
+      "pixels": [
+        566,
+        800
+      ],
+      "rgbPixelSha256": "4a69c480086e91f7d565003c741997240b88a6b7ba358569efca633f5680238b",
+      "pdfPoints": [
+        424.5,
+        600.0
+      ],
+      "pdfRotation": 0,
+      "embeddedPixelsIdentical": true
+    },
+    {
+      "page": 2,
+      "png": "fixtures/source-png/page-02.png",
+      "originalPreviewPath": ".cache/render/page-02.png",
+      "pngSha256": "85321b00933c5312be13949afe13ff4015d7f806d1f679f440c735d6b827ea69",
+      "pngBytes": 18886,
+      "pixels": [
+        566,
+        800
+      ],
+      "rgbPixelSha256": "4558b93006ea358eec7f29c85153b9d058b82340f8be0b1cee01f8aed31dec91",
+      "pdfPoints": [
+        424.5,
+        600.0
+      ],
+      "pdfRotation": 0,
+      "embeddedPixelsIdentical": true
+    },
+    {
+      "page": 3,
+      "png": "fixtures/source-png/page-03.png",
+      "originalPreviewPath": ".cache/render/page-03.png",
+      "pngSha256": "dec8d523428ecb31206ede69c62285ce11aa121d3633ea635d982e011091834d",
+      "pngBytes": 16987,
+      "pixels": [
+        566,
+        800
+      ],
+      "rgbPixelSha256": "eeb46464401d5be4e5a344931d6978fcf28c337a24ca1ef02ad9779bb239f7ac",
+      "pdfPoints": [
+        424.5,
+        600.0
+      ],
+      "pdfRotation": 0,
+      "embeddedPixelsIdentical": true
+    },
+    {
+      "page": 4,
+      "png": "fixtures/source-png/page-04.png",
+      "originalPreviewPath": ".cache/render/page-04.png",
+      "pngSha256": "a0e4b07817e26dae9b7d519d60b656c94ed0ce69968384dda1c0d858fa6acdb4",
+      "pngBytes": 18507,
+      "pixels": [
+        566,
+        800
+      ],
+      "rgbPixelSha256": "13a628bc07c3316a95f5683334f82c88ec4eeafb0b5f3f8ee0885ce9c6b3770c",
+      "pdfPoints": [
+        424.5,
+        600.0
+      ],
+      "pdfRotation": 0,
+      "embeddedPixelsIdentical": true
+    },
+    {
+      "page": 5,
+      "png": "fixtures/source-png/page-05.png",
+      "originalPreviewPath": ".cache/render/page-05.png",
+      "pngSha256": "706d98ba1d80cbceff04d39130f5dcfd1bf3cee237ebf647c98d96df2a0cb442",
+      "pngBytes": 21454,
+      "pixels": [
+        566,
+        800
+      ],
+      "rgbPixelSha256": "200d07ec41c8636d23a4c1e01ef9f465c260f02851e6a44b6b0d121ef263c01b",
+      "pdfPoints": [
+        424.5,
+        600.0
+      ],
+      "pdfRotation": 0,
+      "embeddedPixelsIdentical": true
+    },
+    {
+      "page": 6,
+      "png": "fixtures/source-png/page-06.png",
+      "originalPreviewPath": ".cache/render/page-06.png",
+      "pngSha256": "2a06aa191fa20d555015263f4c3b9db4672c83f1fdecfc641052a497dee41630",
+      "pngBytes": 22155,
+      "pixels": [
+        566,
+        800
+      ],
+      "rgbPixelSha256": "6ede5dad76eea573d336784e6ed26a0148265f2bb4d79736a67e6ad8290921f4",
+      "pdfPoints": [
+        424.5,
+        600.0
+      ],
+      "pdfRotation": 0,
+      "embeddedPixelsIdentical": true
+    },
+    {
+      "page": 7,
+      "png": "fixtures/source-png/page-07.png",
+      "originalPreviewPath": ".cache/render/page-07.png",
+      "pngSha256": "e5b54f648ec5b24e40a83401c8b2c7557803b9c1bf171bf49d132919c745493c",
+      "pngBytes": 19788,
+      "pixels": [
+        800,
+        566
+      ],
+      "rgbPixelSha256": "2da0947e55ac96d9645f3d52730382915018722040409ed0b791c32674701dcf",
+      "pdfPoints": [
+        600.0,
+        424.5
+      ],
+      "pdfRotation": 0,
+      "embeddedPixelsIdentical": true
+    },
+    {
+      "page": 8,
+      "png": "fixtures/source-png/page-08.png",
+      "originalPreviewPath": ".cache/render/page-08.png",
+      "pngSha256": "dc762808887973aeb34fca23a2e17dc50b80d14e3754cf9369881f9bfe26822c",
+      "pngBytes": 27867,
+      "pixels": [
+        566,
+        800
+      ],
+      "rgbPixelSha256": "cac139c68c18914326cf5a430fd80d464d8b58c57d22a5bc7e5aeeb58630e5bc",
+      "pdfPoints": [
+        424.5,
+        600.0
+      ],
+      "pdfRotation": 0,
+      "embeddedPixelsIdentical": true
+    },
+    {
+      "page": 9,
+      "png": "fixtures/source-png/page-09.png",
+      "originalPreviewPath": ".cache/render/page-09.png",
+      "pngSha256": "58603a37754e54876bab0a75ba71ddcc596f46310f0c5ed6c4a105e285bcb42d",
+      "pngBytes": 24709,
+      "pixels": [
+        566,
+        800
+      ],
+      "rgbPixelSha256": "b3e0f6d543d74b1f9dbf2b282168417ff2b0aab923032983d15ab37deefa3e39",
+      "pdfPoints": [
+        424.5,
+        600.0
+      ],
+      "pdfRotation": 0,
+      "embeddedPixelsIdentical": true
+    },
+    {
+      "page": 10,
+      "png": "fixtures/source-png/page-10.png",
+      "originalPreviewPath": ".cache/render/page-10.png",
+      "pngSha256": "06e79aba8ac9601cf827ae8d5598d9567e0f18beb4ef3a976ae75cb6c8d523c7",
+      "pngBytes": 36901,
+      "pixels": [
+        566,
+        800
+      ],
+      "rgbPixelSha256": "253e5644051801b5d38d8c2a3e7bd017c3140a44b178b6da3897e061b1118c50",
+      "pdfPoints": [
+        424.5,
+        600.0
+      ],
+      "pdfRotation": 0,
+      "embeddedPixelsIdentical": true
+    }
+  ]
+}

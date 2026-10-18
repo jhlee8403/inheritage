@@ -1,0 +1,339 @@
+{
+  "origin": "All names, dates, relationships and numbers invented for this test. No legal conclusions.",
+  "uniquePages": 10,
+  "pages": [
+    {
+      "page": 1,
+      "kind": "text",
+      "title": "SYNTHETIC OCR TEST 01",
+      "lines": [
+        "성명: 가온새",
+        "날짜: 2001-02-03",
+        "관계: 자녀",
+        "번호: 12345678",
+        "완전 가공 자료 / 실제 사건 아님"
+      ],
+      "expectedText": "SYNTHETIC OCR TEST 01\n성명: 가온새\n날짜: 2001-02-03\n관계: 자녀\n번호: 12345678\n완전 가공 자료 / 실제 사건 아님",
+      "fields": {
+        "name": "가온새",
+        "date": "2001-02-03",
+        "relationship": "자녀",
+        "number": "12345678",
+        "hanja": ""
+      },
+      "pdfSize": [
+        595,
+        842
+      ],
+      "canonicalBodyRectTopLeft": [
+        35,
+        115,
+        525,
+        430
+      ],
+      "sourceDpi": null,
+      "pdfRotation": 0,
+      "legalStatus": "PENDING"
+    },
+    {
+      "page": 2,
+      "kind": "scan",
+      "title": "SYNTHETIC OCR TEST 02",
+      "lines": [
+        "성명: 누리솔",
+        "날짜: 2002-03-04",
+        "관계: 배우자",
+        "번호: 23456789",
+        "완전 가공 자료 / 실제 사건 아님"
+      ],
+      "expectedText": "SYNTHETIC OCR TEST 02\n성명: 누리솔\n날짜: 2002-03-04\n관계: 배우자\n번호: 23456789\n완전 가공 자료 / 실제 사건 아님",
+      "fields": {
+        "name": "누리솔",
+        "date": "2002-03-04",
+        "relationship": "배우자",
+        "number": "23456789",
+        "hanja": ""
+      },
+      "pdfSize": [
+        595,
+        842
+      ],
+      "canonicalBodyRectTopLeft": [
+        35,
+        115,
+        525,
+        430
+      ],
+      "sourceDpi": 144,
+      "pdfRotation": 0,
+      "legalStatus": "PENDING"
+    },
+    {
+      "page": 3,
+      "kind": "text-hanja",
+      "title": "SYNTHETIC OCR TEST 03",
+      "lines": [
+        "성명: 다온별",
+        "날짜: 2003-04-05",
+        "관계: 부모",
+        "번호: 34567890",
+        "한자: 金明秀",
+        "완전 가공 자료 / 실제 사건 아님"
+      ],
+      "expectedText": "SYNTHETIC OCR TEST 03\n성명: 다온별\n날짜: 2003-04-05\n관계: 부모\n번호: 34567890\n한자: 金明秀\n완전 가공 자료 / 실제 사건 아님",
+      "fields": {
+        "name": "다온별",
+        "date": "2003-04-05",
+        "relationship": "부모",
+        "number": "34567890",
+        "hanja": "金明秀"
+      },
+      "pdfSize": [
+        595,
+        842
+      ],
+      "canonicalBodyRectTopLeft": [
+        35,
+        115,
+        525,
+        430
+      ],
+      "sourceDpi": null,
+      "pdfRotation": 0,
+      "legalStatus": "PENDING"
+    },
+    {
+      "page": 4,
+      "kind": "title-text-image-body",
+      "title": "SYNTHETIC OCR TEST 04",
+      "lines": [
+        "성명: 라온빛",
+        "날짜: 2004-05-06",
+        "관계: 형제자매",
+        "번호: 45678901",
+        "완전 가공 자료 / 실제 사건 아님"
+      ],
+      "expectedText": "SYNTHETIC OCR TEST 04\n성명: 라온빛\n날짜: 2004-05-06\n관계: 형제자매\n번호: 45678901\n완전 가공 자료 / 실제 사건 아님",
+      "fields": {
+        "name": "라온빛",
+        "date": "2004-05-06",
+        "relationship": "형제자매",
+        "number": "45678901",
+        "hanja": ""
+      },
+      "pdfSize": [
+        595,
+        842
+      ],
+      "canonicalBodyRectTopLeft": [
+        35,
+        115,
+        525,
+        430
+      ],
+      "sourceDpi": 144,
+      "pdfRotation": 0,
+      "legalStatus": "PENDING"
+    },
+    {
+      "page": 5,
+      "kind": "dense-numbers",
+      "title": "SYNTHETIC OCR TEST 05",
+      "lines": [
+        "성명: 마루온",
+        "날짜: 2005-06-07",
+        "관계: 자녀",
+        "번호: 0123456789 9876543210 1029384756",
+        "완전 가공 자료 / 실제 사건 아님"
+      ],
+      "expectedText": "SYNTHETIC OCR TEST 05\n성명: 마루온\n날짜: 2005-06-07\n관계: 자녀\n번호: 0123456789 9876543210 1029384756\n완전 가공 자료 / 실제 사건 아님",
+      "fields": {
+        "name": "마루온",
+        "date": "2005-06-07",
+        "relationship": "자녀",
+        "number": "0123456789 9876543210 1029384756",
+        "hanja": ""
+      },
+      "pdfSize": [
+        595,
+        842
+      ],
+      "canonicalBodyRectTopLeft": [
+        35,
+        115,
+        525,
+        430
+      ],
+      "sourceDpi": 144,
+      "pdfRotation": 0,
+      "legalStatus": "PENDING"
+    },
+    {
+      "page": 6,
+      "kind": "hanja",
+      "title": "SYNTHETIC OCR TEST 06",
+      "lines": [
+        "성명: 바다결",
+        "날짜: 2006-07-08",
+        "관계: 배우자",
+        "번호: 56789012",
+        "한자: 李春花 金明秀",
+        "완전 가공 자료 / 실제 사건 아님"
+      ],
+      "expectedText": "SYNTHETIC OCR TEST 06\n성명: 바다결\n날짜: 2006-07-08\n관계: 배우자\n번호: 56789012\n한자: 李春花 金明秀\n완전 가공 자료 / 실제 사건 아님",
+      "fields": {
+        "name": "바다결",
+        "date": "2006-07-08",
+        "relationship": "배우자",
+        "number": "56789012",
+        "hanja": "李春花 金明秀"
+      },
+      "pdfSize": [
+        595,
+        842
+      ],
+      "canonicalBodyRectTopLeft": [
+        35,
+        115,
+        525,
+        430
+      ],
+      "sourceDpi": 144,
+      "pdfRotation": 0,
+      "legalStatus": "PENDING"
+    },
+    {
+      "page": 7,
+      "kind": "rotate90",
+      "title": "SYNTHETIC OCR TEST 07",
+      "lines": [
+        "성명: 새봄결",
+        "날짜: 2007-08-09",
+        "관계: 부모",
+        "번호: 67890123",
+        "완전 가공 자료 / 실제 사건 아님"
+      ],
+      "expectedText": "SYNTHETIC OCR TEST 07\n성명: 새봄결\n날짜: 2007-08-09\n관계: 부모\n번호: 67890123\n완전 가공 자료 / 실제 사건 아님",
+      "fields": {
+        "name": "새봄결",
+        "date": "2007-08-09",
+        "relationship": "부모",
+        "number": "67890123",
+        "hanja": ""
+      },
+      "pdfSize": [
+        595,
+        842
+      ],
+      "canonicalBodyRectTopLeft": [
+        35,
+        115,
+        525,
+        430
+      ],
+      "sourceDpi": 144,
+      "pdfRotation": 90,
+      "legalStatus": "PENDING"
+    },
+    {
+      "page": 8,
+      "kind": "skew3",
+      "title": "SYNTHETIC OCR TEST 08",
+      "lines": [
+        "성명: 아라봄",
+        "날짜: 2008-09-10",
+        "관계: 형제자매",
+        "번호: 78901234",
+        "완전 가공 자료 / 실제 사건 아님"
+      ],
+      "expectedText": "SYNTHETIC OCR TEST 08\n성명: 아라봄\n날짜: 2008-09-10\n관계: 형제자매\n번호: 78901234\n완전 가공 자료 / 실제 사건 아님",
+      "fields": {
+        "name": "아라봄",
+        "date": "2008-09-10",
+        "relationship": "형제자매",
+        "number": "78901234",
+        "hanja": ""
+      },
+      "pdfSize": [
+        595,
+        842
+      ],
+      "canonicalBodyRectTopLeft": [
+        35,
+        115,
+        525,
+        430
+      ],
+      "sourceDpi": 144,
+      "pdfRotation": 0,
+      "legalStatus": "PENDING"
+    },
+    {
+      "page": 9,
+      "kind": "low-resolution",
+      "title": "SYNTHETIC OCR TEST 09",
+      "lines": [
+        "성명: 자온길",
+        "날짜: 2009-10-11",
+        "관계: 자녀",
+        "번호: 89012345",
+        "완전 가공 자료 / 실제 사건 아님"
+      ],
+      "expectedText": "SYNTHETIC OCR TEST 09\n성명: 자온길\n날짜: 2009-10-11\n관계: 자녀\n번호: 89012345\n완전 가공 자료 / 실제 사건 아님",
+      "fields": {
+        "name": "자온길",
+        "date": "2009-10-11",
+        "relationship": "자녀",
+        "number": "89012345",
+        "hanja": ""
+      },
+      "pdfSize": [
+        595,
+        842
+      ],
+      "canonicalBodyRectTopLeft": [
+        35,
+        115,
+        525,
+        430
+      ],
+      "sourceDpi": 60,
+      "pdfRotation": 0,
+      "legalStatus": "PENDING"
+    },
+    {
+      "page": 10,
+      "kind": "blur-overlap",
+      "title": "SYNTHETIC OCR TEST 10",
+      "lines": [
+        "성명: 차오름",
+        "날짜: 2010-11-12",
+        "관계: 배우자",
+        "번호: 90123456",
+        "한자: 金明秀",
+        "완전 가공 자료 / 실제 사건 아님"
+      ],
+      "expectedText": "SYNTHETIC OCR TEST 10\n성명: 차오름\n날짜: 2010-11-12\n관계: 배우자\n번호: 90123456\n한자: 金明秀\n완전 가공 자료 / 실제 사건 아님",
+      "fields": {
+        "name": "차오름",
+        "date": "2010-11-12",
+        "relationship": "배우자",
+        "number": "90123456",
+        "hanja": "金明秀"
+      },
+      "pdfSize": [
+        595,
+        842
+      ],
+      "canonicalBodyRectTopLeft": [
+        35,
+        115,
+        525,
+        430
+      ],
+      "sourceDpi": 144,
+      "pdfRotation": 0,
+      "legalStatus": "PENDING"
+    }
+  ]
+}

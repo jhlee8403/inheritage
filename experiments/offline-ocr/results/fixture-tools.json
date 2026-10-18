@@ -1,0 +1,42 @@
+[
+  {
+    "name": "reportlab",
+    "version": "4.4.9",
+    "license": "BSD license (see license.txt for details), Copyright (c) 2000-2025, ReportLab Inc.",
+    "officialSource": "https://www.reportlab.com/",
+    "installation": "Codex bundled Python runtime 26.1017.11052",
+    "installedBytes": 8314285,
+    "metadataSha256": "c73111f8f0ce43fc2194b3e03d0a1e3dd5aa136a7f87b63261776fad7d023097"
+  },
+  {
+    "name": "Pillow",
+    "version": "12.3.0",
+    "license": "MIT-CMU",
+    "officialSource": [
+      "Release notes, https://pillow.readthedocs.io/en/stable/releasenotes/index.html",
+      "Changelog, https://github.com/python-pillow/Pillow/releases",
+      "Documentation, https://pillow.readthedocs.io",
+      "Funding, https://tidelift.com/subscription/pkg/pypi-pillow?utm_source=pypi-pillow&utm_medium=pypi",
+      "Homepage, https://python-pillow.github.io",
+      "Mastodon, https://fosstodon.org/@pillow",
+      "Source, https://github.com/python-pillow/Pillow"
+    ],
+    "installation": "Codex bundled Python runtime 26.1017.11052",
+    "installedBytes": 14730237,
+    "metadataSha256": "8fc07146cab33ef7582361dab6eac596d340b03ec648f18217da7894f73838c8"
+  },
+  {
+    "name": "pypdf",
+    "version": "6.10.0",
+    "license": "BSD-3-Clause",
+    "officialSource": [
+      "Bug Reports, https://github.com/py-pdf/pypdf/issues",
+      "Changelog, https://pypdf.readthedocs.io/en/latest/meta/CHANGELOG.html",
+      "Documentation, https://pypdf.readthedocs.io/en/latest/",
+      "Source, https://github.com/py-pdf/pypdf"
+    ],
+    "installation": "Codex bundled Python runtime 26.1017.11052",
+    "installedBytes": 3195137,
+    "metadataSha256": "74db615a83dee1980ab4c4a73609d53cebf557e80ee822e9ac363cd575f7a61a"
+  }
+]

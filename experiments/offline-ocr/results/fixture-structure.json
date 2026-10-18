@@ -1,0 +1,52 @@
+[
+  {
+    "page": 1,
+    "pypdfText": "SYNTHETIC OCR TEST 01\n성명: 가온새\n날짜: 2001-02-03\n관계: 자녀\n번호: 12345678\n완전 가공 자료 / 실제 사건 아님",
+    "imageOnly": false
+  },
+  {
+    "page": 2,
+    "pypdfText": "",
+    "imageOnly": true
+  },
+  {
+    "page": 3,
+    "pypdfText": "SYNTHETIC OCR TEST 03\n성명: 다온별\n날짜: 2003-04-05\n관계: 부모\n번호: 34567890\n한자: 金明秀\n완전 가공 자료 / 실제 사건 아님",
+    "imageOnly": false
+  },
+  {
+    "page": 4,
+    "pypdfText": "SYNTHETIC OCR TEST 04",
+    "imageOnly": false
+  },
+  {
+    "page": 5,
+    "pypdfText": "",
+    "imageOnly": true
+  },
+  {
+    "page": 6,
+    "pypdfText": "",
+    "imageOnly": true
+  },
+  {
+    "page": 7,
+    "pypdfText": "",
+    "imageOnly": true
+  },
+  {
+    "page": 8,
+    "pypdfText": "",
+    "imageOnly": true
+  },
+  {
+    "page": 9,
+    "pypdfText": "",
+    "imageOnly": true
+  },
+  {
+    "page": 10,
+    "pypdfText": "",
+    "imageOnly": true
+  }
+]
