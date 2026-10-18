@@ -1,0 +1,10 @@
+{
+  "errors": [
+    {
+      "page": 1,
+      "message": "Cannot read properties of undefined (reading '0')",
+      "stack": "TypeError: Cannot read properties of undefined (reading '0')\n    at http://127.0.0.1:4173/src/engine.mjs:7:56\n    at Array.map (<anonymous>)\n    at bounds (http://127.0.0.1:4173/src/engine.mjs:7:46)\n    at PdfOcrSession.render (http://127.0.0.1:4173/src/engine.mjs:53:19)\n    at async render (http://127.0.0.1:4173/src/app.mjs:35:3)\n    at async http://127.0.0.1:4173/src/app.mjs:45:14\n    at async run (http://127.0.0.1:4173/src/app.mjs:29:9)"
+    }
+  ],
+  "status": "처리 실패 · 오류를 확인하고 재시도하세요."
+}

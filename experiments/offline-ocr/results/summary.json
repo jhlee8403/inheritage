@@ -1,0 +1,55 @@
+{
+  "suiteOcr": {
+    "name": {
+      "matched": 3,
+      "total": 8
+    },
+    "date": {
+      "matched": 7,
+      "total": 8
+    },
+    "relationship": {
+      "matched": 6,
+      "total": 8
+    },
+    "number": {
+      "matched": 8,
+      "total": 8
+    },
+    "hanja": {
+      "matched": 2,
+      "total": 2
+    }
+  },
+  "syntheticScan": {
+    "name": {
+      "matched": 6,
+      "total": 10
+    },
+    "date": {
+      "matched": 10,
+      "total": 10
+    },
+    "relationship": {
+      "matched": 8,
+      "total": 10
+    },
+    "number": {
+      "matched": 10,
+      "total": 10
+    },
+    "hanja": {
+      "matched": 1,
+      "total": 3
+    }
+  },
+  "suiteOcrEdits": 112,
+  "scanEdits": 111,
+  "corpusCounts": {
+    "unique": 10,
+    "originalDirectOnly": 2,
+    "originalWithOcr": 8,
+    "scanDerived": 10
+  },
+  "externalRequests": 0
+}

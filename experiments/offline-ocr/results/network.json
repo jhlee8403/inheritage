@@ -1,0 +1,456 @@
+{
+  "requests": [
+    {
+      "context": "cold-corpus",
+      "url": "http://127.0.0.1:4173/",
+      "method": "GET",
+      "resourceType": "document"
+    },
+    {
+      "context": "cold-corpus",
+      "url": "http://127.0.0.1:4173/src/style.css",
+      "method": "GET",
+      "resourceType": "stylesheet"
+    },
+    {
+      "context": "cold-corpus",
+      "url": "http://127.0.0.1:4173/public/vendor/tesseract/tesseract.min.js",
+      "method": "GET",
+      "resourceType": "script"
+    },
+    {
+      "context": "cold-corpus",
+      "url": "http://127.0.0.1:4173/src/app.mjs",
+      "method": "GET",
+      "resourceType": "script"
+    },
+    {
+      "context": "cold-corpus",
+      "url": "http://127.0.0.1:4173/src/engine.mjs",
+      "method": "GET",
+      "resourceType": "script"
+    },
+    {
+      "context": "cold-corpus",
+      "url": "http://127.0.0.1:4173/public/vendor/pdfjs/pdf.mjs",
+      "method": "GET",
+      "resourceType": "script"
+    },
+    {
+      "context": "cold-corpus",
+      "url": "http://127.0.0.1:4173/public/vendor/pdfjs/pdf.worker.mjs",
+      "method": "GET",
+      "resourceType": "script"
+    },
+    {
+      "context": "cold-corpus",
+      "url": "http://127.0.0.1:4173/public/vendor/tesseract/worker.min.js",
+      "method": "HEAD",
+      "resourceType": "fetch"
+    },
+    {
+      "context": "cold-corpus",
+      "url": "http://127.0.0.1:4173/public/vendor/tesseract-core/tesseract-core-simd-lstm.wasm.js",
+      "method": "HEAD",
+      "resourceType": "fetch"
+    },
+    {
+      "context": "cold-corpus",
+      "url": "http://127.0.0.1:4173/public/vendor/tesseract-core/tesseract-core-simd-lstm.wasm",
+      "method": "HEAD",
+      "resourceType": "fetch"
+    },
+    {
+      "context": "cold-corpus",
+      "url": "http://127.0.0.1:4173/public/models/kor.traineddata",
+      "method": "HEAD",
+      "resourceType": "fetch"
+    },
+    {
+      "context": "cold-corpus",
+      "url": "http://127.0.0.1:4173/public/models/eng.traineddata",
+      "method": "HEAD",
+      "resourceType": "fetch"
+    },
+    {
+      "context": "cold-corpus",
+      "url": "http://127.0.0.1:4173/public/models/chi_tra.traineddata",
+      "method": "HEAD",
+      "resourceType": "fetch"
+    },
+    {
+      "context": "cold-corpus",
+      "url": "http://127.0.0.1:4173/public/vendor/tesseract/worker.min.js",
+      "method": "GET",
+      "resourceType": "script"
+    },
+    {
+      "context": "cold-corpus",
+      "url": "http://127.0.0.1:4173/public/vendor/tesseract-core/tesseract-core-relaxedsimd-lstm.wasm.js",
+      "method": "GET",
+      "resourceType": "other"
+    },
+    {
+      "context": "cold-corpus",
+      "url": "http://127.0.0.1:4173/public/models/kor.traineddata",
+      "method": "GET",
+      "resourceType": "fetch"
+    },
+    {
+      "context": "cold-corpus",
+      "url": "http://127.0.0.1:4173/public/models/eng.traineddata",
+      "method": "GET",
+      "resourceType": "fetch"
+    },
+    {
+      "context": "cold-corpus",
+      "url": "http://127.0.0.1:4173/public/models/chi_tra.traineddata",
+      "method": "GET",
+      "resourceType": "fetch"
+    },
+    {
+      "context": "clipboard-denied",
+      "url": "http://127.0.0.1:4173/",
+      "method": "GET",
+      "resourceType": "document"
+    },
+    {
+      "context": "clipboard-denied",
+      "url": "http://127.0.0.1:4173/src/style.css",
+      "method": "GET",
+      "resourceType": "stylesheet"
+    },
+    {
+      "context": "clipboard-denied",
+      "url": "http://127.0.0.1:4173/public/vendor/tesseract/tesseract.min.js",
+      "method": "GET",
+      "resourceType": "script"
+    },
+    {
+      "context": "clipboard-denied",
+      "url": "http://127.0.0.1:4173/src/app.mjs",
+      "method": "GET",
+      "resourceType": "script"
+    },
+    {
+      "context": "clipboard-denied",
+      "url": "http://127.0.0.1:4173/src/engine.mjs",
+      "method": "GET",
+      "resourceType": "script"
+    },
+    {
+      "context": "clipboard-denied",
+      "url": "http://127.0.0.1:4173/public/vendor/pdfjs/pdf.mjs",
+      "method": "GET",
+      "resourceType": "script"
+    },
+    {
+      "context": "clipboard-denied",
+      "url": "http://127.0.0.1:4173/public/vendor/pdfjs/pdf.worker.mjs",
+      "method": "GET",
+      "resourceType": "script"
+    },
+    {
+      "context": "synthetic-scan-cold",
+      "url": "http://127.0.0.1:4173/",
+      "method": "GET",
+      "resourceType": "document"
+    },
+    {
+      "context": "synthetic-scan-cold",
+      "url": "http://127.0.0.1:4173/src/style.css",
+      "method": "GET",
+      "resourceType": "stylesheet"
+    },
+    {
+      "context": "synthetic-scan-cold",
+      "url": "http://127.0.0.1:4173/public/vendor/tesseract/tesseract.min.js",
+      "method": "GET",
+      "resourceType": "script"
+    },
+    {
+      "context": "synthetic-scan-cold",
+      "url": "http://127.0.0.1:4173/src/app.mjs",
+      "method": "GET",
+      "resourceType": "script"
+    },
+    {
+      "context": "synthetic-scan-cold",
+      "url": "http://127.0.0.1:4173/src/engine.mjs",
+      "method": "GET",
+      "resourceType": "script"
+    },
+    {
+      "context": "synthetic-scan-cold",
+      "url": "http://127.0.0.1:4173/public/vendor/pdfjs/pdf.mjs",
+      "method": "GET",
+      "resourceType": "script"
+    },
+    {
+      "context": "synthetic-scan-cold",
+      "url": "http://127.0.0.1:4173/public/vendor/pdfjs/pdf.worker.mjs",
+      "method": "GET",
+      "resourceType": "script"
+    },
+    {
+      "context": "synthetic-scan-cold",
+      "url": "http://127.0.0.1:4173/public/vendor/tesseract/worker.min.js",
+      "method": "HEAD",
+      "resourceType": "fetch"
+    },
+    {
+      "context": "synthetic-scan-cold",
+      "url": "http://127.0.0.1:4173/public/vendor/tesseract-core/tesseract-core-simd-lstm.wasm.js",
+      "method": "HEAD",
+      "resourceType": "fetch"
+    },
+    {
+      "context": "synthetic-scan-cold",
+      "url": "http://127.0.0.1:4173/public/vendor/tesseract-core/tesseract-core-simd-lstm.wasm",
+      "method": "HEAD",
+      "resourceType": "fetch"
+    },
+    {
+      "context": "synthetic-scan-cold",
+      "url": "http://127.0.0.1:4173/public/models/kor.traineddata",
+      "method": "HEAD",
+      "resourceType": "fetch"
+    },
+    {
+      "context": "synthetic-scan-cold",
+      "url": "http://127.0.0.1:4173/public/models/eng.traineddata",
+      "method": "HEAD",
+      "resourceType": "fetch"
+    },
+    {
+      "context": "synthetic-scan-cold",
+      "url": "http://127.0.0.1:4173/public/models/chi_tra.traineddata",
+      "method": "HEAD",
+      "resourceType": "fetch"
+    },
+    {
+      "context": "synthetic-scan-cold",
+      "url": "http://127.0.0.1:4173/public/vendor/tesseract/worker.min.js",
+      "method": "GET",
+      "resourceType": "script"
+    },
+    {
+      "context": "synthetic-scan-cold",
+      "url": "http://127.0.0.1:4173/public/vendor/tesseract-core/tesseract-core-relaxedsimd-lstm.wasm.js",
+      "method": "GET",
+      "resourceType": "other"
+    },
+    {
+      "context": "synthetic-scan-cold",
+      "url": "http://127.0.0.1:4173/public/models/kor.traineddata",
+      "method": "GET",
+      "resourceType": "fetch"
+    },
+    {
+      "context": "synthetic-scan-cold",
+      "url": "http://127.0.0.1:4173/public/models/eng.traineddata",
+      "method": "GET",
+      "resourceType": "fetch"
+    },
+    {
+      "context": "synthetic-scan-cold",
+      "url": "http://127.0.0.1:4173/public/models/chi_tra.traineddata",
+      "method": "GET",
+      "resourceType": "fetch"
+    },
+    {
+      "context": "missing-model-retry",
+      "url": "http://127.0.0.1:4173/",
+      "method": "GET",
+      "resourceType": "document"
+    },
+    {
+      "context": "missing-model-retry",
+      "url": "http://127.0.0.1:4173/src/style.css",
+      "method": "GET",
+      "resourceType": "stylesheet"
+    },
+    {
+      "context": "missing-model-retry",
+      "url": "http://127.0.0.1:4173/public/vendor/tesseract/tesseract.min.js",
+      "method": "GET",
+      "resourceType": "script"
+    },
+    {
+      "context": "missing-model-retry",
+      "url": "http://127.0.0.1:4173/src/app.mjs",
+      "method": "GET",
+      "resourceType": "script"
+    },
+    {
+      "context": "missing-model-retry",
+      "url": "http://127.0.0.1:4173/src/engine.mjs",
+      "method": "GET",
+      "resourceType": "script"
+    },
+    {
+      "context": "missing-model-retry",
+      "url": "http://127.0.0.1:4173/public/vendor/pdfjs/pdf.mjs",
+      "method": "GET",
+      "resourceType": "script"
+    },
+    {
+      "context": "missing-model-retry",
+      "url": "http://127.0.0.1:4173/public/vendor/pdfjs/pdf.worker.mjs",
+      "method": "GET",
+      "resourceType": "script"
+    },
+    {
+      "context": "missing-model-retry",
+      "url": "http://127.0.0.1:4173/public/vendor/tesseract/worker.min.js",
+      "method": "HEAD",
+      "resourceType": "fetch"
+    },
+    {
+      "context": "missing-model-retry",
+      "url": "http://127.0.0.1:4173/public/vendor/tesseract-core/tesseract-core-simd-lstm.wasm.js",
+      "method": "HEAD",
+      "resourceType": "fetch"
+    },
+    {
+      "context": "missing-model-retry",
+      "url": "http://127.0.0.1:4173/public/vendor/tesseract-core/tesseract-core-simd-lstm.wasm",
+      "method": "HEAD",
+      "resourceType": "fetch"
+    },
+    {
+      "context": "missing-model-retry",
+      "url": "http://127.0.0.1:4173/public/models/kor.traineddata",
+      "method": "HEAD",
+      "resourceType": "fetch"
+    },
+    {
+      "context": "missing-model-retry",
+      "url": "http://127.0.0.1:4173/public/vendor/tesseract/worker.min.js",
+      "method": "HEAD",
+      "resourceType": "fetch"
+    },
+    {
+      "context": "missing-model-retry",
+      "url": "http://127.0.0.1:4173/public/vendor/tesseract-core/tesseract-core-simd-lstm.wasm.js",
+      "method": "HEAD",
+      "resourceType": "fetch"
+    },
+    {
+      "context": "missing-model-retry",
+      "url": "http://127.0.0.1:4173/public/vendor/tesseract-core/tesseract-core-simd-lstm.wasm",
+      "method": "HEAD",
+      "resourceType": "fetch"
+    },
+    {
+      "context": "missing-model-retry",
+      "url": "http://127.0.0.1:4173/public/models/kor.traineddata",
+      "method": "HEAD",
+      "resourceType": "fetch"
+    },
+    {
+      "context": "missing-model-retry",
+      "url": "http://127.0.0.1:4173/public/models/eng.traineddata",
+      "method": "HEAD",
+      "resourceType": "fetch"
+    },
+    {
+      "context": "missing-model-retry",
+      "url": "http://127.0.0.1:4173/public/models/chi_tra.traineddata",
+      "method": "HEAD",
+      "resourceType": "fetch"
+    },
+    {
+      "context": "missing-model-retry",
+      "url": "http://127.0.0.1:4173/public/vendor/tesseract/worker.min.js",
+      "method": "GET",
+      "resourceType": "script"
+    },
+    {
+      "context": "missing-model-retry",
+      "url": "http://127.0.0.1:4173/public/vendor/tesseract-core/tesseract-core-relaxedsimd-lstm.wasm.js",
+      "method": "GET",
+      "resourceType": "other"
+    },
+    {
+      "context": "missing-model-retry",
+      "url": "http://127.0.0.1:4173/public/models/kor.traineddata",
+      "method": "GET",
+      "resourceType": "fetch"
+    },
+    {
+      "context": "missing-model-retry",
+      "url": "http://127.0.0.1:4173/public/models/eng.traineddata",
+      "method": "GET",
+      "resourceType": "fetch"
+    },
+    {
+      "context": "missing-model-retry",
+      "url": "http://127.0.0.1:4173/public/models/chi_tra.traineddata",
+      "method": "GET",
+      "resourceType": "fetch"
+    },
+    {
+      "context": "missing-model-retry",
+      "url": "http://127.0.0.1:4173/public/vendor/pdfjs/pdf.worker.mjs",
+      "method": "GET",
+      "resourceType": "script"
+    },
+    {
+      "context": "missing-model-retry",
+      "url": "http://127.0.0.1:4173/public/vendor/pdfjs/pdf.worker.mjs",
+      "method": "GET",
+      "resourceType": "script"
+    },
+    {
+      "context": "file-protocol",
+      "url": "file:///<experiment>/index.html",
+      "method": "GET",
+      "resourceType": "document"
+    },
+    {
+      "context": "file-protocol",
+      "url": "file:///<experiment>/src/style.css",
+      "method": "GET",
+      "resourceType": "stylesheet"
+    },
+    {
+      "context": "file-protocol",
+      "url": "file:///<experiment>/public/vendor/tesseract/tesseract.min.js",
+      "method": "GET",
+      "resourceType": "script"
+    },
+    {
+      "context": "file-protocol",
+      "url": "file:///<experiment>/src/app.mjs",
+      "method": "GET",
+      "resourceType": "script"
+    }
+  ],
+  "consoleErrors": [
+    {
+      "context": "clipboard-denied",
+      "message": "Permissions policy violation: The Clipboard API has been blocked because of a permissions policy applied to the current document. See https://crbug.com/414348233 for more details."
+    },
+    {
+      "context": "missing-model-retry",
+      "message": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    },
+    {
+      "context": "missing-model-retry",
+      "message": "Error: 로컬 OCR 자원 확인 실패: ../public/models/kor.traineddata (HTTP 404)\n    at PdfOcrSession.getWorker (http://127.0.0.1:4173/src/engine.mjs:79:31)\n    at async PdfOcrSession.recognize (http://127.0.0.1:4173/src/engine.mjs:105:35)\n    at async PdfOcrSession.process (http://127.0.0.1:4173/src/engine.mjs:138:24)\n    at async run (http://127.0.0.1:4173/src/app.mjs:30:9)"
+    },
+    {
+      "context": "missing-model-retry",
+      "message": "InvalidPDFException"
+    },
+    {
+      "context": "file-protocol",
+      "message": "Access to script at 'file:///<experiment>/src/app.mjs' from origin 'null' has been blocked by CORS policy: Cross origin requests are only supported for protocol schemes: chrome, chrome-untrusted, data, http, https."
+    },
+    {
+      "context": "file-protocol",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    }
+  ]
+}
