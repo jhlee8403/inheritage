@@ -26,7 +26,7 @@ for (const truth of POSITIVE_TRUTHS) {
     assert.deepEqual(result.unresolved, []);
     assert.deepEqual(result.blockedReasons, []);
     assert.deepEqual(result.warnings, warnings);
-    assert.deepEqual(result.provenance, { engineVersion: '0.1.0', approvalRecordVersion: 'C1-approval-v1',
+    assert.deepEqual(result.provenance, { engineVersion: '0.2.0', approvalRecordVersion: 'C1-approval-v1',
       appliedRules: rules, attemptedRules: rules, lawSnapshotId: 'BL1-LAW-2016-14409',
       truthReference: { id: truth.id, version: 'v1' }, truthVersion: 'v1', eventId: 'E1', inputRevision: '1' });
     assert.deepEqual(result.checks.conservation, { ok: true, allocated: input.asset.share, unresolved: zero,
@@ -79,7 +79,7 @@ function assertBlocked(input, reasons, approvals = APPROVALS, attempted = baseRu
   assert.deepEqual(result.warnings, [...new Set([...warnings,...reasons.map(r => r.code)])]);
   assert.deepEqual(result.unresolved, [{ id: 'E1:unresolved', eventId: 'E1', relativeShare: f('1'),
     wholeShare: input.asset.share, reasons }]);
-  assert.deepEqual(result.provenance, { engineVersion: '0.1.0', approvalRecordVersion: 'C1-approval-v1',
+  assert.deepEqual(result.provenance, { engineVersion: '0.2.0', approvalRecordVersion: 'C1-approval-v1',
     appliedRules: baseRules, attemptedRules: attempted, lawSnapshotId: 'BL1-LAW-2016-14409',
     truthReference: input.truthReference, truthVersion: 'v1', eventId: 'E1', inputRevision: '1' });
   assert.deepEqual(result.checks.conservation, { ok: true, allocated: zero, unresolved: input.asset.share,
@@ -128,4 +128,6 @@ test('BL1-T11', () => {
   approvals.rules['BL1-R01'].status = 'PENDING';
   const attempted = ['BL1-G00','BL1-R01','BL1-R06','BL1-R07'].map(id => ({ id, version: 'v1' }));
   assertBlocked(input, [{ code: 'RULE_PENDING', field: 'rules', ruleId: 'BL1-R01' }], approvals, attempted);
+  assert.equal(APPROVALS.rules['BL1-R01'].status, 'APPROVED_FOR_C1');
+  assert.equal(calculate(t01()).status, 'REVIEW_READY');
 });

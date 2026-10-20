@@ -1,6 +1,7 @@
-import { InputError, ZERO, ONE, initialShare, ratio, multiply } from './fraction.mjs';
+import { InputError, ZERO, ONE, initialShare, ratio, multiply, cloneExactValue } from './fraction.mjs';
 import { APPROVALS, VERSION, ruleRef, approvalReasons, deepFreeze } from './approval.mjs';
 import { assertIntegrity } from './validation.mjs';
+import { ENGINE_VERSION } from './version.mjs';
 
 export const SCOPE_FACTS = Object.freeze([
   'predeceasedChildBranches', 'fetus', 'adoption', 'relationshipDispute', 'renunciation',
@@ -63,6 +64,7 @@ function reasonsForFacts(input) {
     if (!SCOPE_FACTS.includes(key)) block('UNSUPPORTED_SCOPE', `scopeFacts.${key}`);
   }
   const seen = new Set([input.event.decedentId]);
+  const readyCollections = new Set();
   for (const key of COLLECTIONS) {
     const collection = input.family?.[key];
     const field = `family.${key}`;
@@ -81,6 +83,8 @@ function reasonsForFacts(input) {
       (collection.existence === 'PRESENT' && collection.members.length === 0)) {
       throw new InputError('CONTRADICTORY_COLLECTION', field);
     }
+    if (collection.review === 'CONFIRMED' && collection.complete === 'CONFIRMED' &&
+      ['PRESENT','ABSENT_CONFIRMED'].includes(collection.existence)) readyCollections.add(key);
     if (key === 'parents' && collection.members.length > 2) block('UNSUPPORTED_SCOPE', `${field}.members`);
     for (const p of collection.members) {
       for (const extra of Object.keys(p ?? {})) {
@@ -92,6 +96,8 @@ function reasonsForFacts(input) {
       if (seen.has(p.id)) throw new InputError('DUPLICATE_PERSON', p.id);
       seen.add(p.id);
       if (p.review !== 'CONFIRMED' || p.relationshipReview !== 'CONFIRMED') block('FACT_UNCONFIRMED', `${field}.${p.id}`);
+      if (p.review !== 'CONFIRMED' || p.relationshipReview !== 'CONFIRMED' ||
+        !['ALIVE','PREDECEASED'].includes(p.life)) readyCollections.delete(key);
       if (p.adult !== 'CONFIRMED') block('UNSUPPORTED_AGE_OR_UNKNOWN', `${field}.${p.id}.adult`);
       if (!['ALIVE', 'PREDECEASED'].includes(p.life)) block('LIFE_STATUS_UNKNOWN', `${field}.${p.id}.life`);
       const expected = { spouse: 'SPOUSE', children: 'CHILD', parents: 'PARENT' }[key];
@@ -107,12 +113,22 @@ function reasonsForFacts(input) {
           block('UNSUPPORTED_SCOPE', `${field}.${p.id}.deathDate`);
         }
       }
-      if (key === 'remoteRelatives') {
-        if (!['GRANDCHILD', 'GRANDPARENT'].includes(p.relation)) block('UNSUPPORTED_RELATIONSHIP', `${field}.${p.id}.relation`);
-        const via = p.relation === 'GRANDCHILD' ? input.family.children : input.family.parents;
-        const parent = via?.members?.find(a => a.id === p.viaId);
-        if (!parent) throw new InputError('MISSING_RELATIONSHIP_REFERENCE', `${field}.${p.id}.viaId`);
-        if (p.relation === 'GRANDCHILD' && parent.life !== 'ALIVE') block('UNSUPPORTED_SCOPE', `${field}.${p.id}.viaId`);
+    }
+  }
+  // Only resolve links after every depended-on collection has passed review/shape checks.
+  // Missing facts are retained as BLOCKED reasons, never repaired into absent collections.
+  if (readyCollections.has('remoteRelatives')) {
+    for (const p of input.family.remoteRelatives.members) {
+      if (!['GRANDCHILD','GRANDPARENT'].includes(p.relation)) {
+        block('UNSUPPORTED_RELATIONSHIP', `family.remoteRelatives.${p.id}.relation`);
+        continue;
+      }
+      const viaKey = p.relation === 'GRANDCHILD' ? 'children' : 'parents';
+      if (!readyCollections.has(viaKey)) continue;
+      const parent = input.family[viaKey].members.find(a => a.id === p.viaId);
+      if (!parent) throw new InputError('MISSING_RELATIONSHIP_REFERENCE', `family.remoteRelatives.${p.id}.viaId`);
+      if (p.relation === 'GRANDCHILD' && parent.life !== 'ALIVE') {
+        block('UNSUPPORTED_SCOPE', `family.remoteRelatives.${p.id}.viaId`);
       }
     }
   }
@@ -120,7 +136,7 @@ function reasonsForFacts(input) {
 }
 function provenance(input, ids, attempted, approvals) {
   return {
-    engineVersion: '0.1.0', approvalRecordVersion: approvals?.recordVersion ?? null,
+    engineVersion: ENGINE_VERSION, approvalRecordVersion: approvals?.recordVersion ?? null,
     appliedRules: ids.map(ruleRef), attemptedRules: attempted.map(ruleRef),
     lawSnapshotId: input.lawSnapshotId ?? null,
     truthReference: input.truthReference ?? null, truthVersion: input.truthReference?.version ?? null,
@@ -140,7 +156,7 @@ function finish(input, q, allocations, paths, nonSelected, blockedReasons, appli
   };
   result.checks = assertIntegrity(result);
   // Clone so caller-owned fact/provenance objects cannot mutate this result later.
-  return deepFreeze(structuredClone(result));
+  return deepFreeze(cloneExactValue(result));
 }
 export function calculate(input, approvals = APPROVALS) {
   checkShape(input);

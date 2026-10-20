@@ -79,6 +79,7 @@ test('R04/R05 stay PENDING and the built-in approval record is immutable', () =>
   assert.equal(APPROVALS.rules['BL1-R05'].status, 'PENDING');
   assert.throws(() => { APPROVALS.rules['BL1-R04'].status = 'APPROVED_FOR_C1'; }, TypeError);
   const forged = t01(); forged.requestedRuleIds = ['BL1-R04']; blocked(forged, 'UNSUPPORTED_SCOPE');
+  const flag = t01(); flag.approved = true; blocked(flag, 'UNSUPPORTED_SCOPE');
 });
 
 test('Unsupported ages, adoption, spouse-only and grandparent-only families block', () => {
