@@ -4,6 +4,8 @@
 
 지원 범위는 실제 사망 개시일 **2017-01-10**, 결과 기준일 **2017-01-11**, `BL1-LAW-2016-14409`로 고정한다. 법률혼 배우자+생존 성년 친생자녀, 배우자+최근친 생존 성년 친생부모, 배우자 없는 생존 성년 친생자녀만 계산한다. 다른 일자·법령·관계로 자동 확대하지 않는다.
 
+이번 기술 수정의 엔진 버전은 **0.2.0**이다. 법률 rule/truth 버전과 승인 범위는 v1 그대로다. Node의 기존 동기 스냅샷 API는 유지하며, 브라우저용 공개 진입점과 명시적 비동기 스냅샷 API를 추가했다.
+
 ## 실행
 
 Node.js 24 이상, ESM JavaScript. 검증 런타임은 Node.js 24.22.0이다. 외부 패키지·설치·빌드·네트워크가 필요 없다.
@@ -42,11 +44,15 @@ JS
 |`src/engine.mjs`|G00 확인 게이트와 R01/R02/R03 단일 사건 배분, R06/R07의 배율·미해결 원장, provenance|
 |`src/arithmetic.mjs`|T07의 순수 경로 곱셈·합산. 법률 엔진의 입력 경로와 분리|
 |`src/validation.mjs`|합계 보존과 사람/경로 구조 검증을 서로 분리|
-|`src/snapshot.mjs`|입력·관계·법령·Q·승인 버전 전체의 SHA-256 의존성 해시, 변경 시 STALE|
+|`src/snapshot.mjs`|Node 동기 SHA-256 어댑터. 기존 createSnapshot/refreshSnapshot 반환 형식 유지|
+|`src/browser.mjs`, `src/snapshot-browser.mjs`|공개 브라우저 진입점·Web Crypto SHA-256 비동기 스냅샷. Node 내장 모듈 의존 없음|
+|`src/snapshot-common.mjs`, `src/version.mjs`|공유 결정적 직렬화·입력/승인 사본·STALE 복사·엔진 버전|
 |`src/index.mjs`|공개 API|
 |`test/fixtures.mjs`|완전 가공 사실과 구현 전 문서에서 옮긴 고정 기대값. 엔진 import·출력 역산 없음|
 |`test/truth.test.mjs`|필수 11개 truth. 사람·지분·경로·규칙·상태·경고·미해결·provenance 비교|
-|`test/guards.test.mjs`|22개 경계/무결성/미지원/버전/STALE 시험|
+|`test/guards.test.mjs`|기존 22개 경계/무결성/미지원/버전/STALE 시험|
+|`test/defects.test.mjs`, `test/review-regressions.test.mjs`, `test/snapshot-browser.test.mjs`|세 결함과 검토 때만 실행했던 변형의 지속 회귀 테스트|
+|`test/browser/`|loopback 실제 브라우저 검사만 수행하는 최소 하네스. 제품 UI 아님|
 
 ## 입력 계약
 
@@ -80,10 +86,37 @@ JSON 형태의 검토 완료 사실을 받는다. OCR이나 원문에서 사실�
 - `checks.conservation`은 배분+미해결=Q만 검사한다. `checks.identityPaths`는 중복·참조·수령자·경로별 합의 구조를 검사한다. 일관되게 잘못 지정한 수령자를 알아내는 법률 추론은 하지 않으므로 **별도 truth 테스트에서 고정한 사람/경로/규칙을 비교**한다. 합계가 맞아도 이 비교가 실패하면 오답이다.
 - 결과와 스냅샷은 입력과 분리해 복제·동결한다. `refreshSnapshot`은 revision을 올리지 않은 사실 변경도 감지한다. STALE 결과는 재계산 전 사용하지 않는다. 되돌리기만으로 예전 STALE 결과를 되살리지 않는다. 호출자는 변경 시 이 API를 사용해야 하며 아직 UI 자동 연결은 없다.
 
-분수의 입력 정수 문자열은 각 1,024자 이하다. 부동소수점 값·소수 문자열을 받지 않는다. 분모는 양수, 결과0은0/1로 정규화한다. 날짜 검증과 배열 인덱스 외에 지분을 Number로 변환하지 않는다.
+분수의 입력 정수 문자열은 각 1,024자 이하다. 부동소수점 값·소수 문자열을 받지 않는다. 분모는 양수, 결과0은0/1로 정규화한다. 외부 객체의 파싱에는 1,024자 제한을 그대로 적용한다. 검증된 연산이 만든 불변 분수만 모듈 내부의 비공개 WeakSet으로 식별하여, 중간 분수가 더 길어져도 정확히 연산·검증한다. 임의 객체나 JSON 사본은 이 식별을 위조할 수 없다. JSON 출력은 긴 정수 문자열도 정확히 보존하지만, JSON/structuredClone 후 객체를 자동으로 내부 값으로 신뢰하지는 않는다. 1,024자를 넘는 출력 사본을 외부 Q로 재입력하면 거부하며, 스냅샷/결과를 재계산할 때는 원래 유효한 입력을 사용한다. 날짜 검증과 배열 인덱스 외에 지분을 Number로 변환하지 않는다.
 
 T07은 `ARITHMETIC_ONLY`이며 `lawSnapshotId`와 `eventId`는 null이다. 법률 사건을 만든 것처럼 기록하지 않는다. `truthVersion: v1` 및 R06/R07 계약 경로만 추적한다. X의 두 경로 합산은 수학적 가정이며 법률상 복수 자격 병존을 허용하는 API가 아니다.
 
 ## 남은 제한
 
 UI·PDF·OCR 연결, 법률 관계/원자료 확정, 일반 날짜의 자동 법령 선택, 실제 사건 검증·배포는 이번 구현에 없다. R04/R05와 기타 미승인 쟁점은 계속 PENDING이다. 코드·테스트 통과는 승인 범위를 확대하지 않는다.
+
+## 브라우저 공개 API와 스냅샷 호환성
+
+Node에서 패키지 기본 진입점(`src/index.mjs`)의 `createSnapshot`, `refreshSnapshot`은 계속 **동기**다. 브라우저에서는 `@inheritage/inheritance-engine/browser` 또는 정적 모듈 URL `src/browser.mjs`를 사용한다. browser 조건을 지원하는 도구에는 기본 export의 browser 매핑도 제공한다. 이 공개 진입점의 전체 import 연결에는 Node 전용 모듈이 없다.
+
+```js
+import { calculate, createSnapshotAsync, refreshSnapshotAsync } from './src/browser.mjs';
+const result = calculate(facts); // 동기
+const snapshot = await createSnapshotAsync(facts, approvals);
+const current = await refreshSnapshotAsync(snapshot, changedFacts, approvals);
+```
+
+비동기 두 API는 Promise를 반환한다. Web Crypto가 가능한 secure context(개발 시험은 `http://127.0.0.1`)가 필요하다. `HASH_UNAVAILABLE`/`HASH_FAILED`는 명시적 오류이며 약한 해시·상수·원격 서비스로 대체하지 않는다. 입력/승인 객체를 첫 await 전에 복제하고 같은 사본으로 직렬화·해시·계산하여 호출 중 외부 수정이 결과와 해시를 갈라놓지 않는다.
+
+Node와 브라우저는 키를 정렬하는 동일한 JSON 직렬화와 SHA-256을 사용한다. 의존성에는 엔진 버전도 들어가므로 0.1.0 스냅샷은 0.2.0에서 refresh하면 STALE이 된다. 법률 승인 범위 변경을 뜻하지 않는다. 동결된 결과·STALE 경고·되돌려도 STALE 부활 금지 계약을 유지한다. UI 자동 연결은 아직 없다.
+
+## 실제 브라우저 시험
+
+```sh
+npm run test:browser
+```
+
+기존 `experiments/offline-ocr/node_modules/playwright` 개발 도구와 설치된 Chromium을 읽어 사용한다. OCR 코드는 수정하지 않는다. 다른 설치된 Playwright를 사용할 때는 `INHERITAGE_PLAYWRIGHT_MODULE`에 그 `index.mjs` 절대 경로를 지정할 수 있다. 이 하네스는 패키지/브라우저 설치를 수행하지 않으며 엔진 런타임 의존성을 추가하지 않는다.
+
+127.0.0.1의 임시 포트로만 서버를 열고 공개 브라우저 모듈·필수 truth 11개·회귀 사례·비동기 변경·STALE·Node/브라우저 해시를 시험한다. 콘솔 오류·미처리 Promise 거절·외부 요청·계산 중 요청이 있으면 실패한다. Chromium sandbox를 활성화하며 보안 옵션을 완화하지 않는다. 서버와 브라우저는 종료 시 닫는다.
+
+표준 `/Applications` 또는 사용자 `Applications` 경로의 기존 Edge가 있으면 같은 검사를 실제 Edge에서도 실행하고 버전을 출력한다. 다른 위치는 `INHERITAGE_EDGE_EXECUTABLE`로 지정할 수 있다. Edge가 없으면 설치하지 않고 미실시로 표시한다. Chromium 결과는 Edge 또는 실제 오프라인 업무 PC의 통과를 뜻하지 않는다. file://·제품 실행기·업무 UI는 이번 범위가 아니다.
