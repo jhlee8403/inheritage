@@ -1,0 +1,5 @@
+{
+  "name": "inheritage-manual-validation", "private": true, "type": "module",
+  "scripts": {"start": "node scripts/server.mjs", "test": "node test/browser.mjs"},
+  "engines": {"node": ">=24"}
+}

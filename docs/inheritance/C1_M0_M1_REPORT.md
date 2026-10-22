@@ -118,3 +118,11 @@ Edge 자체와 실제 오프라인 업무 PC는 미검증이다. 기본 계산 �
 사용자는 실제 Mac Edge의 기존 엔진 검증 통과를 수동 계산 검증 화면 구현의 선행 조건으로 지정했다. 이번 요청에서 표준 앱 경로(`/Applications`, `~/Applications`), `/System/Applications`를 포함한 앱 폴더 추가 탐색 및 Spotlight의 `com.microsoft.edgemac`/접두사 검색을 수행했으나 Edge 앱/실행 파일을 찾지 못했다. Spotlight 명령은 출력 없이 종료0이었다.
 
 **실제 Edge 실행·버전 조회·엔진 시험은 미실시**다. 실행 중 오류를 관측한 것이 아니라 실행 대상을 확보하지 못한 상태이며, 다른 브라우저 결과로 통과를 대신하지 않는다. Edge 설치나 보안 옵션 변경은 하지 않았다. 사용자가 설치하거나 기존 비표준 경로를 제공한 뒤 기존 하네스로 실제 Edge 검증이 필요하다. 조건 미충족으로 화면 구현은 보류했다. 이번 착수 전 확인의 상세 결과는 `MANUAL_CALCULATOR_REPORT.md`에 기록했다. 이전 Chromium 시험·과거 Edge 미실시 기록을 소급 수정하지 않는다.
+
+## 2026-10-22 기록 — Edge 설치 후 실제 엔진 검증 완료
+
+사용자 설치 후 실제 `/Applications/Microsoft Edge.app/Contents/MacOS/Microsoft Edge` **155.0.4283.62**로 기존 `npm run test:browser --prefix packages/inheritance-engine`를 실행했다. 연결 중단 전 같은 재개 작업에서 얻은 `/private/tmp/inheritage-edge-resume.txt` 로그를 현재 다시 확인했다. **Mac Edge 20 PASS / 0 FAIL / 0 SKIP**, Chromium 156.0.8078.4도 **20 PASS / 0 FAIL / 0 SKIP**, 명령 종료0이다. 이전의 Edge 미발견 기록은 당시 사실로 유지한다. 이번 기록을 위해 엔진 하네스를 중복 실행한 것은 아니다.
+
+Edge에서 공개 브라우저 import, 필수 truth11, 기존 결함 회귀, createSnapshotAsync/refreshSnapshotAsync, 비동기 중 입력/승인 객체 변경, STALE, Node/브라우저 SHA-256 일치, 해시 불가/실패를 검증했다. console error0·page error0·미처리 Promise 거절0·외부 요청0·모듈 로딩 후 계산 요청0. sandbox를 유지했으며 보안 옵션 완화·Edge 설치·엔진/법률 코드 변경은 하지 않았다. Node 24.22.0은 중단 전57개 통과, 현재 재개 후 동일 `npm test --prefix packages/inheritance-engine`도 **57 PASS / 0 FAIL / 0 SKIP**, 종료0이다.
+
+이 통과를 선행 조건으로 별도 `feat/manual-calculation-workbench`에서 가공 수동 계산 검증 화면을 연결했다. 화면 자체의 새 실제 Edge/Chromium 시험은 각각 **18 PASS / 0 FAIL / 0 SKIP**이며 엔진20개와 합쳐 같은 시험처럼 세지 않는다. 화면의 비동기·즉시 무효화·BLOCKED/오류·복사·HTML 비실행 결과 및 정확한 실행법은 `MANUAL_CALCULATOR_REPORT.md`의 이번 추가 절을 따른다. Mac 결과는 Windows Edge·실제 오프라인 업무 PC·실제 사건 합격을 뜻하지 않는다. 법률·날짜·스냅샷·R04/R05 PENDING 및 OCR 변경 제한은 유지한다.
