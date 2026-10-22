@@ -1,0 +1,154 @@
+# M2 엔진 계약·회귀 시험 설계
+
+작성일2026-10-23 (Asia/Seoul). 버전 `M2-test-design-draft-v1`. **시험 설계 확정 PENDING / R04·R05 및 새 truth 법률 승인 PENDING / 구현·실행 NOT_RUN.** 이 문서는 실행 코드·자동시험 fixture가 아니다. 기술 문서 작성 승인과 개발 착수 승인을 구분한다.
+
+기준 커밋 `a5548fc6c60978f232148be1f18b4cc9d4869788`, 설계 브랜치 `docs/m2-engine-contract`. [엔진 계약안](M2_ENGINE_CONTRACT.md), [기존 법률 검토](M2_R04_R05_LEGAL_REVIEW.md), [문서형 정답 후보](M2_R04_R05_TRUTH_CANDIDATES.md), LEGAL_APPROVAL_M0_M1 및 실제 C1 코드·시험·수동 검증 화면 계약을 대조했다. 이번 변경은 두 설계 문서뿐이며 기존 M2 후보·Q-09·M1 승인 기록은 고치지 않는다.
+
+## 1. 정답 출처·독립성·실행 단계
+
+법률상 수치/경로의 출처는 기존 문서형 T04/T05/T05-B와 그 Q/기준일 변형이다. 새 가족관계의 법률 정답을 만들지 않는다. 구현 결과를 보고 기대값을 수정하지 않으며 동일 엔진 함수로 기대값을 계산하지 않는다. 기대값을 변경해야 한다면 원 후보·근거·변경 사유·검토/승인 이력을 별도 남긴다. 여기서는 바꾸지 않았다.
+
+정상 후보 입력·중간값·말단·경로를 문서에서 고정하고 독립 검토한 뒤 자동화할 계획이다. 수치 기대는 literal 분자/분모 문자열, 사람·사건·매개·유입 참조도 독립 literal 구조로 작성한다. 비교할 때 public API의 분수 정규화/곱셈/합산으로 정답을 만들지 않는다. 산술 불변식 검사와 고정 truth 비교를 둘 다 수행한다. 임의 정수 기반 산술 property 검사는 법률 자격 승인과 분리한다.
+
+|시험 층|향후 방법|현재|
+|---|---|---|
+|문서 정합성|링크·JSON 문법·ID·기존 수치와 의미 대조|이번에 문서 검사만 수행. M2 엔진 합격 수치로 세지 않음|
+|순수 구조/분수/무결성|법률 선택 없이 조립한 명시적 원장에 검증기 적용|미실시, 코딩 미승인|
+|PENDING 게이트|새 모듈 요청에서 정상 결과 없음, Q 전체 보류|시험 설계만. 기존 C1의 게이트와 M2의 새 형식 구별|
+|조건부 양성|별도 승인 이후 검토된 바인딩으로 문서 truth를 비교|현재 실행/활성화 금지|
+|브라우저/화면|공개 M2 API·async/hash 및 별도 승인된 UI 연결 시험|미실시. 현재 M1 화면은 수정하지 않음|
+
+나중의 양성 테스트용 승인 컨텍스트는 검토된 명시적 범위를 가진 별도 test fixture여야 한다. 한 사건 JSON에 approved=true를 넣거나 기존 레지스트리를 전역 수정해 다른 시험이 통과하게 만들면 안 된다. R04/R05 allowlist·날짜 승인 절차를 테스트 helper가 우회해서도 안 된다. 현재는 그런 fixture를 작성하지 않는다.
+
+## 2. 고정할 양성·기준일 기대
+
+아래 숫자는 원 M2 후보 표를 그대로 승계한다. 전제·법령·제외·가족/집합 확인은 원 후보 전체를 포함하며 축약 표의 이름만으로 완전 입력이라고 간주하지 않는다. ‘정상 후보’는 승인 후 REVIEW_READY의 비교 대상이고 **현재 기대는 미승인/미지원 차단**이다.
+
+|시험 ID|원 후보|Q·기준일|고정 기대·필수 경로|
+|---|---|---|---|
+|M2-P01|BL1-T04|1,01-11|C1/2,G1/G2 각1/4. E1 직접C와 대습G1/G2, B 실제 취득 없음|
+|M2-P02|BL1-T05|1,01-21|C1/2,G1/G2 각1/4. E1 B/C 실제1/2, E2 B 유입1/2 소비|
+|M2-P03|BL1-T05-B|1/3,01-21|E1 B/C 각1/6, E2 유입1/6, G1/G2 각1/12. 말단합1/3|
+|M2-P04|M2-T04-Q13|1/3,01-11|C1/6,G1/G2 각1/12. 가정 가지1/6, 실제B취득 없음|
+|M2-P05|M2-T04-Q25|2/5,01-11|C1/5,G1/G2 각1/10. 가지 한도1/5|
+|M2-P06|M2-T05-Q25|2/5,01-21|E1 B/C 각1/5, E2 G1/G2 각1/10. 말단합2/5|
+|M2-P07|M2-T05-MID|1,01-15|말단B/C 각1/2, E2 NOT_YET_OPENED. E2 취득/소비 없음|
+|M2-P08|M2-T05-B-MID|1/3,01-15|말단B/C 각1/6, 나머지는 P07과 동일|
+
+P01/P02 최종 분수는 같아도 원장 전체 동등 비교에서 서로 같으면 실패다. P04/P03도 같은 구별을 적용한다. 정상 각 사례의 blockedReasons 비어 있음, unresolved 비어 있음, 가공/기초계산/권리 미확정 경고, rule/version/law/truth/사건별 승인 proof, 두 종류 상대분과 wholeShare까지 비교한다.
+
+## 3. 경로·원장 전용 검증
+
+|시험 ID|행동·대조|고정 검증 기준|
+|---|---|---|
+|M2-L01|P01 실제 취득자와 가지 기준 비교|actual recipients={C,G1,G2}, B는branchBases의 mediator만. B 사망 사실이 있어도 B asset event/actual acquisition 없음|
+|M2-L02|P02/P03 E1의 B 취득 검사|B의 eventId=E1,실제취득·asset·유입·rule/proof 존재. E2 eventInput이 이 acquisition만 참조|
+|M2-L03|대습·연속 경로 바꿔 넣기|합계·말단 숫자가 같아도 사건열·매개·취득 참조·path kind 오류로 실패|
+|M2-L04|역사B와 말단을 함께 allocations에 넣기|root 보존 실패 또는 terminal 상태 위반. 역사1/2을 더해3/2이 되는 합계를 허용하지 않음|
+|M2-L05|B 가지 기준을 acquisition으로 복사|R04의 NO_MEDIATOR_ACQUISITION 위반. G1/G2 실제 취득과 가정 기준을 동시 합산하지 않음|
+|M2-L06|동일path ID 재등록, 다른ID로 동일유입 이중소비|InputError 권고안과 X10 기존BLOCKED안의 분류 차이는 §5. 어느 쪽도 늘어난 정상 결과 금지|
+|M2-L07|소비된 B취득을 말단으로 남기거나 미소비 말단을 누락|source 소비상태·terminal closure·각path의 단일 배분 소유 검사 실패|
+|M2-L08|B의 다른 물건·다른 유입을 E2에 연결|asset/root/source/owner 불일치. B 고유재산을 최초Q에 합산 금지|
+|M2-L09|E2 owner와 source 취득자 불일치,미래 source,source 참조 없음,순환|구조 오류 제안대로 중단. 임의로 source를 추정·새 경로 생성 금지|
+|M2-L10|사람ID 일관 치환·배열 역순|숫자/의미상 사람·경로 보존. literal A/B/truth ID 정답 하드코딩 방지. 입력 배열 순서가 바뀌면 snapshot은 보수적 STALE 가능|
+|M2-L11|같은 합계로 수령자/분모/매개/규칙만 오염|conservation이 통과해도 identity/truth/provenance 비교가 반드시 실패|
+|M2-L12|P03 세 분수 필드 비교|E2 G1 사건내1/2·root1/4·전체1/12. T04 G1 사건내1/4·가지내1/2를 혼동하지 않음|
+
+사건별 합계·최종 합계·source 소비·사람/경로/proof 무결성을 각각 검사하고 실패 reason도 분리한다. 체크를 실행하지 못한 상태는 NOT_RUN이며 true로 표시하지 않는다. 구조가 일관된 잘못된 수령자는 일반 validator만으로 검출된다고 약속하지 않고 고정 truth로 검출한다.
+
+## 4. 사실·날짜·범위·승인 게이트
+
+모든 차단 후보에서 **유효 Q에 한해** status=BLOCKED, 최종 paths/allocations 없음, 미해결Q 한 묶음·rootRelativeShare=1/1, 이유(event/field/rule)를 비교한다. 귀속0은 사람의 법률상 지분0이 아니다. auditHistory를 허용할 때도 최종합에 포함되지 않고 자체 현재성/proof가 검증된 영역인지 확인한다. 독립 가지의 부분 배분을 성공 출력으로 게시하면 실패다.
+
+|시험 ID|원 후보/입력|차단·필수 검증|
+|---|---|---|
+|M2-G01|X01 사망연도만/선후UNKNOWN,날짜 정밀도·검토 누락|DEATH_ORDER_UNKNOWN/DATE_UNCONFIRMED. R04/R05 선택·월일 보완 금지|
+|M2-G02|X02 B배우자UNKNOWN,존재 필드 누락|SPOUSE_EXISTENCE_UNKNOWN. 빈배열을 부존재로 읽지 않음. B 사망 시와 E1 두 확인을 각각 제거해 검사|
+|M2-G03|X03 대습자 집합 불완전·members 누락/잘못된 타입|FACTS_INCOMPLETE/BRANCH_INCOMPLETE, Q전체 미해결. 알려진 사람만 균분 금지|
+|M2-G04|X04 E2 family/자녀 집합 불완전|EVENT_FAMILY_INCOMPLETE. E1 취득 감사정보가 있어도 최종전체 BLOCKED|
+|M2-G05|관계 review누락/CONFLICTED,사건시점 생존/성년 미확인|사실 게이트 실패. E1 CONFIRMED를 E2로 자동 승계 금지|
+|M2-G06|법령 ID/version 불명·불일치,개시일/기준일 미확인,승인 밖 날짜(X07)|LAW_SCOPE/DATE_OUT_OF_SCOPE 등 차단. 같은 law ID만으로 다른날짜 승인 추론 금지|
+|M2-G07|R04 또는R05 PENDING(X08/X09),허용목록 밖 버전|RULE_PENDING/UNSUPPORTED_RULE. 현재 PENDING 그대로면 숫자 후보 게시 불가|
+|M2-G08|R05만 가정 승인,E2의G00/R03 또는날짜/기준일 바인딩 PENDING(X15)|DEPENDENCY_SCOPE_PENDING. E1승인이나R05승인 하나로 E2 통과 금지|
+|M2-G09|일반 사건 JSON의 approved/status/approvalOverride,원하는 source금액·path결과 주입|무시하고 정상 처리하지 말고 추가/미지원 필드로 거부. 승인 컨텍스트를 사건 데이터에서 만들지 않음|
+|M2-G10|R03 공개API 두 번 호출한 결과를 M2 입력/최종 결과로 주입|M2 root/모듈/유입·승인 proof 검사를 우회하지 못함. 순수 산술 API 결과도 법률 결과 승격 금지|
+|M2-G11|R04 재대습·배우자·전원 선사망·결격/상실 등(X12)|UNSUPPORTED_SCOPE. 법률상 지분을0으로 단정하거나 기존 숫자를 적용하지 않음|
+|M2-G12|R05 세번째 사건·복수유입·대습과 혼합|지원된 두 사건으로 잘라내지 않음. 승인 밖 구성 전체 BLOCKED|
+|M2-G13|MID의 확실한 미래E2 가족만 불완전(X14)|필요한 미래 제외 계약 승인 후 P07/08 유지 후보. E2는 NOT_YET_OPENED·검토완료 아님. 선후 불명은 G01 차단|
+|M2-G14|C1 승인만으로 MID/01-21 기준일 요청|REFERENCE_DATE_SCOPE_PENDING. 기준일을01-11로 조용히 바꾸지 않음|
+|M2-G15|truthReference가 있되미승인/버전불일치|TRUTH_PENDING/VERSION_MISMATCH. truth ID로 숫자 선택 안 함. 일반 가공 호출에서 생략을 허용할지는M2 바인딩에 명시|
+
+존재/완전성의 각 값을 누락·UNKNOWN·ABSENT_CONFIRMED·PRESENT로 독립 변형한다. PRESENT+빈확정집합 또는ABSENT_CONFIRMED+인원 존재는 C1의CONTRADICTORY_COLLECTION과 같은 구조 모순 InputError 권고다. 단순 필드 없음과 모순된 단정이 동일하지 않다. 어느 단계가 도달 가능한지 고정한 격리 입력을 써서 선행 승인 차단이 후행 사실 검사의 성공처럼 보이지 않게 한다.
+
+## 5. InputError 분류와 기존 후보와의 차이
+
+다음은 최종 승인 전 분류 제안이다. M2-X10의 기존 문서형 후보는 유효Q 전체BLOCKED안과 ERROR 대안을 모두 열어두었다. 계약안은 C1 무결성 오류와의 일관성을 위해 **중복/순환/실질 이중소비 InputError**를 우선 제안한다. 이 문서가 X10 정답을 수정/확정한 것은 아니다. 분류 선택을 기술 검토에서 기록한 뒤 자동시험의 단일 기대 상태를 고정해야 한다. ‘BLOCKED 또는ERROR 아무거나 통과’ 같은 느슨한 assertion으로 구현 결함을 숨기지 않는다.
+
+|시험 ID|입력/오염|고정할 제안·검증|
+|---|---|---|
+|M2-E01|X16의손상 Q·분모0·음수·0·1초과·정수 아닌값·길이초과|InputError, 결과 없음. 현재 fraction.mjs code/field별 기대 보존. denominator0은fraction.denominator 등 실제 C1 계약과 구별 없이 추측하지 않음|
+|M2-E02|중복ID·빠진 명시참조·자기참조·관계/사건순환|InputError 권고. 사실 집합 미확인을MISSING_REFERENCE로 성급히 던지는 결함은 G03으로 별도 검출|
+|M2-E03|다른ID의동일source 이중소비·asset/owner 불일치|InputError 권고, 정상원장/부분배분/미해결0 반환 금지. Q-09의 분류 확정 대기|
+|M2-E04|결과 생성 후 말단합·path참조·소비잔액·rule/proof 오염|RESULT_INTEGRITY_ERROR, 외부 게시/복사 안 함. 사용자 사실 부족BLOCKED와 내부 결과 결함 구별|
+|M2-E05|JSON 아닌의존값·WebCrypto없음/거절|SnapshotError 명시. 상수hash/약한hash/온라인계산 fallback 금지|
+|M2-E06|길이1024인유효Q의 내부 연산 분모가 더 길어짐|정확한 내부 분수 운반·보존검사·JSON표시, 외부Number변환 금지. 출력사본 외부재입력은 기존길이제한대로 거부|
+|M2-E07|지원하지 않는schema/버전,C1snapshot을M2refresh로 또는그 반대|명시적인 버전/형식 오류, 자동해석/캐시승격/원본덮어쓰기 금지|
+
+UI의 ERROR 표시는 법률 정답 상태가 아니며 InputError 후 직전 성공 결과가 남아서는 안 된다. 유효 Q의 BLOCKED에는 미해결 Q가 있지만 무효 Q의 InputError에는 그런 원장을 만들지 않는다. 자원 한계의 정확한 byte/건수 값은 아직 미정이다. 한계값을 정한 뒤 경계±1 및 중단 시간/메모리 검사를 추가하며, 이번 문서에서 실측 수치를 만들지 않는다.
+
+## 6. STALE·hash·비동기 시험 계획
+
+|시험 ID|동작|필수 기대|
+|---|---|---|
+|M2-S01|revision을 그대로 두고 사건 추가/삭제·날짜·사람·관계·유입 요구 수정|실제 dependency hash 변화·STALE. revision 숫자만 검사하지 않음|
+|M2-S02|Q·asset·기준일·법령/rule/truth/승인 레코드·날짜 바인딩 변경|STALE. 별도 승인 컨텍스트 변경도 즉시 복사 차단|
+|M2-S03|객체 키 순서만 변경 / 배열 순서 변경|키 정렬은 동일 hash, 배열은 초기 계약상 hash 변화·STALE. 의미상 계산 결과는 독립 검증|
+|M2-S04|Async 호출 직후 입력·승인 객체 변이|첫 await 전 동일 사본을 해시/계산. 원본·전역 승인 변경이나 hash/결과 분리 없음|
+|M2-S05|refresh 호출 후 원본을 되돌리거나 한 번 STALE 뒤 원상 복원|캡처한 사본으로 판정, STALE 자동 부활 없음|
+|M2-S06|같은 M2 입력·승인 컨텍스트로 Node/브라우저 hash 비교|정확한 SHA-256 일치. 엔진/schema/contract 버전 변경 시 이전 snapshot을 그대로 사용하지 않음|
+|M2-S07|늦은 첫 계산·새 입력의 두 번째 계산·승인 철회 경합|requestId+inputRevision+approvalContextRevision이 맞는 최신 완료만 게시. 늦은 성공/오류 모두 무시|
+|M2-S08|계산·hash 검사·복사 도중 입력 수정/취소|기존 출력 즉시 제거, 복사 불가. 완료 후 권한/출력 부활 없음. 외부 clipboard 회수 약속 없음|
+|M2-S09|E2 불완전으로 BLOCKED일 때 E1 감사 기록 유지, 이후 E1 사실 변경|최종 합계에 감사 기록 미포함. 현재 hash/proof 없으면 STALE_HISTORY. 과거 성공을 현재 배분으로 게시하지 않음|
+
+비동기 순서는 향후 test harness에서 실제 digest 완료만 통제해 재현하고 법률 계산 결과를 정답표로 대체하지 않는다. 입력/승인 변경과 계산 완료를 같은 event loop 구간에서 확인해 해시가 빨리 끝났다는 우연에 의존하지 않게 한다. console/pageerror/unhandledrejection 관측과 별개로 결과·세션 상태도 검증한다.
+
+## 7. 기존 C1·브라우저·화면 회귀 보존
+
+기존 실제 시험은 test/truth.test.mjs,guards.test.mjs,defects.test.mjs,review-regressions.test.mjs,snapshot-browser.test.mjs와 test/browser/,수동 화면 test/browser.mjs에 존재한다. 법률 truth11개는 T01,T02-A/B,T03,T06-A/B,T07,T08~T11이다. 원 기대값·버전·이벤트/날짜·warnings/provenance를 변경하지 않는다.
+
+- Node 동기 snapshot과 브라우저 Async 반환형·엔트리 import를 유지한다. 기존 브라우저 엔트리에 Node 내장 모듈·DOM·OCR·네트워크 의존이 유입되면 실패다.
+- C1의 사람·분수·DIRECT path ID와 c1-result-v1 형식을 유지한다. 현재 R04/R05의 PENDING/allowlist 밖 요청은 계속 차단하며, M2 승인 후에도 C1 호출의 지원 범위를 조용히 바꾸지 않는다.
+- 불완전 집합 참조의 TypeError 방지, 1024자 Q 내부 성장/검산, 명시적 HASH 오류·동일 사본 hash·STALE, 배열/ID 변형 회귀를 보존한다.
+- 기존 수동 화면의 표본·입력 수정·BLOCKED/ERROR·최신 복사·선택 대안·경합·HTML 비실행·외부 요청 검사를 유지한다. 현재 화면의 M2 연결은 별도 승인이다.
+- 산술 부품을 재사용하더라도 개시일을01-10으로 고쳐 기존 public calculate로 E2를 계산해서는 안 된다. 사건별 승인·사실 게이트를 재사용 명분으로 우회하지 않는다.
+
+향후 실행 명령의 현재 기준은 아래와 같다. **이번 문서 작업에서는 실행하지 않았다.** 새 M2 시험 명령/파일은 별도 구현 승인 후 결정한다.
+
+```sh
+npm test --prefix packages/inheritance-engine
+npm run test:browser --prefix packages/inheritance-engine
+npm test --prefix experiments/inheritance-calculator
+```
+
+C1 보고서의 Node57·Chromium/Edge20 및 화면18은 과거 실제 기록이며 이번 시험 설계 통과 수로 재사용하지 않는다. 향후 Node·Chromium·실제 Mac Edge·Windows Edge·실제 오프라인 업무 PC 결과를 따로 보고한다. Mac 성공을 Windows 성공으로 세지 않으며 보안 옵션 완화·설치·배포를 시작하지 않는다.
+
+## 8. 실행 전 고정·승인 체크리스트
+
+|항목|현재 상태|
+|---|---|
+|8개 수치 후보와 기존16개 음성/경계 후보의 출처·전제·사람·경로 확인|문서상 대응 완료, 독립 법률/검산 승인 PENDING|
+|R04 한 단계 가지·B 매개·실제 취득 없음의 승인|PENDING|
+|R05 별도 사건·유입만 전달·E2 날짜 G00/R03·01-15/21 기준일 승인|PENDING|
+|전체 BLOCKED/Q 보존·미래 사건 closure·감사 원장 정책|기본 방향 유지, 세부 계약 확정 PENDING|
+|X10 BLOCKED안 대비 InputError 권고·code/field·schema/API·자원 한계|기술 설계 확정 PENDING|
+|승인 컨텍스트 불변성/변경 알림·hash/STALE·브라우저 최신성 계약|기술 설계 확정 PENDING|
+|검토된 양성 fixture와 오류 분류의 단일 기대 고정|미작성, 승인 후 별도 단계|
+|R04/R05 개발 착수의 명시적 사용자 지시|없음|
+
+이번에는 문서/JSON 정합성만 점검하고 로컬 문서 커밋한다. 산술·법률·소프트웨어 실행·브라우저·업무 환경 검증은 서로 다른 축이며, 이 문서로 어떤 PENDING도 해제하지 않는다. 다음 단계의 코드·자동시험·UI·OCR·Windows 작업을 자동 시작하지 않는다.
+
+## 9. 이번 문서 점검 기록
+
+Python 표준 json/re/fractions로 문서에서만 추출해 점검했다. JSON 예시6개 파싱·중복 키 부재·표시된 분수의 기약성, EventFacts 예시의20개 scope 키와 현 선언의 대응, BLOCKED 예시의 빈 최종 배분/미해결Q, 조건부 T04/T05-B 말단합1 및1/3과 B 취득 참조를 확인했다. 상대 문서 링크가 존재하고 계획 시험 ID51개가 중복되지 않으며 양성8개가 기존 후보 표에 대응함을 확인했다. 이 검사 명령은 종료0이었다.
+
+입력 골격은 eventFacts가 비어 있는 불완전 예시임을 확인했고, 이를 정상 schema/법률 fixture 통과로 세지 않았다. 독립법률승인·M2 계산/검증기 구현·자동시험·Node/브라우저 회귀 실행은 이번에 수행하지 않았다. 변경은 M2_ENGINE_CONTRACT.md와 이 문서뿐이며 기존 엔진·화면·OCR·truth·법률 승인·대기열은 보존한다.
