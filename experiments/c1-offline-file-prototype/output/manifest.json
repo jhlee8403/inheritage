@@ -1,0 +1,97 @@
+{
+  "format": "c1-file-prototype-v1",
+  "buildScript": "experiments/c1-offline-file-prototype/scripts/build.mjs",
+  "buildScriptSha256": "247c2077c092227775438dbbc6dc8b3a5a67639a5bd116838a8303b81dcd0b97",
+  "sourceBaseline": "3b94f4c52af7f98d4da38debbc9ef28edababb5a",
+  "sources": [
+    {
+      "path": "experiments/inheritance-calculator/app.mjs",
+      "sha256": "e03e5c4a309b53444216ba430ac800ef52644571c67506495c6a3d184abfa0f8"
+    },
+    {
+      "path": "experiments/inheritance-calculator/engine-adapter.mjs",
+      "sha256": "b6054a0e39ad32667ddfaf15058af63f6471d212b4ac49f20648f33d03a62ffc"
+    },
+    {
+      "path": "experiments/inheritance-calculator/fixtures.mjs",
+      "sha256": "5690fcc023b7e5012e8f4581a7449c2fed8c53007db0edb9710c4bacd49a87d7"
+    },
+    {
+      "path": "experiments/inheritance-calculator/index.html",
+      "sha256": "1e3e40463d47f07756176317a9a650158d414debebb8507c3f447b71d5d35d53"
+    },
+    {
+      "path": "experiments/inheritance-calculator/session.mjs",
+      "sha256": "b488e01c54a512ea1347a5b451c855a046f5f95486f5bd8c466abc9779c6cb5e"
+    },
+    {
+      "path": "experiments/inheritance-calculator/style.css",
+      "sha256": "1cde1a960cda88075790f2918239aabdf1683349a1c8f4ef516c8cc1b09ac330"
+    },
+    {
+      "path": "packages/inheritance-engine/src/approval.mjs",
+      "sha256": "d23f41c6f454af7e14702e77f200ef0cf4d71f684833635275ee707fe6410177"
+    },
+    {
+      "path": "packages/inheritance-engine/src/arithmetic.mjs",
+      "sha256": "d6783ae09968fba01c1e458f0cd3451a12460c5f383b1d4088c68d60b38cf921"
+    },
+    {
+      "path": "packages/inheritance-engine/src/browser.mjs",
+      "sha256": "d484a1f0597420944f1cb4bc70d308fea068c20e7bc53f7a843c77a48aaa4ab7"
+    },
+    {
+      "path": "packages/inheritance-engine/src/core.mjs",
+      "sha256": "450796ff1b4508081c201b11cbf8a59495e8746519739193fec26a58f705f724"
+    },
+    {
+      "path": "packages/inheritance-engine/src/engine.mjs",
+      "sha256": "511cc7b2b6f8e0498d458effbbe1e55c4d465b516c91109ac70ad28c7c7d427a"
+    },
+    {
+      "path": "packages/inheritance-engine/src/fraction.mjs",
+      "sha256": "fe7212b9d3d3b7bfc9c654a61622306a4ae7d087f6452e010e308bb378456d46"
+    },
+    {
+      "path": "packages/inheritance-engine/src/snapshot-browser.mjs",
+      "sha256": "a3d4c95100ad219b6d1ab59d924c6988242c1115762f340e5d79c7486151e29f"
+    },
+    {
+      "path": "packages/inheritance-engine/src/snapshot-common.mjs",
+      "sha256": "d488f6dace3f37fbbc51d7108bc6f9fb0edc3e8b83b247ee8b2946e4a724bfe3"
+    },
+    {
+      "path": "packages/inheritance-engine/src/validation.mjs",
+      "sha256": "3acf16914a471cb0b6d5c6d9d08cc1541cc69d4b6cb9d981460955b13117bf61"
+    },
+    {
+      "path": "packages/inheritance-engine/src/version.mjs",
+      "sha256": "acac4c83a6834e3c7b152963723eb61d1959e0e278ce95e9fa44b628190aa815"
+    }
+  ],
+  "adaptations": [
+    "C1 source linked as private classic-script modules; no calculation rewrite",
+    "inline CSS/JS with CSP hashes",
+    "prototype title/footer and portable copy instructions"
+  ],
+  "modules": [
+    "experiments/inheritance-calculator/app.mjs",
+    "experiments/inheritance-calculator/engine-adapter.mjs",
+    "experiments/inheritance-calculator/fixtures.mjs",
+    "experiments/inheritance-calculator/session.mjs",
+    "packages/inheritance-engine/src/approval.mjs",
+    "packages/inheritance-engine/src/arithmetic.mjs",
+    "packages/inheritance-engine/src/browser.mjs",
+    "packages/inheritance-engine/src/core.mjs",
+    "packages/inheritance-engine/src/engine.mjs",
+    "packages/inheritance-engine/src/fraction.mjs",
+    "packages/inheritance-engine/src/snapshot-browser.mjs",
+    "packages/inheritance-engine/src/snapshot-common.mjs",
+    "packages/inheritance-engine/src/validation.mjs",
+    "packages/inheritance-engine/src/version.mjs"
+  ],
+  "outputs": {
+    "c1-calculator.html": "5a1ed623e662b3a06313245c49632f3b2fe94ff8cf3e49b28b6b0b37a477ecf8",
+    "사용방법.txt": "d8268db664a9c601e08cd14d2b83bb1c71d2b353fddd04f4a36add4b7881cce9"
+  }
+}

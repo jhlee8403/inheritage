@@ -1,0 +1,783 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-ImhTIx485IsoZ17+jNB9cO6ZTEkTXZ92qvUmQ9mqkYA='; style-src 'sha256-HN4algzaiAdXkPKRgjmqvfFoM0mhyPTvUWyMwbCawzA='; img-src data:; connect-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'"><meta name="viewport" content="width=device-width, initial-scale=1"><title>가공 사례 계산 검증</title><link rel="icon" href="data:,"><style>:root{font-family:system-ui,-apple-system,sans-serif;color:#183532;background:#eef3f1;font-size:15px}*{box-sizing:border-box}body{margin:0}main{max-width:1140px;margin:36px auto;padding:0 24px}header{border-top:5px solid #207566;padding:22px 0}h1{font-size:30px;letter-spacing:-1px;margin:8px 0 20px}h2{font-size:20px;margin:0 0 15px}p{line-height:1.7}.eyebrow{font-size:12px;letter-spacing:2px;color:#43756b}.notice{font-weight:700;color:#8a3b1b;background:#fff1df;padding:12px 16px;border-radius:6px}section{background:white;border:1px solid #d4e0db;border-radius:10px;padding:24px;margin-bottom:20px}.toolbar{display:flex;gap:10px;flex-wrap:wrap}button{font:inherit;border:1px solid #78948a;background:#fff;color:#1c5147;border-radius:5px;padding:9px 13px;cursor:pointer}.primary{background:#155c4e;color:white}button:disabled{opacity:.4;cursor:default}input,select{font:inherit;max-width:100%;border:1px solid #a9bdb5;border-radius:4px;padding:7px;background:#fff;color:#183532}label{display:flex;flex-direction:column;gap:5px;font-size:13px;min-width:140px}fieldset{border:1px solid #d4e0db;border-radius:6px;margin:18px 0;padding:16px}legend{font-weight:650}.fields{display:flex;gap:12px;flex-wrap:wrap}.person{margin-top:12px;padding:12px;background:#f3f7f5;border-radius:5px}.person label{min-width:110px;flex:1}details{margin-top:16px}summary{cursor:pointer;font-weight:600}.muted,footer{font-size:13px;color:#61766e}#status{font-weight:700}#output{width:100%;height:430px;resize:vertical;font:14px/1.6 ui-monospace,monospace;padding:16px;border:1px solid #9ab5a8;background:#f4f8f6;color:#183532}#copy-note{color:#8a3b1b}footer{padding:10px 0 30px}@media(max-width:600px){main{padding:0 12px;margin-top:16px}section{padding:16px}label{width:100%}.person .fields{display:grid;grid-template-columns:1fr 1fr}}
+</style></head>
+<body><main>
+<header><p class="eyebrow">INHERITAGE · M0 + M1</p><h1>C1 오프라인 파일 시제품</h1><p class="notice">가공 사례 검증용 / 지원 범위 제한 / 실제 사건 사용 불가</p>
+<p>개시일 <strong>2017-01-10</strong> · 기준일 <strong>2017-01-11</strong> · <strong>BL1-LAW-2016-14409</strong> 고정</p>
+<p>생존 성년 친생자녀·친생부모와 법률혼 배우자의 단일 사건만 지원합니다. R04 대습·R05 연속상속 및 기타 미승인 범위는 차단됩니다.</p></header>
+<section aria-label="가공 표본"><h2>1. 입력 준비</h2><p>표본은 확인 상태까지 작성한 완전 가공 입력입니다. 새 수동 입력의 빈 사실은 확인된 것으로 채우지 않습니다.</p>
+<div class="toolbar"><button data-sample="spouse">배우자 + 자녀 표본</button><button data-sample="parents">배우자 + 부모 표본</button><button data-sample="children">자녀 균분 표본</button><button id="blank">새 수동 입력</button></div></section>
+<section><h2>2. 사실·가족·시작 지분</h2><p>인물 ID: 영문·숫자·밑줄·하이픈, 1~100자. UNKNOWN은 부존재 확인과 다릅니다. 인원 추가·삭제 후에는 해당 집합 완전성을 다시 확인하세요.</p><form id="facts" autocomplete="off"></form></section>
+<section><h2>3. 계산 결과</h2><div class="toolbar"><button id="calculate" class="primary">현재 입력 계산</button><button id="cancel">계산 취소</button><button id="copy" disabled>최신 결과 복사</button><button id="select" disabled>결과 텍스트 선택</button></div>
+<p id="status" role="status" aria-live="polite">EMPTY</p><p id="copy-note" role="status"></p>
+<textarea id="output" aria-label="현재 결과 텍스트" readonly hidden></textarea>
+<p class="muted">입력 변경 즉시 이전 결과를 제거합니다. 이미 외부에 복사한 클립보드 내용은 회수하지 않습니다. 자동 복사가 막히면 결과 텍스트를 선택해 Edge의 복사 메뉴 또는 Ctrl+C (Mac: Command+C)로 복사하세요.</p></section>
+<footer>C1 전용 file:// 시제품 · Windows Edge/업무 PC 미검증 · PDF/OCR 미포함</footer>
+</main><script>(()=>{'use strict';
+const __factories={
+"packages/inheritance-engine/src/fraction.mjs":(__exports,__load)=>{
+// source: packages/inheritance-engine/src/fraction.mjs
+// Decimal strings at the boundary, BigInt throughout; no Number conversion of shares.
+class InputError extends Error {
+  constructor(code, field) {
+    super(`${code}: ${field}`);
+    this.name = 'InputError';
+    this.code = code;
+    this.field = field;
+  }
+}
+
+const MAX_DIGITS = 1024;
+// Only this module can mint trusted internal values. Properties/prototypes/JSON cannot forge this brand.
+const internalValues = new WeakSet();
+const operand = value => internalValues.has(value) ? value : fraction(value);
+
+// Keep validated immutable fractions when copying engine results, without trusting fresh external objects.
+function cloneExactValue(value) {
+  if (internalValues.has(value)) return value;
+  if (Array.isArray(value)) return value.map(cloneExactValue);
+  if (value !== null && typeof value === 'object') {
+    return Object.fromEntries(Object.entries(value).map(([key,item]) => [key,cloneExactValue(item)]));
+  }
+  return value;
+}
+function integer(value, field) {
+  if (typeof value !== 'string' || !/^-?\d+$/.test(value) || value.length > MAX_DIGITS) {
+    throw new InputError('INVALID_INTEGER_STRING', field);
+  }
+  return BigInt(value);
+}
+function gcd(a, b) {
+  while (b !== 0n) [a, b] = [b, a % b];
+  return a;
+}
+function reduced(n, d) {
+  if (d <= 0n) throw new InputError('NONPOSITIVE_DENOMINATOR', 'fraction.denominator');
+  if (n < 0n) throw new InputError('NEGATIVE_SHARE', 'fraction.numerator');
+  const divisor = gcd(n, d);
+  const value = Object.freeze({ numerator: String(n / divisor), denominator: String(d / divisor) });
+  internalValues.add(value);
+  return value;
+}
+function fraction(value, field = 'fraction') {
+  if (!value || typeof value !== 'object') throw new InputError('INVALID_FRACTION', field);
+  const n = integer(value.numerator, `${field}.numerator`);
+  const d = integer(value.denominator, `${field}.denominator`);
+  return reduced(n, d);
+}
+const ZERO = reduced(0n, 1n);
+const ONE = reduced(1n, 1n);
+function ratio(n, d) { return reduced(n, d); }
+function add(a, b) {
+  a = operand(a); b = operand(b);
+  return reduced(BigInt(a.numerator) * BigInt(b.denominator) + BigInt(b.numerator) * BigInt(a.denominator),
+    BigInt(a.denominator) * BigInt(b.denominator));
+}
+function multiply(a, b) {
+  a = operand(a); b = operand(b);
+  return reduced(BigInt(a.numerator) * BigInt(b.numerator), BigInt(a.denominator) * BigInt(b.denominator));
+}
+function equal(a, b) {
+  a = operand(a); b = operand(b);
+  return a.numerator === b.numerator && a.denominator === b.denominator;
+}
+function sum(values) { return values.reduce(add, ZERO); }
+function initialShare(value) {
+  const q = fraction(value, 'asset.share');
+  if (BigInt(q.numerator) <= 0n || BigInt(q.numerator) > BigInt(q.denominator)) {
+    throw new InputError('INITIAL_SHARE_OUT_OF_RANGE', 'asset.share');
+  }
+  return q;
+}
+
+__exports.InputError=InputError;
+__exports.cloneExactValue=cloneExactValue;
+__exports.fraction=fraction;
+__exports.ZERO=ZERO;
+__exports.ONE=ONE;
+__exports.ratio=ratio;
+__exports.add=add;
+__exports.multiply=multiply;
+__exports.equal=equal;
+__exports.sum=sum;
+__exports.initialShare=initialShare;
+},
+"packages/inheritance-engine/src/approval.mjs":(__exports,__load)=>{
+// source: packages/inheritance-engine/src/approval.mjs
+function deepFreeze(value) {
+  if (value && typeof value === 'object' && !Object.isFrozen(value)) {
+    for (const item of Object.values(value)) deepFreeze(item);
+    Object.freeze(value);
+  }
+  return value;
+}
+const LAW_ID = 'BL1-LAW-2016-14409';
+const VERSION = 'v1';
+const RULE_IDS = Object.freeze(['BL1-G00', 'BL1-R01', 'BL1-R02', 'BL1-R03', 'BL1-R06', 'BL1-R07']);
+const TRUTH_IDS = Object.freeze(['BL1-T01', 'BL1-T02-A', 'BL1-T02-B', 'BL1-T03',
+  'BL1-T06-A', 'BL1-T06-B', 'BL1-T07', 'BL1-T08', 'BL1-T09', 'BL1-T10', 'BL1-T11']);
+const APPROVALS = deepFreeze({
+  recordVersion: 'C1-approval-v1',
+  approvedBy: '사용자',
+  approvedOn: '2026-10-18',
+  timezone: 'Asia/Seoul',
+  law: { id: LAW_ID, status: 'APPROVED_FOR_C1' },
+  rules: Object.fromEntries([...RULE_IDS.map(id => [id, { version: VERSION, status: 'APPROVED_FOR_C1' }]),
+    ['BL1-R04', { version: VERSION, status: 'PENDING' }],
+    ['BL1-R05', { version: VERSION, status: 'PENDING' }]]),
+  truths: Object.fromEntries(TRUTH_IDS.map(id => [id, { version: VERSION, status: 'APPROVED_FOR_C1' }])),
+});
+const ruleRef = id => ({ id, version: VERSION });
+
+// An injected context can revoke approval for tests/review; it cannot widen this allowlist.
+function approvalReasons(ids, input, approvals) {
+  const reasons = [];
+  if (approvals?.recordVersion !== APPROVALS.recordVersion) {
+    reasons.push({ code: 'APPROVAL_RECORD_MISMATCH', field: 'approvalRecordVersion' });
+  }
+  for (const id of ids) {
+    const entry = approvals?.rules?.[id];
+    if (!RULE_IDS.includes(id)) reasons.push({ code: 'UNSUPPORTED_RULE', field: 'rules', ruleId: id });
+    else if (entry?.status !== 'APPROVED_FOR_C1') reasons.push({ code: 'RULE_PENDING', field: 'rules', ruleId: id });
+    else if (entry.version !== VERSION) reasons.push({ code: 'RULE_VERSION_MISMATCH', field: 'rules', ruleId: id });
+  }
+  if (input.lawSnapshotId !== LAW_ID || approvals?.law?.id !== LAW_ID) {
+    reasons.push({ code: 'LAW_SNAPSHOT_UNSUPPORTED', field: 'lawSnapshotId' });
+  } else if (approvals.law.status !== 'APPROVED_FOR_C1') {
+    reasons.push({ code: 'LAW_PENDING', field: 'lawSnapshotId' });
+  }
+  if (input.truthReference != null) {
+    const { id, version } = input.truthReference;
+    if (!TRUTH_IDS.includes(id) || approvals?.truths?.[id]?.status !== 'APPROVED_FOR_C1') {
+      reasons.push({ code: 'TRUTH_PENDING', field: 'truthReference' });
+    } else if (version !== VERSION || approvals.truths[id].version !== VERSION) {
+      reasons.push({ code: 'TRUTH_VERSION_MISMATCH', field: 'truthReference' });
+    }
+  }
+  return reasons;
+}
+
+__exports.deepFreeze=deepFreeze;
+__exports.LAW_ID=LAW_ID;
+__exports.VERSION=VERSION;
+__exports.RULE_IDS=RULE_IDS;
+__exports.TRUTH_IDS=TRUTH_IDS;
+__exports.APPROVALS=APPROVALS;
+__exports.ruleRef=ruleRef;
+__exports.approvalReasons=approvalReasons;
+},
+"packages/inheritance-engine/src/validation.mjs":(__exports,__load)=>{
+// source: packages/inheritance-engine/src/validation.mjs
+const {InputError,ZERO,equal,sum}=__load("packages/inheritance-engine/src/fraction.mjs");
+
+function validateConservation(result) {
+  const allocated = sum(result.allocations.map(a => a.wholeShare));
+  const unresolved = sum(result.unresolved.map(a => a.wholeShare));
+  const total = sum([allocated, unresolved]);
+  return { ok: equal(total, result.initialShare), allocated, unresolved, total, expected: result.initialShare };
+}
+
+// Structural identity/path checks are independent of the total-share check.
+// Truth tests separately compare the expected people, routes and legal rule IDs.
+function validateIdentityPaths(result) {
+  const issues = [];
+  const seen = new Set();
+  const people = new Set();
+  for (const path of result.paths) {
+    if (seen.has(path.pathId)) issues.push('DUPLICATE_PATH');
+    seen.add(path.pathId);
+    if (path.eventId !== result.eventId) issues.push('PATH_EVENT_MISMATCH');
+  }
+  for (const a of result.allocations) {
+    if (people.has(a.personId)) issues.push('DUPLICATE_PERSON');
+    people.add(a.personId);
+    const paths = result.paths.filter(p => a.pathIds.includes(p.pathId));
+    if (new Set(a.pathIds).size !== a.pathIds.length || paths.length !== a.pathIds.length || !paths.length) {
+      issues.push('INVALID_PATH_REFERENCE');
+    }
+    if (paths.some(p => p.toId !== a.personId)) issues.push('PATH_PERSON_MISMATCH');
+    if (!equal(sum(paths.map(p => p.wholeShare)), a.wholeShare)) issues.push('PATH_WHOLE_SHARE_MISMATCH');
+    if (!equal(sum(paths.map(p => p.relativeShare)), a.relativeShare)) issues.push('PATH_RELATIVE_SHARE_MISMATCH');
+  }
+  for (const p of result.paths) {
+    if (result.allocations.filter(a => a.pathIds.includes(p.pathId)).length !== 1) issues.push('ORPHAN_OR_SHARED_PATH');
+  }
+  if (result.nonSelected.some(p => people.has(p.personId) || !equal(p.wholeShare, ZERO))) issues.push('NONSELECTED_CONFLICT');
+  return { ok: issues.length === 0, issues: [...new Set(issues)] };
+}
+function assertIntegrity(result) {
+  const checks = { conservation: validateConservation(result), identityPaths: validateIdentityPaths(result) };
+  if (!checks.conservation.ok || !checks.identityPaths.ok) throw new InputError('RESULT_INTEGRITY_ERROR', 'result');
+  return checks;
+}
+
+__exports.validateConservation=validateConservation;
+__exports.validateIdentityPaths=validateIdentityPaths;
+__exports.assertIntegrity=assertIntegrity;
+},
+"packages/inheritance-engine/src/version.mjs":(__exports,__load)=>{
+// source: packages/inheritance-engine/src/version.mjs
+const ENGINE_VERSION = '0.2.0';
+
+__exports.ENGINE_VERSION=ENGINE_VERSION;
+},
+"packages/inheritance-engine/src/engine.mjs":(__exports,__load)=>{
+// source: packages/inheritance-engine/src/engine.mjs
+const {InputError,ZERO,ONE,initialShare,ratio,multiply,cloneExactValue}=__load("packages/inheritance-engine/src/fraction.mjs");
+const {APPROVALS,VERSION,ruleRef,approvalReasons,deepFreeze}=__load("packages/inheritance-engine/src/approval.mjs");
+const {assertIntegrity}=__load("packages/inheritance-engine/src/validation.mjs");
+const {ENGINE_VERSION}=__load("packages/inheritance-engine/src/version.mjs");
+
+const SCOPE_FACTS = Object.freeze([
+  'predeceasedChildBranches', 'fetus', 'adoption', 'relationshipDispute', 'renunciation',
+  'disqualification', 'lossOfInheritance', 'limitedAcceptance', 'specialBenefit', 'contribution',
+  'bequest', 'partition', 'specialAsset', 'internationalLaw', 'simultaneousDeath', 'missingPerson',
+  'multipleCapacity', 'successiveSuccession', 'historicalLaw', 'specialKinship',
+]);
+const BASE_WARNINGS = Object.freeze(['SYNTHETIC_ONLY', 'STATUTORY_SHARE_ONLY', 'NOT_A_RIGHTS_DETERMINATION']);
+const BASE_RULES = ['BL1-G00', 'BL1-R06', 'BL1-R07'];
+const COLLECTIONS = ['spouse', 'children', 'parents', 'remoteRelatives'];
+const idPattern = /^[A-Za-z0-9_-]{1,100}$/;
+function requireId(value, field) {
+  if (typeof value !== 'string' || !idPattern.test(value)) throw new InputError('INVALID_ID', field);
+}
+function isExactDate(value) {
+  if (typeof value !== 'string' || !/^\d{4}-\d{2}-\d{2}$/.test(value)) return false;
+  const time = Date.parse(`${value}T00:00:00Z`);
+  return Number.isFinite(time) && new Date(time).toISOString().slice(0, 10) === value;
+}
+function checkShape(input) {
+  if (!input || typeof input !== 'object' || input.schemaVersion !== 'c1-v1') throw new InputError('INVALID_SCHEMA', 'schemaVersion');
+  requireId(input.caseId, 'caseId');
+  requireId(input.inputRevision, 'inputRevision');
+  requireId(input.asset?.id, 'asset.id');
+  requireId(input.event?.id, 'event.id');
+  requireId(input.event?.decedentId, 'event.decedentId');
+  if (input.truthReference != null && (typeof input.truthReference !== 'object' || !input.truthReference.id)) {
+    throw new InputError('INVALID_TRUTH_REFERENCE', 'truthReference');
+  }
+}
+function reasonsForFacts(input) {
+  const reasons = [];
+  const block = (code, field) => reasons.push({ code, field });
+  const allowedFields = [
+    [input, ['schemaVersion','material','caseId','inputRevision','truthReference','lawSnapshotId','asset','referenceDate','event','family','scopeFacts'], 'input'],
+    [input.event, ['id','decedentId','kind','deathOrder','openingDate'], 'event'],
+    [input.asset, ['id','share','review'], 'asset'],
+    [input.family, ['complete','review',...COLLECTIONS], 'family'],
+  ];
+  for (const [object, keys, field] of allowedFields) {
+    for (const key of Object.keys(object ?? {})) if (!keys.includes(key)) block('UNSUPPORTED_SCOPE', `${field}.${key}`);
+  }
+  if (input.material !== 'SYNTHETIC') block('SYNTHETIC_ONLY', 'material');
+  if (input.asset.review !== 'CONFIRMED') block('FACT_UNCONFIRMED', 'asset.review');
+  if (input.event.openingDate?.review !== 'CONFIRMED' || input.event.openingDate?.precision !== 'DAY') {
+    block('DEATH_DATE_UNCONFIRMED', 'event.openingDate');
+  } else if (input.event.openingDate.value !== '2017-01-10') block('DATE_OUT_OF_SCOPE', 'event.openingDate');
+  if (input.referenceDate?.review !== 'CONFIRMED') block('FACT_UNCONFIRMED', 'referenceDate');
+  else if (input.referenceDate.value !== '2017-01-11') block('DATE_OUT_OF_SCOPE', 'referenceDate');
+  if (input.event.deathOrder !== 'CONFIRMED') block('DEATH_ORDER_UNKNOWN', 'event.deathOrder');
+  if (input.event.kind !== 'SINGLE') block('UNSUPPORTED_SCOPE', 'event.kind');
+  if (input.family?.complete !== 'CONFIRMED') block('FAMILY_INCOMPLETE', 'family.complete');
+  if (input.family?.review !== 'CONFIRMED') block('FACT_UNCONFIRMED', 'family.review');
+  for (const key of SCOPE_FACTS) {
+    const state = input.scopeFacts?.[key];
+    if (state === 'PRESENT') block('UNSUPPORTED_SCOPE', `scopeFacts.${key}`);
+    else if (state !== 'ABSENT_CONFIRMED') block('SCOPE_UNCONFIRMED', `scopeFacts.${key}`);
+  }
+  for (const key of Object.keys(input.scopeFacts ?? {})) {
+    if (!SCOPE_FACTS.includes(key)) block('UNSUPPORTED_SCOPE', `scopeFacts.${key}`);
+  }
+  const seen = new Set([input.event.decedentId]);
+  const readyCollections = new Set();
+  for (const key of COLLECTIONS) {
+    const collection = input.family?.[key];
+    const field = `family.${key}`;
+    for (const extra of Object.keys(collection ?? {})) {
+      if (!['existence','review','complete','members'].includes(extra)) block('UNSUPPORTED_SCOPE', `${field}.${extra}`);
+    }
+    if (collection?.existence === 'UNKNOWN' || collection?.existence == null) {
+      block(key === 'spouse' ? 'SPOUSE_UNKNOWN' : 'FAMILY_UNKNOWN', `${field}.existence`);
+    } else if (!['PRESENT', 'ABSENT_CONFIRMED'].includes(collection.existence)) {
+      throw new InputError('INVALID_EXISTENCE_STATE', `${field}.existence`);
+    }
+    if (collection?.review !== 'CONFIRMED') block('FACT_UNCONFIRMED', `${field}.review`);
+    if (collection?.complete !== 'CONFIRMED') block('FAMILY_INCOMPLETE', `${field}.complete`);
+    if (!Array.isArray(collection?.members)) { block('FAMILY_INCOMPLETE', `${field}.members`); continue; }
+    if ((collection.existence === 'ABSENT_CONFIRMED' && collection.members.length !== 0) ||
+      (collection.existence === 'PRESENT' && collection.members.length === 0)) {
+      throw new InputError('CONTRADICTORY_COLLECTION', field);
+    }
+    if (collection.review === 'CONFIRMED' && collection.complete === 'CONFIRMED' &&
+      ['PRESENT','ABSENT_CONFIRMED'].includes(collection.existence)) readyCollections.add(key);
+    if (key === 'parents' && collection.members.length > 2) block('UNSUPPORTED_SCOPE', `${field}.members`);
+    for (const p of collection.members) {
+      for (const extra of Object.keys(p ?? {})) {
+        if (!['id','relation','kind','life','adult','review','relationshipReview','viaId','deathDate'].includes(extra)) {
+          block('UNSUPPORTED_SCOPE', `${field}.${p.id}.${extra}`);
+        }
+      }
+      requireId(p?.id, `${field}.personId`);
+      if (seen.has(p.id)) throw new InputError('DUPLICATE_PERSON', p.id);
+      seen.add(p.id);
+      if (p.review !== 'CONFIRMED' || p.relationshipReview !== 'CONFIRMED') block('FACT_UNCONFIRMED', `${field}.${p.id}`);
+      if (p.review !== 'CONFIRMED' || p.relationshipReview !== 'CONFIRMED' ||
+        !['ALIVE','PREDECEASED'].includes(p.life)) readyCollections.delete(key);
+      if (p.adult !== 'CONFIRMED') block('UNSUPPORTED_AGE_OR_UNKNOWN', `${field}.${p.id}.adult`);
+      if (!['ALIVE', 'PREDECEASED'].includes(p.life)) block('LIFE_STATUS_UNKNOWN', `${field}.${p.id}.life`);
+      const expected = { spouse: 'SPOUSE', children: 'CHILD', parents: 'PARENT' }[key];
+      if (expected && p.relation !== expected) block('UNSUPPORTED_RELATIONSHIP', `${field}.${p.id}.relation`);
+      if (p.kind !== (key === 'spouse' ? 'LEGAL_MARRIAGE' : 'BIOLOGICAL')) block('UNSUPPORTED_RELATIONSHIP', `${field}.${p.id}.kind`);
+      if (key === 'spouse' && p.life !== 'ALIVE') block('UNSUPPORTED_SCOPE', `${field}.${p.id}.life`);
+      if (key === 'children' && p.life === 'PREDECEASED') block('UNSUPPORTED_SCOPE', `${field}.${p.id}.life`);
+      if (p.deathDate != null) {
+        if (p.deathDate.review !== 'CONFIRMED' || p.deathDate.precision !== 'DAY') {
+          block('DEATH_DATE_UNCONFIRMED', `${field}.${p.id}.deathDate`);
+        } else if (p.life !== 'PREDECEASED' || !isExactDate(p.deathDate.value) ||
+          p.deathDate.value >= '2017-01-10') {
+          block('UNSUPPORTED_SCOPE', `${field}.${p.id}.deathDate`);
+        }
+      }
+    }
+  }
+  // Only resolve links after every depended-on collection has passed review/shape checks.
+  // Missing facts are retained as BLOCKED reasons, never repaired into absent collections.
+  if (readyCollections.has('remoteRelatives')) {
+    for (const p of input.family.remoteRelatives.members) {
+      if (!['GRANDCHILD','GRANDPARENT'].includes(p.relation)) {
+        block('UNSUPPORTED_RELATIONSHIP', `family.remoteRelatives.${p.id}.relation`);
+        continue;
+      }
+      const viaKey = p.relation === 'GRANDCHILD' ? 'children' : 'parents';
+      if (!readyCollections.has(viaKey)) continue;
+      const parent = input.family[viaKey].members.find(a => a.id === p.viaId);
+      if (!parent) throw new InputError('MISSING_RELATIONSHIP_REFERENCE', `family.remoteRelatives.${p.id}.viaId`);
+      if (p.relation === 'GRANDCHILD' && parent.life !== 'ALIVE') {
+        block('UNSUPPORTED_SCOPE', `family.remoteRelatives.${p.id}.viaId`);
+      }
+    }
+  }
+  return reasons;
+}
+function provenance(input, ids, attempted, approvals) {
+  return {
+    engineVersion: ENGINE_VERSION, approvalRecordVersion: approvals?.recordVersion ?? null,
+    appliedRules: ids.map(ruleRef), attemptedRules: attempted.map(ruleRef),
+    lawSnapshotId: input.lawSnapshotId ?? null,
+    truthReference: input.truthReference ?? null, truthVersion: input.truthReference?.version ?? null,
+    eventId: input.event.id, inputRevision: input.inputRevision,
+  };
+}
+function finish(input, q, allocations, paths, nonSelected, blockedReasons, applied, attempted, approvals) {
+  const result = {
+    schemaVersion: 'c1-result-v1', caseId: input.caseId, eventId: input.event.id,
+    status: blockedReasons.length ? 'BLOCKED' : 'REVIEW_READY', initialShare: q,
+    allocations, paths, nonSelected,
+    unresolved: blockedReasons.length ? [{ id: `${input.event.id}:unresolved`, eventId: input.event.id,
+      relativeShare: ONE, wholeShare: q, reasons: blockedReasons }] : [],
+    blockedReasons,
+    warnings: [...new Set([...BASE_WARNINGS, ...blockedReasons.map(r => r.code)])],
+    provenance: provenance(input, applied, attempted, approvals),
+  };
+  result.checks = assertIntegrity(result);
+  // Clone so caller-owned fact/provenance objects cannot mutate this result later.
+  return deepFreeze(cloneExactValue(result));
+}
+function calculate(input, approvals = APPROVALS) {
+  checkShape(input);
+  const q = initialShare(input.asset.share);
+  const baseReasons = approvalReasons(BASE_RULES, input, approvals);
+  const appliedBase = BASE_RULES.filter(id => approvals?.rules?.[id]?.status === 'APPROVED_FOR_C1' && approvals.rules[id].version === VERSION);
+  if (baseReasons.length) return finish(input, q, [], [], [], baseReasons, appliedBase, BASE_RULES, approvals);
+  const reasons = reasonsForFacts(input);
+  if (reasons.length) return finish(input, q, [], [], [], reasons, BASE_RULES, BASE_RULES, approvals);
+
+  const { spouse, children, parents, remoteRelatives } = input.family;
+  const w = spouse.members;
+  const c = children.members;
+  const p = parents.members.filter(p => p.life === 'ALIVE');
+  let ruleId;
+  let blood;
+  if (c.length > 0 && w.length === 1) { ruleId = 'BL1-R01'; blood = c; }
+  else if (c.length === 0 && children.existence === 'ABSENT_CONFIRMED' && w.length === 1 && p.length >= 1 && p.length <= 2) {
+    ruleId = 'BL1-R02'; blood = p;
+  } else if (c.length > 0 && spouse.existence === 'ABSENT_CONFIRMED') { ruleId = 'BL1-R03'; blood = c; }
+  else return finish(input, q, [], [], [], [{ code: 'UNSUPPORTED_SCOPE', field: 'family' }], BASE_RULES, BASE_RULES, approvals);
+
+  const attempted = ['BL1-G00', ruleId, 'BL1-R06', 'BL1-R07'];
+  const ruleReasons = approvalReasons([ruleId], input, approvals);
+  if (ruleReasons.length) return finish(input, q, [], [], [], ruleReasons, BASE_RULES, attempted, approvals);
+  const denominator = w.length ? 3n + 2n * BigInt(blood.length) : BigInt(blood.length);
+  const selected = [...w.map(person => [person, 3n]), ...blood.map(person => [person, w.length ? 2n : 1n])];
+  const paths = selected.map(([person, weight]) => {
+    const relativeShare = ratio(weight, denominator);
+    return {
+      pathId: `${input.event.id}:${input.event.decedentId}:${person.id}:DIRECT`,
+      eventId: input.event.id, fromId: input.event.decedentId, toId: person.id, kind: 'DIRECT',
+      relativeShare, wholeShare: multiply(q, relativeShare),
+      appliedRules: attempted.map(ruleRef), lawSnapshotId: input.lawSnapshotId,
+      truthReference: input.truthReference ?? null,
+    };
+  });
+  const allocations = paths.map(p => ({ personId: p.toId, relativeShare: p.relativeShare,
+    wholeShare: p.wholeShare, pathIds: [p.pathId] }));
+  const nonSelected = [];
+  if (c.length) {
+    for (const person of parents.members) nonSelected.push({ personId: person.id,
+      reason: person.life === 'PREDECEASED' ? 'PREDECEASED_ASCENDANT' : 'LOWER_RANK', relativeShare: ZERO, wholeShare: ZERO });
+  } else {
+    for (const person of parents.members.filter(p => p.life === 'PREDECEASED')) nonSelected.push({ personId: person.id,
+      reason: 'PREDECEASED_ASCENDANT', relativeShare: ZERO, wholeShare: ZERO });
+  }
+  for (const person of remoteRelatives.members) nonSelected.push({ personId: person.id,
+    reason: c.length && person.relation === 'GRANDPARENT' ? 'LOWER_RANK' : 'REMOTER_DEGREE', relativeShare: ZERO, wholeShare: ZERO });
+  return finish(input, q, allocations, paths, nonSelected, [], attempted, attempted, approvals);
+}
+
+__exports.SCOPE_FACTS=SCOPE_FACTS;
+__exports.BASE_WARNINGS=BASE_WARNINGS;
+__exports.calculate=calculate;
+},
+"packages/inheritance-engine/src/arithmetic.mjs":(__exports,__load)=>{
+// source: packages/inheritance-engine/src/arithmetic.mjs
+const {InputError,ONE,initialShare,fraction,multiply,sum,equal}=__load("packages/inheritance-engine/src/fraction.mjs");
+const {deepFreeze}=__load("packages/inheritance-engine/src/approval.mjs");
+
+// Pure arithmetic only. This API does not choose heirs, event order, or legal capacities.
+// It is not an input path into calculate(), and has no REVIEW_READY legal result.
+function evaluateArithmeticPaths({ initial, paths, truthReference = null }) {
+  if (truthReference !== null && (truthReference.id !== 'BL1-T07' || truthReference.version !== 'v1')) {
+    throw new InputError('ARITHMETIC_TRUTH_UNSUPPORTED', 'truthReference');
+  }
+  const q = initialShare(initial);
+  if (!Array.isArray(paths) || !paths.length) throw new InputError('MISSING_PATHS', 'paths');
+  const seen = new Set();
+  const normalized = paths.map(path => {
+    if (typeof path.pathId !== 'string' || !path.pathId || typeof path.personId !== 'string' || !path.personId) {
+      throw new InputError('INVALID_PATH_IDENTITY', 'paths');
+    }
+    if (seen.has(path.pathId)) throw new InputError('DUPLICATE_PATH', path.pathId);
+    seen.add(path.pathId);
+    if (!Array.isArray(path.factors) || !path.factors.length) throw new InputError('MISSING_FACTORS', path.pathId);
+    const factors = path.factors.map(f => {
+      const value = fraction(f);
+      if (BigInt(value.numerator) > BigInt(value.denominator)) throw new InputError('FACTOR_OUT_OF_RANGE', path.pathId);
+      return value;
+    });
+    const relativeShare = factors.reduce(multiply, ONE);
+    return { pathId: path.pathId, personId: path.personId, factors, relativeShare, wholeShare: multiply(q, relativeShare) };
+  });
+  const people = [...new Set(normalized.map(p => p.personId))];
+  const allocations = people.map(personId => {
+    const own = normalized.filter(p => p.personId === personId);
+    return { personId, pathIds: own.map(p => p.pathId),
+      relativeShare: sum(own.map(p => p.relativeShare)), wholeShare: sum(own.map(p => p.wholeShare)) };
+  });
+  if (!equal(sum(normalized.map(p => p.relativeShare)), ONE) || !equal(sum(allocations.map(p => p.wholeShare)), q)) {
+    throw new InputError('ARITHMETIC_CONSERVATION_ERROR', 'paths');
+  }
+  return deepFreeze({ status: 'ARITHMETIC_ONLY', warnings: ['NO_LEGAL_CAPACITY_DETERMINATION'],
+    initialShare: q, paths: normalized, allocations, unresolved: [], blockedReasons: [],
+    provenance: { appliedRules: [{ id: 'BL1-R06', version: 'v1' }, { id: 'BL1-R07', version: 'v1' }],
+      truthReference: structuredClone(truthReference), truthVersion: truthReference?.version ?? null,
+      eventId: null, lawSnapshotId: null, lawApplicability: 'NOT_APPLICABLE_ARITHMETIC_ONLY' } });
+}
+
+__exports.evaluateArithmeticPaths=evaluateArithmeticPaths;
+},
+"packages/inheritance-engine/src/snapshot-common.mjs":(__exports,__load)=>{
+// source: packages/inheritance-engine/src/snapshot-common.mjs
+const {deepFreeze}=__load("packages/inheritance-engine/src/approval.mjs");
+const {cloneExactValue}=__load("packages/inheritance-engine/src/fraction.mjs");
+const {ENGINE_VERSION}=__load("packages/inheritance-engine/src/version.mjs");
+
+class SnapshotError extends Error {
+  constructor(code, cause) {
+    super(code, { cause }); this.name = 'SnapshotError'; this.code = code;
+  }
+}
+function canonical(value) {
+  if (Array.isArray(value)) return `[${value.map(canonical).join(',')}]`;
+  if (value !== null && typeof value === 'object') {
+    const proto = Object.getPrototypeOf(value);
+    if (proto !== Object.prototype && proto !== null) throw new SnapshotError('NON_JSON_DEPENDENCY');
+    return `{${Object.keys(value).sort().map(k => `${JSON.stringify(k)}:${canonical(value[k])}`).join(',')}}`;
+  }
+  if (typeof value === 'number' && !Number.isFinite(value)) throw new SnapshotError('NON_JSON_DEPENDENCY');
+  const serialized = JSON.stringify(value);
+  if (serialized === undefined) throw new SnapshotError('NON_JSON_DEPENDENCY');
+  return serialized;
+}
+// Clone synchronously before any await. Hashing and calculation use these same private copies.
+function captureDependencies(input, approvals) {
+  const copies = structuredClone({ engineVersion: ENGINE_VERSION, input, approvals });
+  return { ...copies, serialized: canonical(copies) };
+}
+function staleSnapshot(snapshot) {
+  return deepFreeze({ ...cloneExactValue(snapshot), result: { ...cloneExactValue(snapshot.result), status: 'STALE',
+    staleReasons: ['DEPENDENCIES_CHANGED'], warnings: [...snapshot.result.warnings, 'STALE_RESULT_DO_NOT_USE'] } });
+}
+
+__exports.SnapshotError=SnapshotError;
+__exports.captureDependencies=captureDependencies;
+__exports.staleSnapshot=staleSnapshot;
+},
+"packages/inheritance-engine/src/core.mjs":(__exports,__load)=>{
+// source: packages/inheritance-engine/src/core.mjs
+__exports["calculate"]=__load("packages/inheritance-engine/src/engine.mjs")["calculate"];
+__exports["SCOPE_FACTS"]=__load("packages/inheritance-engine/src/engine.mjs")["SCOPE_FACTS"];
+__exports["BASE_WARNINGS"]=__load("packages/inheritance-engine/src/engine.mjs")["BASE_WARNINGS"];
+__exports["APPROVALS"]=__load("packages/inheritance-engine/src/approval.mjs")["APPROVALS"];
+__exports["LAW_ID"]=__load("packages/inheritance-engine/src/approval.mjs")["LAW_ID"];
+__exports["RULE_IDS"]=__load("packages/inheritance-engine/src/approval.mjs")["RULE_IDS"];
+__exports["TRUTH_IDS"]=__load("packages/inheritance-engine/src/approval.mjs")["TRUTH_IDS"];
+__exports["InputError"]=__load("packages/inheritance-engine/src/fraction.mjs")["InputError"];
+__exports["fraction"]=__load("packages/inheritance-engine/src/fraction.mjs")["fraction"];
+__exports["initialShare"]=__load("packages/inheritance-engine/src/fraction.mjs")["initialShare"];
+__exports["add"]=__load("packages/inheritance-engine/src/fraction.mjs")["add"];
+__exports["multiply"]=__load("packages/inheritance-engine/src/fraction.mjs")["multiply"];
+__exports["sum"]=__load("packages/inheritance-engine/src/fraction.mjs")["sum"];
+__exports["equal"]=__load("packages/inheritance-engine/src/fraction.mjs")["equal"];
+__exports["ZERO"]=__load("packages/inheritance-engine/src/fraction.mjs")["ZERO"];
+__exports["ONE"]=__load("packages/inheritance-engine/src/fraction.mjs")["ONE"];
+__exports["evaluateArithmeticPaths"]=__load("packages/inheritance-engine/src/arithmetic.mjs")["evaluateArithmeticPaths"];
+__exports["validateConservation"]=__load("packages/inheritance-engine/src/validation.mjs")["validateConservation"];
+__exports["validateIdentityPaths"]=__load("packages/inheritance-engine/src/validation.mjs")["validateIdentityPaths"];
+__exports["ENGINE_VERSION"]=__load("packages/inheritance-engine/src/version.mjs")["ENGINE_VERSION"];
+__exports["SnapshotError"]=__load("packages/inheritance-engine/src/snapshot-common.mjs")["SnapshotError"];
+
+
+},
+"packages/inheritance-engine/src/snapshot-browser.mjs":(__exports,__load)=>{
+// source: packages/inheritance-engine/src/snapshot-browser.mjs
+const {APPROVALS,deepFreeze}=__load("packages/inheritance-engine/src/approval.mjs");
+const {calculate}=__load("packages/inheritance-engine/src/engine.mjs");
+const {captureDependencies,staleSnapshot,SnapshotError}=__load("packages/inheritance-engine/src/snapshot-common.mjs");
+
+async function digest(serialized) {
+  const subtle = globalThis.crypto?.subtle;
+  if (typeof subtle?.digest !== 'function') throw new SnapshotError('HASH_UNAVAILABLE');
+  try {
+    const bytes = new TextEncoder().encode(serialized);
+    const hash = await subtle.digest('SHA-256', bytes);
+    return Array.from(new Uint8Array(hash), b => b.toString(16).padStart(2,'0')).join('');
+  } catch (cause) { throw new SnapshotError('HASH_FAILED', cause); }
+}
+async function createSnapshotAsync(input, approvals = APPROVALS) {
+  const captured = captureDependencies(input, approvals);
+  const dependencyHash = await digest(captured.serialized);
+  return deepFreeze({ dependencyHash, result: calculate(captured.input, captured.approvals) });
+}
+async function refreshSnapshotAsync(snapshot, currentInput, approvals = APPROVALS) {
+  if (snapshot.result.status === 'STALE') return snapshot;
+  const captured = captureDependencies(currentInput, approvals);
+  const currentHash = await digest(captured.serialized);
+  return snapshot.dependencyHash === currentHash ? snapshot : staleSnapshot(snapshot);
+}
+
+__exports.createSnapshotAsync=createSnapshotAsync;
+__exports.refreshSnapshotAsync=refreshSnapshotAsync;
+},
+"packages/inheritance-engine/src/browser.mjs":(__exports,__load)=>{
+// source: packages/inheritance-engine/src/browser.mjs
+// Public browser API: calculation is synchronous; Web Crypto snapshots are explicitly async.
+Object.assign(__exports,__load("packages/inheritance-engine/src/core.mjs"));
+__exports["createSnapshotAsync"]=__load("packages/inheritance-engine/src/snapshot-browser.mjs")["createSnapshotAsync"];
+__exports["refreshSnapshotAsync"]=__load("packages/inheritance-engine/src/snapshot-browser.mjs")["refreshSnapshotAsync"];
+
+
+},
+"experiments/inheritance-calculator/engine-adapter.mjs":(__exports,__load)=>{
+// source: experiments/inheritance-calculator/engine-adapter.mjs
+// The view uses the public browser entry only. No calculation formula lives here.
+__exports["createSnapshotAsync"]=__load("packages/inheritance-engine/src/browser.mjs")["createSnapshotAsync"];
+__exports["refreshSnapshotAsync"]=__load("packages/inheritance-engine/src/browser.mjs")["refreshSnapshotAsync"];
+__exports["SCOPE_FACTS"]=__load("packages/inheritance-engine/src/browser.mjs")["SCOPE_FACTS"];
+__exports["LAW_ID"]=__load("packages/inheritance-engine/src/browser.mjs")["LAW_ID"];
+
+
+},
+"experiments/inheritance-calculator/fixtures.mjs":(__exports,__load)=>{
+// source: experiments/inheritance-calculator/fixtures.mjs
+const {SCOPE_FACTS,LAW_ID}=__load("experiments/inheritance-calculator/engine-adapter.mjs");
+const collection = members => ({existence: members.length ? 'PRESENT' : 'ABSENT_CONFIRMED', review:'CONFIRMED', complete:'CONFIRMED', members});
+const person = (id, relation) => ({id, relation, kind:relation === 'SPOUSE' ? 'LEGAL_MARRIAGE' : 'BIOLOGICAL', life:'ALIVE', adult:'CONFIRMED', review:'CONFIRMED', relationshipReview:'CONFIRMED'});
+// Input-only, fully fabricated fixtures. No expected shares or result lookup table.
+function sample(type) {
+  return {
+    schemaVersion:'c1-v1', material:'SYNTHETIC', caseId:'SyntheticManual', inputRevision:'1', lawSnapshotId:LAW_ID,
+    asset:{id:'SyntheticAsset', share:{numerator:'1',denominator:'1'}, review:'CONFIRMED'},
+    referenceDate:{value:'2017-01-11', review:'CONFIRMED'},
+    event:{id:'E1', decedentId:'A', kind:'SINGLE', deathOrder:'CONFIRMED', openingDate:{value:'2017-01-10',precision:'DAY',review:'CONFIRMED'}},
+    family:{review:'CONFIRMED',complete:'CONFIRMED',
+      spouse:collection(type === 'children' ? [] : [person('W','SPOUSE')]),
+      children:collection(type === 'parents' ? [] : (type === 'children' ? ['C1','C2','C3'] : ['C1','C2']).map(id=>person(id,'CHILD'))),
+      parents:collection(type === 'parents' ? [person('F','PARENT'),person('M','PARENT')] : []), remoteRelatives:collection([])},
+    scopeFacts:Object.fromEntries(SCOPE_FACTS.map(key=>[key,'ABSENT_CONFIRMED']))
+  };
+}
+function blank() {
+  const input=sample('children');
+  input.asset.share={numerator:'',denominator:''};
+  input.asset.review=input.referenceDate.review=input.event.deathOrder=input.event.openingDate.review='UNKNOWN';
+  input.family.review=input.family.complete='UNKNOWN';
+  for(const key of ['spouse','children','parents','remoteRelatives']) input.family[key]={existence:'UNKNOWN',review:'UNKNOWN',complete:'UNKNOWN',members:[]};
+  for(const key of SCOPE_FACTS) input.scopeFacts[key]='UNKNOWN';
+  return input;
+}
+function blankPerson(relation) {
+  return {id:'',relation,kind:relation==='SPOUSE'?'LEGAL_MARRIAGE':'BIOLOGICAL',life:'UNKNOWN',adult:'UNKNOWN',review:'UNKNOWN',relationshipReview:'UNKNOWN'};
+}
+
+__exports.sample=sample;
+__exports.blank=blank;
+__exports.blankPerson=blankPerson;
+},
+"experiments/inheritance-calculator/session.mjs":(__exports,__load)=>{
+// source: experiments/inheritance-calculator/session.mjs
+// Revision/request identity is independent of asynchronous digest completion order.
+class CalculationSession {
+  constructor(api, publish) { this.api=api; this.publish=publish; this.revision=0; this.request=0; this.snapshot=null; this.state={status:'EMPTY'}; }
+  emit(state) { this.state=state; this.publish(state); }
+  invalidate(input) {
+    const previous=this.snapshot;
+    this.revision++; this.request++; this.snapshot=null;
+    this.emit({status:'STALE', message:'입력이 변경되었습니다. 재계산 전에는 복사할 수 없습니다.'});
+    // No old result remains visible/copyable while the dependency hash is checked.
+    if(previous) {
+      const revision=this.revision, request=this.request;
+      void this.api.refreshSnapshotAsync(previous, structuredClone(input)).catch(error=>{
+        if(this.revision===revision && this.request===request) this.emit({status:'ERROR',message:`${error.code ?? error.name}: ${error.message}`});
+      });
+    }
+  }
+  cancel() { this.request++; this.snapshot=null; this.emit({status:'CANCELLED',message:'계산이 취소되었습니다. 다시 계산하세요.'}); }
+  async calculate(input) {
+    const request=++this.request, revision=this.revision;
+    this.snapshot=null; this.emit({status:'CALCULATING',message:'현재 입력을 해시·계산 중입니다.'});
+    try {
+      const snapshot=await this.api.createSnapshotAsync(structuredClone(input));
+      if(request!==this.request || revision!==this.revision) return;
+      this.snapshot=snapshot;
+      this.emit({status:snapshot.result.status, result:snapshot.result, hash:snapshot.dependencyHash});
+    } catch(error) {
+      if(request!==this.request || revision!==this.revision) return;
+      this.emit({status:'ERROR',message:`${error.code ?? error.name} (${error.field ?? ''}): ${error.message}`});
+    }
+  }
+  canCopy() { return !!this.snapshot && ['REVIEW_READY','BLOCKED'].includes(this.state.status); }
+}
+
+__exports.CalculationSession=CalculationSession;
+},
+"experiments/inheritance-calculator/app.mjs":(__exports,__load)=>{
+// source: experiments/inheritance-calculator/app.mjs
+const api=__load("experiments/inheritance-calculator/engine-adapter.mjs");
+const {sample,blank,blankPerson}=__load("experiments/inheritance-calculator/fixtures.mjs");
+const {CalculationSession}=__load("experiments/inheritance-calculator/session.mjs");
+const $=id=>document.getElementById(id);
+const reviews=['UNKNOWN','CONFIRMED'];
+const existence=['UNKNOWN','PRESENT','ABSENT_CONFIRMED'];
+const groups={spouse:['배우자','SPOUSE'],children:['자녀','CHILD'],parents:['부모','PARENT'],remoteRelatives:['먼 혈족 (비선택 확인용)','GRANDCHILD']};
+let input=blank(), revision=0;
+const fraction=f=>`${f.numerator}/${f.denominator}`;
+function resultText(state) {
+  const r=state.result;
+  const lines=['가공 사례 검증용 / 지원 범위 제한 / 실제 사건 사용 불가',`상태: ${r.status}`,`사건: ${r.eventId} / 입력 revision: ${r.provenance.inputRevision}`,`시작 지분 Q: ${fraction(r.initialShare)}`];
+  if(r.status==='BLOCKED') lines.push('계산 차단 — 확정 배분 결과가 아닙니다. 각 사람의 법률상 지분 0을 의미하지 않습니다.',...r.blockedReasons.map(b=>`${b.code}: ${b.field}`));
+  else {
+    lines.push('가공 검토 결과 (실제 권리 확정 아님)', '인물 | 상대분 | 물건 전체분 | 취득 경로');
+    for(const a of r.allocations) lines.push(`${a.personId} | ${fraction(a.relativeShare)} | ${fraction(a.wholeShare)} | ${a.pathIds.join(', ')}`);
+  }
+  for(const u of r.unresolved) lines.push(`미해결 Q: ${fraction(u.wholeShare)} / ${u.id}`);
+  lines.push(`적용 규칙: ${r.provenance.appliedRules.map(rule=>`${rule.id}@${rule.version}`).join(', ')}`,`경고: ${r.warnings.join(', ')}`,`SHA-256: ${state.hash}`,'','전체 경로·미해결·provenance·검산 (JSON)',JSON.stringify(r,null,2));
+  return lines.join('\n');
+}
+function publish(state) {
+  $('status').textContent=`${state.status}${state.message ? ' · '+state.message : ''}`;
+  $('status').dataset.state=state.status;
+  const ready=!!state.result;
+  $('output').value=ready ? resultText(state) : '';
+  $('output').setSelectionRange(0,0);
+  $('output').scrollTop=0;
+  $('output').hidden=!ready;
+  $('copy').disabled=$('select').disabled=!ready;
+  $('copy-note').textContent='';
+}
+const session=new CalculationSession(api,publish);
+function changed() {
+  input.inputRevision=String(++revision);
+  // A manually edited fixture is no longer claimed to be its original truth input.
+  delete input.truthReference;
+  session.invalidate(input);
+}
+function at(path) { return path.split('.').reduce((value,key)=>value[key],input); }
+function set(path,value) {const parts=path.split('.'),key=parts.pop();parts.reduce((value,p)=>value[p],input)[key]=value;}
+function node(tag,text) {const element=document.createElement(tag);if(text!==undefined)element.textContent=text;return element;}
+function field(parent,title,path,options) {
+  const label=node('label',title),control=node(options?'select':'input');
+  control.dataset.field=path;control.setAttribute('aria-label',title);
+  if(options) for(const value of options){const option=node('option',value);option.value=value;control.append(option);}
+  else {control.type='text';control.spellcheck=false;control.maxLength=1100;}
+  control.value=at(path) ?? '';
+  control.addEventListener(options?'change':'input',()=>{set(path,control.value);changed();});
+  label.append(control);parent.append(label);
+}
+function fields(parent) {const row=node('div');row.className='fields';parent.append(row);return row;}
+function render() {
+  const form=$('facts');form.replaceChildren();
+  const general=fields(form);
+  field(general,'가공 사건 ID','caseId');field(general,'피상속인 ID','event.decedentId');
+  field(general,'Q 분자 (정수 문자열)','asset.share.numerator');field(general,'Q 분모 (양의 정수 문자열)','asset.share.denominator');
+  const confirmations=node('fieldset');confirmations.append(node('legend','공통 사실 확인'));form.append(confirmations);
+  const common=fields(confirmations);
+  for(const [title,path] of [['물건 지분 확인','asset.review'],['개시일 확인','event.openingDate.review'],['기준일 확인','referenceDate.review'],['사망 선후 확인','event.deathOrder'],['가족 사실 확인','family.review'],['가족 집합 완전성','family.complete']]) field(common,title,path,reviews);
+  for(const [key,[title,relation]] of Object.entries(groups)) {
+    const box=node('fieldset');box.append(node('legend',title));form.append(box);
+    const row=fields(box),base=`family.${key}`;
+    field(row,`${title} 존재 상태`,`${base}.existence`,existence);
+    field(row,`${title} 사실 확인`,`${base}.review`,reviews);field(row,`${title} 집합 완전성`,`${base}.complete`,reviews);
+    input.family[key].members.forEach((person,index)=>{
+      const card=node('div');card.className='person';box.append(card);const row=fields(card),path=`${base}.members.${index}`;
+      field(row,'가공 인물 ID',`${path}.id`);
+      if(key==='remoteRelatives') {field(row,'먼 혈족 관계',`${path}.relation`,['GRANDCHILD','GRANDPARENT']);field(row,'연결 인물 viaId',`${path}.viaId`);}
+      field(row,'생존 상태',`${path}.life`,['UNKNOWN','ALIVE','PREDECEASED']);
+      field(row,'성년 확인',`${path}.adult`,reviews);field(row,'인물 사실 확인',`${path}.review`,reviews);field(row,'관계 확인',`${path}.relationshipReview`,reviews);
+      const remove=node('button','인물 삭제');remove.type='button';remove.dataset.remove=`${key}:${index}`;
+      remove.addEventListener('click',()=>{input.family[key].members.splice(index,1);input.family[key].complete='UNKNOWN';changed();render();});card.append(remove);
+    });
+    const add=node('button',`${title} 인물 추가`);add.type='button';add.dataset.add=key;
+    add.addEventListener('click',()=>{const person=blankPerson(relation);if(key==='remoteRelatives')person.viaId='';input.family[key].members.push(person);input.family[key].complete='UNKNOWN';changed();render();});box.append(add);
+  }
+  const details=node('details');details.append(node('summary','미지원 쟁점 확인 (모두 부존재 확인이 필요)'));form.append(details);
+  const scope=fields(details);for(const key of api.SCOPE_FACTS) field(scope,key,`scopeFacts.${key}`,existence);
+}
+$('facts').addEventListener('submit',event=>event.preventDefault());
+for(const button of document.querySelectorAll('[data-sample]')) button.addEventListener('click',()=>{input=sample(button.dataset.sample);changed();render();});
+$('blank').addEventListener('click',()=>{input=blank();changed();render();});
+$('calculate').addEventListener('click',()=>void session.calculate(input));
+$('cancel').addEventListener('click',()=>session.cancel());
+$('select').addEventListener('click',()=>{if(session.canCopy()){$('output').focus();$('output').select();}});
+$('copy').addEventListener('click',async()=>{
+  if(!session.canCopy())return;
+  const request=session.request,rev=session.revision,text=$('output').value;
+  $('copy').disabled=true;
+  try {
+    await navigator.clipboard.writeText(text);
+    if(request===session.request && rev===session.revision && session.canCopy()) $('copy-note').textContent='현재 결과를 복사했습니다.';
+  } catch {
+    if(request===session.request && rev===session.revision && session.canCopy()) {
+      $('copy-note').textContent='자동 복사가 허용되지 않았습니다. 결과 텍스트 선택 후 Edge의 복사 메뉴 또는 Ctrl+C (Mac: Command+C)로 복사하세요.';
+      $('output').focus();$('output').select();
+    }
+  } finally {if(request===session.request && rev===session.revision && session.canCopy())$('copy').disabled=false;}
+});
+render();publish({status:'EMPTY',message:'가공 표본을 불러오거나 새 수동 입력을 작성하세요.'});
+
+
+}
+};
+const __cache=Object.create(null);
+function __load(id){if(__cache[id])return __cache[id];const value=Object.create(null);__cache[id]=value;__factories[id](value,__load);return Object.freeze(value);}
+__load("experiments/inheritance-calculator/app.mjs");
+})();</script></body></html>
