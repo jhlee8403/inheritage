@@ -8,13 +8,15 @@
       "browser": "./src/browser.mjs",
       "default": "./src/index.mjs"
     },
-    "./browser": "./src/browser.mjs"
+    "./browser": "./src/browser.mjs",
+    "./m2": "./src/m2.mjs"
   },
   "engines": {
     "node": ">=24"
   },
   "scripts": {
     "test": "node --test test/*.test.mjs",
-    "test:browser": "node test/browser/run.mjs"
+    "test:browser": "node test/browser/run.mjs",
+    "test:browser:m2": "node test/browser/run-m2.mjs"
   }
 }
