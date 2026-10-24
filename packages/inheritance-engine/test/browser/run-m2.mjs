@@ -37,10 +37,11 @@ try {
       await page.goto(origin);await page.evaluate(async()=>{
         globalThis.__m2Checks=(await import('/test/browser/m2-suite.mjs')).runM2Checks;
         globalThis.__m2SnapshotChecks=(await import('/test/browser/m2-snapshot-suite.mjs')).runM2SnapshotChecks;
+        globalThis.__m2HardeningChecks=(await import('/test/browser/m2-hardening-suite.mjs')).runM2HardeningChecks;
       });
       const boundary=requests.length;const result=await page.evaluate(async expected=>{
-        const s0=await globalThis.__m2Checks(),s1=await globalThis.__m2SnapshotChecks(expected);
-        return {results:[...s0.results,...s1.results],pass:s0.pass+s1.pass,fail:s0.fail+s1.fail,skipped:s0.skipped+s1.skipped,s0:{pass:s0.pass,fail:s0.fail},s1:{pass:s1.pass,fail:s1.fail}};
+        const s0=await globalThis.__m2Checks(),s1=await globalThis.__m2SnapshotChecks(expected),review=await globalThis.__m2HardeningChecks();
+        return {results:[...s0.results,...s1.results,...review.results],pass:s0.pass+s1.pass+review.pass,fail:s0.fail+s1.fail+review.fail,skipped:s0.skipped+s1.skipped+review.skipped,s0:{pass:s0.pass,fail:s0.fail},s1:{pass:s1.pass,fail:s1.fail},review:{pass:review.pass,fail:review.fail}};
       },expectedHash);
       diagnostics.unhandledRejections=await page.evaluate(()=>globalThis.__unhandled);diagnostics.calculationRequests=requests.slice(boundary);
       report.browsers.push({name:target.name,version:browser.version(),...result,diagnostics,diagnosticsPass:Object.values(diagnostics).every(a=>a.length===0)});

@@ -43,7 +43,7 @@ export const snapshotCases = [
     assert((await api.refreshM2SnapshotAsync(first, x)).validity === 'STALE');
   }],
   ['M2-S01/S02 facts, relations, events, deaths, date, Q, asset, law and truth invalidate without revision change', async () => {
-    const original = m2Input(), snapshot = await api.createM2SnapshotAsync(original);
+    const original = m2Input();
     for (const change of [
       x => x.eventFacts[0].complete = 'UNKNOWN', x => x.relations[0].review = 'UNKNOWN',
       x => x.events.reverse(), x => x.deathFacts[1].date.value = '2017-01-19',
@@ -53,6 +53,8 @@ export const snapshotCases = [
       x => x.persons.push({ personId: 'Extra' }),
       x => { x.events.pop(); x.eventFacts.pop(); },
     ]) {
+      // Each mutation must reach capture/hash, not a prior iteration's STALE shortcut.
+      const snapshot = await api.createM2SnapshotAsync(original);
       const x = structuredClone(original); change(x);
       const result = await api.refreshM2SnapshotAsync(snapshot, x);
       assert(result.validity === 'STALE' && result.result.status === 'STALE');

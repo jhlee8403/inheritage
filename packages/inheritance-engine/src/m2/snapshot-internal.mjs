@@ -31,7 +31,7 @@ export function buildM2SnapshotApi(readDependencies) {
   const context = () => deepFreeze(captureM2Object(readDependencies()));
   const register = value => { deepFreeze(value); owned.add(value); return value; };
   function check(snapshot) {
-    if (!snapshot || snapshot.schemaVersion !== 'm2-snapshot-draft-v1' || !owned.has(snapshot)) {
+    if (!snapshot || !owned.has(snapshot) || snapshot.schemaVersion !== 'm2-snapshot-draft-v1') {
       throw new SnapshotError('M2_SNAPSHOT_REQUIRED');
     }
   }
@@ -67,10 +67,17 @@ export function buildM2SnapshotApi(readDependencies) {
     check(snapshot);
     if (snapshot.validity === 'STALE') return snapshot;
     if (staleCopies.has(snapshot)) return staleCopies.get(snapshot);
-    const captured = capture(input);
-    const hash = await digest(captured.serialized);
-    if (staleCopies.has(snapshot)) return staleCopies.get(snapshot);
-    return hash === snapshot.dependencyHash && captured.contextKey === canonicalM2(context()) ? snapshot : stale(snapshot);
+    try {
+      const captured = capture(input);
+      const hash = await digest(captured.serialized);
+      if (staleCopies.has(snapshot)) return staleCopies.get(snapshot);
+      return hash === snapshot.dependencyHash && captured.contextKey === canonicalM2(context()) ? snapshot : stale(snapshot);
+    } catch (error) {
+      // A failed revalidation is not evidence that the old result is current.
+      // Preserve the precise InputError/SnapshotError while retiring the old token.
+      stale(snapshot);
+      throw error;
+    }
   }
   function createM2Session() {
     if (arguments.length) throw new SnapshotError('APPROVAL_OVERRIDE_FORBIDDEN');

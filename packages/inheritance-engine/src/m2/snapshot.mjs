@@ -5,7 +5,7 @@ import { buildM2SnapshotApi } from './snapshot-internal.mjs';
 
 // Fixed engine-owned dependencies. No caller-supplied approval parameter.
 const api = buildM2SnapshotApi(() => ({
-  snapshotVersion: 'm2-snapshot-safety-v1', schemaVersion: 'm2-input-draft-v1',
+  snapshotVersion: 'm2-snapshot-safety-v1.0.1', schemaVersion: 'm2-input-draft-v1',
   resultSchemaVersion: 'm2-result-draft-v1', contractVersion: 'M2-contract-draft-v1',
   engineVersion: M2_VERSION, c1EngineVersion: ENGINE_VERSION,
   m2Policy: M2_POLICY, c1ApprovalRecord: APPROVALS,

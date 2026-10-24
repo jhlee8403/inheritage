@@ -3,7 +3,7 @@ import { deepFreeze, APPROVALS } from '../approval.mjs';
 import { captureM2Object, parseM2InputJson } from './boundary.mjs';
 import { inspectStructure, object, fail, SCOPE_FACTS } from './structure.mjs';
 
-export const M2_VERSION='m2-validation-0.1.0';
+export const M2_VERSION='m2-validation-0.1.1';
 export const M2_POLICY=deepFreeze({version:'M2-safety-policy-v1',rules:{'BL1-R04':'PENDING','BL1-R05':'PENDING'},bindings:[]});
 function diagnostics(input,graph) {
   const reasons=[];

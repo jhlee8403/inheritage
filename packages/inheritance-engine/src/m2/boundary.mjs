@@ -22,7 +22,7 @@ export function captureM2Object(input) {
     if(typeof value!=='object') fail('NON_JSON_INPUT',field);
     if(ancestors.has(value)) fail('CYCLIC_JSON_OBJECT',field);
     const proto=Object.getPrototypeOf(value);
-    if(!Array.isArray(value) && proto!==Object.prototype && proto!==null) fail('NON_JSON_INPUT',field);
+    if(Array.isArray(value) ? proto!==Array.prototype : proto!==Object.prototype && proto!==null) fail('NON_JSON_INPUT',field);
     ancestors.add(value);
     const descriptors=Object.getOwnPropertyDescriptors(value);
     for(const key of Reflect.ownKeys(descriptors)) {
