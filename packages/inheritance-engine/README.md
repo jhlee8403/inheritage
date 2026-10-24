@@ -120,3 +120,33 @@ npm run test:browser
 127.0.0.1의 임시 포트로만 서버를 열고 공개 브라우저 모듈·필수 truth 11개·회귀 사례·비동기 변경·STALE·Node/브라우저 해시를 시험한다. 콘솔 오류·미처리 Promise 거절·외부 요청·계산 중 요청이 있으면 실패한다. Chromium sandbox를 활성화하며 보안 옵션을 완화하지 않는다. 서버와 브라우저는 종료 시 닫는다.
 
 표준 `/Applications` 또는 사용자 `Applications` 경로의 기존 Edge가 있으면 같은 검사를 실제 Edge에서도 실행하고 버전을 출력한다. 다른 위치는 `INHERITAGE_EDGE_EXECUTABLE`로 지정할 수 있다. Edge가 없으면 설치하지 않고 미실시로 표시한다. Chromium 결과는 Edge 또는 실제 오프라인 업무 PC의 통과를 뜻하지 않는다. file://·제품 실행기·업무 UI는 이번 범위가 아니다.
+
+## M2 S1 기술 스냅샷과 세션
+
+M2는 별도 `@inheritage/inheritance-engine/m2` 또는 `src/m2.mjs`로 사용한다. R04/R05는 계속 PENDING이다. 정상 지분 계산 없이 S0의 BLOCKED 결과와 전체 미해결 Q를 스냅샷으로 보관한다.
+
+```js
+import { createM2SnapshotAsync, refreshM2SnapshotAsync, createM2Session } from './src/m2.mjs';
+const snapshot = await createM2SnapshotAsync(m2Facts);
+const checked = await refreshM2SnapshotAsync(snapshot, changedM2Facts);
+const session = createM2Session();
+session.setInput(m2Facts); // 복제·검증, 이전 게시 결과 즉시 제거
+await session.run();
+const state = session.getState(); // 현재 결과는 state.snapshot, 과거 것은 previousSnapshot
+session.cancel();
+```
+
+두 비동기 함수는 Node와 브라우저 모두 Web Crypto SHA-256을 사용한다. secure context가 필요하며 `SnapshotError`의 `HASH_UNAVAILABLE`/`HASH_FAILED`로 명시 중단한다. 약한 해시나 네트워크 대체는 없다. 입력과 엔진 소유 의존성을 첫 await 전에 캡처해 같은 사본으로 계산·해시한다. 일반 사건 JSON이나 추가 인자로 승인 레지스트리를 선택할 수 없다.
+
+스냅샷은 `m2-snapshot-draft-v1`이며 불변 객체다. `validity`는 CURRENT/STALE, 결과 상태는 현재 BLOCKED 또는 STALE이다. 전체 입력·배열 순서·법령 참조와 엔진/스키마/계약/승인 의존성을 해시한다. 객체 키 순서는 정규화한다. STALE 이후 원본 입력이나 원래 스냅샷 참조를 다시 넘겨도 부활하지 않는다. 새로운 계산은 새 스냅샷을 생성해야 한다.
+
+S1 스냅샷은 생성한 모듈 인스턴스 안에서만 refresh할 수 있다. C1 객체·위조 객체·JSON/structuredClone 사본·다른 인스턴스의 객체는 `M2_SNAPSHOT_REQUIRED`로 거부한다. 직렬화해 저장하는 것은 가능하지만 복원/마이그레이션 API는 없다. Node/브라우저의 동일 해시는 검증하며 인스턴스 간 객체 복원 지원을 뜻하지 않는다. 기존 C1 refresh의 계약을 변경하지 않았으며 M2 객체는 M2 API에만 전달해야 한다.
+
+세션은 입력을 불변 사본으로 소유한다. 외부 원본의 변경은 자동 편집으로 취급하지 않으므로 편집마다 `setInput`을 호출한다. 이 호출은 동기적으로 기존 결과를 제거한다. run 중에도 게시 스냅샷은 null이며 요청 epoch가 맞는 최신 완료만 게시한다. 실패/취소/의존성 무효화도 이전 결과를 되살리지 않는다. `invalidateDependencies()`는 컨텍스트 변경 알림용이며 승인 객체를 받지 않는다. `getState()`도 게시 결과의 현재 의존성을 재확인한다. 일반 코드에서 보관한 과거 state 객체가 자동 변형되는 것은 아니므로 소비자는 현재 getState를 확인해야 한다.
+
+`previousSnapshot`은 STALE 과거 자료이고 최신 출력으로 사용하지 않는다. 이번에는 UI·클립보드·역사 취득 원장을 연결하지 않았다. 내부 시험용 의존성 공급자는 해시/무효화만 검증하며 실제 calculateM2 승인 정책을 바꾸지 않는다. 자세한 범위와 미실시는 `docs/inheritance/M2_S1_REPORT.md`에 기록했다.
+
+```sh
+npm test --prefix packages/inheritance-engine
+npm run test:browser:m2 --prefix packages/inheritance-engine
+```
