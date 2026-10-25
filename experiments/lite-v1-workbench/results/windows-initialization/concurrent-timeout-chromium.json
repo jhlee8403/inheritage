@@ -1,0 +1,120 @@
+{
+  "target": "chromium",
+  "started": "2026-10-25T11:14:02.410Z",
+  "windows": "NOT_RUN",
+  "offline": "fresh context, empty cache, browser offline emulation; physical disconnection NOT_RUN",
+  "checks": [
+    {
+      "name": "selected text PDF, render and direct NEEDS_REVIEW",
+      "state": "FAIL",
+      "error": "Error: TIMEOUT: selected text PDF, render and direct NEEDS_REVIEW 15000ms"
+    }
+  ],
+  "stages": [
+    {
+      "time": "2026-10-25T11:14:02.410Z",
+      "stage": "browser launch",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-25T11:14:02.921Z",
+      "stage": "browser launch",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-25T11:14:02.922Z",
+      "stage": "browser connect",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-25T11:14:02.996Z",
+      "stage": "browser connect",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-25T11:14:02.996Z",
+      "stage": "fresh offline context",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-25T11:14:03.001Z",
+      "stage": "fresh offline context",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-25T11:14:03.002Z",
+      "stage": "request guard",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-25T11:14:03.003Z",
+      "stage": "request guard",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-25T11:14:03.003Z",
+      "stage": "page creation",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-25T11:14:03.164Z",
+      "stage": "page creation",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-25T11:14:03.165Z",
+      "stage": "diagnostic hooks",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-25T11:14:03.171Z",
+      "stage": "diagnostic hooks",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-25T11:14:03.171Z",
+      "stage": "file HTML load",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-25T11:14:03.445Z",
+      "stage": "file HTML load",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-25T11:14:03.446Z",
+      "stage": "selected text PDF, render and direct NEEDS_REVIEW",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-25T11:19:05.013Z",
+      "stage": "selected text PDF, render and direct NEEDS_REVIEW",
+      "state": "TIMEOUT",
+      "error": "Error: TIMEOUT: selected text PDF, render and direct NEEDS_REVIEW 15000ms"
+    },
+    {
+      "time": "2026-10-25T11:19:05.188Z",
+      "stage": "browser disconnect/close",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-25T11:19:05.190Z",
+      "stage": "absolute deadline",
+      "state": "TIMEOUT"
+    }
+  ],
+  "diagnostics": {
+    "consoleErrors": [],
+    "pageErrors": [],
+    "externalRequests": [],
+    "unhandledRejections": [],
+    "cspViolations": []
+  },
+  "browserPid": 2614,
+  "version": "156.0.8078.4",
+  "requests": [
+    "<repo>/experiments/lite-v1-workbench/generated/lite-v1.html"
+  ],
+  "fatal": "TIMEOUT: absolute test deadline 180000ms",
+  "killedOwnBrowserPid": 2614
+}

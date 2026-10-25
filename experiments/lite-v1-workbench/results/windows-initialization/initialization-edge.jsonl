@@ -1,0 +1,28 @@
+{"time":"2026-10-25T11:13:59.128Z","stage":"browser launch","state":"START"}
+{"time":"2026-10-25T11:14:00.757Z","stage":"browser launch","state":"PASS"}
+{"time":"2026-10-25T11:14:00.757Z","stage":"browser connect","state":"START"}
+{"time":"2026-10-25T11:14:00.778Z","stage":"browser connect","state":"PASS"}
+{"time":"2026-10-25T11:14:00.778Z","stage":"fresh offline context","state":"START"}
+{"time":"2026-10-25T11:14:00.783Z","stage":"fresh offline context","state":"PASS"}
+{"time":"2026-10-25T11:14:00.783Z","stage":"request guard","state":"START"}
+{"time":"2026-10-25T11:14:00.784Z","stage":"request guard","state":"PASS"}
+{"time":"2026-10-25T11:14:00.784Z","stage":"page creation","state":"START"}
+{"time":"2026-10-25T11:14:01.273Z","stage":"page creation","state":"PASS"}
+{"time":"2026-10-25T11:14:01.274Z","stage":"diagnostic hooks","state":"START"}
+{"time":"2026-10-25T11:14:01.277Z","stage":"diagnostic hooks","state":"PASS"}
+{"time":"2026-10-25T11:14:01.277Z","stage":"file HTML load","state":"START"}
+{"time":"2026-10-25T11:14:01.622Z","stage":"file HTML load","state":"PASS"}
+{"time":"2026-10-25T11:14:01.622Z","stage":"normal PDF/C1 READY before file choice and diagnostics nonempty","state":"START"}
+{"time":"2026-10-25T11:14:01.640Z","stage":"normal PDF/C1 READY before file choice and diagnostics nonempty","state":"PASS"}
+{"time":"2026-10-25T11:14:01.641Z","stage":"missing TextDecoder reproduces pre-app failure and preserves C1","state":"START"}
+{"time":"2026-10-25T11:14:02.204Z","stage":"missing TextDecoder reproduces pre-app failure and preserves C1","state":"PASS"}
+{"time":"2026-10-25T11:14:02.204Z","stage":"Tesseract initialization exception shows exact stage, C1 unaffected","state":"START"}
+{"time":"2026-10-25T11:14:02.770Z","stage":"Tesseract initialization exception shows exact stage, C1 unaffected","state":"PASS"}
+{"time":"2026-10-25T11:14:02.771Z","stage":"PDF-only parse error visible from independent bootstrap, C1 unaffected","state":"START"}
+{"time":"2026-10-25T11:14:03.077Z","stage":"PDF-only parse error visible from independent bootstrap, C1 unaffected","state":"PASS"}
+{"time":"2026-10-25T11:14:03.078Z","stage":"PDF-only CSP hash mismatch fails visibly, no security relaxation","state":"START"}
+{"time":"2026-10-25T11:19:05.216Z","stage":"PDF-only CSP hash mismatch fails visibly, no security relaxation","state":"TIMEOUT","error":"Error: TIMEOUT: PDF-only CSP hash mismatch fails visibly, no security relaxation 15000ms"}
+{"time":"2026-10-25T11:19:05.219Z","stage":"browser disconnect/close","state":"START"}
+{"time":"2026-10-25T11:19:05.221Z","stage":"absolute deadline","state":"TIMEOUT"}
+{"time":"2026-10-25T11:31:04.038Z","stage":"browser launch","state":"START"}
+{"time":"2026-10-25T11:34:16.094Z","stage":"browser launch","state":"TIMEOUT","error":"Error: TIMEOUT: browser launch 25000ms"}

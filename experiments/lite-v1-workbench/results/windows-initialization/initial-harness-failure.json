@@ -1,0 +1,175 @@
+{
+  "target": "chromium",
+  "started": "2026-10-25T11:11:45.769Z",
+  "windows": "NOT_RUN",
+  "offline": "fresh context, empty cache, browser offline emulation; physical disconnection NOT_RUN",
+  "checks": [
+    {
+      "name": "normal PDF/C1 READY before file choice and diagnostics nonempty",
+      "state": "PASS"
+    },
+    {
+      "name": "missing TextDecoder reproduces pre-app failure and preserves C1",
+      "state": "PASS"
+    },
+    {
+      "name": "Tesseract initialization exception shows exact stage, C1 unaffected",
+      "state": "FAIL",
+      "error": "Error: locator.textContent: Error: strict mode violation: locator('#pdf-init-status') resolved to 7 elements:\n    1) <p role=\"status\" id=\"pdf-init-status\">PDF 초기화: RUNNING · PDF_PAYLOAD</p> aka getByText('PDF 초기화: RUNNING · PDF_PAYLOAD')\n    2) <p role=\"status\" id=\"pdf-init-status\">PDF 초기화: NOT_STARTED · 이 문구가 바뀌지 않으면 스크립트 실행 또는 정…</p> aka getByText('PDF 초기화: NOT_STARTED').first()\n    3) <p role=\"status\" id=\"pdf-init-status\">PDF 초기화: NOT_STARTED · 이 문구가 바뀌지 않으면 스크립트 실행 또는 정…</p> aka getByText('PDF 초기화: NOT_STARTED').nth(1)\n    4) <p role=\"status\" id=\"pdf-init-status\">PDF 초기화: NOT_STARTED · 이 문구가 바뀌지 않으면 스크립트 실행 또는 정…</p> aka getByText('PDF 초기화: NOT_STARTED').nth(2)\n    5) <p role=\"status\" id=\"pdf-init-status\">PDF 초기화: NOT_STARTED · 이 문구가 바뀌지 않으면 스크립트 실행 또는 정…</p> aka getByText('PDF 초기화: NOT_STARTED').nth(3)\n    6) <p role=\"status\" id=\"pdf-init-status\">PDF 초기화: NOT_STARTED · 이 문구가 바뀌지 않으면 스크립트 실행 또는 정…</p> aka getByText('PDF 초기화: NOT_STARTED').nth(4)\n    7) <p role=\"status\" id=\"pdf-init-status\">PDF 초기화: NOT_STARTED · 이 문구가 바뀌지 않으면 스크립트 실행 또는 정…</p> aka locator('uniform').getByText('PDF 초기화: NOT_STARTED')\n\nCall log:\n\u001b[2m  - waiting for locator('#pdf-init-status')\u001b[22m\n"
+    }
+  ],
+  "stages": [
+    {
+      "time": "2026-10-25T11:11:45.772Z",
+      "stage": "browser launch",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-25T11:11:46.235Z",
+      "stage": "browser launch",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-25T11:11:46.236Z",
+      "stage": "browser connect",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-25T11:11:46.272Z",
+      "stage": "browser connect",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-25T11:11:46.272Z",
+      "stage": "fresh offline context",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-25T11:11:46.277Z",
+      "stage": "fresh offline context",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-25T11:11:46.277Z",
+      "stage": "request guard",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-25T11:11:46.278Z",
+      "stage": "request guard",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-25T11:11:46.278Z",
+      "stage": "page creation",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-25T11:11:46.497Z",
+      "stage": "page creation",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-25T11:11:46.497Z",
+      "stage": "diagnostic hooks",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-25T11:11:46.499Z",
+      "stage": "diagnostic hooks",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-25T11:11:46.499Z",
+      "stage": "file HTML load",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-25T11:11:46.809Z",
+      "stage": "file HTML load",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-25T11:11:46.809Z",
+      "stage": "normal PDF/C1 READY before file choice and diagnostics nonempty",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-25T11:11:46.829Z",
+      "stage": "normal PDF/C1 READY before file choice and diagnostics nonempty",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-25T11:11:46.829Z",
+      "stage": "missing TextDecoder reproduces pre-app failure and preserves C1",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-25T11:11:47.160Z",
+      "stage": "missing TextDecoder reproduces pre-app failure and preserves C1",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-25T11:11:47.161Z",
+      "stage": "Tesseract initialization exception shows exact stage, C1 unaffected",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-25T11:11:51.489Z",
+      "stage": "Tesseract initialization exception shows exact stage, C1 unaffected",
+      "state": "FAIL",
+      "error": "Error: locator.textContent: Error: strict mode violation: locator('#pdf-init-status') resolved to 7 elements:\n    1) <p role=\"status\" id=\"pdf-init-status\">PDF 초기화: RUNNING · PDF_PAYLOAD</p> aka getByText('PDF 초기화: RUNNING · PDF_PAYLOAD')\n    2) <p role=\"status\" id=\"pdf-init-status\">PDF 초기화: NOT_STARTED · 이 문구가 바뀌지 않으면 스크립트 실행 또는 정…</p> aka getByText('PDF 초기화: NOT_STARTED').first()\n    3) <p role=\"status\" id=\"pdf-init-status\">PDF 초기화: NOT_STARTED · 이 문구가 바뀌지 않으면 스크립트 실행 또는 정…</p> aka getByText('PDF 초기화: NOT_STARTED').nth(1)\n    4) <p role=\"status\" id=\"pdf-init-status\">PDF 초기화: NOT_STARTED · 이 문구가 바뀌지 않으면 스크립트 실행 또는 정…</p> aka getByText('PDF 초기화: NOT_STARTED').nth(2)\n    5) <p role=\"status\" id=\"pdf-init-status\">PDF 초기화: NOT_STARTED · 이 문구가 바뀌지 않으면 스크립트 실행 또는 정…</p> aka getByText('PDF 초기화: NOT_STARTED').nth(3)\n    6) <p role=\"status\" id=\"pdf-init-status\">PDF 초기화: NOT_STARTED · 이 문구가 바뀌지 않으면 스크립트 실행 또는 정…</p> aka getByText('PDF 초기화: NOT_STARTED').nth(4)\n    7) <p role=\"status\" id=\"pdf-init-status\">PDF 초기화: NOT_STARTED · 이 문구가 바뀌지 않으면 스크립트 실행 또는 정…</p> aka locator('uniform').getByText('PDF 초기화: NOT_STARTED')\n\nCall log:\n\u001b[2m  - waiting for locator('#pdf-init-status')\u001b[22m\n"
+    },
+    {
+      "time": "2026-10-25T11:11:51.490Z",
+      "stage": "browser disconnect/close",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-25T11:11:51.491Z",
+      "stage": "browser disconnect/close",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-25T11:11:51.491Z",
+      "stage": "browser process close",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-25T11:11:51.528Z",
+      "stage": "browser process close",
+      "state": "PASS"
+    }
+  ],
+  "diagnostics": {
+    "consoleErrors": [],
+    "pageErrors": [],
+    "externalRequests": [],
+    "unhandledRejections": [],
+    "cspViolations": []
+  },
+  "browserPid": 2425,
+  "version": "156.0.8078.4",
+  "requests": [
+    "<repo>/experiments/lite-v1-workbench/generated/lite-v1.html"
+  ],
+  "initializationProfiles": [
+    {
+      "name": "missing-decoder",
+      "errors": [],
+      "consoleErrors": [],
+      "csp": [],
+      "externalRequests": [],
+      "pdf": "PDF 초기화: FAILED · PDF_WORKER_CODE · ReferenceError: TextDecoder is not defined\n    at <repo>/experiments/lite-v1-workbench/generated/lite-v1.html:2762:25\n    at <repo>/experiments/lite-v1-workbench/generated/lite-v1.html:65790:33\n    at <repo>/experiments/lite-v1-workbench/generated/lite-v1.html:94113:3",
+      "c1": "C1 초기화: READY · C1_SCRIPT",
+      "details": "{\n  \"area\": \"pdf\",\n  \"initialization\": {\n    \"state\": \"FAILED\",\n    \"stage\": \"PDF_WORKER_CODE\",\n    \"error\": \"ReferenceError: TextDecoder is not defined\\n    at <repo>/experiments/lite-v1-workbench/generated/lite-v1.html:2762:25\\n    at <repo>/experiments/lite-v1-workbench/generated/lite-v1.html:65790:33\\n    at <repo>/experiments/lite-v1-workbench/generated/lite-v1.html:94113:3\"\n  },\n  \"environment\": {\n    \"userAgent\": \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36\",\n    \"protocol\": \"file:\",\n    \"capabilities\": {\n      \"textDecoder\": false,\n      \"textEncoder\": true,\n      \"promiseWithResolvers\": true,\n      \"promiseTry\": true,\n      \"mapGetOrInsertComputed\": true,\n      \"urlParse\": true,\n      \"uint8ToHex\": true,\n      \"uint8FromBase64\": true,\n      \"mathSumPrecise\": true,\n      \"workerAPI\": true,\n      \"wasmAPI\": true,\n      \"sha256API\": true,\n      \"fileAPI\": true,\n      \"canvas2d\": true,\n      \"secureContext\": true\n    },\n    \"note\": \"API presence is not worker/WASM policy success. Windows cause unconfirmed.\"\n  }\n}"
+    }
+  ],
+  "fatal": "locator.textContent: Error: strict mode violation: locator('#pdf-init-status') resolved to 7 elements:\n    1) <p role=\"status\" id=\"pdf-init-status\">PDF 초기화: RUNNING · PDF_PAYLOAD</p> aka getByText('PDF 초기화: RUNNING · PDF_PAYLOAD')\n    2) <p role=\"status\" id=\"pdf-init-status\">PDF 초기화: NOT_STARTED · 이 문구가 바뀌지 않으면 스크립트 실행 또는 정…</p> aka getByText('PDF 초기화: NOT_STARTED').first()\n    3) <p role=\"status\" id=\"pdf-init-status\">PDF 초기화: NOT_STARTED · 이 문구가 바뀌지 않으면 스크립트 실행 또는 정…</p> aka getByText('PDF 초기화: NOT_STARTED').nth(1)\n    4) <p role=\"status\" id=\"pdf-init-status\">PDF 초기화: NOT_STARTED · 이 문구가 바뀌지 않으면 스크립트 실행 또는 정…</p> aka getByText('PDF 초기화: NOT_STARTED').nth(2)\n    5) <p role=\"status\" id=\"pdf-init-status\">PDF 초기화: NOT_STARTED · 이 문구가 바뀌지 않으면 스크립트 실행 또는 정…</p> aka getByText('PDF 초기화: NOT_STARTED').nth(3)\n    6) <p role=\"status\" id=\"pdf-init-status\">PDF 초기화: NOT_STARTED · 이 문구가 바뀌지 않으면 스크립트 실행 또는 정…</p> aka getByText('PDF 초기화: NOT_STARTED').nth(4)\n    7) <p role=\"status\" id=\"pdf-init-status\">PDF 초기화: NOT_STARTED · 이 문구가 바뀌지 않으면 스크립트 실행 또는 정…</p> aka locator('uniform').getByText('PDF 초기화: NOT_STARTED')\n\nCall log:\n\u001b[2m  - waiting for locator('#pdf-init-status')\u001b[22m\n\n    at <repo>/experiments/lite-v1-workbench/test-initialization-suite.mjs:40:49\n    at profile (<repo>/experiments/lite-v1-workbench/test-initialization-suite.mjs:27:52)\n    at async step (<repo>/experiments/lite-v1-workbench/test-browser.mjs:26:19)\n    at async check (<repo>/experiments/lite-v1-workbench/test-browser.mjs:30:44)\n    at async run (<repo>/experiments/lite-v1-workbench/test-initialization-suite.mjs:39:3)\n    at async <repo>/experiments/lite-v1-workbench/test-browser.mjs:62:3",
+  "finished": "2026-10-25T11:11:51.528Z",
+  "counts": {
+    "pass": 2,
+    "fail": 1,
+    "notRun": 6
+  }
+}

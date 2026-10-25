@@ -1,16 +1,18 @@
 <section aria-label="PDF 원문과 후보">
 <h1>축소형 오프라인 통합 검증</h1>
 <p class="notice">가공 사례 검증용 / 실제 사건 사용 불가 / Windows 통합 실행 미검증</p>
+<p id="pdf-init-status" role="status">PDF 초기화: NOT_STARTED · 이 문구가 바뀌지 않으면 스크립트 실행 또는 정책 원인 미확정</p>
+<details><summary>PDF 초기화 진단 (브라우저 버전·실패 단계)</summary><pre id="pdf-init-details" class="pdf-log">초기화 진단 코드가 아직 실행되지 않았습니다. C1 작동 여부와 이 문구를 함께 기록하세요.</pre></details>
 <h2>PDF 원문 · 추출/OCR 후보 검토</h2>
 <p>후보는 법률 사실이 아닙니다. 아래 C1에는 필요한 사실을 별도로 직접 입력하세요. 자동 반영·자동 상속인 결정·자동 저장은 하지 않습니다.</p>
 <p id="pdf-quality">품질 경고: 한국어 단일 모델의 기존 가공 표본 CER 32.84%, 인명 누락. 한자·세로쓰기·제적등본 정확도 미검증. 이름과 관계는 반드시 원문으로 확인하세요.</p>
 <p>제한: PDF 8 MiB, 최대 10쪽, 렌더 400만 화소, 페이지 텍스트 10만 자. 1~3쪽 소형 가공 자료 우선. 전체 브라우저 메모리 상한을 보장하지 않습니다.</p>
-<label>가공 PDF 선택 <input id="pdf-file" type="file" accept="application/pdf,.pdf"></label>
+<label>가공 PDF 선택 <input id="pdf-file" type="file" disabled accept="application/pdf,.pdf"></label>
 <div class="toolbar"><button id="pdf-prev" disabled>이전 페이지</button><span id="pdf-page">0 / 0</span><button id="pdf-next" disabled>다음 페이지</button><button id="pdf-ocr" disabled>현재 페이지 한국어 OCR</button><button id="pdf-cancel">PDF/OCR 취소</button><button id="pdf-close">문서 닫기</button></div>
 <p id="pdf-status" role="status">EMPTY</p>
 <div class="pdf-grid"><div><canvas id="pdf-canvas" aria-label="선택 페이지 원문"></canvas></div><div>
 <label>직접 추출 원문 · NEEDS_REVIEW<textarea id="pdf-direct" readonly></textarea></label>
 <label>OCR 원문 후보 · NEEDS_REVIEW<textarea id="pdf-original" readonly></textarea></label>
 <label>사용자 수정 후보 · NEEDS_REVIEW (법률 사실 미확정)<textarea id="pdf-edited" maxlength="100000"></textarea></label>
-</div></div><details><summary>현재 문서/작업 진단 (메모리 내 기록)</summary><pre id="pdf-details" class="pdf-log"></pre></details>
+</div></div><details><summary>현재 문서/작업 진단 (메모리 내 기록)</summary><pre id="pdf-details" class="pdf-log">초기화 진단 실행 대기. 이 문구가 그대로면 PDF JavaScript 초기화가 확인되지 않았습니다. 위 초기화 진단과 C1 상태를 기록하세요.</pre></details>
 </section>

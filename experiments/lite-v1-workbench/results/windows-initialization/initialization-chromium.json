@@ -1,0 +1,352 @@
+{
+  "target": "chromium",
+  "started": "2026-10-25T11:44:04.947Z",
+  "windows": "NOT_RUN",
+  "offline": "fresh context, empty cache, browser offline emulation; physical disconnection NOT_RUN",
+  "checks": [
+    {
+      "name": "normal PDF/C1 READY before file choice and diagnostics nonempty",
+      "state": "PASS"
+    },
+    {
+      "name": "missing TextDecoder reproduces pre-app failure and preserves C1",
+      "state": "PASS"
+    },
+    {
+      "name": "Tesseract initialization exception shows exact stage, C1 unaffected",
+      "state": "PASS"
+    },
+    {
+      "name": "PDF-only parse error visible from independent bootstrap, C1 unaffected",
+      "state": "PASS"
+    },
+    {
+      "name": "PDF-only CSP hash mismatch fails visibly, no security relaxation",
+      "state": "PASS"
+    },
+    {
+      "name": "missing PDF completion becomes TIMEOUT instead of quiet EMPTY",
+      "state": "PASS"
+    },
+    {
+      "name": "worker/WASM absence does not prevent initial PDF diagnostic or direct PDF",
+      "state": "PASS"
+    },
+    {
+      "name": "missing lazy modern APIs recorded without falsely blaming initial bootstrap",
+      "state": "PASS"
+    },
+    {
+      "name": "zero external requests and console/page/promise/CSP errors",
+      "state": "PASS"
+    }
+  ],
+  "stages": [
+    {
+      "time": "2026-10-25T11:44:04.949Z",
+      "stage": "browser launch",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-25T11:44:05.306Z",
+      "stage": "browser launch",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-25T11:44:05.306Z",
+      "stage": "browser connect",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-25T11:44:05.333Z",
+      "stage": "browser connect",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-25T11:44:05.333Z",
+      "stage": "fresh offline context",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-25T11:44:05.338Z",
+      "stage": "fresh offline context",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-25T11:44:05.339Z",
+      "stage": "request guard",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-25T11:44:05.340Z",
+      "stage": "request guard",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-25T11:44:05.340Z",
+      "stage": "page creation",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-25T11:44:05.515Z",
+      "stage": "page creation",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-25T11:44:05.516Z",
+      "stage": "diagnostic hooks",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-25T11:44:05.517Z",
+      "stage": "diagnostic hooks",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-25T11:44:05.517Z",
+      "stage": "file HTML load",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-25T11:44:05.808Z",
+      "stage": "file HTML load",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-25T11:44:05.808Z",
+      "stage": "normal PDF/C1 READY before file choice and diagnostics nonempty",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-25T11:44:05.829Z",
+      "stage": "normal PDF/C1 READY before file choice and diagnostics nonempty",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-25T11:44:05.829Z",
+      "stage": "missing TextDecoder reproduces pre-app failure and preserves C1",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-25T11:44:06.139Z",
+      "stage": "missing TextDecoder reproduces pre-app failure and preserves C1",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-25T11:44:06.139Z",
+      "stage": "Tesseract initialization exception shows exact stage, C1 unaffected",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-25T11:44:06.467Z",
+      "stage": "Tesseract initialization exception shows exact stage, C1 unaffected",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-25T11:44:06.467Z",
+      "stage": "PDF-only parse error visible from independent bootstrap, C1 unaffected",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-25T11:44:06.602Z",
+      "stage": "PDF-only parse error visible from independent bootstrap, C1 unaffected",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-25T11:44:06.602Z",
+      "stage": "PDF-only CSP hash mismatch fails visibly, no security relaxation",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-25T11:44:06.812Z",
+      "stage": "PDF-only CSP hash mismatch fails visibly, no security relaxation",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-25T11:44:06.813Z",
+      "stage": "missing PDF completion becomes TIMEOUT instead of quiet EMPTY",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-25T11:44:16.942Z",
+      "stage": "missing PDF completion becomes TIMEOUT instead of quiet EMPTY",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-25T11:44:16.943Z",
+      "stage": "worker/WASM absence does not prevent initial PDF diagnostic or direct PDF",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-25T11:44:17.493Z",
+      "stage": "worker/WASM absence does not prevent initial PDF diagnostic or direct PDF",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-25T11:44:17.493Z",
+      "stage": "missing lazy modern APIs recorded without falsely blaming initial bootstrap",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-25T11:44:17.792Z",
+      "stage": "missing lazy modern APIs recorded without falsely blaming initial bootstrap",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-25T11:44:17.793Z",
+      "stage": "promise diagnostics",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-25T11:44:17.795Z",
+      "stage": "promise diagnostics",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-25T11:44:17.795Z",
+      "stage": "CSP diagnostics",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-25T11:44:17.796Z",
+      "stage": "CSP diagnostics",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-25T11:44:17.797Z",
+      "stage": "zero external requests and console/page/promise/CSP errors",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-25T11:44:17.797Z",
+      "stage": "zero external requests and console/page/promise/CSP errors",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-25T11:44:17.797Z",
+      "stage": "screenshot",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-25T11:44:17.907Z",
+      "stage": "screenshot",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-25T11:44:17.907Z",
+      "stage": "browser disconnect/close",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-25T11:44:17.909Z",
+      "stage": "browser disconnect/close",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-25T11:44:17.910Z",
+      "stage": "browser process close",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-25T11:44:17.926Z",
+      "stage": "browser process close",
+      "state": "PASS"
+    }
+  ],
+  "diagnostics": {
+    "consoleErrors": [],
+    "pageErrors": [],
+    "externalRequests": [],
+    "unhandledRejections": [],
+    "cspViolations": []
+  },
+  "browserPid": 3066,
+  "version": "156.0.8078.4",
+  "requests": [
+    "<repo>/experiments/lite-v1-workbench/generated/lite-v1.html"
+  ],
+  "initializationProfiles": [
+    {
+      "name": "missing-decoder",
+      "errors": [],
+      "consoleErrors": [],
+      "csp": [],
+      "externalRequests": [],
+      "pdf": "PDF 초기화: FAILED · PDF_WORKER_CODE · ReferenceError: TextDecoder is not defined\n    at <repo>/experiments/lite-v1-workbench/generated/lite-v1.html:2763:25\n    at <repo>/experiments/lite-v1-workbench/generated/lite-v1.html:65791:33\n    at <repo>/experiments/lite-v1-workbench/generated/lite-v1.html:94114:3",
+      "c1": "C1 초기화: READY · C1_SCRIPT",
+      "details": "{\n  \"area\": \"pdf\",\n  \"initialization\": {\n    \"state\": \"FAILED\",\n    \"stage\": \"PDF_WORKER_CODE\",\n    \"error\": \"ReferenceError: TextDecoder is not defined\\n    at <repo>/experiments/lite-v1-workbench/generated/lite-v1.html:2763:25\\n    at <repo>/experiments/lite-v1-workbench/generated/lite-v1.html:65791:33\\n    at <repo>/experiments/lite-v1-workbench/generated/lite-v1.html:94114:3\"\n  },\n  \"environment\": {\n    \"userAgent\": \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36\",\n    \"protocol\": \"file:\",\n    \"capabilities\": {\n      \"textDecoder\": false,\n      \"textEncoder\": true,\n      \"promiseWithResolvers\": true,\n      \"promiseTry\": true,\n      \"mapGetOrInsertComputed\": true,\n      \"urlParse\": true,\n      \"uint8ToHex\": true,\n      \"uint8FromBase64\": true,\n      \"mathSumPrecise\": true,\n      \"workerAPI\": true,\n      \"wasmAPI\": true,\n      \"sha256API\": true,\n      \"fileAPI\": true,\n      \"canvas2d\": true,\n      \"secureContext\": true\n    },\n    \"note\": \"API presence is not worker/WASM policy success. Windows cause unconfirmed.\"\n  }\n}"
+    },
+    {
+      "name": "runtime",
+      "errors": [],
+      "consoleErrors": [],
+      "csp": [],
+      "externalRequests": [],
+      "pdf": "PDF 초기화: FAILED · TESSERACT_CODE · ReferenceError: synthetic Tesseract initialization fault\n    at <repo>/experiments/lite-v1-workbench/generated/init-runtime.html:94001:42\n    at <repo>/experiments/lite-v1-workbench/generated/init-runtime.html:94114:3",
+      "c1": "C1 초기화: READY · C1_SCRIPT",
+      "details": "{\n  \"area\": \"pdf\",\n  \"initialization\": {\n    \"state\": \"FAILED\",\n    \"stage\": \"TESSERACT_CODE\",\n    \"error\": \"ReferenceError: synthetic Tesseract initialization fault\\n    at <repo>/experiments/lite-v1-workbench/generated/init-runtime.html:94001:42\\n    at <repo>/experiments/lite-v1-workbench/generated/init-runtime.html:94114:3\"\n  },\n  \"environment\": {\n    \"userAgent\": \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36\",\n    \"protocol\": \"file:\",\n    \"capabilities\": {\n      \"textDecoder\": true,\n      \"textEncoder\": true,\n      \"promiseWithResolvers\": true,\n      \"promiseTry\": true,\n      \"mapGetOrInsertComputed\": true,\n      \"urlParse\": true,\n      \"uint8ToHex\": true,\n      \"uint8FromBase64\": true,\n      \"mathSumPrecise\": true,\n      \"workerAPI\": true,\n      \"wasmAPI\": true,\n      \"sha256API\": true,\n      \"fileAPI\": true,\n      \"canvas2d\": true,\n      \"secureContext\": true\n    },\n    \"note\": \"API presence is not worker/WASM policy success. Windows cause unconfirmed.\"\n  }\n}"
+    },
+    {
+      "name": "syntax",
+      "errors": [
+        "SyntaxError: Unexpected token ';'"
+      ],
+      "consoleErrors": [],
+      "csp": [],
+      "externalRequests": [],
+      "pdf": "PDF 초기화: FAILED · PDF_PAYLOAD · SyntaxError: Unexpected token ';'",
+      "c1": "C1 초기화: READY · C1_SCRIPT",
+      "details": "{\n  \"area\": \"pdf\",\n  \"initialization\": {\n    \"state\": \"FAILED\",\n    \"stage\": \"PDF_PAYLOAD\",\n    \"error\": \"SyntaxError: Unexpected token ';'\"\n  },\n  \"environment\": {\n    \"userAgent\": \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36\",\n    \"protocol\": \"file:\",\n    \"capabilities\": {\n      \"textDecoder\": true,\n      \"textEncoder\": true,\n      \"promiseWithResolvers\": true,\n      \"promiseTry\": true,\n      \"mapGetOrInsertComputed\": true,\n      \"urlParse\": true,\n      \"uint8ToHex\": true,\n      \"uint8FromBase64\": true,\n      \"mathSumPrecise\": true,\n      \"workerAPI\": true,\n      \"wasmAPI\": true,\n      \"sha256API\": true,\n      \"fileAPI\": true,\n      \"canvas2d\": true,\n      \"secureContext\": true\n    },\n    \"note\": \"API presence is not worker/WASM policy success. Windows cause unconfirmed.\"\n  }\n}"
+    },
+    {
+      "name": "csp",
+      "errors": [],
+      "consoleErrors": [
+        "Executing inline script violates the following Content Security Policy directive 'script-src 'sha256-KziomwILKnn+tiA+ve5VTmgWkr3lDFPQcq8ID23f/K4=' 'sha256-jm8IZuHIa5L1dg6FaVAJLO6duECHrH5L4P0gGrm6xjA=' 'sha256-ImhTIx485IsoZ17+jNB9cO6ZTEkTXZ92qvUmQ9mqkYA=' 'sha256-uC19jiRqM7nV4wFgA+fzasU4zWHNjSWtscpCrlOQTQ8=' 'sha256-TShjsESAJ7AMtay8VvRHclQuS7zENpGMRCUM4yK50JE=' 'sha256-OBOwOCD7euIG6CkwzC01B7iIGhR6sxYT6Fb2l+WV4ms=' 'wasm-unsafe-eval''. Either the 'unsafe-inline' keyword, a hash ('sha256-r5a5AOpXCSof1DqfelR70w+jv95Pq/XP47lPdSa3ANE='), or a nonce ('nonce-...') is required to enable inline execution. The action has been blocked."
+      ],
+      "csp": [
+        "script-src-elem"
+      ],
+      "externalRequests": [],
+      "pdf": "PDF 초기화: FAILED · PDF_PAYLOAD · CSP_SCRIPT_BLOCKED · 스크립트 해시/전달 파일을 확인하세요.",
+      "c1": "C1 초기화: READY · C1_SCRIPT",
+      "details": "{\n  \"area\": \"pdf\",\n  \"initialization\": {\n    \"state\": \"FAILED\",\n    \"stage\": \"PDF_PAYLOAD\",\n    \"error\": \"CSP_SCRIPT_BLOCKED · 스크립트 해시/전달 파일을 확인하세요.\"\n  },\n  \"environment\": {\n    \"userAgent\": \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36\",\n    \"protocol\": \"file:\",\n    \"capabilities\": {\n      \"textDecoder\": true,\n      \"textEncoder\": true,\n      \"promiseWithResolvers\": true,\n      \"promiseTry\": true,\n      \"mapGetOrInsertComputed\": true,\n      \"urlParse\": true,\n      \"uint8ToHex\": true,\n      \"uint8FromBase64\": true,\n      \"mathSumPrecise\": true,\n      \"workerAPI\": true,\n      \"wasmAPI\": true,\n      \"sha256API\": true,\n      \"fileAPI\": true,\n      \"canvas2d\": true,\n      \"secureContext\": true\n    },\n    \"note\": \"API presence is not worker/WASM policy success. Windows cause unconfirmed.\"\n  }\n}"
+    },
+    {
+      "name": "silent",
+      "errors": [],
+      "consoleErrors": [],
+      "csp": [],
+      "externalRequests": [],
+      "pdf": "PDF 초기화: TIMEOUT · PDF_PAYLOAD · 초기화 완료 신호 없음 · 구문/CSP/API/실행 중단 원인 미확정",
+      "c1": "C1 초기화: READY · C1_SCRIPT",
+      "details": "{\n  \"area\": \"pdf\",\n  \"initialization\": {\n    \"state\": \"TIMEOUT\",\n    \"stage\": \"PDF_PAYLOAD\",\n    \"error\": \"초기화 완료 신호 없음 · 구문/CSP/API/실행 중단 원인 미확정\"\n  },\n  \"environment\": {\n    \"userAgent\": \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36\",\n    \"protocol\": \"file:\",\n    \"capabilities\": {\n      \"textDecoder\": true,\n      \"textEncoder\": true,\n      \"promiseWithResolvers\": true,\n      \"promiseTry\": true,\n      \"mapGetOrInsertComputed\": true,\n      \"urlParse\": true,\n      \"uint8ToHex\": true,\n      \"uint8FromBase64\": true,\n      \"mathSumPrecise\": true,\n      \"workerAPI\": true,\n      \"wasmAPI\": true,\n      \"sha256API\": true,\n      \"fileAPI\": true,\n      \"canvas2d\": true,\n      \"secureContext\": true\n    },\n    \"note\": \"API presence is not worker/WASM policy success. Windows cause unconfirmed.\"\n  }\n}"
+    },
+    {
+      "name": "worker-blocked",
+      "errors": [],
+      "consoleErrors": [],
+      "csp": [],
+      "externalRequests": [],
+      "pdf": "PDF 초기화: READY · PDF_APP_DIAGNOSTICS_COMPLETE",
+      "c1": "C1 초기화: READY · C1_SCRIPT",
+      "details": "{\n  \"area\": \"pdf\",\n  \"initialization\": {\n    \"state\": \"READY\",\n    \"stage\": \"PDF_APP_DIAGNOSTICS_COMPLETE\",\n    \"error\": null\n  },\n  \"environment\": {\n    \"userAgent\": \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36\",\n    \"protocol\": \"file:\",\n    \"capabilities\": {\n      \"textDecoder\": true,\n      \"textEncoder\": true,\n      \"promiseWithResolvers\": true,\n      \"promiseTry\": true,\n      \"mapGetOrInsertComputed\": true,\n      \"urlParse\": true,\n      \"uint8ToHex\": true,\n      \"uint8FromBase64\": true,\n      \"mathSumPrecise\": true,\n      \"workerAPI\": true,\n      \"wasmAPI\": false,\n      \"sha256API\": true,\n      \"fileAPI\": true,\n      \"canvas2d\": true,\n      \"secureContext\": true\n    },\n    \"note\": \"API presence is not worker/WASM policy success. Windows cause unconfirmed.\"\n  }\n}"
+    },
+    {
+      "name": "lazy-apis",
+      "errors": [],
+      "consoleErrors": [],
+      "csp": [],
+      "externalRequests": [],
+      "pdf": "PDF 초기화: READY · PDF_APP_DIAGNOSTICS_COMPLETE",
+      "c1": "C1 초기화: READY · C1_SCRIPT",
+      "details": "{\n  \"area\": \"pdf\",\n  \"initialization\": {\n    \"state\": \"READY\",\n    \"stage\": \"PDF_APP_DIAGNOSTICS_COMPLETE\",\n    \"error\": null\n  },\n  \"environment\": {\n    \"userAgent\": \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36\",\n    \"protocol\": \"file:\",\n    \"capabilities\": {\n      \"textDecoder\": true,\n      \"textEncoder\": true,\n      \"promiseWithResolvers\": false,\n      \"promiseTry\": false,\n      \"mapGetOrInsertComputed\": false,\n      \"urlParse\": false,\n      \"uint8ToHex\": true,\n      \"uint8FromBase64\": true,\n      \"mathSumPrecise\": true,\n      \"workerAPI\": true,\n      \"wasmAPI\": true,\n      \"sha256API\": true,\n      \"fileAPI\": true,\n      \"canvas2d\": true,\n      \"secureContext\": true\n    },\n    \"note\": \"API presence is not worker/WASM policy success. Windows cause unconfirmed.\"\n  }\n}"
+    }
+  ],
+  "finished": "2026-10-25T11:44:17.926Z",
+  "counts": {
+    "pass": 9,
+    "fail": 0,
+    "notRun": 0
+  }
+}

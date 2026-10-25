@@ -1,0 +1,81 @@
+[
+  {
+    "missing": "none",
+    "errors": [],
+    "pdf": "{\n  \"state\": \"EMPTY\",\n  \"events\": [],\n  \"page\": 0,\n  \"pages\": 0,\n  \"pendingCleanup\": 0\n}",
+    "c1": 7,
+    "status": "EMPTY"
+  },
+  {
+    "missing": "Map.getOrInsertComputed",
+    "errors": [],
+    "pdf": "{\n  \"state\": \"EMPTY\",\n  \"events\": [],\n  \"page\": 0,\n  \"pages\": 0,\n  \"pendingCleanup\": 0\n}",
+    "c1": 7,
+    "status": "EMPTY"
+  },
+  {
+    "missing": "Promise.withResolvers",
+    "errors": [],
+    "pdf": "{\n  \"state\": \"EMPTY\",\n  \"events\": [],\n  \"page\": 0,\n  \"pages\": 0,\n  \"pendingCleanup\": 0\n}",
+    "c1": 7,
+    "status": "EMPTY"
+  },
+  {
+    "missing": "URL.parse",
+    "errors": [],
+    "pdf": "{\n  \"state\": \"EMPTY\",\n  \"events\": [],\n  \"page\": 0,\n  \"pages\": 0,\n  \"pendingCleanup\": 0\n}",
+    "c1": 7,
+    "status": "EMPTY"
+  },
+  {
+    "missing": "Promise.try",
+    "errors": [],
+    "pdf": "{\n  \"state\": \"EMPTY\",\n  \"events\": [],\n  \"page\": 0,\n  \"pages\": 0,\n  \"pendingCleanup\": 0\n}",
+    "c1": 7,
+    "status": "EMPTY"
+  },
+  {
+    "missing": "DOMMatrix",
+    "errors": [],
+    "pdf": "{\n  \"state\": \"EMPTY\",\n  \"events\": [],\n  \"page\": 0,\n  \"pages\": 0,\n  \"pendingCleanup\": 0\n}",
+    "c1": 7,
+    "status": "EMPTY"
+  },
+  {
+    "missing": "ImageData",
+    "errors": [],
+    "pdf": "{\n  \"state\": \"EMPTY\",\n  \"events\": [],\n  \"page\": 0,\n  \"pages\": 0,\n  \"pendingCleanup\": 0\n}",
+    "c1": 7,
+    "status": "EMPTY"
+  },
+  {
+    "missing": "Math.sumPrecise",
+    "errors": [],
+    "pdf": "{\n  \"state\": \"EMPTY\",\n  \"events\": [],\n  \"page\": 0,\n  \"pages\": 0,\n  \"pendingCleanup\": 0\n}",
+    "c1": 7,
+    "status": "EMPTY"
+  },
+  {
+    "missing": "Uint8Array.toHex",
+    "errors": [],
+    "pdf": "{\n  \"state\": \"EMPTY\",\n  \"events\": [],\n  \"page\": 0,\n  \"pages\": 0,\n  \"pendingCleanup\": 0\n}",
+    "c1": 7,
+    "status": "EMPTY"
+  },
+  {
+    "missing": "TextDecoder",
+    "errors": [
+      "ReferenceError: TextDecoder is not defined"
+    ],
+    "pdf": "",
+    "c1": 7,
+    "status": "EMPTY"
+  },
+  {
+    "missing": "AbortController",
+    "errors": [],
+    "pdf": "{\n  \"state\": \"EMPTY\",\n  \"events\": [],\n  \"page\": 0,\n  \"pages\": 0,\n  \"pendingCleanup\": 0\n}",
+    "c1": 7,
+    "status": "EMPTY"
+  }
+]

@@ -1,14 +1,14 @@
 {
-  "instructionsSha256": "dd436bf8cc1b19751732f410706dd8b1d8ab7f884a54c083cc6384049af52ac5",
+  "instructionsSha256": "41dc1c1c6c6891f958c1b592dbb3d9abbbd8fe3f5438fb155eab7fcb22cad58d",
   "notice": {
     "bytes": 44247,
     "sha256": "b2f64bf866df353e0ad039b2dce993e3f7a6f78f6abc942e42d5052dfee7ddc8"
   },
   "format": "lite-v1-integrated-v1",
-  "baseline": "fc7b470afc3cc4a18129603a0c5d21ed959f2aeb",
+  "baseline": "ffb88aeac9582f700b1997fae40546c0becbd2b3",
   "output": "generated/lite-v1.html",
-  "bytes": 9466825,
-  "sha256": "412b514ac49907de994e17c99ccd52217c9ddfc02982714f67c7d774c4dfac99",
+  "bytes": 9473096,
+  "sha256": "23a1099a737ff7c8b91a6fcfe0f2f9c51551d419f98bc7ea4c4bc8698579fa1e",
   "versions": {
     "pdfjs": "6.4.299",
     "tesseract": "7.0.0",
@@ -16,10 +16,43 @@
   },
   "c1OutputSha256": "5a1ed623e662b3a06313245c49632f3b2fe94ff8cf3e49b28b6b0b37a477ecf8",
   "c1ScriptSha256": "226853231e3ce48b28675efe8cd07d70ee994c49135d9f76aaf52643d9aa9180",
+  "scripts": [
+    {
+      "index": 0,
+      "cspSha256": "KziomwILKnn+tiA+ve5VTmgWkr3lDFPQcq8ID23f/K4=",
+      "bytes": 4562
+    },
+    {
+      "index": 1,
+      "cspSha256": "jm8IZuHIa5L1dg6FaVAJLO6duECHrH5L4P0gGrm6xjA=",
+      "bytes": 40
+    },
+    {
+      "index": 2,
+      "cspSha256": "ImhTIx485IsoZ17+jNB9cO6ZTEkTXZ92qvUmQ9mqkYA=",
+      "bytes": 44498
+    },
+    {
+      "index": 3,
+      "cspSha256": "uC19jiRqM7nV4wFgA+fzasU4zWHNjSWtscpCrlOQTQ8=",
+      "bytes": 179
+    },
+    {
+      "index": 4,
+      "cspSha256": "TShjsESAJ7AMtay8VvRHclQuS7zENpGMRCUM4yK50JE=",
+      "bytes": 41
+    },
+    {
+      "index": 5,
+      "cspSha256": "OBOwOCD7euIG6CkwzC01B7iIGhR6sxYT6Fb2l+WV4ms=",
+      "bytes": 9415783
+    }
+  ],
   "sources": {
+    "initialization": "2b38a89b020b2a79feb6203ebdee554e681692bde50c53d072af080f6ddffcae",
     "app": "50d7356286650175dac5f87cc825e5b2a002e44aab9e930a7e0886b31233adab",
-    "view": "0e1b8232eec9e5b4546be4fc789ba2438605867ab205e4452693677a31e47852",
-    "builder": "9bb8159691bf1300004fd4d4fd59bb7c02510197d2e3be82550cf0bbabc2b533",
+    "view": "fa4365f47530e703baaac0d0f1c0243f8933c37f40e7409fe13e8050f756edef",
+    "builder": "55895575044dbc73386eb2960248471fba12f57d8bfc20a5ae1337ad0d611241",
     "workerAdapter": "eb3b37117264d6f66f0fab0d879d3875eec049886836f4e94ddb0d144649050f",
     "pocBuilder": "5334ffee078cdfe10908c534e25ab0026992aeb79e0d07f6db9c5cbebbc57269"
   },

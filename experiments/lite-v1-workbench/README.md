@@ -42,3 +42,20 @@ node experiments/lite-v1-workbench/regressions.mjs
 - 기존 kor 가공 표본 CER32.84%, 이름 누락. 한자·세로쓰기·복잡한 제적등본 품질 미검증. 실제 사건 사용 불가.
 
 소스·버전·SHA·모델 출처는 `results/build.json`, 라이선스는 생성 NOTICE, 실제 시험은 `results/`와 `docs/inheritance/LITE_V1_INTEGRATED_WORKBENCH_REPORT.md` 참조. 생성물과 가공 PDF/스크린샷은 generated/에 두고 Git에서 제외한다.
+
+## 2026-10-25 초기화 진단 보완
+
+이후 회사 Windows 사용자 보고에서 C1은 동작하고 PDF 최초 진단부터 비어 있는 문제가 확인됐다. 실제 회사 원인은 미확정이며 수정본 Windows 검증도 NOT_RUN이다. 기존 완료 기록을 소급 변경하지 않는다.
+
+생성 HTML은 독립 초기화 감시 → C1 시작 표시 → 원본 C1 스크립트 → C1 완료 확인 → PDF 시작 표시 → PDF 전용 스크립트의 여섯 인라인 스크립트로 분리한다. 각각의 CSP SHA-256을 기록한다. C1 스크립트 자체는 동일 바이트다. PDF worker 코드 평가/PDF.js/Tesseract/PDF 앱 리스너/최초 diagnostics 완료를 표시하고, 실행 예외·뒤쪽 구문 오류·CSP 차단·완료 신호 누락을 화면에서 구분한다. 파일 선택은 PDF 초기화 READY 이후에만 허용한다. 전체 JavaScript가 막혔을 때는 정적 미실행 안내가 남는다. 10초 감시는 이벤트 루프가 실행될 때 동작하며 OS 중단·동기 무한 루프까지 해결하는 것은 아니다.
+
+```sh
+node experiments/lite-v1-workbench/build.mjs
+node --test experiments/lite-v1-workbench/build.test.mjs
+INHERITAGE_LITE_INIT_PROBE=1 INHERITAGE_LITE_RESULTS=results/windows-initialization/ node experiments/lite-v1-workbench/test-browser.mjs chromium
+INHERITAGE_LITE_RESULTS=results/windows-initialization/ node experiments/lite-v1-workbench/test-browser.mjs chromium
+# 실제 Mac Edge 실행 가능 시, 별도 단독 실행:
+INHERITAGE_LITE_INIT_PROBE=1 INHERITAGE_LITE_RESULTS=results/windows-initialization/ node experiments/lite-v1-workbench/test-browser.mjs edge
+```
+
+새 시험 결과는 windows-initialization/에 따로 저장한다. CSP/구문 실패용 HTML은 하네스가 generated/init-*.html로 만들며 사용자에게 전달하지 않는다. 과거 browser JSON과 실험 결과를 덮어쓰지 않는다. 시험은 API 부재·초기화 실패를 가공해서 확인하는 것이며 특정 구버전 Windows Edge를 실제 실행한 검증이 아니다.

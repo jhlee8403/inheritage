@@ -1,15 +1,18 @@
 import {chromium} from '../offline-ocr/node_modules/playwright/index.mjs';
 import {readFileSync,writeFileSync,appendFileSync,mkdirSync,existsSync} from 'node:fs';
 import assert from 'node:assert/strict';
-import {run} from './test-suite.mjs';
+const probing=process.env.INHERITAGE_LITE_INIT_PROBE==='1';
+const {run}=await import(probing?'./test-initialization-suite.mjs':'./test-suite.mjs');
 import {fileURLToPath} from 'node:url';
 const target=process.argv[2]??'chromium';
 if(!['chromium','edge'].includes(target))throw new Error('Use chromium or edge');
 const edge='/Applications/Microsoft Edge.app/Contents/MacOS/Microsoft Edge';
 const root=new URL('../../',import.meta.url);
 const clean=value=>String(value).replaceAll(root.href,'<repo>/').replaceAll(decodeURI(root.pathname),'<repo>/');
-const out=new URL(`results/${target}.json`,import.meta.url),log=new URL(`results/${target}.jsonl`,import.meta.url);
-mkdirSync(new URL('results/',import.meta.url),{recursive:true});
+const resultDir=process.env.INHERITAGE_LITE_RESULTS??'results/';
+const prefix=probing?'initialization-':'';
+const out=new URL(`${resultDir}${prefix}${target}.json`,import.meta.url),log=new URL(`${resultDir}${prefix}${target}.jsonl`,import.meta.url);
+mkdirSync(new URL(resultDir,import.meta.url),{recursive:true});
 const report={target,started:new Date().toISOString(),windows:'NOT_RUN',offline:'fresh context, empty cache, browser offline emulation; physical disconnection NOT_RUN',checks:[],stages:[],diagnostics:{consoleErrors:[],pageErrors:[],externalRequests:[],unhandledRejections:[],cspViolations:[]}};
 const save=()=>writeFileSync(out,clean(JSON.stringify(report,null,2))+'\n');
 const emit=(stage,state,extra={})=>{const row={time:new Date().toISOString(),stage,state,...extra};report.stages.push(row);appendFileSync(log,clean(JSON.stringify(row))+'\n');save();console.log(JSON.stringify(row));};
@@ -56,7 +59,7 @@ try{
     addEventListener('securitypolicyviolation',e=>__csp.push({directive:e.violatedDirective,blocked:e.blockedURI}));
   }));
   await step('file HTML load',()=>page.goto(new URL('generated/lite-v1.html',import.meta.url).href,{waitUntil:'load',timeout:15000}),17000);
-  await run(page,check,report);
+  await run(page,check,report,browser);
   report.diagnostics.unhandledRejections=await step('promise diagnostics',()=>page.evaluate(()=>__unhandled));
   report.diagnostics.cspViolations=await step('CSP diagnostics',()=>page.evaluate(()=>__csp));
   await check('zero external requests and console/page/promise/CSP errors',()=>{for(const rows of Object.values(report.diagnostics))assert.deepEqual(rows,[]);});
@@ -66,7 +69,7 @@ try{
 finally{
   if(browser){try{await step('browser disconnect/close',()=>browser.close(),5000);}catch(error){report.cleanupError=String(error);}}
   if(server){try{await step('browser process close',()=>server.close(),5000);}catch(error){report.cleanupError=String(error);stopOwned();}}
-  clearTimeout(deadline);report.finished=new Date().toISOString();report.counts={pass:report.checks.filter(c=>c.state==='PASS').length,fail:report.checks.filter(c=>c.state==='FAIL').length,notRun:25-report.checks.length};save();
+  clearTimeout(deadline);report.finished=new Date().toISOString();report.counts={pass:report.checks.filter(c=>c.state==='PASS').length,fail:report.checks.filter(c=>c.state==='FAIL').length,notRun:(probing?9:25)-report.checks.length};save();
 }
 // End the isolated test process even if a failed library operation retained a handle.
 process.exit(report.fatal||report.cleanupError||report.counts.fail?1:0);

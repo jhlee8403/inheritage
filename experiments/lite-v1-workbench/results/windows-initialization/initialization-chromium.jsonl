@@ -1,0 +1,108 @@
+{"time":"2026-10-25T11:11:45.772Z","stage":"browser launch","state":"START"}
+{"time":"2026-10-25T11:11:46.235Z","stage":"browser launch","state":"PASS"}
+{"time":"2026-10-25T11:11:46.236Z","stage":"browser connect","state":"START"}
+{"time":"2026-10-25T11:11:46.272Z","stage":"browser connect","state":"PASS"}
+{"time":"2026-10-25T11:11:46.272Z","stage":"fresh offline context","state":"START"}
+{"time":"2026-10-25T11:11:46.277Z","stage":"fresh offline context","state":"PASS"}
+{"time":"2026-10-25T11:11:46.277Z","stage":"request guard","state":"START"}
+{"time":"2026-10-25T11:11:46.278Z","stage":"request guard","state":"PASS"}
+{"time":"2026-10-25T11:11:46.278Z","stage":"page creation","state":"START"}
+{"time":"2026-10-25T11:11:46.497Z","stage":"page creation","state":"PASS"}
+{"time":"2026-10-25T11:11:46.497Z","stage":"diagnostic hooks","state":"START"}
+{"time":"2026-10-25T11:11:46.499Z","stage":"diagnostic hooks","state":"PASS"}
+{"time":"2026-10-25T11:11:46.499Z","stage":"file HTML load","state":"START"}
+{"time":"2026-10-25T11:11:46.809Z","stage":"file HTML load","state":"PASS"}
+{"time":"2026-10-25T11:11:46.809Z","stage":"normal PDF/C1 READY before file choice and diagnostics nonempty","state":"START"}
+{"time":"2026-10-25T11:11:46.829Z","stage":"normal PDF/C1 READY before file choice and diagnostics nonempty","state":"PASS"}
+{"time":"2026-10-25T11:11:46.829Z","stage":"missing TextDecoder reproduces pre-app failure and preserves C1","state":"START"}
+{"time":"2026-10-25T11:11:47.160Z","stage":"missing TextDecoder reproduces pre-app failure and preserves C1","state":"PASS"}
+{"time":"2026-10-25T11:11:47.161Z","stage":"Tesseract initialization exception shows exact stage, C1 unaffected","state":"START"}
+{"time":"2026-10-25T11:11:51.489Z","stage":"Tesseract initialization exception shows exact stage, C1 unaffected","state":"FAIL","error":"Error: locator.textContent: Error: strict mode violation: locator('#pdf-init-status') resolved to 7 elements:\n    1) <p role=\"status\" id=\"pdf-init-status\">PDF 초기화: RUNNING · PDF_PAYLOAD</p> aka getByText('PDF 초기화: RUNNING · PDF_PAYLOAD')\n    2) <p role=\"status\" id=\"pdf-init-status\">PDF 초기화: NOT_STARTED · 이 문구가 바뀌지 않으면 스크립트 실행 또는 정…</p> aka getByText('PDF 초기화: NOT_STARTED').first()\n    3) <p role=\"status\" id=\"pdf-init-status\">PDF 초기화: NOT_STARTED · 이 문구가 바뀌지 않으면 스크립트 실행 또는 정…</p> aka getByText('PDF 초기화: NOT_STARTED').nth(1)\n    4) <p role=\"status\" id=\"pdf-init-status\">PDF 초기화: NOT_STARTED · 이 문구가 바뀌지 않으면 스크립트 실행 또는 정…</p> aka getByText('PDF 초기화: NOT_STARTED').nth(2)\n    5) <p role=\"status\" id=\"pdf-init-status\">PDF 초기화: NOT_STARTED · 이 문구가 바뀌지 않으면 스크립트 실행 또는 정…</p> aka getByText('PDF 초기화: NOT_STARTED').nth(3)\n    6) <p role=\"status\" id=\"pdf-init-status\">PDF 초기화: NOT_STARTED · 이 문구가 바뀌지 않으면 스크립트 실행 또는 정…</p> aka getByText('PDF 초기화: NOT_STARTED').nth(4)\n    7) <p role=\"status\" id=\"pdf-init-status\">PDF 초기화: NOT_STARTED · 이 문구가 바뀌지 않으면 스크립트 실행 또는 정…</p> aka locator('uniform').getByText('PDF 초기화: NOT_STARTED')\n\nCall log:\n\u001b[2m  - waiting for locator('#pdf-init-status')\u001b[22m\n"}
+{"time":"2026-10-25T11:11:51.490Z","stage":"browser disconnect/close","state":"START"}
+{"time":"2026-10-25T11:11:51.491Z","stage":"browser disconnect/close","state":"PASS"}
+{"time":"2026-10-25T11:11:51.491Z","stage":"browser process close","state":"START"}
+{"time":"2026-10-25T11:11:51.528Z","stage":"browser process close","state":"PASS"}
+{"time":"2026-10-25T11:12:31.904Z","stage":"browser launch","state":"START"}
+{"time":"2026-10-25T11:12:31.995Z","stage":"browser launch","state":"PASS"}
+{"time":"2026-10-25T11:12:31.995Z","stage":"browser connect","state":"START"}
+{"time":"2026-10-25T11:12:32.019Z","stage":"browser connect","state":"PASS"}
+{"time":"2026-10-25T11:12:32.020Z","stage":"fresh offline context","state":"START"}
+{"time":"2026-10-25T11:12:32.023Z","stage":"fresh offline context","state":"PASS"}
+{"time":"2026-10-25T11:12:32.023Z","stage":"request guard","state":"START"}
+{"time":"2026-10-25T11:12:32.024Z","stage":"request guard","state":"PASS"}
+{"time":"2026-10-25T11:12:32.024Z","stage":"page creation","state":"START"}
+{"time":"2026-10-25T11:12:32.066Z","stage":"page creation","state":"PASS"}
+{"time":"2026-10-25T11:12:32.067Z","stage":"diagnostic hooks","state":"START"}
+{"time":"2026-10-25T11:12:32.067Z","stage":"diagnostic hooks","state":"PASS"}
+{"time":"2026-10-25T11:12:32.068Z","stage":"file HTML load","state":"START"}
+{"time":"2026-10-25T11:12:32.249Z","stage":"file HTML load","state":"PASS"}
+{"time":"2026-10-25T11:12:32.250Z","stage":"normal PDF/C1 READY before file choice and diagnostics nonempty","state":"START"}
+{"time":"2026-10-25T11:12:32.263Z","stage":"normal PDF/C1 READY before file choice and diagnostics nonempty","state":"PASS"}
+{"time":"2026-10-25T11:12:32.263Z","stage":"missing TextDecoder reproduces pre-app failure and preserves C1","state":"START"}
+{"time":"2026-10-25T11:12:32.551Z","stage":"missing TextDecoder reproduces pre-app failure and preserves C1","state":"PASS"}
+{"time":"2026-10-25T11:12:32.552Z","stage":"Tesseract initialization exception shows exact stage, C1 unaffected","state":"START"}
+{"time":"2026-10-25T11:12:32.852Z","stage":"Tesseract initialization exception shows exact stage, C1 unaffected","state":"PASS"}
+{"time":"2026-10-25T11:12:32.853Z","stage":"PDF-only parse error visible from independent bootstrap, C1 unaffected","state":"START"}
+{"time":"2026-10-25T11:12:32.984Z","stage":"PDF-only parse error visible from independent bootstrap, C1 unaffected","state":"PASS"}
+{"time":"2026-10-25T11:12:32.985Z","stage":"PDF-only CSP hash mismatch fails visibly, no security relaxation","state":"START"}
+{"time":"2026-10-25T11:12:33.193Z","stage":"PDF-only CSP hash mismatch fails visibly, no security relaxation","state":"PASS"}
+{"time":"2026-10-25T11:12:33.194Z","stage":"missing PDF completion becomes TIMEOUT instead of quiet EMPTY","state":"START"}
+{"time":"2026-10-25T11:12:43.330Z","stage":"missing PDF completion becomes TIMEOUT instead of quiet EMPTY","state":"PASS"}
+{"time":"2026-10-25T11:12:43.331Z","stage":"worker/WASM absence does not prevent initial PDF diagnostic or direct PDF","state":"START"}
+{"time":"2026-10-25T11:12:43.922Z","stage":"worker/WASM absence does not prevent initial PDF diagnostic or direct PDF","state":"PASS"}
+{"time":"2026-10-25T11:12:43.923Z","stage":"missing lazy modern APIs recorded without falsely blaming initial bootstrap","state":"START"}
+{"time":"2026-10-25T11:12:44.219Z","stage":"missing lazy modern APIs recorded without falsely blaming initial bootstrap","state":"PASS"}
+{"time":"2026-10-25T11:12:44.219Z","stage":"promise diagnostics","state":"START"}
+{"time":"2026-10-25T11:12:44.222Z","stage":"promise diagnostics","state":"PASS"}
+{"time":"2026-10-25T11:12:44.223Z","stage":"CSP diagnostics","state":"START"}
+{"time":"2026-10-25T11:12:44.224Z","stage":"CSP diagnostics","state":"PASS"}
+{"time":"2026-10-25T11:12:44.225Z","stage":"zero external requests and console/page/promise/CSP errors","state":"START"}
+{"time":"2026-10-25T11:12:44.225Z","stage":"zero external requests and console/page/promise/CSP errors","state":"PASS"}
+{"time":"2026-10-25T11:12:44.225Z","stage":"screenshot","state":"START"}
+{"time":"2026-10-25T11:12:44.329Z","stage":"screenshot","state":"PASS"}
+{"time":"2026-10-25T11:12:44.329Z","stage":"browser disconnect/close","state":"START"}
+{"time":"2026-10-25T11:12:44.331Z","stage":"browser disconnect/close","state":"PASS"}
+{"time":"2026-10-25T11:12:44.332Z","stage":"browser process close","state":"START"}
+{"time":"2026-10-25T11:12:44.346Z","stage":"browser process close","state":"PASS"}
+{"time":"2026-10-25T11:44:04.949Z","stage":"browser launch","state":"START"}
+{"time":"2026-10-25T11:44:05.306Z","stage":"browser launch","state":"PASS"}
+{"time":"2026-10-25T11:44:05.306Z","stage":"browser connect","state":"START"}
+{"time":"2026-10-25T11:44:05.333Z","stage":"browser connect","state":"PASS"}
+{"time":"2026-10-25T11:44:05.333Z","stage":"fresh offline context","state":"START"}
+{"time":"2026-10-25T11:44:05.338Z","stage":"fresh offline context","state":"PASS"}
+{"time":"2026-10-25T11:44:05.339Z","stage":"request guard","state":"START"}
+{"time":"2026-10-25T11:44:05.340Z","stage":"request guard","state":"PASS"}
+{"time":"2026-10-25T11:44:05.340Z","stage":"page creation","state":"START"}
+{"time":"2026-10-25T11:44:05.515Z","stage":"page creation","state":"PASS"}
+{"time":"2026-10-25T11:44:05.516Z","stage":"diagnostic hooks","state":"START"}
+{"time":"2026-10-25T11:44:05.517Z","stage":"diagnostic hooks","state":"PASS"}
+{"time":"2026-10-25T11:44:05.517Z","stage":"file HTML load","state":"START"}
+{"time":"2026-10-25T11:44:05.808Z","stage":"file HTML load","state":"PASS"}
+{"time":"2026-10-25T11:44:05.808Z","stage":"normal PDF/C1 READY before file choice and diagnostics nonempty","state":"START"}
+{"time":"2026-10-25T11:44:05.829Z","stage":"normal PDF/C1 READY before file choice and diagnostics nonempty","state":"PASS"}
+{"time":"2026-10-25T11:44:05.829Z","stage":"missing TextDecoder reproduces pre-app failure and preserves C1","state":"START"}
+{"time":"2026-10-25T11:44:06.139Z","stage":"missing TextDecoder reproduces pre-app failure and preserves C1","state":"PASS"}
+{"time":"2026-10-25T11:44:06.139Z","stage":"Tesseract initialization exception shows exact stage, C1 unaffected","state":"START"}
+{"time":"2026-10-25T11:44:06.467Z","stage":"Tesseract initialization exception shows exact stage, C1 unaffected","state":"PASS"}
+{"time":"2026-10-25T11:44:06.467Z","stage":"PDF-only parse error visible from independent bootstrap, C1 unaffected","state":"START"}
+{"time":"2026-10-25T11:44:06.602Z","stage":"PDF-only parse error visible from independent bootstrap, C1 unaffected","state":"PASS"}
+{"time":"2026-10-25T11:44:06.602Z","stage":"PDF-only CSP hash mismatch fails visibly, no security relaxation","state":"START"}
+{"time":"2026-10-25T11:44:06.812Z","stage":"PDF-only CSP hash mismatch fails visibly, no security relaxation","state":"PASS"}
+{"time":"2026-10-25T11:44:06.813Z","stage":"missing PDF completion becomes TIMEOUT instead of quiet EMPTY","state":"START"}
+{"time":"2026-10-25T11:44:16.942Z","stage":"missing PDF completion becomes TIMEOUT instead of quiet EMPTY","state":"PASS"}
+{"time":"2026-10-25T11:44:16.943Z","stage":"worker/WASM absence does not prevent initial PDF diagnostic or direct PDF","state":"START"}
+{"time":"2026-10-25T11:44:17.493Z","stage":"worker/WASM absence does not prevent initial PDF diagnostic or direct PDF","state":"PASS"}
+{"time":"2026-10-25T11:44:17.493Z","stage":"missing lazy modern APIs recorded without falsely blaming initial bootstrap","state":"START"}
+{"time":"2026-10-25T11:44:17.792Z","stage":"missing lazy modern APIs recorded without falsely blaming initial bootstrap","state":"PASS"}
+{"time":"2026-10-25T11:44:17.793Z","stage":"promise diagnostics","state":"START"}
+{"time":"2026-10-25T11:44:17.795Z","stage":"promise diagnostics","state":"PASS"}
+{"time":"2026-10-25T11:44:17.795Z","stage":"CSP diagnostics","state":"START"}
+{"time":"2026-10-25T11:44:17.796Z","stage":"CSP diagnostics","state":"PASS"}
+{"time":"2026-10-25T11:44:17.797Z","stage":"zero external requests and console/page/promise/CSP errors","state":"START"}
+{"time":"2026-10-25T11:44:17.797Z","stage":"zero external requests and console/page/promise/CSP errors","state":"PASS"}
+{"time":"2026-10-25T11:44:17.797Z","stage":"screenshot","state":"START"}
+{"time":"2026-10-25T11:44:17.907Z","stage":"screenshot","state":"PASS"}
+{"time":"2026-10-25T11:44:17.907Z","stage":"browser disconnect/close","state":"START"}
+{"time":"2026-10-25T11:44:17.909Z","stage":"browser disconnect/close","state":"PASS"}
+{"time":"2026-10-25T11:44:17.910Z","stage":"browser process close","state":"START"}
+{"time":"2026-10-25T11:44:17.926Z","stage":"browser process close","state":"PASS"}

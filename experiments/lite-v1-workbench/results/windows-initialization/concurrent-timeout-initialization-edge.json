@@ -1,0 +1,210 @@
+{
+  "target": "edge",
+  "started": "2026-10-25T11:13:59.128Z",
+  "windows": "NOT_RUN",
+  "offline": "fresh context, empty cache, browser offline emulation; physical disconnection NOT_RUN",
+  "checks": [
+    {
+      "name": "normal PDF/C1 READY before file choice and diagnostics nonempty",
+      "state": "PASS"
+    },
+    {
+      "name": "missing TextDecoder reproduces pre-app failure and preserves C1",
+      "state": "PASS"
+    },
+    {
+      "name": "Tesseract initialization exception shows exact stage, C1 unaffected",
+      "state": "PASS"
+    },
+    {
+      "name": "PDF-only parse error visible from independent bootstrap, C1 unaffected",
+      "state": "PASS"
+    },
+    {
+      "name": "PDF-only CSP hash mismatch fails visibly, no security relaxation",
+      "state": "FAIL",
+      "error": "Error: TIMEOUT: PDF-only CSP hash mismatch fails visibly, no security relaxation 15000ms"
+    }
+  ],
+  "stages": [
+    {
+      "time": "2026-10-25T11:13:59.128Z",
+      "stage": "browser launch",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-25T11:14:00.757Z",
+      "stage": "browser launch",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-25T11:14:00.757Z",
+      "stage": "browser connect",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-25T11:14:00.778Z",
+      "stage": "browser connect",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-25T11:14:00.778Z",
+      "stage": "fresh offline context",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-25T11:14:00.783Z",
+      "stage": "fresh offline context",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-25T11:14:00.783Z",
+      "stage": "request guard",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-25T11:14:00.784Z",
+      "stage": "request guard",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-25T11:14:00.784Z",
+      "stage": "page creation",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-25T11:14:01.273Z",
+      "stage": "page creation",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-25T11:14:01.274Z",
+      "stage": "diagnostic hooks",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-25T11:14:01.277Z",
+      "stage": "diagnostic hooks",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-25T11:14:01.277Z",
+      "stage": "file HTML load",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-25T11:14:01.622Z",
+      "stage": "file HTML load",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-25T11:14:01.622Z",
+      "stage": "normal PDF/C1 READY before file choice and diagnostics nonempty",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-25T11:14:01.640Z",
+      "stage": "normal PDF/C1 READY before file choice and diagnostics nonempty",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-25T11:14:01.641Z",
+      "stage": "missing TextDecoder reproduces pre-app failure and preserves C1",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-25T11:14:02.204Z",
+      "stage": "missing TextDecoder reproduces pre-app failure and preserves C1",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-25T11:14:02.204Z",
+      "stage": "Tesseract initialization exception shows exact stage, C1 unaffected",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-25T11:14:02.770Z",
+      "stage": "Tesseract initialization exception shows exact stage, C1 unaffected",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-25T11:14:02.771Z",
+      "stage": "PDF-only parse error visible from independent bootstrap, C1 unaffected",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-25T11:14:03.077Z",
+      "stage": "PDF-only parse error visible from independent bootstrap, C1 unaffected",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-25T11:14:03.078Z",
+      "stage": "PDF-only CSP hash mismatch fails visibly, no security relaxation",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-25T11:19:05.216Z",
+      "stage": "PDF-only CSP hash mismatch fails visibly, no security relaxation",
+      "state": "TIMEOUT",
+      "error": "Error: TIMEOUT: PDF-only CSP hash mismatch fails visibly, no security relaxation 15000ms"
+    },
+    {
+      "time": "2026-10-25T11:19:05.219Z",
+      "stage": "browser disconnect/close",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-25T11:19:05.221Z",
+      "stage": "absolute deadline",
+      "state": "TIMEOUT"
+    }
+  ],
+  "diagnostics": {
+    "consoleErrors": [],
+    "pageErrors": [],
+    "externalRequests": [],
+    "unhandledRejections": [],
+    "cspViolations": []
+  },
+  "browserPid": 2559,
+  "version": "156.0.4314.42",
+  "requests": [
+    "<repo>/experiments/lite-v1-workbench/generated/lite-v1.html"
+  ],
+  "initializationProfiles": [
+    {
+      "name": "missing-decoder",
+      "errors": [],
+      "consoleErrors": [],
+      "csp": [],
+      "externalRequests": [],
+      "pdf": "PDF 초기화: FAILED · PDF_WORKER_CODE · ReferenceError: TextDecoder is not defined\n    at <repo>/experiments/lite-v1-workbench/generated/lite-v1.html:2762:25\n    at <repo>/experiments/lite-v1-workbench/generated/lite-v1.html:65790:33\n    at <repo>/experiments/lite-v1-workbench/generated/lite-v1.html:94113:3",
+      "c1": "C1 초기화: READY · C1_SCRIPT",
+      "details": "{\n  \"area\": \"pdf\",\n  \"initialization\": {\n    \"state\": \"FAILED\",\n    \"stage\": \"PDF_WORKER_CODE\",\n    \"error\": \"ReferenceError: TextDecoder is not defined\\n    at <repo>/experiments/lite-v1-workbench/generated/lite-v1.html:2762:25\\n    at <repo>/experiments/lite-v1-workbench/generated/lite-v1.html:65790:33\\n    at <repo>/experiments/lite-v1-workbench/generated/lite-v1.html:94113:3\"\n  },\n  \"environment\": {\n    \"userAgent\": \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36 Edg/156.0.0.0\",\n    \"protocol\": \"file:\",\n    \"capabilities\": {\n      \"textDecoder\": false,\n      \"textEncoder\": true,\n      \"promiseWithResolvers\": true,\n      \"promiseTry\": true,\n      \"mapGetOrInsertComputed\": true,\n      \"urlParse\": true,\n      \"uint8ToHex\": true,\n      \"uint8FromBase64\": true,\n      \"mathSumPrecise\": true,\n      \"workerAPI\": true,\n      \"wasmAPI\": true,\n      \"sha256API\": true,\n      \"fileAPI\": true,\n      \"canvas2d\": true,\n      \"secureContext\": true\n    },\n    \"note\": \"API presence is not worker/WASM policy success. Windows cause unconfirmed.\"\n  }\n}"
+    },
+    {
+      "name": "runtime",
+      "errors": [],
+      "consoleErrors": [],
+      "csp": [],
+      "externalRequests": [],
+      "pdf": "PDF 초기화: FAILED · TESSERACT_CODE · ReferenceError: synthetic Tesseract initialization fault\n    at <repo>/experiments/lite-v1-workbench/generated/init-runtime.html:94000:42\n    at <repo>/experiments/lite-v1-workbench/generated/init-runtime.html:94113:3",
+      "c1": "C1 초기화: READY · C1_SCRIPT",
+      "details": "{\n  \"area\": \"pdf\",\n  \"initialization\": {\n    \"state\": \"FAILED\",\n    \"stage\": \"TESSERACT_CODE\",\n    \"error\": \"ReferenceError: synthetic Tesseract initialization fault\\n    at <repo>/experiments/lite-v1-workbench/generated/init-runtime.html:94000:42\\n    at <repo>/experiments/lite-v1-workbench/generated/init-runtime.html:94113:3\"\n  },\n  \"environment\": {\n    \"userAgent\": \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36 Edg/156.0.0.0\",\n    \"protocol\": \"file:\",\n    \"capabilities\": {\n      \"textDecoder\": true,\n      \"textEncoder\": true,\n      \"promiseWithResolvers\": true,\n      \"promiseTry\": true,\n      \"mapGetOrInsertComputed\": true,\n      \"urlParse\": true,\n      \"uint8ToHex\": true,\n      \"uint8FromBase64\": true,\n      \"mathSumPrecise\": true,\n      \"workerAPI\": true,\n      \"wasmAPI\": true,\n      \"sha256API\": true,\n      \"fileAPI\": true,\n      \"canvas2d\": true,\n      \"secureContext\": true\n    },\n    \"note\": \"API presence is not worker/WASM policy success. Windows cause unconfirmed.\"\n  }\n}"
+    },
+    {
+      "name": "syntax",
+      "errors": [
+        "SyntaxError: Unexpected token ';'"
+      ],
+      "consoleErrors": [],
+      "csp": [],
+      "externalRequests": [],
+      "pdf": "PDF 초기화: FAILED · PDF_PAYLOAD · SyntaxError: Unexpected token ';'",
+      "c1": "C1 초기화: READY · C1_SCRIPT",
+      "details": "{\n  \"area\": \"pdf\",\n  \"initialization\": {\n    \"state\": \"FAILED\",\n    \"stage\": \"PDF_PAYLOAD\",\n    \"error\": \"SyntaxError: Unexpected token ';'\"\n  },\n  \"environment\": {\n    \"userAgent\": \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36 Edg/156.0.0.0\",\n    \"protocol\": \"file:\",\n    \"capabilities\": {\n      \"textDecoder\": true,\n      \"textEncoder\": true,\n      \"promiseWithResolvers\": true,\n      \"promiseTry\": true,\n      \"mapGetOrInsertComputed\": true,\n      \"urlParse\": true,\n      \"uint8ToHex\": true,\n      \"uint8FromBase64\": true,\n      \"mathSumPrecise\": true,\n      \"workerAPI\": true,\n      \"wasmAPI\": true,\n      \"sha256API\": true,\n      \"fileAPI\": true,\n      \"canvas2d\": true,\n      \"secureContext\": true\n    },\n    \"note\": \"API presence is not worker/WASM policy success. Windows cause unconfirmed.\"\n  }\n}"
+    }
+  ],
+  "fatal": "TIMEOUT: absolute test deadline 180000ms",
+  "killedOwnBrowserPid": 2559
+}
