@@ -1,0 +1,201 @@
+{
+  "node": "v24.22.0",
+  "origin": "http://127.0.0.1:57064",
+  "browsers": [
+    {
+      "name": "Chromium",
+      "version": "156.0.8078.4",
+      "results": [
+        {
+          "name": "public browser entry includes calculation and async snapshots",
+          "pass": true
+        },
+        {
+          "name": "BL1-T01",
+          "pass": true
+        },
+        {
+          "name": "BL1-T02-A",
+          "pass": true
+        },
+        {
+          "name": "BL1-T02-B",
+          "pass": true
+        },
+        {
+          "name": "BL1-T03",
+          "pass": true
+        },
+        {
+          "name": "BL1-T06-A",
+          "pass": true
+        },
+        {
+          "name": "BL1-T06-B",
+          "pass": true
+        },
+        {
+          "name": "BL1-T07",
+          "pass": true
+        },
+        {
+          "name": "BL1-T08",
+          "pass": true
+        },
+        {
+          "name": "BL1-T09",
+          "pass": true
+        },
+        {
+          "name": "BL1-T10",
+          "pass": true
+        },
+        {
+          "name": "BL1-T11",
+          "pass": true
+        },
+        {
+          "name": "incomplete collection dependencies preserve Q",
+          "pass": true
+        },
+        {
+          "name": "valid collection bad viaId, duplicate ID and invalid Q keep InputError",
+          "pass": true
+        },
+        {
+          "name": "1024-digit Q: exact growth, conservation, identity, equality and JSON",
+          "pass": true
+        },
+        {
+          "name": "Node/browser SHA-256 equality for 10 legal truth inputs",
+          "pass": true
+        },
+        {
+          "name": "snapshot changes and irreversible STALE",
+          "pass": true
+        },
+        {
+          "name": "async creation uses same pinned input/approval copies",
+          "pass": true
+        },
+        {
+          "name": "async refresh captures change before caller reverts",
+          "pass": true
+        },
+        {
+          "name": "unavailable or failing Web Crypto reports explicit error",
+          "pass": true
+        }
+      ],
+      "pass": 20,
+      "fail": 0,
+      "skipped": 0,
+      "diagnostics": {
+        "consoleErrors": [],
+        "pageErrors": [],
+        "unhandledRejections": [],
+        "externalRequests": [],
+        "engineRequests": []
+      },
+      "diagnosticsPass": true
+    },
+    {
+      "name": "Microsoft Edge",
+      "version": "156.0.4314.42",
+      "results": [
+        {
+          "name": "public browser entry includes calculation and async snapshots",
+          "pass": true
+        },
+        {
+          "name": "BL1-T01",
+          "pass": true
+        },
+        {
+          "name": "BL1-T02-A",
+          "pass": true
+        },
+        {
+          "name": "BL1-T02-B",
+          "pass": true
+        },
+        {
+          "name": "BL1-T03",
+          "pass": true
+        },
+        {
+          "name": "BL1-T06-A",
+          "pass": true
+        },
+        {
+          "name": "BL1-T06-B",
+          "pass": true
+        },
+        {
+          "name": "BL1-T07",
+          "pass": true
+        },
+        {
+          "name": "BL1-T08",
+          "pass": true
+        },
+        {
+          "name": "BL1-T09",
+          "pass": true
+        },
+        {
+          "name": "BL1-T10",
+          "pass": true
+        },
+        {
+          "name": "BL1-T11",
+          "pass": true
+        },
+        {
+          "name": "incomplete collection dependencies preserve Q",
+          "pass": true
+        },
+        {
+          "name": "valid collection bad viaId, duplicate ID and invalid Q keep InputError",
+          "pass": true
+        },
+        {
+          "name": "1024-digit Q: exact growth, conservation, identity, equality and JSON",
+          "pass": true
+        },
+        {
+          "name": "Node/browser SHA-256 equality for 10 legal truth inputs",
+          "pass": true
+        },
+        {
+          "name": "snapshot changes and irreversible STALE",
+          "pass": true
+        },
+        {
+          "name": "async creation uses same pinned input/approval copies",
+          "pass": true
+        },
+        {
+          "name": "async refresh captures change before caller reverts",
+          "pass": true
+        },
+        {
+          "name": "unavailable or failing Web Crypto reports explicit error",
+          "pass": true
+        }
+      ],
+      "pass": 20,
+      "fail": 0,
+      "skipped": 0,
+      "diagnostics": {
+        "consoleErrors": [],
+        "pageErrors": [],
+        "unhandledRejections": [],
+        "externalRequests": [],
+        "engineRequests": []
+      },
+      "diagnosticsPass": true
+    }
+  ],
+  "edge": "INSTALLED"
+}

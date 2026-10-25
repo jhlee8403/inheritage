@@ -1,0 +1,12 @@
+✔ generated C1 script is byte-identical to the protected C1 artifact (6.837375ms)
+✔ single file hash and SHA-256 CSP match, no external resource tags (27.573125ms)
+✔ rebuild is byte reproducible from locked local resources (154.997916ms)
+✔ instructions and redistribution notice have recorded hashes (0.617625ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 4
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 233.938875

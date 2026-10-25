@@ -1,0 +1,222 @@
+{"time":"2026-10-25T09:51:02.782Z","stage":"browser launch","state":"START"}
+{"time":"2026-10-25T09:51:04.320Z","stage":"browser launch","state":"PASS"}
+{"time":"2026-10-25T09:51:04.320Z","stage":"browser connect","state":"START"}
+{"time":"2026-10-25T09:51:04.346Z","stage":"browser connect","state":"PASS"}
+{"time":"2026-10-25T09:51:04.346Z","stage":"fresh offline context","state":"START"}
+{"time":"2026-10-25T09:51:04.351Z","stage":"fresh offline context","state":"PASS"}
+{"time":"2026-10-25T09:51:04.351Z","stage":"request guard","state":"START"}
+{"time":"2026-10-25T09:51:04.353Z","stage":"request guard","state":"PASS"}
+{"time":"2026-10-25T09:51:04.353Z","stage":"page creation","state":"START"}
+{"time":"2026-10-25T09:51:04.968Z","stage":"page creation","state":"PASS"}
+{"time":"2026-10-25T09:51:04.969Z","stage":"diagnostic hooks","state":"START"}
+{"time":"2026-10-25T09:51:04.976Z","stage":"diagnostic hooks","state":"PASS"}
+{"time":"2026-10-25T09:51:04.976Z","stage":"file HTML load","state":"START"}
+{"time":"2026-10-25T09:51:05.303Z","stage":"file HTML load","state":"PASS"}
+{"time":"2026-10-25T09:51:05.304Z","stage":"selected text PDF, render and direct NEEDS_REVIEW","state":"START"}
+{"time":"2026-10-25T09:51:05.412Z","stage":"selected text PDF, render and direct NEEDS_REVIEW","state":"PASS"}
+{"time":"2026-10-25T09:51:05.412Z","stage":"selected scan PDF, real Blob/WASM/kor OCR candidate","state":"START"}
+{"time":"2026-10-25T09:51:05.942Z","stage":"selected scan PDF, real Blob/WASM/kor OCR candidate","state":"PASS"}
+{"time":"2026-10-25T09:51:05.942Z","stage":"user candidate editing and quality warning, no C1 auto-fill","state":"START"}
+{"time":"2026-10-25T09:51:05.956Z","stage":"user candidate editing and quality warning, no C1 auto-fill","state":"PASS"}
+{"time":"2026-10-25T09:51:05.956Z","stage":"replacement clears previous document candidate","state":"START"}
+{"time":"2026-10-25T09:51:05.978Z","stage":"replacement clears previous document candidate","state":"PASS"}
+{"time":"2026-10-25T09:51:05.979Z","stage":"three-page selected PDF navigation and per-page edited candidate","state":"START"}
+{"time":"2026-10-25T09:51:06.092Z","stage":"three-page selected PDF navigation and per-page edited candidate","state":"PASS"}
+{"time":"2026-10-25T09:51:06.093Z","stage":"PDF markup remains literal text, no HTML execution","state":"START"}
+{"time":"2026-10-25T09:51:06.193Z","stage":"PDF markup remains literal text, no HTML execution","state":"PASS"}
+{"time":"2026-10-25T09:51:06.193Z","stage":"OCR cancellation after actual worker boot and cleanup","state":"START"}
+{"time":"2026-10-25T09:51:06.667Z","stage":"OCR cancellation after actual worker boot and cleanup","state":"PASS"}
+{"time":"2026-10-25T09:51:06.668Z","stage":"navigation blocks held late OCR completion","state":"START"}
+{"time":"2026-10-25T09:51:07.095Z","stage":"navigation blocks held late OCR completion","state":"PASS"}
+{"time":"2026-10-25T09:51:07.096Z","stage":"PDF replacement blocks held old OCR completion","state":"START"}
+{"time":"2026-10-25T09:51:07.444Z","stage":"PDF replacement blocks held old OCR completion","state":"PASS"}
+{"time":"2026-10-25T09:51:07.445Z","stage":"explicit OCR error clears candidate and releases resources","state":"START"}
+{"time":"2026-10-25T09:51:07.658Z","stage":"explicit OCR error clears candidate and releases resources","state":"PASS"}
+{"time":"2026-10-25T09:51:07.659Z","stage":"OCR pipeline hash TIMEOUT, late result cannot publish","state":"START"}
+{"time":"2026-10-25T09:51:12.952Z","stage":"OCR pipeline hash TIMEOUT, late result cannot publish","state":"PASS"}
+{"time":"2026-10-25T09:51:12.954Z","stage":"malformed PDF explicit ERROR","state":"START"}
+{"time":"2026-10-25T09:51:12.977Z","stage":"malformed PDF explicit ERROR","state":"PASS"}
+{"time":"2026-10-25T09:51:12.978Z","stage":"file byte limit explicit ERROR before parsing","state":"START"}
+{"time":"2026-10-25T09:51:13.487Z","stage":"file byte limit explicit ERROR before parsing","state":"PASS"}
+{"time":"2026-10-25T09:51:13.488Z","stage":"page count limit explicit ERROR","state":"START"}
+{"time":"2026-10-25T09:51:13.495Z","stage":"page count limit explicit ERROR","state":"PASS"}
+{"time":"2026-10-25T09:51:13.495Z","stage":"render pixel limit explicit ERROR before canvas allocation","state":"START"}
+{"time":"2026-10-25T09:51:13.503Z","stage":"render pixel limit explicit ERROR before canvas allocation","state":"PASS"}
+{"time":"2026-10-25T09:51:13.504Z","stage":"integrated C1 spouse","state":"START"}
+{"time":"2026-10-25T09:51:13.582Z","stage":"integrated C1 spouse","state":"PASS"}
+{"time":"2026-10-25T09:51:13.582Z","stage":"integrated C1 parents","state":"START"}
+{"time":"2026-10-25T09:51:13.775Z","stage":"integrated C1 parents","state":"PASS"}
+{"time":"2026-10-25T09:51:13.775Z","stage":"integrated C1 children","state":"START"}
+{"time":"2026-10-25T09:51:13.844Z","stage":"integrated C1 children","state":"PASS"}
+{"time":"2026-10-25T09:51:13.845Z","stage":"C1 exact Q, immediate STALE and copy disabled","state":"START"}
+{"time":"2026-10-25T09:51:13.893Z","stage":"C1 exact Q, immediate STALE and copy disabled","state":"PASS"}
+{"time":"2026-10-25T09:51:13.894Z","stage":"C1 UNKNOWN BLOCKED preserves Q","state":"START"}
+{"time":"2026-10-25T09:51:13.959Z","stage":"C1 UNKNOWN BLOCKED preserves Q","state":"PASS"}
+{"time":"2026-10-25T09:51:13.959Z","stage":"C1 denominator zero ERROR, no old result or copy","state":"START"}
+{"time":"2026-10-25T09:51:14.058Z","stage":"C1 denominator zero ERROR, no old result or copy","state":"PASS"}
+{"time":"2026-10-25T09:51:14.059Z","stage":"C1 late async calculation blocked by edited revision","state":"START"}
+{"time":"2026-10-25T09:51:14.265Z","stage":"C1 late async calculation blocked by edited revision","state":"PASS"}
+{"time":"2026-10-25T09:51:14.266Z","stage":"C1 clipboard attempt and manual selection fallback","state":"START"}
+{"time":"2026-10-25T09:51:14.377Z","stage":"C1 clipboard attempt and manual selection fallback","state":"PASS"}
+{"time":"2026-10-25T09:51:14.377Z","stage":"document close clears source, candidates and owned workers","state":"START"}
+{"time":"2026-10-25T09:51:14.412Z","stage":"document close clears source, candidates and owned workers","state":"PASS"}
+{"time":"2026-10-25T09:51:14.973Z","stage":"promise diagnostics","state":"START"}
+{"time":"2026-10-25T09:51:14.975Z","stage":"promise diagnostics","state":"PASS"}
+{"time":"2026-10-25T09:51:14.975Z","stage":"CSP diagnostics","state":"START"}
+{"time":"2026-10-25T09:51:14.976Z","stage":"CSP diagnostics","state":"PASS"}
+{"time":"2026-10-25T09:51:14.976Z","stage":"zero external requests and console/page/promise/CSP errors","state":"START"}
+{"time":"2026-10-25T09:51:14.976Z","stage":"zero external requests and console/page/promise/CSP errors","state":"PASS"}
+{"time":"2026-10-25T09:51:14.976Z","stage":"screenshot","state":"START"}
+{"time":"2026-10-25T09:51:15.388Z","stage":"screenshot","state":"PASS"}
+{"time":"2026-10-25T09:51:15.388Z","stage":"browser disconnect/close","state":"START"}
+{"time":"2026-10-25T09:51:15.390Z","stage":"browser disconnect/close","state":"PASS"}
+{"time":"2026-10-25T09:51:15.390Z","stage":"browser process close","state":"START"}
+{"time":"2026-10-25T09:51:16.244Z","stage":"browser process close","state":"PASS"}
+{"time":"2026-10-25T09:53:10.222Z","stage":"browser launch","state":"START"}
+{"time":"2026-10-25T09:53:10.683Z","stage":"browser launch","state":"PASS"}
+{"time":"2026-10-25T09:53:10.684Z","stage":"browser connect","state":"START"}
+{"time":"2026-10-25T09:53:10.727Z","stage":"browser connect","state":"PASS"}
+{"time":"2026-10-25T09:53:10.727Z","stage":"fresh offline context","state":"START"}
+{"time":"2026-10-25T09:53:10.736Z","stage":"fresh offline context","state":"PASS"}
+{"time":"2026-10-25T09:53:10.737Z","stage":"request guard","state":"START"}
+{"time":"2026-10-25T09:53:10.739Z","stage":"request guard","state":"PASS"}
+{"time":"2026-10-25T09:53:10.739Z","stage":"page creation","state":"START"}
+{"time":"2026-10-25T09:53:10.944Z","stage":"page creation","state":"PASS"}
+{"time":"2026-10-25T09:53:10.945Z","stage":"diagnostic hooks","state":"START"}
+{"time":"2026-10-25T09:53:10.955Z","stage":"diagnostic hooks","state":"PASS"}
+{"time":"2026-10-25T09:53:10.957Z","stage":"file HTML load","state":"START"}
+{"time":"2026-10-25T09:53:11.266Z","stage":"file HTML load","state":"PASS"}
+{"time":"2026-10-25T09:53:11.267Z","stage":"selected text PDF, render and direct NEEDS_REVIEW","state":"START"}
+{"time":"2026-10-25T09:53:11.478Z","stage":"selected text PDF, render and direct NEEDS_REVIEW","state":"PASS"}
+{"time":"2026-10-25T09:53:11.479Z","stage":"selected scan PDF, real Blob/WASM/kor OCR candidate","state":"START"}
+{"time":"2026-10-25T09:53:12.482Z","stage":"selected scan PDF, real Blob/WASM/kor OCR candidate","state":"PASS"}
+{"time":"2026-10-25T09:53:12.483Z","stage":"user candidate editing and quality warning, no C1 auto-fill","state":"START"}
+{"time":"2026-10-25T09:53:12.504Z","stage":"user candidate editing and quality warning, no C1 auto-fill","state":"PASS"}
+{"time":"2026-10-25T09:53:12.504Z","stage":"replacement clears previous document candidate","state":"START"}
+{"time":"2026-10-25T09:53:12.556Z","stage":"replacement clears previous document candidate","state":"PASS"}
+{"time":"2026-10-25T09:53:12.558Z","stage":"three-page selected PDF navigation and per-page edited candidate","state":"START"}
+{"time":"2026-10-25T09:53:12.796Z","stage":"three-page selected PDF navigation and per-page edited candidate","state":"PASS"}
+{"time":"2026-10-25T09:53:12.796Z","stage":"PDF markup remains literal text, no HTML execution","state":"START"}
+{"time":"2026-10-25T09:53:12.904Z","stage":"PDF markup remains literal text, no HTML execution","state":"PASS"}
+{"time":"2026-10-25T09:53:12.905Z","stage":"OCR cancellation after actual worker boot and cleanup","state":"START"}
+{"time":"2026-10-25T09:53:13.435Z","stage":"OCR cancellation after actual worker boot and cleanup","state":"PASS"}
+{"time":"2026-10-25T09:53:13.435Z","stage":"navigation blocks held late OCR completion","state":"START"}
+{"time":"2026-10-25T09:53:13.916Z","stage":"navigation blocks held late OCR completion","state":"PASS"}
+{"time":"2026-10-25T09:53:13.917Z","stage":"PDF replacement blocks held old OCR completion","state":"START"}
+{"time":"2026-10-25T09:53:14.284Z","stage":"PDF replacement blocks held old OCR completion","state":"PASS"}
+{"time":"2026-10-25T09:53:14.284Z","stage":"explicit OCR error clears candidate and releases resources","state":"START"}
+{"time":"2026-10-25T09:53:14.527Z","stage":"explicit OCR error clears candidate and releases resources","state":"PASS"}
+{"time":"2026-10-25T09:53:14.527Z","stage":"OCR pipeline hash TIMEOUT, late result cannot publish","state":"START"}
+{"time":"2026-10-25T09:53:19.839Z","stage":"OCR pipeline hash TIMEOUT, late result cannot publish","state":"PASS"}
+{"time":"2026-10-25T09:53:19.840Z","stage":"malformed PDF explicit ERROR","state":"START"}
+{"time":"2026-10-25T09:53:19.860Z","stage":"malformed PDF explicit ERROR","state":"PASS"}
+{"time":"2026-10-25T09:53:19.861Z","stage":"file byte limit explicit ERROR before parsing","state":"START"}
+{"time":"2026-10-25T09:53:20.385Z","stage":"file byte limit explicit ERROR before parsing","state":"PASS"}
+{"time":"2026-10-25T09:53:20.386Z","stage":"page count limit explicit ERROR","state":"START"}
+{"time":"2026-10-25T09:53:20.394Z","stage":"page count limit explicit ERROR","state":"PASS"}
+{"time":"2026-10-25T09:53:20.394Z","stage":"render pixel limit explicit ERROR before canvas allocation","state":"START"}
+{"time":"2026-10-25T09:53:20.402Z","stage":"render pixel limit explicit ERROR before canvas allocation","state":"PASS"}
+{"time":"2026-10-25T09:53:20.402Z","stage":"integrated C1 spouse","state":"START"}
+{"time":"2026-10-25T09:53:20.466Z","stage":"integrated C1 spouse","state":"PASS"}
+{"time":"2026-10-25T09:53:20.467Z","stage":"integrated C1 parents","state":"START"}
+{"time":"2026-10-25T09:53:20.530Z","stage":"integrated C1 parents","state":"PASS"}
+{"time":"2026-10-25T09:53:20.530Z","stage":"integrated C1 children","state":"START"}
+{"time":"2026-10-25T09:53:20.597Z","stage":"integrated C1 children","state":"PASS"}
+{"time":"2026-10-25T09:53:20.598Z","stage":"C1 exact Q, immediate STALE and copy disabled","state":"START"}
+{"time":"2026-10-25T09:53:20.631Z","stage":"C1 exact Q, immediate STALE and copy disabled","state":"PASS"}
+{"time":"2026-10-25T09:53:20.631Z","stage":"C1 UNKNOWN BLOCKED preserves Q","state":"START"}
+{"time":"2026-10-25T09:53:20.697Z","stage":"C1 UNKNOWN BLOCKED preserves Q","state":"PASS"}
+{"time":"2026-10-25T09:53:20.697Z","stage":"C1 denominator zero ERROR, no old result or copy","state":"START"}
+{"time":"2026-10-25T09:53:20.796Z","stage":"C1 denominator zero ERROR, no old result or copy","state":"PASS"}
+{"time":"2026-10-25T09:53:20.796Z","stage":"C1 late async calculation blocked by edited revision","state":"START"}
+{"time":"2026-10-25T09:53:21.000Z","stage":"C1 late async calculation blocked by edited revision","state":"PASS"}
+{"time":"2026-10-25T09:53:21.001Z","stage":"C1 clipboard attempt and manual selection fallback","state":"START"}
+{"time":"2026-10-25T09:53:21.114Z","stage":"C1 clipboard attempt and manual selection fallback","state":"PASS"}
+{"time":"2026-10-25T09:53:21.115Z","stage":"document close clears source, candidates and owned workers","state":"START"}
+{"time":"2026-10-25T09:53:21.150Z","stage":"document close clears source, candidates and owned workers","state":"PASS"}
+{"time":"2026-10-25T09:53:21.744Z","stage":"promise diagnostics","state":"START"}
+{"time":"2026-10-25T09:53:21.745Z","stage":"promise diagnostics","state":"PASS"}
+{"time":"2026-10-25T09:53:21.745Z","stage":"CSP diagnostics","state":"START"}
+{"time":"2026-10-25T09:53:21.745Z","stage":"CSP diagnostics","state":"PASS"}
+{"time":"2026-10-25T09:53:21.746Z","stage":"zero external requests and console/page/promise/CSP errors","state":"START"}
+{"time":"2026-10-25T09:53:21.746Z","stage":"zero external requests and console/page/promise/CSP errors","state":"PASS"}
+{"time":"2026-10-25T09:53:21.746Z","stage":"screenshot","state":"START"}
+{"time":"2026-10-25T09:53:22.060Z","stage":"screenshot","state":"PASS"}
+{"time":"2026-10-25T09:53:22.060Z","stage":"browser disconnect/close","state":"START"}
+{"time":"2026-10-25T09:53:22.061Z","stage":"browser disconnect/close","state":"PASS"}
+{"time":"2026-10-25T09:53:22.061Z","stage":"browser process close","state":"START"}
+{"time":"2026-10-25T09:53:22.295Z","stage":"browser process close","state":"PASS"}
+{"time":"2026-10-25T09:59:12.564Z","stage":"browser launch","state":"START"}
+{"time":"2026-10-25T09:59:14.088Z","stage":"browser launch","state":"PASS"}
+{"time":"2026-10-25T09:59:14.089Z","stage":"browser connect","state":"START"}
+{"time":"2026-10-25T09:59:14.120Z","stage":"browser connect","state":"PASS"}
+{"time":"2026-10-25T09:59:14.120Z","stage":"fresh offline context","state":"START"}
+{"time":"2026-10-25T09:59:14.127Z","stage":"fresh offline context","state":"PASS"}
+{"time":"2026-10-25T09:59:14.127Z","stage":"request guard","state":"START"}
+{"time":"2026-10-25T09:59:14.128Z","stage":"request guard","state":"PASS"}
+{"time":"2026-10-25T09:59:14.128Z","stage":"page creation","state":"START"}
+{"time":"2026-10-25T09:59:14.618Z","stage":"page creation","state":"PASS"}
+{"time":"2026-10-25T09:59:14.620Z","stage":"diagnostic hooks","state":"START"}
+{"time":"2026-10-25T09:59:14.623Z","stage":"diagnostic hooks","state":"PASS"}
+{"time":"2026-10-25T09:59:14.623Z","stage":"file HTML load","state":"START"}
+{"time":"2026-10-25T09:59:14.935Z","stage":"file HTML load","state":"PASS"}
+{"time":"2026-10-25T09:59:14.936Z","stage":"selected text PDF, render and direct NEEDS_REVIEW","state":"START"}
+{"time":"2026-10-25T09:59:15.046Z","stage":"selected text PDF, render and direct NEEDS_REVIEW","state":"PASS"}
+{"time":"2026-10-25T09:59:15.046Z","stage":"selected scan PDF, real Blob/WASM/kor OCR candidate","state":"START"}
+{"time":"2026-10-25T09:59:15.591Z","stage":"selected scan PDF, real Blob/WASM/kor OCR candidate","state":"PASS"}
+{"time":"2026-10-25T09:59:15.591Z","stage":"user candidate editing and quality warning, no C1 auto-fill","state":"START"}
+{"time":"2026-10-25T09:59:15.607Z","stage":"user candidate editing and quality warning, no C1 auto-fill","state":"PASS"}
+{"time":"2026-10-25T09:59:15.607Z","stage":"replacement clears previous document candidate","state":"START"}
+{"time":"2026-10-25T09:59:15.626Z","stage":"replacement clears previous document candidate","state":"PASS"}
+{"time":"2026-10-25T09:59:15.627Z","stage":"three-page selected PDF navigation and per-page edited candidate","state":"START"}
+{"time":"2026-10-25T09:59:15.738Z","stage":"three-page selected PDF navigation and per-page edited candidate","state":"PASS"}
+{"time":"2026-10-25T09:59:15.738Z","stage":"PDF markup remains literal text, no HTML execution","state":"START"}
+{"time":"2026-10-25T09:59:15.842Z","stage":"PDF markup remains literal text, no HTML execution","state":"PASS"}
+{"time":"2026-10-25T09:59:15.842Z","stage":"OCR cancellation after actual worker boot and cleanup","state":"START"}
+{"time":"2026-10-25T09:59:16.316Z","stage":"OCR cancellation after actual worker boot and cleanup","state":"PASS"}
+{"time":"2026-10-25T09:59:16.318Z","stage":"navigation blocks held late OCR completion","state":"START"}
+{"time":"2026-10-25T09:59:16.742Z","stage":"navigation blocks held late OCR completion","state":"PASS"}
+{"time":"2026-10-25T09:59:16.743Z","stage":"PDF replacement blocks held old OCR completion","state":"START"}
+{"time":"2026-10-25T09:59:17.079Z","stage":"PDF replacement blocks held old OCR completion","state":"PASS"}
+{"time":"2026-10-25T09:59:17.080Z","stage":"explicit OCR error clears candidate and releases resources","state":"START"}
+{"time":"2026-10-25T09:59:17.309Z","stage":"explicit OCR error clears candidate and releases resources","state":"PASS"}
+{"time":"2026-10-25T09:59:17.309Z","stage":"OCR pipeline hash TIMEOUT, late result cannot publish","state":"START"}
+{"time":"2026-10-25T09:59:22.629Z","stage":"OCR pipeline hash TIMEOUT, late result cannot publish","state":"PASS"}
+{"time":"2026-10-25T09:59:22.632Z","stage":"malformed PDF explicit ERROR","state":"START"}
+{"time":"2026-10-25T09:59:22.654Z","stage":"malformed PDF explicit ERROR","state":"PASS"}
+{"time":"2026-10-25T09:59:22.655Z","stage":"file byte limit explicit ERROR before parsing","state":"START"}
+{"time":"2026-10-25T09:59:23.176Z","stage":"file byte limit explicit ERROR before parsing","state":"PASS"}
+{"time":"2026-10-25T09:59:23.177Z","stage":"page count limit explicit ERROR","state":"START"}
+{"time":"2026-10-25T09:59:23.183Z","stage":"page count limit explicit ERROR","state":"PASS"}
+{"time":"2026-10-25T09:59:23.183Z","stage":"render pixel limit explicit ERROR before canvas allocation","state":"START"}
+{"time":"2026-10-25T09:59:23.192Z","stage":"render pixel limit explicit ERROR before canvas allocation","state":"PASS"}
+{"time":"2026-10-25T09:59:23.192Z","stage":"integrated C1 spouse","state":"START"}
+{"time":"2026-10-25T09:59:23.259Z","stage":"integrated C1 spouse","state":"PASS"}
+{"time":"2026-10-25T09:59:23.259Z","stage":"integrated C1 parents","state":"START"}
+{"time":"2026-10-25T09:59:23.323Z","stage":"integrated C1 parents","state":"PASS"}
+{"time":"2026-10-25T09:59:23.324Z","stage":"integrated C1 children","state":"START"}
+{"time":"2026-10-25T09:59:23.392Z","stage":"integrated C1 children","state":"PASS"}
+{"time":"2026-10-25T09:59:23.392Z","stage":"C1 exact Q, immediate STALE and copy disabled","state":"START"}
+{"time":"2026-10-25T09:59:23.424Z","stage":"C1 exact Q, immediate STALE and copy disabled","state":"PASS"}
+{"time":"2026-10-25T09:59:23.424Z","stage":"C1 UNKNOWN BLOCKED preserves Q","state":"START"}
+{"time":"2026-10-25T09:59:23.490Z","stage":"C1 UNKNOWN BLOCKED preserves Q","state":"PASS"}
+{"time":"2026-10-25T09:59:23.490Z","stage":"C1 denominator zero ERROR, no old result or copy","state":"START"}
+{"time":"2026-10-25T09:59:23.592Z","stage":"C1 denominator zero ERROR, no old result or copy","state":"PASS"}
+{"time":"2026-10-25T09:59:23.592Z","stage":"C1 late async calculation blocked by edited revision","state":"START"}
+{"time":"2026-10-25T09:59:23.794Z","stage":"C1 late async calculation blocked by edited revision","state":"PASS"}
+{"time":"2026-10-25T09:59:23.795Z","stage":"C1 clipboard attempt and manual selection fallback","state":"START"}
+{"time":"2026-10-25T09:59:23.906Z","stage":"C1 clipboard attempt and manual selection fallback","state":"PASS"}
+{"time":"2026-10-25T09:59:23.906Z","stage":"document close clears source, candidates and owned workers","state":"START"}
+{"time":"2026-10-25T09:59:23.941Z","stage":"document close clears source, candidates and owned workers","state":"PASS"}
+{"time":"2026-10-25T09:59:24.487Z","stage":"promise diagnostics","state":"START"}
+{"time":"2026-10-25T09:59:24.488Z","stage":"promise diagnostics","state":"PASS"}
+{"time":"2026-10-25T09:59:24.488Z","stage":"CSP diagnostics","state":"START"}
+{"time":"2026-10-25T09:59:24.489Z","stage":"CSP diagnostics","state":"PASS"}
+{"time":"2026-10-25T09:59:24.489Z","stage":"zero external requests and console/page/promise/CSP errors","state":"START"}
+{"time":"2026-10-25T09:59:24.489Z","stage":"zero external requests and console/page/promise/CSP errors","state":"PASS"}
+{"time":"2026-10-25T09:59:24.489Z","stage":"screenshot","state":"START"}
+{"time":"2026-10-25T09:59:24.618Z","stage":"screenshot","state":"PASS"}
+{"time":"2026-10-25T09:59:24.619Z","stage":"browser disconnect/close","state":"START"}
+{"time":"2026-10-25T09:59:24.621Z","stage":"browser disconnect/close","state":"PASS"}
+{"time":"2026-10-25T09:59:24.621Z","stage":"browser process close","state":"START"}
+{"time":"2026-10-25T09:59:25.989Z","stage":"browser process close","state":"PASS"}

@@ -1,0 +1,36 @@
+Chromium: blank manual fields remain UNKNOWN and empty: PASS
+Chromium: spouse fixture: people, fractions, paths, rules and checks: PASS
+Chromium: parents fixture: people, fractions, paths, rules and checks: PASS
+Chromium: children fixture: people, fractions, paths, rules and checks: PASS
+Chromium: Q edit immediately clears result and copy before any hash completes; recalculation: PASS
+Chromium: add/remove family member requires explicit confirmation; new ID and Q: PASS
+Chromium: UNKNOWN spouse: BLOCKED, unresolved Q, no allocations; blocked text copyable: PASS
+Chromium: incomplete family: BLOCKED preserves Q: PASS
+Chromium: malformed, zero-denominator and negative Q: ERROR and no old output: PASS
+Chromium: input changes during pending calculation: old completion ignored: PASS
+Chromium: overlapping calculations: newer result wins even when older completes last: PASS
+Chromium: cancel pending calculation cannot resurrect previous success: PASS
+Chromium: hash failure is ERROR, caught, and removes previous successful output: PASS
+Chromium: latest result real clipboard copy and selection; clipboard denial fallback: PASS
+Chromium: person ID HTML payload remains text and is rejected as invalid ID: PASS
+Chromium: pending clipboard completion cannot restore copy permission after an edit: PASS
+Chromium: date scope visible and fixed; new blank never retains old result: PASS
+Chromium: recalculation resets previous output selection and scroll to the new result heading: PASS
+Mac Microsoft Edge: blank manual fields remain UNKNOWN and empty: PASS
+Mac Microsoft Edge: spouse fixture: people, fractions, paths, rules and checks: PASS
+Mac Microsoft Edge: parents fixture: people, fractions, paths, rules and checks: PASS
+Mac Microsoft Edge: children fixture: people, fractions, paths, rules and checks: PASS
+Mac Microsoft Edge: Q edit immediately clears result and copy before any hash completes; recalculation: PASS
+Mac Microsoft Edge: add/remove family member requires explicit confirmation; new ID and Q: PASS
+Mac Microsoft Edge: UNKNOWN spouse: BLOCKED, unresolved Q, no allocations; blocked text copyable: PASS
+Mac Microsoft Edge: incomplete family: BLOCKED preserves Q: PASS
+Mac Microsoft Edge: malformed, zero-denominator and negative Q: ERROR and no old output: PASS
+Mac Microsoft Edge: input changes during pending calculation: old completion ignored: PASS
+Mac Microsoft Edge: overlapping calculations: newer result wins even when older completes last: PASS
+Mac Microsoft Edge: cancel pending calculation cannot resurrect previous success: PASS
+Mac Microsoft Edge: hash failure is ERROR, caught, and removes previous successful output: PASS
+Mac Microsoft Edge: latest result real clipboard copy and selection; clipboard denial fallback: PASS
+Mac Microsoft Edge: person ID HTML payload remains text and is rejected as invalid ID: PASS
+Mac Microsoft Edge: pending clipboard completion cannot restore copy permission after an edit: PASS
+Mac Microsoft Edge: date scope visible and fixed; new blank never retains old result: PASS
+Mac Microsoft Edge: recalculation resets previous output selection and scroll to the new result heading: PASS

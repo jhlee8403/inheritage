@@ -1,0 +1,23 @@
+{
+  "synthetic": true,
+  "files": [
+    {
+      "name": "three-pages.pdf",
+      "bytes": 61231,
+      "pages": 3,
+      "sha256": "97f6cf0c45ded78bf6971576d1c48f10657321619e3845e1e980c499855f71fa"
+    },
+    {
+      "name": "too-many.pdf",
+      "bytes": 1645,
+      "pages": 11,
+      "sha256": "fb4ad2875338147f7be28adb576e9428539c99dba9218e891bf09a25303d03e1"
+    },
+    {
+      "name": "too-large-page.pdf",
+      "bytes": 433,
+      "pages": 1,
+      "sha256": "a1807db8af28858bea171f20df613d6dae7b9b5c05c70f2e4b7f6a61086a92bb"
+    }
+  ]
+}

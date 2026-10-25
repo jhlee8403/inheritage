@@ -1,0 +1,197 @@
+{
+  "mode": "relocated-single-file",
+  "node": "v24.22.0",
+  "emulatedNetworkOffline": true,
+  "freshNonpersistentContexts": true,
+  "clipboardPermissionOverrideInitially": false,
+  "windows": "NOT_RUN",
+  "browsers": [
+    {
+      "name": "Chromium",
+      "version": "156.0.8078.4",
+      "pass": 17,
+      "fail": 0,
+      "skipped": 0,
+      "checks": [
+        {
+          "name": "cold isolated offline file loads inline UI/CSS and Web Crypto without module requests",
+          "pass": true
+        },
+        {
+          "name": "file normal spouse: independent people/fractions/paths/rules",
+          "pass": true
+        },
+        {
+          "name": "file normal parents: independent people/fractions/paths/rules",
+          "pass": true
+        },
+        {
+          "name": "file normal children: independent people/fractions/paths/rules",
+          "pass": true
+        },
+        {
+          "name": "file input edit immediately clears old output and copy; exact Q recalculation",
+          "pass": true
+        },
+        {
+          "name": "file UNKNOWN spouse BLOCKED preserves Q",
+          "pass": true
+        },
+        {
+          "name": "file incomplete collection BLOCKED",
+          "pass": true
+        },
+        {
+          "name": "file malformed, zero denominator and negative Q ERROR without old result",
+          "pass": true
+        },
+        {
+          "name": "file pending calculation plus input edit blocks late result",
+          "pass": true
+        },
+        {
+          "name": "file older async success/error cannot overwrite latest calculation",
+          "pass": true
+        },
+        {
+          "name": "file cancel and hash failure never restore old result",
+          "pass": true
+        },
+        {
+          "name": "file default clipboard attempt and manual full-text selection alternative",
+          "pass": true
+        },
+        {
+          "name": "file explicit clipboard denial selects latest text with Windows-compatible instructions",
+          "pass": true
+        },
+        {
+          "name": "file delayed clipboard completion cannot restore stale copy permission",
+          "pass": true
+        },
+        {
+          "name": "file HTML input is plain text and never executed or requested",
+          "pass": true
+        },
+        {
+          "name": "file page has fixed approved dates and no external references",
+          "pass": true
+        },
+        {
+          "name": "file missing Web Crypto fails closed",
+          "pass": true
+        }
+      ],
+      "clipboardObservation": {
+        "defaultWriteNote": "자동 복사가 허용되지 않았습니다. 결과 텍스트 선택 후 Edge의 복사 메뉴 또는 Ctrl+C (Mac: Command+C)로 복사하세요.",
+        "readback": "NOT_RUN"
+      },
+      "requests": [
+        "file:///var/folders/qx/szmrz43n2nz_xb2mt1bnvs640000gn/T/C1%20%EC%9D%B4%EB%8F%99%20%EC%8B%9C%ED%97%98%20%23%20unadfk/%EA%B3%84%EC%82%B0%20%EC%8B%9C%EC%A0%9C%ED%92%88.html"
+      ],
+      "diagnostics": {
+        "consoleErrors": [],
+        "pageErrors": [],
+        "unhandledRejections": [],
+        "externalRequests": [],
+        "otherResourceRequests": [],
+        "cspViolations": []
+      },
+      "diagnosticsPass": true
+    },
+    {
+      "name": "Mac Microsoft Edge",
+      "version": "156.0.4314.42",
+      "pass": 17,
+      "fail": 0,
+      "skipped": 0,
+      "checks": [
+        {
+          "name": "cold isolated offline file loads inline UI/CSS and Web Crypto without module requests",
+          "pass": true
+        },
+        {
+          "name": "file normal spouse: independent people/fractions/paths/rules",
+          "pass": true
+        },
+        {
+          "name": "file normal parents: independent people/fractions/paths/rules",
+          "pass": true
+        },
+        {
+          "name": "file normal children: independent people/fractions/paths/rules",
+          "pass": true
+        },
+        {
+          "name": "file input edit immediately clears old output and copy; exact Q recalculation",
+          "pass": true
+        },
+        {
+          "name": "file UNKNOWN spouse BLOCKED preserves Q",
+          "pass": true
+        },
+        {
+          "name": "file incomplete collection BLOCKED",
+          "pass": true
+        },
+        {
+          "name": "file malformed, zero denominator and negative Q ERROR without old result",
+          "pass": true
+        },
+        {
+          "name": "file pending calculation plus input edit blocks late result",
+          "pass": true
+        },
+        {
+          "name": "file older async success/error cannot overwrite latest calculation",
+          "pass": true
+        },
+        {
+          "name": "file cancel and hash failure never restore old result",
+          "pass": true
+        },
+        {
+          "name": "file default clipboard attempt and manual full-text selection alternative",
+          "pass": true
+        },
+        {
+          "name": "file explicit clipboard denial selects latest text with Windows-compatible instructions",
+          "pass": true
+        },
+        {
+          "name": "file delayed clipboard completion cannot restore stale copy permission",
+          "pass": true
+        },
+        {
+          "name": "file HTML input is plain text and never executed or requested",
+          "pass": true
+        },
+        {
+          "name": "file page has fixed approved dates and no external references",
+          "pass": true
+        },
+        {
+          "name": "file missing Web Crypto fails closed",
+          "pass": true
+        }
+      ],
+      "clipboardObservation": {
+        "defaultWriteNote": "현재 결과를 복사했습니다.",
+        "readback": "NOT_RUN"
+      },
+      "requests": [
+        "file:///var/folders/qx/szmrz43n2nz_xb2mt1bnvs640000gn/T/C1%20%EC%9D%B4%EB%8F%99%20%EC%8B%9C%ED%97%98%20%23%20unadfk/%EA%B3%84%EC%82%B0%20%EC%8B%9C%EC%A0%9C%ED%92%88.html"
+      ],
+      "diagnostics": {
+        "consoleErrors": [],
+        "pageErrors": [],
+        "unhandledRejections": [],
+        "externalRequests": [],
+        "otherResourceRequests": [],
+        "cspViolations": []
+      },
+      "diagnosticsPass": true
+    }
+  ],
+  "htmlSha256": "5a1ed623e662b3a06313245c49632f3b2fe94ff8cf3e49b28b6b0b37a477ecf8"
+}

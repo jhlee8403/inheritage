@@ -1,0 +1,146 @@
+{
+  "instructionsSha256": "dd436bf8cc1b19751732f410706dd8b1d8ab7f884a54c083cc6384049af52ac5",
+  "notice": {
+    "bytes": 44247,
+    "sha256": "b2f64bf866df353e0ad039b2dce993e3f7a6f78f6abc942e42d5052dfee7ddc8"
+  },
+  "format": "lite-v1-integrated-v1",
+  "baseline": "fc7b470afc3cc4a18129603a0c5d21ed959f2aeb",
+  "output": "generated/lite-v1.html",
+  "bytes": 9466825,
+  "sha256": "412b514ac49907de994e17c99ccd52217c9ddfc02982714f67c7d774c4dfac99",
+  "versions": {
+    "pdfjs": "6.4.299",
+    "tesseract": "7.0.0",
+    "core": "7.0.0"
+  },
+  "c1OutputSha256": "5a1ed623e662b3a06313245c49632f3b2fe94ff8cf3e49b28b6b0b37a477ecf8",
+  "c1ScriptSha256": "226853231e3ce48b28675efe8cd07d70ee994c49135d9f76aaf52643d9aa9180",
+  "sources": {
+    "app": "50d7356286650175dac5f87cc825e5b2a002e44aab9e930a7e0886b31233adab",
+    "view": "0e1b8232eec9e5b4546be4fc789ba2438605867ab205e4452693677a31e47852",
+    "builder": "9bb8159691bf1300004fd4d4fd59bb7c02510197d2e3be82550cf0bbabc2b533",
+    "workerAdapter": "eb3b37117264d6f66f0fab0d879d3875eec049886836f4e94ddb0d144649050f",
+    "pocBuilder": "5334ffee078cdfe10908c534e25ab0026992aeb79e0d07f6db9c5cbebbc57269"
+  },
+  "resources": [
+    {
+      "key": "pdfjs",
+      "path": "public/vendor/pdfjs/pdf.mjs",
+      "bytes": 860818,
+      "sha256": "dd13af821c9c3e1778653340d6539a1ba07bc56cba40073a4c727864cf0c232a"
+    },
+    {
+      "key": "pdfWorker",
+      "path": "public/vendor/pdfjs/pdf.worker.mjs",
+      "bytes": 2229713,
+      "sha256": "07ceb740d746e5d9012fcf9f27d5c7dea09f7d2f5e74f5c8109e5787551a2333"
+    },
+    {
+      "key": "tesseract",
+      "path": "public/vendor/tesseract/tesseract.min.js",
+      "bytes": 62961,
+      "sha256": "000c27d9cd0def655f77b36c72a389c0ab13793aa31cb4d7aab56d09c0afbc7e"
+    },
+    {
+      "key": "worker",
+      "path": "public/vendor/tesseract/worker.min.js",
+      "bytes": 111307,
+      "sha256": "576b7df7e3393e137e51849357c9adb53fe7ac1bb69bfa06cf3d61520f182c6d"
+    },
+    {
+      "key": "core",
+      "path": "public/vendor/tesseract-core/tesseract-core-simd-lstm.js",
+      "bytes": 89271,
+      "sha256": "e48e2f02ddae3716c8dd24bf41cd290d4efa96892d689cdc4013c2545d63f469"
+    },
+    {
+      "key": "wasm",
+      "path": "public/vendor/tesseract-core/tesseract-core-simd-lstm.wasm",
+      "bytes": 2857601,
+      "sha256": "34e8d50cac216427d86bf397d610fdd9f49492539bbcdfbfccc4eda20c810bea"
+    },
+    {
+      "key": "model",
+      "path": "public/models/kor.traineddata",
+      "bytes": 1677415,
+      "sha256": "6b85e11d9bbf07863b97b3523b1b112844c43e713df8b66418a081fd1060b3b2"
+    }
+  ],
+  "modelSource": {
+    "name": "tessdata_fast/kor",
+    "version": "87416418657359cb625c412a48b6e1d6d41c29bd",
+    "license": "Apache-2.0",
+    "url": "https://raw.githubusercontent.com/tesseract-ocr/tessdata_fast/87416418657359cb625c412a48b6e1d6d41c29bd/kor.traineddata",
+    "target": "public/models/kor.traineddata",
+    "role": "OCR language data (LSTM only)",
+    "bytes": 1677415,
+    "sha256": "6b85e11d9bbf07863b97b3523b1b112844c43e713df8b66418a081fd1060b3b2"
+  },
+  "c1Sources": [
+    {
+      "path": "experiments/inheritance-calculator/app.mjs",
+      "sha256": "e03e5c4a309b53444216ba430ac800ef52644571c67506495c6a3d184abfa0f8"
+    },
+    {
+      "path": "experiments/inheritance-calculator/engine-adapter.mjs",
+      "sha256": "b6054a0e39ad32667ddfaf15058af63f6471d212b4ac49f20648f33d03a62ffc"
+    },
+    {
+      "path": "experiments/inheritance-calculator/fixtures.mjs",
+      "sha256": "5690fcc023b7e5012e8f4581a7449c2fed8c53007db0edb9710c4bacd49a87d7"
+    },
+    {
+      "path": "experiments/inheritance-calculator/index.html",
+      "sha256": "1e3e40463d47f07756176317a9a650158d414debebb8507c3f447b71d5d35d53"
+    },
+    {
+      "path": "experiments/inheritance-calculator/session.mjs",
+      "sha256": "b488e01c54a512ea1347a5b451c855a046f5f95486f5bd8c466abc9779c6cb5e"
+    },
+    {
+      "path": "experiments/inheritance-calculator/style.css",
+      "sha256": "1cde1a960cda88075790f2918239aabdf1683349a1c8f4ef516c8cc1b09ac330"
+    },
+    {
+      "path": "packages/inheritance-engine/src/approval.mjs",
+      "sha256": "d23f41c6f454af7e14702e77f200ef0cf4d71f684833635275ee707fe6410177"
+    },
+    {
+      "path": "packages/inheritance-engine/src/arithmetic.mjs",
+      "sha256": "d6783ae09968fba01c1e458f0cd3451a12460c5f383b1d4088c68d60b38cf921"
+    },
+    {
+      "path": "packages/inheritance-engine/src/browser.mjs",
+      "sha256": "d484a1f0597420944f1cb4bc70d308fea068c20e7bc53f7a843c77a48aaa4ab7"
+    },
+    {
+      "path": "packages/inheritance-engine/src/core.mjs",
+      "sha256": "450796ff1b4508081c201b11cbf8a59495e8746519739193fec26a58f705f724"
+    },
+    {
+      "path": "packages/inheritance-engine/src/engine.mjs",
+      "sha256": "511cc7b2b6f8e0498d458effbbe1e55c4d465b516c91109ac70ad28c7c7d427a"
+    },
+    {
+      "path": "packages/inheritance-engine/src/fraction.mjs",
+      "sha256": "fe7212b9d3d3b7bfc9c654a61622306a4ae7d087f6452e010e308bb378456d46"
+    },
+    {
+      "path": "packages/inheritance-engine/src/snapshot-browser.mjs",
+      "sha256": "a3d4c95100ad219b6d1ab59d924c6988242c1115762f340e5d79c7486151e29f"
+    },
+    {
+      "path": "packages/inheritance-engine/src/snapshot-common.mjs",
+      "sha256": "d488f6dace3f37fbbc51d7108bc6f9fb0edc3e8b83b247ee8b2946e4a724bfe3"
+    },
+    {
+      "path": "packages/inheritance-engine/src/validation.mjs",
+      "sha256": "3acf16914a471cb0b6d5c6d9d08cc1541cc69d4b6cb9d981460955b13117bf61"
+    },
+    {
+      "path": "packages/inheritance-engine/src/version.mjs",
+      "sha256": "acac4c83a6834e3c7b152963723eb61d1959e0e278ce95e9fa44b628190aa815"
+    }
+  ]
+}
