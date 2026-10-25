@@ -1,0 +1,27 @@
+{
+  "format": "pdf-file-direct-trial-v1",
+  "output": "generated/direct-text.html",
+  "bytes": 3111400,
+  "sha256": "65ca1e1ee1a94653804b0c032f8a746c4dd958aaf5b4240fcde63444a9923978",
+  "builderSha256": "3dfaca08a8a3df594c849d8e86072048ea7b93dfb4556a87631b7539afb0a9fc",
+  "appSha256": "2fb478b6f84c10701a3978753f54c9068cde117d66b3c2d59024b82ca1eb4808",
+  "fixture": {
+    "path": "experiments/offline-ocr/fixtures/text-only.pdf",
+    "bytes": 13602,
+    "sha256": "236cdab97cb7f40ee3a546671920ff70215612cd572f65bc03b6ab96d20ccb04"
+  },
+  "sources": [
+    {
+      "path": "public/vendor/pdfjs/pdf.mjs",
+      "bytes": 860818,
+      "sha256": "dd13af821c9c3e1778653340d6539a1ba07bc56cba40073a4c727864cf0c232a"
+    },
+    {
+      "path": "public/vendor/pdfjs/pdf.worker.mjs",
+      "bytes": 2229713,
+      "sha256": "07ceb740d746e5d9012fcf9f27d5c7dea09f7d2f5e74f5c8109e5787551a2333"
+    }
+  ],
+  "adaptation": "Static classic-script wrappers of locked PDF.js exports; import.meta.url replaced by inert labels in unused resource/Node branches; preloaded handler/main thread; no engine algorithm rewrite.",
+  "limits": "Fixed embedded synthetic PDF, first page only, no native worker/WASM/OCR/model loading, generated vendor-bearing HTML intentionally gitignored"
+}

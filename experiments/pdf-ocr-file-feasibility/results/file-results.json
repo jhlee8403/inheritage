@@ -1,0 +1,263 @@
+{
+  "schemaVersion": 1,
+  "mode": "file://; isolated contexts; emulated offline; no security overrides",
+  "windowsOCR": "NOT_RUN",
+  "browsers": [
+    {
+      "name": "Chromium",
+      "observations": [
+        {
+          "component": "ORIGINAL_OCR_FILE_APP",
+          "status": "FAIL",
+          "display": "초기화 중. file://에서 이 문구가 계속 보이면 로컬 모듈 로드 실패일 수 있습니다.",
+          "errors": [
+            "Access to script at '<ocr>/src/app.mjs' from origin 'null' has been blocked by CORS policy: Cross origin requests are only supported for protocol schemes: chrome, chrome-untrusted, data, http, https.",
+            "Failed to load resource: net::ERR_FAILED"
+          ],
+          "unhandledRejections": []
+        },
+        {
+          "component": "PDFJS_ES_MODULE_FILE_IMPORT",
+          "status": "FAIL",
+          "error": "Error: page.evaluate: TypeError: Failed to fetch dynamically imported module: <ocr>/public/vendor/pdfjs/pdf.mjs",
+          "stack": "page.evaluate: TypeError: Failed to fetch dynamically imported module: <ocr>/public/vendor/pdfjs/pdf.mjs\n    at <repo>/experiments/pdf-ocr-file-feasibility/test-file.mjs:37:58\n    at observe (<repo>/experiments/pdf-ocr-file-feasibility/test-file.mjs:34:30)\n    at <repo>/experiments/pdf-ocr-file-feasibility/test-file.mjs:37:11"
+        },
+        {
+          "component": "PDFJS_NATIVE_MODULE_WORKER",
+          "status": "FAIL",
+          "error": "Error: page.evaluate: SecurityError: Failed to construct 'Worker': Script at '<ocr>/public/vendor/pdfjs/pdf.worker.mjs' cannot be accessed from origin 'null'.\n    at eval (eval at evaluate (:370:30), <anonymous>:2:29)\n    at new Promise (<anonymous>)\n    at eval (eval at evaluate (:370:30), <anonymous>:1:6)\n    at UtilityScript.evaluate (<anonymous>:372:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+          "stack": "page.evaluate: SecurityError: Failed to construct 'Worker': Script at '<ocr>/public/vendor/pdfjs/pdf.worker.mjs' cannot be accessed from origin 'null'.\n    at eval (eval at evaluate (:370:30), <anonymous>:2:29)\n    at new Promise (<anonymous>)\n    at eval (eval at evaluate (:370:30), <anonymous>:1:6)\n    at UtilityScript.evaluate (<anonymous>:372:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at <repo>/experiments/pdf-ocr-file-feasibility/test-file.mjs:38:57\n    at observe (<repo>/experiments/pdf-ocr-file-feasibility/test-file.mjs:34:30)\n    at <repo>/experiments/pdf-ocr-file-feasibility/test-file.mjs:38:11"
+        },
+        {
+          "component": "TESSERACT_CLASSIC_SCRIPT",
+          "status": "PASS",
+          "createWorker": "function"
+        },
+        {
+          "component": "TESSERACT_WORKER_PIPELINE",
+          "status": "FAIL",
+          "error": "Error: page.evaluate: SecurityError: Failed to construct 'Worker': Script at '<ocr>/public/vendor/tesseract/worker.min.js' cannot be accessed from origin 'null'.\n    at t.exports (<ocr>/public/vendor/tesseract/tesseract.min.js:2:19332)\n    at <ocr>/public/vendor/tesseract/tesseract.min.js:2:46809\n    at p (<ocr>/public/vendor/tesseract/tesseract.min.js:2:38443)\n    at Generator.<anonymous> (<ocr>/public/vendor/tesseract/tesseract.min.js:2:39785)\n    at Generator.next (<ocr>/public/vendor/tesseract/tesseract.min.js:2:38872)\n    at l (<ocr>/public/vendor/tesseract/tesseract.min.js:2:45787)\n    at a (<ocr>/public/vendor/tesseract/tesseract.min.js:2:45990)\n    at <ocr>/public/vendor/tesseract/tesseract.min.js:2:46049\n    at new Promise (<anonymous>)\n    at Object.createWorker (<ocr>/public/vendor/tesseract/tesseract.min.js:2:45930)",
+          "stack": "page.evaluate: SecurityError: Failed to construct 'Worker': Script at '<ocr>/public/vendor/tesseract/worker.min.js' cannot be accessed from origin 'null'.\n    at t.exports (<ocr>/public/vendor/tesseract/tesseract.min.js:2:19332)\n    at <ocr>/public/vendor/tesseract/tesseract.min.js:2:46809\n    at p (<ocr>/public/vendor/tesseract/tesseract.min.js:2:38443)\n    at Generator.<anonymous> (<ocr>/public/vendor/tesseract/tesseract.min.js:2:39785)\n    at Generator.next (<ocr>/public/vendor/tesseract/tesseract.min.js:2:38872)\n    at l (<ocr>/public/vendor/tesseract/tesseract.min.js:2:45787)\n    at a (<ocr>/public/vendor/tesseract/tesseract.min.js:2:45990)\n    at <ocr>/public/vendor/tesseract/tesseract.min.js:2:46049\n    at new Promise (<anonymous>)\n    at Object.createWorker (<ocr>/public/vendor/tesseract/tesseract.min.js:2:45930)\n    at <repo>/experiments/pdf-ocr-file-feasibility/test-file.mjs:45:56\n    at observe (<repo>/experiments/pdf-ocr-file-feasibility/test-file.mjs:34:30)\n    at <repo>/experiments/pdf-ocr-file-feasibility/test-file.mjs:45:11"
+        },
+        {
+          "component": "TESSERACT_WASM_FILE_FETCH",
+          "status": "FAIL",
+          "error": "Error: page.evaluate: TypeError: Failed to fetch\n    at eval (eval at evaluate (:370:30), <anonymous>:1:27)\n    at UtilityScript.evaluate (<anonymous>:372:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+          "stack": "page.evaluate: TypeError: Failed to fetch\n    at eval (eval at evaluate (:370:30), <anonymous>:1:27)\n    at UtilityScript.evaluate (<anonymous>:372:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at <repo>/experiments/pdf-ocr-file-feasibility/test-file.mjs:56:40\n    at observe (<repo>/experiments/pdf-ocr-file-feasibility/test-file.mjs:34:30)\n    at <repo>/experiments/pdf-ocr-file-feasibility/test-file.mjs:56:13"
+        },
+        {
+          "component": "MODEL_KOR_FILE_FETCH",
+          "status": "FAIL",
+          "error": "Error: page.evaluate: TypeError: Failed to fetch\n    at eval (eval at evaluate (:370:30), <anonymous>:1:27)\n    at UtilityScript.evaluate (<anonymous>:372:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+          "stack": "page.evaluate: TypeError: Failed to fetch\n    at eval (eval at evaluate (:370:30), <anonymous>:1:27)\n    at UtilityScript.evaluate (<anonymous>:372:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at <repo>/experiments/pdf-ocr-file-feasibility/test-file.mjs:56:40\n    at observe (<repo>/experiments/pdf-ocr-file-feasibility/test-file.mjs:34:30)\n    at <repo>/experiments/pdf-ocr-file-feasibility/test-file.mjs:56:13"
+        },
+        {
+          "component": "MODEL_ENG_FILE_FETCH",
+          "status": "FAIL",
+          "error": "Error: page.evaluate: TypeError: Failed to fetch\n    at eval (eval at evaluate (:370:30), <anonymous>:1:27)\n    at UtilityScript.evaluate (<anonymous>:372:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+          "stack": "page.evaluate: TypeError: Failed to fetch\n    at eval (eval at evaluate (:370:30), <anonymous>:1:27)\n    at UtilityScript.evaluate (<anonymous>:372:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at <repo>/experiments/pdf-ocr-file-feasibility/test-file.mjs:56:40\n    at observe (<repo>/experiments/pdf-ocr-file-feasibility/test-file.mjs:34:30)\n    at <repo>/experiments/pdf-ocr-file-feasibility/test-file.mjs:56:13"
+        },
+        {
+          "component": "MODEL_CHI_TRA_FILE_FETCH",
+          "status": "FAIL",
+          "error": "Error: page.evaluate: TypeError: Failed to fetch\n    at eval (eval at evaluate (:370:30), <anonymous>:1:27)\n    at UtilityScript.evaluate (<anonymous>:372:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+          "stack": "page.evaluate: TypeError: Failed to fetch\n    at eval (eval at evaluate (:370:30), <anonymous>:1:27)\n    at UtilityScript.evaluate (<anonymous>:372:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at <repo>/experiments/pdf-ocr-file-feasibility/test-file.mjs:56:40\n    at observe (<repo>/experiments/pdf-ocr-file-feasibility/test-file.mjs:34:30)\n    at <repo>/experiments/pdf-ocr-file-feasibility/test-file.mjs:56:13"
+        },
+        {
+          "component": "SCANNED_PDF_OCR_RECOGNITION",
+          "status": "NOT_RUN",
+          "reason": "No recognize() call; worker/model file prerequisites did not initialize. No accuracy evaluation."
+        },
+        {
+          "component": "WASM_EXECUTION_AND_LANGUAGE_INITIALIZATION",
+          "status": "NOT_RUN",
+          "reason": "Resource fetch tests are not WebAssembly execution or model initialization."
+        },
+        {
+          "component": "PDF_DIRECT_TEXT_MAIN_THREAD",
+          "status": "PASS",
+          "text": "SYNTHETIC OCR TEST 01\n성명: 가온새\n날짜: 2001-02-03\n관계: 자녀\n번호: 12345678\n완전 가공 자료 / 실제 사건 아님",
+          "details": "{\n  \"status\": \"NEEDS_REVIEW\",\n  \"numPages\": 1,\n  \"renderedPages\": [\n    1\n  ],\n  \"textItems\": 6,\n  \"mode\": \"PDFJS_MAIN_THREAD_NO_NATIVE_WORKER\",\n  \"wasm\": false,\n  \"ocr\": \"NOT_RUN\",\n  \"candidateOnly\": true\n}"
+        },
+        {
+          "component": "PDF_FIRST_PAGE_RENDER_MAIN_THREAD",
+          "status": "PASS",
+          "pixels": {
+            "width": 833,
+            "height": 1179,
+            "dark": 5669
+          }
+        }
+      ],
+      "assertions": [
+        {
+          "name": "fixed existing synthetic text is extracted without changing expected truth",
+          "pass": true
+        },
+        {
+          "name": "first page rendered nonblank pixels",
+          "pass": true
+        },
+        {
+          "name": "one-page original fixture independently checked by pypdf; candidate remains NEEDS_REVIEW",
+          "pass": true
+        },
+        {
+          "name": "direct trial has no console/page/promise/CSP errors or extra resources",
+          "pass": true
+        }
+      ],
+      "unexpectedErrors": [],
+      "externalRequests": [],
+      "version": "156.0.8078.4",
+      "resourceConsoleErrors": [
+        "Access to script at '<ocr>/public/vendor/pdfjs/pdf.mjs' from origin 'null' has been blocked by CORS policy: Cross origin requests are only supported for protocol schemes: chrome, chrome-untrusted, data, http, https.",
+        "Failed to load resource: net::ERR_FAILED",
+        "Fetch API cannot load <ocr>/public/vendor/tesseract-core/tesseract-core-simd-lstm.wasm. URL scheme \"file\" is not supported.",
+        "Fetch API cannot load <ocr>/public/models/kor.traineddata. URL scheme \"file\" is not supported.",
+        "Fetch API cannot load <ocr>/public/models/eng.traineddata. URL scheme \"file\" is not supported.",
+        "Fetch API cannot load <ocr>/public/models/chi_tra.traineddata. URL scheme \"file\" is not supported."
+      ],
+      "resourceUnhandledRejections": [],
+      "directDiagnostics": {
+        "consoleErrors": [],
+        "pageErrors": [],
+        "unhandledRejections": [],
+        "requests": [
+          "<generated>/direct-text.html"
+        ],
+        "cspViolations": []
+      }
+    },
+    {
+      "name": "Mac Microsoft Edge",
+      "observations": [
+        {
+          "component": "ORIGINAL_OCR_FILE_APP",
+          "status": "FAIL",
+          "display": "초기화 중. file://에서 이 문구가 계속 보이면 로컬 모듈 로드 실패일 수 있습니다.",
+          "errors": [
+            "Access to script at '<ocr>/src/app.mjs' from origin 'null' has been blocked by CORS policy: Cross origin requests are only supported for protocol schemes: chrome-experimental-site-token-provider, chrome-extension, chrome-untrusted, data, edge, http, https, isolated-app.",
+            "Failed to load resource: net::ERR_FAILED"
+          ],
+          "unhandledRejections": []
+        },
+        {
+          "component": "PDFJS_ES_MODULE_FILE_IMPORT",
+          "status": "FAIL",
+          "error": "Error: page.evaluate: TypeError: Failed to fetch dynamically imported module: <ocr>/public/vendor/pdfjs/pdf.mjs",
+          "stack": "page.evaluate: TypeError: Failed to fetch dynamically imported module: <ocr>/public/vendor/pdfjs/pdf.mjs\n    at <repo>/experiments/pdf-ocr-file-feasibility/test-file.mjs:37:58\n    at observe (<repo>/experiments/pdf-ocr-file-feasibility/test-file.mjs:34:30)\n    at <repo>/experiments/pdf-ocr-file-feasibility/test-file.mjs:37:11"
+        },
+        {
+          "component": "PDFJS_NATIVE_MODULE_WORKER",
+          "status": "FAIL",
+          "error": "Error: page.evaluate: SecurityError: Failed to construct 'Worker': Script at '<ocr>/public/vendor/pdfjs/pdf.worker.mjs' cannot be accessed from origin 'null'.\n    at eval (eval at evaluate (:370:30), <anonymous>:2:29)\n    at new Promise (<anonymous>)\n    at eval (eval at evaluate (:370:30), <anonymous>:1:6)\n    at UtilityScript.evaluate (<anonymous>:372:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+          "stack": "page.evaluate: SecurityError: Failed to construct 'Worker': Script at '<ocr>/public/vendor/pdfjs/pdf.worker.mjs' cannot be accessed from origin 'null'.\n    at eval (eval at evaluate (:370:30), <anonymous>:2:29)\n    at new Promise (<anonymous>)\n    at eval (eval at evaluate (:370:30), <anonymous>:1:6)\n    at UtilityScript.evaluate (<anonymous>:372:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at <repo>/experiments/pdf-ocr-file-feasibility/test-file.mjs:38:57\n    at observe (<repo>/experiments/pdf-ocr-file-feasibility/test-file.mjs:34:30)\n    at <repo>/experiments/pdf-ocr-file-feasibility/test-file.mjs:38:11"
+        },
+        {
+          "component": "TESSERACT_CLASSIC_SCRIPT",
+          "status": "PASS",
+          "createWorker": "function"
+        },
+        {
+          "component": "TESSERACT_WORKER_PIPELINE",
+          "status": "FAIL",
+          "error": "Error: page.evaluate: SecurityError: Failed to construct 'Worker': Script at '<ocr>/public/vendor/tesseract/worker.min.js' cannot be accessed from origin 'null'.\n    at t.exports (<ocr>/public/vendor/tesseract/tesseract.min.js:2:19332)\n    at <ocr>/public/vendor/tesseract/tesseract.min.js:2:46809\n    at p (<ocr>/public/vendor/tesseract/tesseract.min.js:2:38443)\n    at Generator.<anonymous> (<ocr>/public/vendor/tesseract/tesseract.min.js:2:39785)\n    at Generator.next (<ocr>/public/vendor/tesseract/tesseract.min.js:2:38872)\n    at l (<ocr>/public/vendor/tesseract/tesseract.min.js:2:45787)\n    at a (<ocr>/public/vendor/tesseract/tesseract.min.js:2:45990)\n    at <ocr>/public/vendor/tesseract/tesseract.min.js:2:46049\n    at new Promise (<anonymous>)\n    at Object.createWorker (<ocr>/public/vendor/tesseract/tesseract.min.js:2:45930)",
+          "stack": "page.evaluate: SecurityError: Failed to construct 'Worker': Script at '<ocr>/public/vendor/tesseract/worker.min.js' cannot be accessed from origin 'null'.\n    at t.exports (<ocr>/public/vendor/tesseract/tesseract.min.js:2:19332)\n    at <ocr>/public/vendor/tesseract/tesseract.min.js:2:46809\n    at p (<ocr>/public/vendor/tesseract/tesseract.min.js:2:38443)\n    at Generator.<anonymous> (<ocr>/public/vendor/tesseract/tesseract.min.js:2:39785)\n    at Generator.next (<ocr>/public/vendor/tesseract/tesseract.min.js:2:38872)\n    at l (<ocr>/public/vendor/tesseract/tesseract.min.js:2:45787)\n    at a (<ocr>/public/vendor/tesseract/tesseract.min.js:2:45990)\n    at <ocr>/public/vendor/tesseract/tesseract.min.js:2:46049\n    at new Promise (<anonymous>)\n    at Object.createWorker (<ocr>/public/vendor/tesseract/tesseract.min.js:2:45930)\n    at <repo>/experiments/pdf-ocr-file-feasibility/test-file.mjs:45:56\n    at observe (<repo>/experiments/pdf-ocr-file-feasibility/test-file.mjs:34:30)\n    at <repo>/experiments/pdf-ocr-file-feasibility/test-file.mjs:45:11"
+        },
+        {
+          "component": "TESSERACT_WASM_FILE_FETCH",
+          "status": "FAIL",
+          "error": "Error: page.evaluate: TypeError: Failed to fetch\n    at eval (eval at evaluate (:370:30), <anonymous>:1:27)\n    at UtilityScript.evaluate (<anonymous>:372:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+          "stack": "page.evaluate: TypeError: Failed to fetch\n    at eval (eval at evaluate (:370:30), <anonymous>:1:27)\n    at UtilityScript.evaluate (<anonymous>:372:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at <repo>/experiments/pdf-ocr-file-feasibility/test-file.mjs:56:40\n    at observe (<repo>/experiments/pdf-ocr-file-feasibility/test-file.mjs:34:30)\n    at <repo>/experiments/pdf-ocr-file-feasibility/test-file.mjs:56:13"
+        },
+        {
+          "component": "MODEL_KOR_FILE_FETCH",
+          "status": "FAIL",
+          "error": "Error: page.evaluate: TypeError: Failed to fetch\n    at eval (eval at evaluate (:370:30), <anonymous>:1:27)\n    at UtilityScript.evaluate (<anonymous>:372:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+          "stack": "page.evaluate: TypeError: Failed to fetch\n    at eval (eval at evaluate (:370:30), <anonymous>:1:27)\n    at UtilityScript.evaluate (<anonymous>:372:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at <repo>/experiments/pdf-ocr-file-feasibility/test-file.mjs:56:40\n    at observe (<repo>/experiments/pdf-ocr-file-feasibility/test-file.mjs:34:30)\n    at <repo>/experiments/pdf-ocr-file-feasibility/test-file.mjs:56:13"
+        },
+        {
+          "component": "MODEL_ENG_FILE_FETCH",
+          "status": "FAIL",
+          "error": "Error: page.evaluate: TypeError: Failed to fetch\n    at eval (eval at evaluate (:370:30), <anonymous>:1:27)\n    at UtilityScript.evaluate (<anonymous>:372:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+          "stack": "page.evaluate: TypeError: Failed to fetch\n    at eval (eval at evaluate (:370:30), <anonymous>:1:27)\n    at UtilityScript.evaluate (<anonymous>:372:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at <repo>/experiments/pdf-ocr-file-feasibility/test-file.mjs:56:40\n    at observe (<repo>/experiments/pdf-ocr-file-feasibility/test-file.mjs:34:30)\n    at <repo>/experiments/pdf-ocr-file-feasibility/test-file.mjs:56:13"
+        },
+        {
+          "component": "MODEL_CHI_TRA_FILE_FETCH",
+          "status": "FAIL",
+          "error": "Error: page.evaluate: TypeError: Failed to fetch\n    at eval (eval at evaluate (:370:30), <anonymous>:1:27)\n    at UtilityScript.evaluate (<anonymous>:372:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+          "stack": "page.evaluate: TypeError: Failed to fetch\n    at eval (eval at evaluate (:370:30), <anonymous>:1:27)\n    at UtilityScript.evaluate (<anonymous>:372:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at <repo>/experiments/pdf-ocr-file-feasibility/test-file.mjs:56:40\n    at observe (<repo>/experiments/pdf-ocr-file-feasibility/test-file.mjs:34:30)\n    at <repo>/experiments/pdf-ocr-file-feasibility/test-file.mjs:56:13"
+        },
+        {
+          "component": "SCANNED_PDF_OCR_RECOGNITION",
+          "status": "NOT_RUN",
+          "reason": "No recognize() call; worker/model file prerequisites did not initialize. No accuracy evaluation."
+        },
+        {
+          "component": "WASM_EXECUTION_AND_LANGUAGE_INITIALIZATION",
+          "status": "NOT_RUN",
+          "reason": "Resource fetch tests are not WebAssembly execution or model initialization."
+        },
+        {
+          "component": "PDF_DIRECT_TEXT_MAIN_THREAD",
+          "status": "PASS",
+          "text": "SYNTHETIC OCR TEST 01\n성명: 가온새\n날짜: 2001-02-03\n관계: 자녀\n번호: 12345678\n완전 가공 자료 / 실제 사건 아님",
+          "details": "{\n  \"status\": \"NEEDS_REVIEW\",\n  \"numPages\": 1,\n  \"renderedPages\": [\n    1\n  ],\n  \"textItems\": 6,\n  \"mode\": \"PDFJS_MAIN_THREAD_NO_NATIVE_WORKER\",\n  \"wasm\": false,\n  \"ocr\": \"NOT_RUN\",\n  \"candidateOnly\": true\n}"
+        },
+        {
+          "component": "PDF_FIRST_PAGE_RENDER_MAIN_THREAD",
+          "status": "PASS",
+          "pixels": {
+            "width": 833,
+            "height": 1179,
+            "dark": 5669
+          }
+        }
+      ],
+      "assertions": [
+        {
+          "name": "fixed existing synthetic text is extracted without changing expected truth",
+          "pass": true
+        },
+        {
+          "name": "first page rendered nonblank pixels",
+          "pass": true
+        },
+        {
+          "name": "one-page original fixture independently checked by pypdf; candidate remains NEEDS_REVIEW",
+          "pass": true
+        },
+        {
+          "name": "direct trial has no console/page/promise/CSP errors or extra resources",
+          "pass": true
+        }
+      ],
+      "unexpectedErrors": [],
+      "externalRequests": [],
+      "version": "156.0.4314.42",
+      "resourceConsoleErrors": [
+        "Access to script at '<ocr>/public/vendor/pdfjs/pdf.mjs' from origin 'null' has been blocked by CORS policy: Cross origin requests are only supported for protocol schemes: chrome-experimental-site-token-provider, chrome-extension, chrome-untrusted, data, edge, http, https, isolated-app.",
+        "Failed to load resource: net::ERR_FAILED",
+        "Access to fetch at '<ocr>/public/vendor/tesseract-core/tesseract-core-simd-lstm.wasm' from origin 'null' has been blocked by CORS policy: Cross origin requests are only supported for protocol schemes: chrome-experimental-site-token-provider, chrome-extension, chrome-untrusted, data, edge, http, https, isolated-app.",
+        "Failed to load resource: net::ERR_FAILED",
+        "Access to fetch at '<ocr>/public/models/kor.traineddata' from origin 'null' has been blocked by CORS policy: Cross origin requests are only supported for protocol schemes: chrome-experimental-site-token-provider, chrome-extension, chrome-untrusted, data, edge, http, https, isolated-app.",
+        "Failed to load resource: net::ERR_FAILED",
+        "Access to fetch at '<ocr>/public/models/eng.traineddata' from origin 'null' has been blocked by CORS policy: Cross origin requests are only supported for protocol schemes: chrome-experimental-site-token-provider, chrome-extension, chrome-untrusted, data, edge, http, https, isolated-app.",
+        "Failed to load resource: net::ERR_FAILED",
+        "Access to fetch at '<ocr>/public/models/chi_tra.traineddata' from origin 'null' has been blocked by CORS policy: Cross origin requests are only supported for protocol schemes: chrome-experimental-site-token-provider, chrome-extension, chrome-untrusted, data, edge, http, https, isolated-app.",
+        "Failed to load resource: net::ERR_FAILED"
+      ],
+      "resourceUnhandledRejections": [],
+      "directDiagnostics": {
+        "consoleErrors": [],
+        "pageErrors": [],
+        "unhandledRejections": [],
+        "requests": [
+          "<generated>/direct-text.html"
+        ],
+        "cspViolations": []
+      }
+    }
+  ]
+}

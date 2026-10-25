@@ -1,0 +1,140 @@
+{
+  "schemaVersion": 1,
+  "sourceBranch": "spike/offline-ocr",
+  "sourceCommit": "513439d7b3d4eb901e4318737bfeef71c57b5177",
+  "runtimeFiles": 228,
+  "runtimeBytes": 60220200,
+  "verified": 228,
+  "failures": [],
+  "selected": [
+    {
+      "path": "public/vendor/pdfjs/LICENSE",
+      "bytes": 10174,
+      "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+    },
+    {
+      "path": "public/vendor/pdfjs/pdf.mjs",
+      "bytes": 860818,
+      "sha256": "dd13af821c9c3e1778653340d6539a1ba07bc56cba40073a4c727864cf0c232a"
+    },
+    {
+      "path": "public/vendor/pdfjs/pdf.worker.mjs",
+      "bytes": 2229713,
+      "sha256": "07ceb740d746e5d9012fcf9f27d5c7dea09f7d2f5e74f5c8109e5787551a2333"
+    },
+    {
+      "path": "public/vendor/tesseract/LICENSE.md",
+      "bytes": 11357,
+      "sha256": "b40930bbcf80744c86c46a12bc9da056641d722716c378f5659b9e555ef833e1"
+    },
+    {
+      "path": "public/vendor/tesseract/tesseract.min.js",
+      "bytes": 62961,
+      "sha256": "000c27d9cd0def655f77b36c72a389c0ab13793aa31cb4d7aab56d09c0afbc7e"
+    },
+    {
+      "path": "public/vendor/tesseract/worker.min.js",
+      "bytes": 111307,
+      "sha256": "576b7df7e3393e137e51849357c9adb53fe7ac1bb69bfa06cf3d61520f182c6d"
+    },
+    {
+      "path": "public/vendor/tesseract-core/tesseract-core-simd-lstm.wasm",
+      "bytes": 2857601,
+      "sha256": "34e8d50cac216427d86bf397d610fdd9f49492539bbcdfbfccc4eda20c810bea"
+    },
+    {
+      "path": "public/vendor/tesseract-core/tesseract-core-simd-lstm.wasm.js",
+      "bytes": 3899472,
+      "sha256": "c58b46a4c796c0b8afccf77591d5b875b6896b45d402bbce8caa6f5362447b38"
+    },
+    {
+      "path": "public/models/LICENSE",
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "path": "public/models/chi_tra.traineddata",
+      "bytes": 2366642,
+      "sha256": "529c5b5797d64b126065cd55f2bb4c7fd7b15790798091b1ff259941a829330b"
+    },
+    {
+      "path": "public/models/eng.traineddata",
+      "bytes": 4113088,
+      "sha256": "7d4322bd2a7749724879683fc3912cb542f19906c83bcc1a52132556427170b2"
+    },
+    {
+      "path": "public/models/kor.traineddata",
+      "bytes": 1677415,
+      "sha256": "6b85e11d9bbf07863b97b3523b1b112844c43e713df8b66418a081fd1060b3b2"
+    }
+  ],
+  "modelSources": [
+    {
+      "name": "tessdata_fast/kor",
+      "version": "87416418657359cb625c412a48b6e1d6d41c29bd",
+      "license": "Apache-2.0",
+      "url": "https://raw.githubusercontent.com/tesseract-ocr/tessdata_fast/87416418657359cb625c412a48b6e1d6d41c29bd/kor.traineddata",
+      "target": "public/models/kor.traineddata",
+      "role": "OCR language data (LSTM only)",
+      "bytes": 1677415,
+      "sha256": "6b85e11d9bbf07863b97b3523b1b112844c43e713df8b66418a081fd1060b3b2"
+    },
+    {
+      "name": "tessdata_fast/eng",
+      "version": "87416418657359cb625c412a48b6e1d6d41c29bd",
+      "license": "Apache-2.0",
+      "url": "https://raw.githubusercontent.com/tesseract-ocr/tessdata_fast/87416418657359cb625c412a48b6e1d6d41c29bd/eng.traineddata",
+      "target": "public/models/eng.traineddata",
+      "role": "OCR language data (LSTM only)",
+      "bytes": 4113088,
+      "sha256": "7d4322bd2a7749724879683fc3912cb542f19906c83bcc1a52132556427170b2"
+    },
+    {
+      "name": "tessdata_fast/chi_tra",
+      "version": "87416418657359cb625c412a48b6e1d6d41c29bd",
+      "license": "Apache-2.0",
+      "url": "https://raw.githubusercontent.com/tesseract-ocr/tessdata_fast/87416418657359cb625c412a48b6e1d6d41c29bd/chi_tra.traineddata",
+      "target": "public/models/chi_tra.traineddata",
+      "role": "OCR language data (LSTM only)",
+      "bytes": 2366642,
+      "sha256": "529c5b5797d64b126065cd55f2bb4c7fd7b15790798091b1ff259941a829330b"
+    },
+    {
+      "name": "tessdata_fast license",
+      "version": "87416418657359cb625c412a48b6e1d6d41c29bd",
+      "license": "Apache-2.0",
+      "url": "https://raw.githubusercontent.com/tesseract-ocr/tessdata_fast/87416418657359cb625c412a48b6e1d6d41c29bd/LICENSE",
+      "target": "public/models/LICENSE",
+      "role": "license",
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    }
+  ],
+  "packages": [
+    {
+      "name": "pdfjs-dist",
+      "version": "6.4.299",
+      "license": "Apache-2.0",
+      "archiveURL": "https://registry.npmjs.org/pdfjs-dist/-/pdfjs-dist-6.4.299.tgz",
+      "npmIntegrity": "sha512-AVl138zALtfaAPvADulE0PZThbYzCBS79nL4pOSL/6Sm/4AH5A21BD9VHt97OlCuzJuCpmeZtAtkinisF4Vb1g==",
+      "installedBytes": 34913648
+    },
+    {
+      "name": "tesseract.js",
+      "version": "7.0.0",
+      "license": "Apache-2.0",
+      "archiveURL": "https://registry.npmjs.org/tesseract.js/-/tesseract.js-7.0.0.tgz",
+      "npmIntegrity": "sha512-exPBkd+z+wM1BuMkx/Bjv43OeLBxhL5kKWsz/9JY+DXcXdiBjiAch0V49QR3oAJqCaL5qURE0vx9Eo+G5YE7mA==",
+      "installedBytes": 1411341
+    },
+    {
+      "name": "tesseract.js-core",
+      "version": "7.0.0",
+      "license": "Apache-2.0",
+      "archiveURL": "https://registry.npmjs.org/tesseract.js-core/-/tesseract.js-core-7.0.0.tgz",
+      "npmIntegrity": "sha512-WnNH518NzmbSq9zgTPeoF8c+xmilS8rFIl1YKbk/ptuuc7p6cLNELNuPAzcmsYw450ca6bLa8j3t0VAtq435Vw==",
+      "installedBytes": 45262431
+    }
+  ],
+  "note": "Read-only SHA-256 audit of existing local resources. No acquisition, repairs or downloads."
+}
