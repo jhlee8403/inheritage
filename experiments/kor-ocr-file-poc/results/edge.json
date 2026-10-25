@@ -1,0 +1,909 @@
+{
+  "target": "edge",
+  "started": "2026-10-25T09:00:54.982Z",
+  "windows": "NOT_RUN",
+  "offline": "fresh context, empty cache, browser offline emulation; physical disconnection NOT_RUN",
+  "checks": [
+    {
+      "name": "real Korean candidate from scan",
+      "state": "PASS"
+    },
+    {
+      "name": "worker/WASM/model stages",
+      "state": "PASS"
+    },
+    {
+      "name": "cancel prevents late publication",
+      "state": "PASS"
+    },
+    {
+      "name": "hash rejection blocks worker and candidate",
+      "state": "PASS"
+    },
+    {
+      "name": "no console/page/promise/CSP errors or external requests",
+      "state": "PASS"
+    }
+  ],
+  "stages": [
+    {
+      "time": "2026-10-25T09:00:54.983Z",
+      "stage": "browser launch",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-25T09:00:56.711Z",
+      "stage": "browser launch",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-25T09:00:56.712Z",
+      "stage": "browser connect",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-25T09:00:56.738Z",
+      "stage": "browser connect",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-25T09:00:56.738Z",
+      "stage": "fresh offline context",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-25T09:00:56.743Z",
+      "stage": "fresh offline context",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-25T09:00:56.744Z",
+      "stage": "request guard",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-25T09:00:56.745Z",
+      "stage": "request guard",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-25T09:00:56.745Z",
+      "stage": "page creation",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-25T09:00:57.226Z",
+      "stage": "page creation",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-25T09:00:57.227Z",
+      "stage": "diagnostic hooks",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-25T09:00:57.230Z",
+      "stage": "diagnostic hooks",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-25T09:00:57.230Z",
+      "stage": "file HTML load",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-25T09:00:57.568Z",
+      "stage": "file HTML load",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-25T09:00:57.569Z",
+      "stage": "OCR start",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-25T09:00:57.909Z",
+      "stage": "OCR start",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-25T09:00:57.909Z",
+      "stage": "worker/WASM/model/recognize result",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-25T09:00:58.365Z",
+      "stage": "worker/WASM/model/recognize result",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-25T09:00:58.366Z",
+      "stage": "read OCR result",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-25T09:00:58.387Z",
+      "stage": "read OCR result",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-25T09:00:58.390Z",
+      "stage": "worker cancellation observer",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-25T09:00:58.391Z",
+      "stage": "worker cancellation observer",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-25T09:00:58.391Z",
+      "stage": "cancel run start",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-25T09:00:58.613Z",
+      "stage": "cancel run start",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-25T09:00:58.614Z",
+      "stage": "cancel acknowledgement",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-25T09:00:58.630Z",
+      "stage": "cancel acknowledgement",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-25T09:00:58.630Z",
+      "stage": "late cancellation observation",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-25T09:00:59.134Z",
+      "stage": "late cancellation observation",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-25T09:00:59.134Z",
+      "stage": "read cancelled result",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-25T09:00:59.141Z",
+      "stage": "read cancelled result",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-25T09:00:59.142Z",
+      "stage": "inject synthetic hash rejection",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-25T09:00:59.144Z",
+      "stage": "inject synthetic hash rejection",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-25T09:00:59.144Z",
+      "stage": "hash failure start",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-25T09:00:59.308Z",
+      "stage": "hash failure start",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-25T09:00:59.309Z",
+      "stage": "hash failure result",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-25T09:00:59.310Z",
+      "stage": "hash failure result",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-25T09:00:59.310Z",
+      "stage": "read hash rejection",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-25T09:00:59.311Z",
+      "stage": "read hash rejection",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-25T09:00:59.312Z",
+      "stage": "promise diagnostics",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-25T09:00:59.312Z",
+      "stage": "promise diagnostics",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-25T09:00:59.313Z",
+      "stage": "CSP diagnostics",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-25T09:00:59.313Z",
+      "stage": "CSP diagnostics",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-25T09:00:59.314Z",
+      "stage": "browser disconnect/close",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-25T09:00:59.314Z",
+      "stage": "browser disconnect/close",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-25T09:00:59.315Z",
+      "stage": "browser process close",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-25T09:01:00.544Z",
+      "stage": "browser process close",
+      "state": "PASS"
+    }
+  ],
+  "diagnostics": {
+    "consoleErrors": [],
+    "pageErrors": [],
+    "externalRequests": [],
+    "unhandledRejections": [],
+    "cspViolations": []
+  },
+  "browserPid": 98944,
+  "version": "156.0.4314.42",
+  "requests": [
+    "<repo>/experiments/kor-ocr-file-poc/generated/kor-ocr.html"
+  ],
+  "progress": {
+    "state": "FAIL",
+    "stages": {
+      "integrity": "NOT_RUN",
+      "pdfRender": "NOT_RUN",
+      "worker": "NOT_RUN",
+      "wasm": "NOT_RUN",
+      "model": "NOT_RUN",
+      "ocr": "NOT_RUN"
+    },
+    "language": "kor",
+    "candidateStatus": "NEEDS_REVIEW",
+    "timingsMs": {},
+    "events": [
+      {
+        "status": "resource SHA-256",
+        "phase": "START",
+        "ms": 139
+      }
+    ],
+    "waitingAt": "resource SHA-256",
+    "error": "Error: synthetic hash failure\n    at crypto.subtle.digest (eval at evaluate (:370:30), <anonymous>:1:46)\n    at verify (<repo>/experiments/kor-ocr-file-poc/generated/kor-ocr.html:93124:60)\n    at HTMLButtonElement.<anonymous> (<repo>/experiments/kor-ocr-file-poc/generated/kor-ocr.html:93165:53)",
+    "cleanup": {
+      "state": "PASS",
+      "errors": []
+    }
+  },
+  "initial": {
+    "status": "NEEDS_REVIEW",
+    "details": {
+      "state": "NEEDS_REVIEW",
+      "stages": {
+        "integrity": "PASS",
+        "pdfRender": "PASS",
+        "worker": "PASS",
+        "wasm": "PASS",
+        "model": "PASS",
+        "ocr": "PASS"
+      },
+      "language": "kor",
+      "candidateStatus": "NEEDS_REVIEW",
+      "timingsMs": {
+        "render": 265,
+        "initialization": 100,
+        "ocr": 365,
+        "total": 732
+      },
+      "events": [
+        {
+          "status": "resource SHA-256",
+          "phase": "START",
+          "ms": 219
+        },
+        {
+          "status": "resource SHA-256",
+          "phase": "PASS",
+          "ms": 220
+        },
+        {
+          "status": "PDF open",
+          "phase": "START",
+          "ms": 227
+        },
+        {
+          "status": "PDF open",
+          "phase": "PASS",
+          "ms": 232
+        },
+        {
+          "status": "PDF page",
+          "phase": "START",
+          "ms": 232
+        },
+        {
+          "status": "PDF page",
+          "phase": "PASS",
+          "ms": 232
+        },
+        {
+          "status": "PDF render",
+          "phase": "START",
+          "ms": 236
+        },
+        {
+          "status": "PDF render",
+          "phase": "PASS",
+          "ms": 263
+        },
+        {
+          "status": "PDF direct text",
+          "phase": "START",
+          "ms": 264
+        },
+        {
+          "status": "PDF direct text",
+          "phase": "PASS",
+          "ms": 265
+        },
+        {
+          "status": "worker/core/WASM/kor initialize",
+          "phase": "START",
+          "ms": 268
+        },
+        {
+          "status": "BLOB_WORKER_BOOTED",
+          "progress": 1,
+          "ms": 289
+        },
+        {
+          "status": "RESOURCE_MESSAGE_RECEIVED",
+          "progress": 1,
+          "ms": 294
+        },
+        {
+          "status": "initializing tesseract",
+          "progress": 0,
+          "ms": 295
+        },
+        {
+          "status": "CORE_FACTORY_ENTERED",
+          "progress": 1,
+          "ms": 295
+        },
+        {
+          "status": "WASM_BYTES_SUPPLIED",
+          "progress": 1,
+          "ms": 295
+        },
+        {
+          "status": "WASM_RUNTIME_READY",
+          "progress": 1,
+          "ms": 314
+        },
+        {
+          "status": "initializing tesseract",
+          "progress": 1,
+          "ms": 314
+        },
+        {
+          "status": "loading language traineddata",
+          "progress": 0,
+          "ms": 315
+        },
+        {
+          "status": "KOR_BYTES_SUPPLIED",
+          "progress": 1,
+          "ms": 315
+        },
+        {
+          "status": "loading language traineddata",
+          "progress": 0.5,
+          "ms": 316
+        },
+        {
+          "status": "loading language traineddata",
+          "progress": 1,
+          "ms": 316
+        },
+        {
+          "status": "initializing api",
+          "progress": 0,
+          "ms": 317
+        },
+        {
+          "status": "initializing api",
+          "progress": 1,
+          "ms": 367
+        },
+        {
+          "status": "worker/core/WASM/kor initialize",
+          "phase": "PASS",
+          "ms": 367
+        },
+        {
+          "status": "OCR parameters",
+          "phase": "START",
+          "ms": 367
+        },
+        {
+          "status": "OCR parameters",
+          "phase": "PASS",
+          "ms": 367
+        },
+        {
+          "status": "recognize",
+          "phase": "START",
+          "ms": 374
+        },
+        {
+          "status": "recognizing text",
+          "progress": 0,
+          "ms": 590
+        },
+        {
+          "status": "recognizing text",
+          "progress": 0.14285714285714285,
+          "ms": 641
+        },
+        {
+          "status": "recognizing text",
+          "progress": 0.2857142857142857,
+          "ms": 662
+        },
+        {
+          "status": "recognizing text",
+          "progress": 0.42857142857142855,
+          "ms": 676
+        },
+        {
+          "status": "recognizing text",
+          "progress": 0.5714285714285714,
+          "ms": 697
+        },
+        {
+          "status": "recognizing text",
+          "progress": 1,
+          "ms": 729
+        },
+        {
+          "status": "recognize",
+          "phase": "PASS",
+          "ms": 732
+        }
+      ],
+      "waitingAt": "recognize",
+      "directText": "",
+      "text": "54111 16 0다1651 02\n\n날짜: 2002-03-04\n관계: 배우자\n번호: 23456 789\n\n완전 가공 자료 / 실제 사건 아님\n",
+      "confidence": 68,
+      "cleanup": {
+        "state": "PASS",
+        "errors": []
+      }
+    }
+  },
+  "accuracy": {
+    "fields": {
+      "name": {
+        "expected": "누리솔",
+        "exactSubstring": false
+      },
+      "date": {
+        "expected": "2002-03-04",
+        "exactSubstring": true
+      },
+      "relationship": {
+        "expected": "배우자",
+        "exactSubstring": true
+      },
+      "number": {
+        "expected": "23456789",
+        "exactSubstring": true
+      }
+    },
+    "raw": {
+      "referenceCharacters": 85,
+      "observedCharacters": 78,
+      "substitutions": 14,
+      "deletions": 10,
+      "insertions": 3,
+      "editDistance": 27,
+      "cer": 0.3176470588235294,
+      "errors": [
+        {
+          "kind": "deletion",
+          "expected": "S",
+          "referenceIndex": 0
+        },
+        {
+          "kind": "substitution",
+          "expected": "Y",
+          "observed": "5",
+          "referenceIndex": 1
+        },
+        {
+          "kind": "substitution",
+          "expected": "N",
+          "observed": "4",
+          "referenceIndex": 2
+        },
+        {
+          "kind": "substitution",
+          "expected": "T",
+          "observed": "1",
+          "referenceIndex": 3
+        },
+        {
+          "kind": "substitution",
+          "expected": "H",
+          "observed": "1",
+          "referenceIndex": 4
+        },
+        {
+          "kind": "substitution",
+          "expected": "E",
+          "observed": "1",
+          "referenceIndex": 5
+        },
+        {
+          "kind": "substitution",
+          "expected": "T",
+          "observed": " ",
+          "referenceIndex": 6
+        },
+        {
+          "kind": "substitution",
+          "expected": "I",
+          "observed": "1",
+          "referenceIndex": 7
+        },
+        {
+          "kind": "substitution",
+          "expected": "C",
+          "observed": "6",
+          "referenceIndex": 8
+        },
+        {
+          "kind": "deletion",
+          "expected": "O",
+          "referenceIndex": 10
+        },
+        {
+          "kind": "deletion",
+          "expected": "C",
+          "referenceIndex": 11
+        },
+        {
+          "kind": "substitution",
+          "expected": "R",
+          "observed": "0",
+          "referenceIndex": 12
+        },
+        {
+          "kind": "substitution",
+          "expected": " ",
+          "observed": "다",
+          "referenceIndex": 13
+        },
+        {
+          "kind": "substitution",
+          "expected": "T",
+          "observed": "1",
+          "referenceIndex": 14
+        },
+        {
+          "kind": "substitution",
+          "expected": "E",
+          "observed": "6",
+          "referenceIndex": 15
+        },
+        {
+          "kind": "substitution",
+          "expected": "S",
+          "observed": "5",
+          "referenceIndex": 16
+        },
+        {
+          "kind": "substitution",
+          "expected": "T",
+          "observed": "1",
+          "referenceIndex": 17
+        },
+        {
+          "kind": "deletion",
+          "expected": "성",
+          "referenceIndex": 22
+        },
+        {
+          "kind": "deletion",
+          "expected": "명",
+          "referenceIndex": 23
+        },
+        {
+          "kind": "deletion",
+          "expected": ":",
+          "referenceIndex": 24
+        },
+        {
+          "kind": "deletion",
+          "expected": " ",
+          "referenceIndex": 25
+        },
+        {
+          "kind": "deletion",
+          "expected": "누",
+          "referenceIndex": 26
+        },
+        {
+          "kind": "deletion",
+          "expected": "리",
+          "referenceIndex": 27
+        },
+        {
+          "kind": "deletion",
+          "expected": "솔",
+          "referenceIndex": 28
+        },
+        {
+          "kind": "insertion",
+          "observed": " ",
+          "observedIndex": 52
+        },
+        {
+          "kind": "insertion",
+          "observed": "\n",
+          "observedIndex": 56
+        },
+        {
+          "kind": "insertion",
+          "observed": "\n",
+          "observedIndex": 77
+        }
+      ]
+    },
+    "normalized": {
+      "referenceCharacters": 67,
+      "observedCharacters": 58,
+      "substitutions": 13,
+      "deletions": 9,
+      "insertions": 0,
+      "editDistance": 22,
+      "cer": 0.3283582089552239,
+      "errors": [
+        {
+          "kind": "deletion",
+          "expected": "S",
+          "referenceIndex": 0
+        },
+        {
+          "kind": "deletion",
+          "expected": "Y",
+          "referenceIndex": 1
+        },
+        {
+          "kind": "deletion",
+          "expected": "N",
+          "referenceIndex": 2
+        },
+        {
+          "kind": "substitution",
+          "expected": "T",
+          "observed": "5",
+          "referenceIndex": 3
+        },
+        {
+          "kind": "substitution",
+          "expected": "H",
+          "observed": "4",
+          "referenceIndex": 4
+        },
+        {
+          "kind": "substitution",
+          "expected": "E",
+          "observed": "1",
+          "referenceIndex": 5
+        },
+        {
+          "kind": "substitution",
+          "expected": "T",
+          "observed": "1",
+          "referenceIndex": 6
+        },
+        {
+          "kind": "substitution",
+          "expected": "I",
+          "observed": "1",
+          "referenceIndex": 7
+        },
+        {
+          "kind": "substitution",
+          "expected": "C",
+          "observed": "1",
+          "referenceIndex": 8
+        },
+        {
+          "kind": "substitution",
+          "expected": "O",
+          "observed": "6",
+          "referenceIndex": 9
+        },
+        {
+          "kind": "substitution",
+          "expected": "C",
+          "observed": "0",
+          "referenceIndex": 10
+        },
+        {
+          "kind": "substitution",
+          "expected": "R",
+          "observed": "다",
+          "referenceIndex": 11
+        },
+        {
+          "kind": "substitution",
+          "expected": "T",
+          "observed": "1",
+          "referenceIndex": 12
+        },
+        {
+          "kind": "substitution",
+          "expected": "E",
+          "observed": "6",
+          "referenceIndex": 13
+        },
+        {
+          "kind": "substitution",
+          "expected": "S",
+          "observed": "5",
+          "referenceIndex": 14
+        },
+        {
+          "kind": "substitution",
+          "expected": "T",
+          "observed": "1",
+          "referenceIndex": 15
+        },
+        {
+          "kind": "deletion",
+          "expected": "성",
+          "referenceIndex": 18
+        },
+        {
+          "kind": "deletion",
+          "expected": "명",
+          "referenceIndex": 19
+        },
+        {
+          "kind": "deletion",
+          "expected": ":",
+          "referenceIndex": 20
+        },
+        {
+          "kind": "deletion",
+          "expected": "누",
+          "referenceIndex": 21
+        },
+        {
+          "kind": "deletion",
+          "expected": "리",
+          "referenceIndex": 22
+        },
+        {
+          "kind": "deletion",
+          "expected": "솔",
+          "referenceIndex": 23
+        }
+      ]
+    },
+    "numbers": {
+      "referenceCharacters": 18,
+      "observedCharacters": 30,
+      "substitutions": 0,
+      "deletions": 0,
+      "insertions": 12,
+      "editDistance": 12,
+      "cer": 0.6666666666666666,
+      "errors": [
+        {
+          "kind": "insertion",
+          "observed": "5",
+          "observedIndex": 0
+        },
+        {
+          "kind": "insertion",
+          "observed": "4",
+          "observedIndex": 1
+        },
+        {
+          "kind": "insertion",
+          "observed": "1",
+          "observedIndex": 2
+        },
+        {
+          "kind": "insertion",
+          "observed": "1",
+          "observedIndex": 3
+        },
+        {
+          "kind": "insertion",
+          "observed": "1",
+          "observedIndex": 4
+        },
+        {
+          "kind": "insertion",
+          "observed": "1",
+          "observedIndex": 5
+        },
+        {
+          "kind": "insertion",
+          "observed": "6",
+          "observedIndex": 6
+        },
+        {
+          "kind": "insertion",
+          "observed": "0",
+          "observedIndex": 7
+        },
+        {
+          "kind": "insertion",
+          "observed": "1",
+          "observedIndex": 8
+        },
+        {
+          "kind": "insertion",
+          "observed": "6",
+          "observedIndex": 9
+        },
+        {
+          "kind": "insertion",
+          "observed": "5",
+          "observedIndex": 10
+        },
+        {
+          "kind": "insertion",
+          "observed": "1",
+          "observedIndex": 11
+        }
+      ]
+    },
+    "hanja": {
+      "referenceCharacters": 0,
+      "observedCharacters": 0,
+      "substitutions": 0,
+      "deletions": 0,
+      "insertions": 0,
+      "editDistance": 0,
+      "cer": null,
+      "errors": []
+    },
+    "manualCorrectionLowerBound": 22,
+    "note": "Field metric is exact substring presence after whitespace removal, not semantic extraction. Edit distance is an algorithmic lower bound, not measured human effort."
+  },
+  "finished": "2026-10-25T09:01:00.545Z",
+  "counts": {
+    "pass": 5,
+    "fail": 0,
+    "notRun": 0
+  }
+}

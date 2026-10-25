@@ -1,0 +1,136 @@
+{
+  "windows": "NOT_RUN",
+  "offline": "browser emulation, not physical network disconnection",
+  "browsers": [
+    {
+      "name": "Chromium",
+      "checks": [
+        {
+          "name": "actual Korean OCR candidate, no direct PDF text",
+          "pass": false,
+          "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n+ actual - expected\n\n+ 'ERROR'\n- 'NEEDS_REVIEW'\n\n    at <repo>/experiments/kor-ocr-file-poc/test-browser.mjs:31:73\n    at check (<repo>/experiments/kor-ocr-file-poc/test-browser.mjs:30:37)\n    at <repo>/experiments/kor-ocr-file-poc/test-browser.mjs:31:5"
+        },
+        {
+          "name": "real worker, WASM and kor initialization",
+          "pass": false,
+          "error": "AssertionError [ERR_ASSERTION]: wasm\n\n'NOT_RUN' !== 'PASS'\n\n    at <repo>/experiments/kor-ocr-file-poc/test-browser.mjs:32:139\n    at check (<repo>/experiments/kor-ocr-file-poc/test-browser.mjs:30:37)\n    at <repo>/experiments/kor-ocr-file-poc/test-browser.mjs:32:5"
+        },
+        {
+          "name": "no console/page/promise/CSP errors or external requests",
+          "pass": false,
+          "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:\n+ actual - expected\n\n+ [\n+   'Error: UNEXPECTED_CORE_FILE: tesseract-core-simd-lstm.wasm\\n' +\n+     '    at Object.locateFile (blob:null/de2a09ea-69de-4a4c-aa2a-8390c844caa0:214:121)\\n' +\n+     '    at blob:null/de2a09ea-69de-4a4c-aa2a-8390c844caa0:136:260\\n' +\n+     '    at blob:null/de2a09ea-69de-4a4c-aa2a-8390c844caa0:136:375\\n' +\n+     '    at blob:null/de2a09ea-69de-4a4c-aa2a-8390c844caa0:214:59'\n+ ]\n- []\n\n    at <repo>/experiments/kor-ocr-file-poc/test-browser.mjs:60:133\n    at check (<repo>/experiments/kor-ocr-file-poc/test-browser.mjs:30:37)\n    at <repo>/experiments/kor-ocr-file-poc/test-browser.mjs:60:5"
+        }
+      ],
+      "diagnostics": {
+        "consoleErrors": [],
+        "pageErrors": [
+          "Error: UNEXPECTED_CORE_FILE: tesseract-core-simd-lstm.wasm\n    at Object.locateFile (blob:null/de2a09ea-69de-4a4c-aa2a-8390c844caa0:214:121)\n    at blob:null/de2a09ea-69de-4a4c-aa2a-8390c844caa0:136:260\n    at blob:null/de2a09ea-69de-4a4c-aa2a-8390c844caa0:136:375\n    at blob:null/de2a09ea-69de-4a4c-aa2a-8390c844caa0:214:59"
+        ],
+        "externalRequests": [],
+        "unhandledRejections": [],
+        "cspViolations": [],
+        "workerErrors": []
+      },
+      "version": "156.0.8078.4",
+      "initial": {
+        "status": "ERROR",
+        "details": {
+          "state": "ERROR",
+          "stages": {
+            "integrity": "PASS",
+            "pdfRender": "PASS",
+            "worker": "PASS",
+            "wasm": "NOT_RUN",
+            "model": "NOT_RUN",
+            "ocr": "NOT_RUN"
+          },
+          "language": "kor",
+          "candidateStatus": "NEEDS_REVIEW",
+          "timingsMs": {
+            "render": 209
+          },
+          "events": [
+            {
+              "status": "BLOB_WORKER_BOOTED",
+              "progress": 1
+            },
+            {
+              "status": "initializing tesseract",
+              "progress": 0
+            }
+          ],
+          "directText": "",
+          "error": "Error: CANCELLED\n    at AbortSignal.rejectAbort (<generated>/kor-ocr.html:93150:85)\n    at <generated>/kor-ocr.html:93153:40"
+        }
+      },
+      "requests": [
+        "<generated>/kor-ocr.html"
+      ]
+    },
+    {
+      "name": "Mac Microsoft Edge",
+      "checks": [
+        {
+          "name": "actual Korean OCR candidate, no direct PDF text",
+          "pass": false,
+          "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n+ actual - expected\n\n+ 'ERROR'\n- 'NEEDS_REVIEW'\n\n    at <repo>/experiments/kor-ocr-file-poc/test-browser.mjs:31:73\n    at check (<repo>/experiments/kor-ocr-file-poc/test-browser.mjs:30:37)\n    at <repo>/experiments/kor-ocr-file-poc/test-browser.mjs:31:5"
+        },
+        {
+          "name": "real worker, WASM and kor initialization",
+          "pass": false,
+          "error": "AssertionError [ERR_ASSERTION]: wasm\n\n'NOT_RUN' !== 'PASS'\n\n    at <repo>/experiments/kor-ocr-file-poc/test-browser.mjs:32:139\n    at check (<repo>/experiments/kor-ocr-file-poc/test-browser.mjs:30:37)\n    at <repo>/experiments/kor-ocr-file-poc/test-browser.mjs:32:5"
+        },
+        {
+          "name": "no console/page/promise/CSP errors or external requests",
+          "pass": false,
+          "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:\n+ actual - expected\n\n+ [\n+   'Error: UNEXPECTED_CORE_FILE: tesseract-core-simd-lstm.wasm\\n' +\n+     '    at Object.locateFile (blob:null/ae61b8e7-d6a1-4098-9ea0-8878d418f30e:214:121)\\n' +\n+     '    at blob:null/ae61b8e7-d6a1-4098-9ea0-8878d418f30e:136:260\\n' +\n+     '    at blob:null/ae61b8e7-d6a1-4098-9ea0-8878d418f30e:136:375\\n' +\n+     '    at blob:null/ae61b8e7-d6a1-4098-9ea0-8878d418f30e:214:59'\n+ ]\n- []\n\n    at <repo>/experiments/kor-ocr-file-poc/test-browser.mjs:60:133\n    at check (<repo>/experiments/kor-ocr-file-poc/test-browser.mjs:30:37)\n    at <repo>/experiments/kor-ocr-file-poc/test-browser.mjs:60:5"
+        }
+      ],
+      "diagnostics": {
+        "consoleErrors": [],
+        "pageErrors": [
+          "Error: UNEXPECTED_CORE_FILE: tesseract-core-simd-lstm.wasm\n    at Object.locateFile (blob:null/ae61b8e7-d6a1-4098-9ea0-8878d418f30e:214:121)\n    at blob:null/ae61b8e7-d6a1-4098-9ea0-8878d418f30e:136:260\n    at blob:null/ae61b8e7-d6a1-4098-9ea0-8878d418f30e:136:375\n    at blob:null/ae61b8e7-d6a1-4098-9ea0-8878d418f30e:214:59"
+        ],
+        "externalRequests": [],
+        "unhandledRejections": [],
+        "cspViolations": [],
+        "workerErrors": []
+      },
+      "version": "156.0.4314.42",
+      "initial": {
+        "status": "ERROR",
+        "details": {
+          "state": "ERROR",
+          "stages": {
+            "integrity": "PASS",
+            "pdfRender": "PASS",
+            "worker": "PASS",
+            "wasm": "NOT_RUN",
+            "model": "NOT_RUN",
+            "ocr": "NOT_RUN"
+          },
+          "language": "kor",
+          "candidateStatus": "NEEDS_REVIEW",
+          "timingsMs": {
+            "render": 200
+          },
+          "events": [
+            {
+              "status": "BLOB_WORKER_BOOTED",
+              "progress": 1
+            },
+            {
+              "status": "initializing tesseract",
+              "progress": 0
+            }
+          ],
+          "directText": "",
+          "error": "Error: CANCELLED\n    at AbortSignal.rejectAbort (<generated>/kor-ocr.html:93150:85)\n    at <generated>/kor-ocr.html:93153:40"
+        }
+      },
+      "requests": [
+        "<generated>/kor-ocr.html"
+      ]
+    }
+  ]
+}

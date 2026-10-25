@@ -1,0 +1,46 @@
+{"time":"2026-10-25T08:51:09.553Z","stage":"browser launch","state":"START"}
+{"time":"2026-10-25T08:51:09.919Z","stage":"browser launch","state":"PASS"}
+{"time":"2026-10-25T08:51:09.919Z","stage":"browser connect","state":"START"}
+{"time":"2026-10-25T08:51:09.953Z","stage":"browser connect","state":"PASS"}
+{"time":"2026-10-25T08:51:09.953Z","stage":"fresh offline context","state":"START"}
+{"time":"2026-10-25T08:51:09.960Z","stage":"fresh offline context","state":"PASS"}
+{"time":"2026-10-25T08:51:09.960Z","stage":"request guard","state":"START"}
+{"time":"2026-10-25T08:51:09.961Z","stage":"request guard","state":"PASS"}
+{"time":"2026-10-25T08:51:09.961Z","stage":"page creation","state":"START"}
+{"time":"2026-10-25T08:51:10.155Z","stage":"page creation","state":"PASS"}
+{"time":"2026-10-25T08:51:10.155Z","stage":"diagnostic hooks","state":"START"}
+{"time":"2026-10-25T08:51:10.157Z","stage":"diagnostic hooks","state":"PASS"}
+{"time":"2026-10-25T08:51:10.157Z","stage":"file HTML load","state":"START"}
+{"time":"2026-10-25T08:51:10.407Z","stage":"file HTML load","state":"PASS"}
+{"time":"2026-10-25T08:51:10.408Z","stage":"OCR start","state":"START"}
+{"time":"2026-10-25T08:51:10.703Z","stage":"OCR start","state":"PASS"}
+{"time":"2026-10-25T08:51:10.704Z","stage":"worker/WASM/model/recognize result","state":"START"}
+{"time":"2026-10-25T08:51:11.008Z","stage":"worker/WASM/model/recognize result","state":"PASS"}
+{"time":"2026-10-25T08:51:11.008Z","stage":"read OCR result","state":"START"}
+{"time":"2026-10-25T08:51:11.011Z","stage":"read OCR result","state":"PASS"}
+{"time":"2026-10-25T08:51:11.014Z","stage":"worker cancellation observer","state":"START"}
+{"time":"2026-10-25T08:51:11.015Z","stage":"worker cancellation observer","state":"PASS"}
+{"time":"2026-10-25T08:51:11.016Z","stage":"cancel run start","state":"START"}
+{"time":"2026-10-25T08:51:11.196Z","stage":"cancel run start","state":"PASS"}
+{"time":"2026-10-25T08:51:11.196Z","stage":"cancel acknowledgement","state":"START"}
+{"time":"2026-10-25T08:51:11.198Z","stage":"cancel acknowledgement","state":"PASS"}
+{"time":"2026-10-25T08:51:11.198Z","stage":"late cancellation observation","state":"START"}
+{"time":"2026-10-25T08:51:11.702Z","stage":"late cancellation observation","state":"PASS"}
+{"time":"2026-10-25T08:51:11.702Z","stage":"read cancelled result","state":"START"}
+{"time":"2026-10-25T08:51:11.705Z","stage":"read cancelled result","state":"PASS"}
+{"time":"2026-10-25T08:51:11.706Z","stage":"inject synthetic hash rejection","state":"START"}
+{"time":"2026-10-25T08:51:11.708Z","stage":"inject synthetic hash rejection","state":"PASS"}
+{"time":"2026-10-25T08:51:11.708Z","stage":"hash failure start","state":"START"}
+{"time":"2026-10-25T08:51:11.857Z","stage":"hash failure start","state":"PASS"}
+{"time":"2026-10-25T08:51:11.857Z","stage":"hash failure result","state":"START"}
+{"time":"2026-10-25T08:51:11.858Z","stage":"hash failure result","state":"PASS"}
+{"time":"2026-10-25T08:51:11.859Z","stage":"read hash rejection","state":"START"}
+{"time":"2026-10-25T08:51:11.860Z","stage":"read hash rejection","state":"PASS"}
+{"time":"2026-10-25T08:51:11.860Z","stage":"promise diagnostics","state":"START"}
+{"time":"2026-10-25T08:51:11.862Z","stage":"promise diagnostics","state":"PASS"}
+{"time":"2026-10-25T08:51:11.862Z","stage":"CSP diagnostics","state":"START"}
+{"time":"2026-10-25T08:51:11.863Z","stage":"CSP diagnostics","state":"PASS"}
+{"time":"2026-10-25T08:51:11.864Z","stage":"browser disconnect/close","state":"START"}
+{"time":"2026-10-25T08:51:11.864Z","stage":"browser disconnect/close","state":"PASS"}
+{"time":"2026-10-25T08:51:11.865Z","stage":"browser process close","state":"START"}
+{"time":"2026-10-25T08:51:11.888Z","stage":"browser process close","state":"PASS"}

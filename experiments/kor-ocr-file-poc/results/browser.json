@@ -1,0 +1,560 @@
+{
+  "windows": "NOT_RUN",
+  "offline": "browser emulation, not physical network disconnection",
+  "browsers": [
+    {
+      "name": "Chromium",
+      "checks": [
+        {
+          "name": "actual Korean OCR candidate, no direct PDF text",
+          "pass": true
+        },
+        {
+          "name": "real worker, WASM and kor initialization",
+          "pass": true
+        },
+        {
+          "name": "cancel after worker boot clears candidate and late completion",
+          "pass": true
+        },
+        {
+          "name": "hash failure prevents OCR publication",
+          "pass": true
+        },
+        {
+          "name": "no console/page/promise/CSP errors or external requests",
+          "pass": true
+        }
+      ],
+      "diagnostics": {
+        "consoleErrors": [],
+        "pageErrors": [],
+        "externalRequests": [],
+        "unhandledRejections": [],
+        "cspViolations": [],
+        "workerErrors": []
+      },
+      "version": "156.0.8078.4",
+      "initial": {
+        "status": "NEEDS_REVIEW",
+        "details": {
+          "state": "NEEDS_REVIEW",
+          "stages": {
+            "integrity": "PASS",
+            "pdfRender": "PASS",
+            "worker": "PASS",
+            "wasm": "PASS",
+            "model": "PASS",
+            "ocr": "PASS"
+          },
+          "language": "kor",
+          "candidateStatus": "NEEDS_REVIEW",
+          "timingsMs": {
+            "render": 205,
+            "initialization": 56,
+            "ocr": 248,
+            "total": 511
+          },
+          "events": [
+            {
+              "status": "BLOB_WORKER_BOOTED",
+              "progress": 1
+            },
+            {
+              "status": "initializing tesseract",
+              "progress": 0
+            },
+            {
+              "status": "WASM_RUNTIME_READY",
+              "progress": 1
+            },
+            {
+              "status": "initializing tesseract",
+              "progress": 1
+            },
+            {
+              "status": "loading language traineddata",
+              "progress": 0
+            },
+            {
+              "status": "KOR_BYTES_SUPPLIED",
+              "progress": 1
+            },
+            {
+              "status": "loading language traineddata",
+              "progress": 0.5
+            },
+            {
+              "status": "loading language traineddata",
+              "progress": 1
+            },
+            {
+              "status": "initializing api",
+              "progress": 0
+            },
+            {
+              "status": "initializing api",
+              "progress": 1
+            },
+            {
+              "status": "recognizing text",
+              "progress": 0
+            },
+            {
+              "status": "recognizing text",
+              "progress": 0.14285714285714285
+            },
+            {
+              "status": "recognizing text",
+              "progress": 0.2857142857142857
+            },
+            {
+              "status": "recognizing text",
+              "progress": 0.42857142857142855
+            },
+            {
+              "status": "recognizing text",
+              "progress": 0.5714285714285714
+            },
+            {
+              "status": "recognizing text",
+              "progress": 1
+            }
+          ],
+          "directText": "",
+          "text": "54111 16 0다1651 02\n\n날짜: 2002-03-04\n관계: 배우자\n번호: 23456 789\n\n완전 가공 자료 / 실제 사건 아님\n",
+          "confidence": 68
+        }
+      },
+      "accuracy": {
+        "fields": {
+          "name": {
+            "expected": "누리솔",
+            "exactSubstring": false
+          },
+          "date": {
+            "expected": "2002-03-04",
+            "exactSubstring": true
+          },
+          "relationship": {
+            "expected": "배우자",
+            "exactSubstring": true
+          },
+          "number": {
+            "expected": "23456789",
+            "exactSubstring": true
+          }
+        },
+        "raw": {
+          "referenceCharacters": 85,
+          "observedCharacters": 78,
+          "substitutions": 14,
+          "deletions": 10,
+          "insertions": 3,
+          "editDistance": 27,
+          "cer": 0.3176470588235294,
+          "errors": [
+            {
+              "kind": "deletion",
+              "expected": "S",
+              "referenceIndex": 0
+            },
+            {
+              "kind": "substitution",
+              "expected": "Y",
+              "observed": "5",
+              "referenceIndex": 1
+            },
+            {
+              "kind": "substitution",
+              "expected": "N",
+              "observed": "4",
+              "referenceIndex": 2
+            },
+            {
+              "kind": "substitution",
+              "expected": "T",
+              "observed": "1",
+              "referenceIndex": 3
+            },
+            {
+              "kind": "substitution",
+              "expected": "H",
+              "observed": "1",
+              "referenceIndex": 4
+            },
+            {
+              "kind": "substitution",
+              "expected": "E",
+              "observed": "1",
+              "referenceIndex": 5
+            },
+            {
+              "kind": "substitution",
+              "expected": "T",
+              "observed": " ",
+              "referenceIndex": 6
+            },
+            {
+              "kind": "substitution",
+              "expected": "I",
+              "observed": "1",
+              "referenceIndex": 7
+            },
+            {
+              "kind": "substitution",
+              "expected": "C",
+              "observed": "6",
+              "referenceIndex": 8
+            },
+            {
+              "kind": "deletion",
+              "expected": "O",
+              "referenceIndex": 10
+            },
+            {
+              "kind": "deletion",
+              "expected": "C",
+              "referenceIndex": 11
+            },
+            {
+              "kind": "substitution",
+              "expected": "R",
+              "observed": "0",
+              "referenceIndex": 12
+            },
+            {
+              "kind": "substitution",
+              "expected": " ",
+              "observed": "다",
+              "referenceIndex": 13
+            },
+            {
+              "kind": "substitution",
+              "expected": "T",
+              "observed": "1",
+              "referenceIndex": 14
+            },
+            {
+              "kind": "substitution",
+              "expected": "E",
+              "observed": "6",
+              "referenceIndex": 15
+            },
+            {
+              "kind": "substitution",
+              "expected": "S",
+              "observed": "5",
+              "referenceIndex": 16
+            },
+            {
+              "kind": "substitution",
+              "expected": "T",
+              "observed": "1",
+              "referenceIndex": 17
+            },
+            {
+              "kind": "deletion",
+              "expected": "성",
+              "referenceIndex": 22
+            },
+            {
+              "kind": "deletion",
+              "expected": "명",
+              "referenceIndex": 23
+            },
+            {
+              "kind": "deletion",
+              "expected": ":",
+              "referenceIndex": 24
+            },
+            {
+              "kind": "deletion",
+              "expected": " ",
+              "referenceIndex": 25
+            },
+            {
+              "kind": "deletion",
+              "expected": "누",
+              "referenceIndex": 26
+            },
+            {
+              "kind": "deletion",
+              "expected": "리",
+              "referenceIndex": 27
+            },
+            {
+              "kind": "deletion",
+              "expected": "솔",
+              "referenceIndex": 28
+            },
+            {
+              "kind": "insertion",
+              "observed": " ",
+              "observedIndex": 52
+            },
+            {
+              "kind": "insertion",
+              "observed": "\n",
+              "observedIndex": 56
+            },
+            {
+              "kind": "insertion",
+              "observed": "\n",
+              "observedIndex": 77
+            }
+          ]
+        },
+        "normalized": {
+          "referenceCharacters": 67,
+          "observedCharacters": 58,
+          "substitutions": 13,
+          "deletions": 9,
+          "insertions": 0,
+          "editDistance": 22,
+          "cer": 0.3283582089552239,
+          "errors": [
+            {
+              "kind": "deletion",
+              "expected": "S",
+              "referenceIndex": 0
+            },
+            {
+              "kind": "deletion",
+              "expected": "Y",
+              "referenceIndex": 1
+            },
+            {
+              "kind": "deletion",
+              "expected": "N",
+              "referenceIndex": 2
+            },
+            {
+              "kind": "substitution",
+              "expected": "T",
+              "observed": "5",
+              "referenceIndex": 3
+            },
+            {
+              "kind": "substitution",
+              "expected": "H",
+              "observed": "4",
+              "referenceIndex": 4
+            },
+            {
+              "kind": "substitution",
+              "expected": "E",
+              "observed": "1",
+              "referenceIndex": 5
+            },
+            {
+              "kind": "substitution",
+              "expected": "T",
+              "observed": "1",
+              "referenceIndex": 6
+            },
+            {
+              "kind": "substitution",
+              "expected": "I",
+              "observed": "1",
+              "referenceIndex": 7
+            },
+            {
+              "kind": "substitution",
+              "expected": "C",
+              "observed": "1",
+              "referenceIndex": 8
+            },
+            {
+              "kind": "substitution",
+              "expected": "O",
+              "observed": "6",
+              "referenceIndex": 9
+            },
+            {
+              "kind": "substitution",
+              "expected": "C",
+              "observed": "0",
+              "referenceIndex": 10
+            },
+            {
+              "kind": "substitution",
+              "expected": "R",
+              "observed": "다",
+              "referenceIndex": 11
+            },
+            {
+              "kind": "substitution",
+              "expected": "T",
+              "observed": "1",
+              "referenceIndex": 12
+            },
+            {
+              "kind": "substitution",
+              "expected": "E",
+              "observed": "6",
+              "referenceIndex": 13
+            },
+            {
+              "kind": "substitution",
+              "expected": "S",
+              "observed": "5",
+              "referenceIndex": 14
+            },
+            {
+              "kind": "substitution",
+              "expected": "T",
+              "observed": "1",
+              "referenceIndex": 15
+            },
+            {
+              "kind": "deletion",
+              "expected": "성",
+              "referenceIndex": 18
+            },
+            {
+              "kind": "deletion",
+              "expected": "명",
+              "referenceIndex": 19
+            },
+            {
+              "kind": "deletion",
+              "expected": ":",
+              "referenceIndex": 20
+            },
+            {
+              "kind": "deletion",
+              "expected": "누",
+              "referenceIndex": 21
+            },
+            {
+              "kind": "deletion",
+              "expected": "리",
+              "referenceIndex": 22
+            },
+            {
+              "kind": "deletion",
+              "expected": "솔",
+              "referenceIndex": 23
+            }
+          ]
+        },
+        "numbers": {
+          "referenceCharacters": 18,
+          "observedCharacters": 30,
+          "substitutions": 0,
+          "deletions": 0,
+          "insertions": 12,
+          "editDistance": 12,
+          "cer": 0.6666666666666666,
+          "errors": [
+            {
+              "kind": "insertion",
+              "observed": "5",
+              "observedIndex": 0
+            },
+            {
+              "kind": "insertion",
+              "observed": "4",
+              "observedIndex": 1
+            },
+            {
+              "kind": "insertion",
+              "observed": "1",
+              "observedIndex": 2
+            },
+            {
+              "kind": "insertion",
+              "observed": "1",
+              "observedIndex": 3
+            },
+            {
+              "kind": "insertion",
+              "observed": "1",
+              "observedIndex": 4
+            },
+            {
+              "kind": "insertion",
+              "observed": "1",
+              "observedIndex": 5
+            },
+            {
+              "kind": "insertion",
+              "observed": "6",
+              "observedIndex": 6
+            },
+            {
+              "kind": "insertion",
+              "observed": "0",
+              "observedIndex": 7
+            },
+            {
+              "kind": "insertion",
+              "observed": "1",
+              "observedIndex": 8
+            },
+            {
+              "kind": "insertion",
+              "observed": "6",
+              "observedIndex": 9
+            },
+            {
+              "kind": "insertion",
+              "observed": "5",
+              "observedIndex": 10
+            },
+            {
+              "kind": "insertion",
+              "observed": "1",
+              "observedIndex": 11
+            }
+          ]
+        },
+        "hanja": {
+          "referenceCharacters": 0,
+          "observedCharacters": 0,
+          "substitutions": 0,
+          "deletions": 0,
+          "insertions": 0,
+          "editDistance": 0,
+          "cer": null,
+          "errors": []
+        },
+        "manualCorrectionLowerBound": 22,
+        "note": "Field metric is exact substring presence after whitespace removal, not semantic extraction. Edit distance is an algorithmic lower bound, not measured human effort."
+      },
+      "hashFailure": {
+        "state": "ERROR",
+        "stages": {
+          "integrity": "NOT_RUN",
+          "pdfRender": "NOT_RUN",
+          "worker": "NOT_RUN",
+          "wasm": "NOT_RUN",
+          "model": "NOT_RUN",
+          "ocr": "NOT_RUN"
+        },
+        "language": "kor",
+        "candidateStatus": "NEEDS_REVIEW",
+        "timingsMs": {},
+        "events": [],
+        "error": "Error: synthetic hash failure\n    at crypto.subtle.digest (eval at evaluate (:370:30), <anonymous>:1:107)\n    at verify (<generated>/kor-ocr.html:93124:60)\n    at HTMLButtonElement.<anonymous> (<generated>/kor-ocr.html:93155:53)"
+      },
+      "requests": [
+        "<generated>/kor-ocr.html"
+      ]
+    },
+    {
+      "name": "Mac Microsoft Edge",
+      "checks": [],
+      "diagnostics": {
+        "consoleErrors": [],
+        "pageErrors": [],
+        "externalRequests": [],
+        "unhandledRejections": [],
+        "cspViolations": [],
+        "workerErrors": []
+      },
+      "fatal": "browserType.launch: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - <launching> /Applications/Microsoft Edge.app/Contents/MacOS/Microsoft Edge --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,BlockOriginHeaderModificationOnRedirect,AvoidCorsURLLoaderRestartOnRedirect,Translate,AutoDeElevate,OptimizationHints,NetworkTimeServiceQuerying,AimEnabled,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-updater-scheduler --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --disable-infobars --disable-search-engine-choice-screen --disable-sync --enable-unsafe-swiftshader --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --user-data-dir=/var/folders/qx/szmrz43n2nz_xb2mt1bnvs640000gn/T/playwright_chromiumdev_profile-XyjRdQ --remote-debugging-pipe --no-startup-window\u001b[22m\n\u001b[2m  - <launched> pid=98259\u001b[22m\n\n    at <repo>/experiments/kor-ocr-file-poc/test-browser.mjs:13:28"
+    }
+  ]
+}

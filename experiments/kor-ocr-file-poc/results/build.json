@@ -1,0 +1,75 @@
+{
+  "format": "kor-file-ocr-poc-v1",
+  "output": "generated/kor-ocr.html",
+  "bytes": 9476603,
+  "sha256": "db5f35aee58da2ee6007e5d82e761c53f8b26026bed60f9b89169ce0873292f6",
+  "tesseractVersion": "7.0.0",
+  "coreVersion": "7.0.0",
+  "pdfjsVersion": "6.4.299",
+  "resources": [
+    {
+      "key": "pdfjs",
+      "path": "public/vendor/pdfjs/pdf.mjs",
+      "bytes": 860818,
+      "sha256": "dd13af821c9c3e1778653340d6539a1ba07bc56cba40073a4c727864cf0c232a"
+    },
+    {
+      "key": "pdfWorker",
+      "path": "public/vendor/pdfjs/pdf.worker.mjs",
+      "bytes": 2229713,
+      "sha256": "07ceb740d746e5d9012fcf9f27d5c7dea09f7d2f5e74f5c8109e5787551a2333"
+    },
+    {
+      "key": "tesseract",
+      "path": "public/vendor/tesseract/tesseract.min.js",
+      "bytes": 62961,
+      "sha256": "000c27d9cd0def655f77b36c72a389c0ab13793aa31cb4d7aab56d09c0afbc7e"
+    },
+    {
+      "key": "worker",
+      "path": "public/vendor/tesseract/worker.min.js",
+      "bytes": 111307,
+      "sha256": "576b7df7e3393e137e51849357c9adb53fe7ac1bb69bfa06cf3d61520f182c6d"
+    },
+    {
+      "key": "core",
+      "path": "public/vendor/tesseract-core/tesseract-core-simd-lstm.js",
+      "bytes": 89271,
+      "sha256": "e48e2f02ddae3716c8dd24bf41cd290d4efa96892d689cdc4013c2545d63f469"
+    },
+    {
+      "key": "wasm",
+      "path": "public/vendor/tesseract-core/tesseract-core-simd-lstm.wasm",
+      "bytes": 2857601,
+      "sha256": "34e8d50cac216427d86bf397d610fdd9f49492539bbcdfbfccc4eda20c810bea"
+    },
+    {
+      "key": "model",
+      "path": "public/models/kor.traineddata",
+      "bytes": 1677415,
+      "sha256": "6b85e11d9bbf07863b97b3523b1b112844c43e713df8b66418a081fd1060b3b2"
+    }
+  ],
+  "fixture": {
+    "path": "fixtures/scan-only.pdf",
+    "bytes": 47203,
+    "sha256": "2b1ddcf045a45a53dc73c543c5d815ea2f0ce46698290a44ee43df3614d4e372",
+    "originalPage": 2
+  },
+  "modelSource": {
+    "name": "tessdata_fast/kor",
+    "version": "87416418657359cb625c412a48b6e1d6d41c29bd",
+    "license": "Apache-2.0",
+    "url": "https://raw.githubusercontent.com/tesseract-ocr/tessdata_fast/87416418657359cb625c412a48b6e1d6d41c29bd/kor.traineddata",
+    "target": "public/models/kor.traineddata",
+    "role": "OCR language data (LSTM only)",
+    "bytes": 1677415,
+    "sha256": "6b85e11d9bbf07863b97b3523b1b112844c43e713df8b66418a081fd1060b3b2"
+  },
+  "sourceHashes": {
+    "builder": "5334ffee078cdfe10908c534e25ab0026992aeb79e0d07f6db9c5cbebbc57269",
+    "app": "5f656980a5a97cb7112915e0512c1e7c94c06368316f19ed2fa580964fcec73a",
+    "adapter": "eb3b37117264d6f66f0fab0d879d3875eec049886836f4e94ddb0d144649050f"
+  },
+  "note": "Generated complete file contains fixed worker/core/WASM/kor/scan resources; no runtime file or HTTP fetch. Large output deliberately gitignored."
+}
