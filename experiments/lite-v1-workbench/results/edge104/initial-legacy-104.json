@@ -1,0 +1,135 @@
+{
+  "target": "chromium104",
+  "started": "2026-10-26T06:05:28.919Z",
+  "windows": "NOT_RUN",
+  "offline": "fresh context, empty cache, browser offline emulation; physical disconnection NOT_RUN",
+  "checks": [
+    {
+      "name": "selected text PDF, render and direct NEEDS_REVIEW",
+      "state": "FAIL",
+      "error": "Error: TIMEOUT: selected text PDF, render and direct NEEDS_REVIEW 15000ms"
+    }
+  ],
+  "stages": [
+    {
+      "time": "2026-10-26T06:05:28.921Z",
+      "stage": "browser launch",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-26T06:05:29.623Z",
+      "stage": "browser launch",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-26T06:05:29.623Z",
+      "stage": "browser connect",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-26T06:05:29.672Z",
+      "stage": "browser connect",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-26T06:05:29.672Z",
+      "stage": "fresh offline context",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-26T06:05:29.695Z",
+      "stage": "fresh offline context",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-26T06:05:29.696Z",
+      "stage": "request guard",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-26T06:05:29.697Z",
+      "stage": "request guard",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-26T06:05:29.699Z",
+      "stage": "page creation",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-26T06:05:29.918Z",
+      "stage": "page creation",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-26T06:05:29.918Z",
+      "stage": "diagnostic hooks",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-26T06:05:29.922Z",
+      "stage": "diagnostic hooks",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-26T06:05:29.922Z",
+      "stage": "file HTML load",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-26T06:05:30.451Z",
+      "stage": "file HTML load",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-26T06:05:30.452Z",
+      "stage": "selected text PDF, render and direct NEEDS_REVIEW",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-26T06:05:45.491Z",
+      "stage": "selected text PDF, render and direct NEEDS_REVIEW",
+      "state": "TIMEOUT",
+      "error": "Error: TIMEOUT: selected text PDF, render and direct NEEDS_REVIEW 15000ms"
+    },
+    {
+      "time": "2026-10-26T06:05:45.511Z",
+      "stage": "browser disconnect/close",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-26T06:05:45.524Z",
+      "stage": "browser disconnect/close",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-26T06:05:45.524Z",
+      "stage": "browser process close",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-26T06:05:45.639Z",
+      "stage": "browser process close",
+      "state": "PASS"
+    }
+  ],
+  "diagnostics": {
+    "consoleErrors": [],
+    "pageErrors": [],
+    "externalRequests": [],
+    "unhandledRejections": [],
+    "cspViolations": []
+  },
+  "browserPid": 4850,
+  "version": "104.0.5112.48",
+  "requests": [
+    "<repo>/experiments/lite-v1-workbench/generated/lite-v1.html"
+  ],
+  "fatal": "Error: TIMEOUT: selected text PDF, render and direct NEEDS_REVIEW 15000ms\n    at Timeout.<anonymous> (<repo>/experiments/lite-v1-workbench/test-browser.mjs:27:123)\n    at listOnTimeout (node:internal/timers:685:17)\n    at process.processTimers (node:internal/timers:618:7)",
+  "finished": "2026-10-26T06:05:45.639Z",
+  "counts": {
+    "pass": 0,
+    "fail": 1,
+    "notRun": 24
+  }
+}

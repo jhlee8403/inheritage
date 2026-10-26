@@ -1,0 +1,34 @@
+{"time":"2026-10-26T06:40:50.066Z","stage":"browser launch","state":"START"}
+{"time":"2026-10-26T06:40:50.374Z","stage":"browser launch","state":"PASS"}
+{"time":"2026-10-26T06:40:50.375Z","stage":"browser connect","state":"START"}
+{"time":"2026-10-26T06:40:50.405Z","stage":"browser connect","state":"PASS"}
+{"time":"2026-10-26T06:40:50.405Z","stage":"fresh offline context","state":"START"}
+{"time":"2026-10-26T06:40:50.420Z","stage":"fresh offline context","state":"PASS"}
+{"time":"2026-10-26T06:40:50.420Z","stage":"request guard","state":"START"}
+{"time":"2026-10-26T06:40:50.421Z","stage":"request guard","state":"PASS"}
+{"time":"2026-10-26T06:40:50.422Z","stage":"page creation","state":"START"}
+{"time":"2026-10-26T06:40:50.617Z","stage":"page creation","state":"PASS"}
+{"time":"2026-10-26T06:40:50.618Z","stage":"diagnostic hooks","state":"START"}
+{"time":"2026-10-26T06:40:50.632Z","stage":"diagnostic hooks","state":"PASS"}
+{"time":"2026-10-26T06:40:50.633Z","stage":"file HTML load","state":"START"}
+{"time":"2026-10-26T06:40:51.013Z","stage":"file HTML load","state":"PASS"}
+{"time":"2026-10-26T06:40:51.015Z","stage":"PDF initialization completion","state":"START"}
+{"time":"2026-10-26T06:40:51.030Z","stage":"PDF initialization completion","state":"PASS"}
+{"time":"2026-10-26T06:40:51.031Z","stage":"initial state capture","state":"START"}
+{"time":"2026-10-26T06:40:51.042Z","stage":"initial state capture","state":"PASS"}
+{"time":"2026-10-26T06:40:51.042Z","stage":"modern 6.4.299 reproduces Iterator failure before PDF app","state":"START"}
+{"time":"2026-10-26T06:40:51.076Z","stage":"modern 6.4.299 reproduces Iterator failure before PDF app","state":"PASS"}
+{"time":"2026-10-26T06:40:51.076Z","stage":"C1 still calculates exact shares with PDF initialization failed","state":"START"}
+{"time":"2026-10-26T06:40:51.167Z","stage":"C1 still calculates exact shares with PDF initialization failed","state":"PASS"}
+{"time":"2026-10-26T06:40:51.168Z","stage":"promise diagnostics","state":"START"}
+{"time":"2026-10-26T06:40:51.169Z","stage":"promise diagnostics","state":"PASS"}
+{"time":"2026-10-26T06:40:51.169Z","stage":"CSP diagnostics","state":"START"}
+{"time":"2026-10-26T06:40:51.171Z","stage":"CSP diagnostics","state":"PASS"}
+{"time":"2026-10-26T06:40:51.171Z","stage":"zero external requests and console/page/promise/CSP errors","state":"START"}
+{"time":"2026-10-26T06:40:51.171Z","stage":"zero external requests and console/page/promise/CSP errors","state":"PASS"}
+{"time":"2026-10-26T06:40:51.171Z","stage":"screenshot","state":"START"}
+{"time":"2026-10-26T06:40:51.462Z","stage":"screenshot","state":"PASS"}
+{"time":"2026-10-26T06:40:51.462Z","stage":"browser disconnect/close","state":"START"}
+{"time":"2026-10-26T06:40:51.463Z","stage":"browser disconnect/close","state":"PASS"}
+{"time":"2026-10-26T06:40:51.463Z","stage":"browser process close","state":"START"}
+{"time":"2026-10-26T06:40:51.478Z","stage":"browser process close","state":"PASS"}

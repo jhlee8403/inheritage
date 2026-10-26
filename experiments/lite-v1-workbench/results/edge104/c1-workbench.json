@@ -1,0 +1,182 @@
+{
+  "node": "v24.22.0",
+  "edge": "/Applications/Microsoft Edge.app/Contents/MacOS/Microsoft Edge",
+  "browsers": [
+    {
+      "name": "Chromium",
+      "version": "156.0.8078.4",
+      "pass": 18,
+      "fail": 0,
+      "skipped": 0,
+      "checks": [
+        {
+          "name": "blank manual fields remain UNKNOWN and empty",
+          "pass": true
+        },
+        {
+          "name": "spouse fixture: people, fractions, paths, rules and checks",
+          "pass": true
+        },
+        {
+          "name": "parents fixture: people, fractions, paths, rules and checks",
+          "pass": true
+        },
+        {
+          "name": "children fixture: people, fractions, paths, rules and checks",
+          "pass": true
+        },
+        {
+          "name": "Q edit immediately clears result and copy before any hash completes; recalculation",
+          "pass": true
+        },
+        {
+          "name": "add/remove family member requires explicit confirmation; new ID and Q",
+          "pass": true
+        },
+        {
+          "name": "UNKNOWN spouse: BLOCKED, unresolved Q, no allocations; blocked text copyable",
+          "pass": true
+        },
+        {
+          "name": "incomplete family: BLOCKED preserves Q",
+          "pass": true
+        },
+        {
+          "name": "malformed, zero-denominator and negative Q: ERROR and no old output",
+          "pass": true
+        },
+        {
+          "name": "input changes during pending calculation: old completion ignored",
+          "pass": true
+        },
+        {
+          "name": "overlapping calculations: newer result wins even when older completes last",
+          "pass": true
+        },
+        {
+          "name": "cancel pending calculation cannot resurrect previous success",
+          "pass": true
+        },
+        {
+          "name": "hash failure is ERROR, caught, and removes previous successful output",
+          "pass": true
+        },
+        {
+          "name": "latest result real clipboard copy and selection; clipboard denial fallback",
+          "pass": true
+        },
+        {
+          "name": "person ID HTML payload remains text and is rejected as invalid ID",
+          "pass": true
+        },
+        {
+          "name": "pending clipboard completion cannot restore copy permission after an edit",
+          "pass": true
+        },
+        {
+          "name": "date scope visible and fixed; new blank never retains old result",
+          "pass": true
+        },
+        {
+          "name": "recalculation resets previous output selection and scroll to the new result heading",
+          "pass": true
+        }
+      ],
+      "diagnostics": {
+        "consoleErrors": [],
+        "pageErrors": [],
+        "unhandledRejections": [],
+        "externalRequests": []
+      },
+      "diagnosticsPass": true
+    },
+    {
+      "name": "Mac Microsoft Edge",
+      "version": "156.0.4314.42",
+      "pass": 18,
+      "fail": 0,
+      "skipped": 0,
+      "checks": [
+        {
+          "name": "blank manual fields remain UNKNOWN and empty",
+          "pass": true
+        },
+        {
+          "name": "spouse fixture: people, fractions, paths, rules and checks",
+          "pass": true
+        },
+        {
+          "name": "parents fixture: people, fractions, paths, rules and checks",
+          "pass": true
+        },
+        {
+          "name": "children fixture: people, fractions, paths, rules and checks",
+          "pass": true
+        },
+        {
+          "name": "Q edit immediately clears result and copy before any hash completes; recalculation",
+          "pass": true
+        },
+        {
+          "name": "add/remove family member requires explicit confirmation; new ID and Q",
+          "pass": true
+        },
+        {
+          "name": "UNKNOWN spouse: BLOCKED, unresolved Q, no allocations; blocked text copyable",
+          "pass": true
+        },
+        {
+          "name": "incomplete family: BLOCKED preserves Q",
+          "pass": true
+        },
+        {
+          "name": "malformed, zero-denominator and negative Q: ERROR and no old output",
+          "pass": true
+        },
+        {
+          "name": "input changes during pending calculation: old completion ignored",
+          "pass": true
+        },
+        {
+          "name": "overlapping calculations: newer result wins even when older completes last",
+          "pass": true
+        },
+        {
+          "name": "cancel pending calculation cannot resurrect previous success",
+          "pass": true
+        },
+        {
+          "name": "hash failure is ERROR, caught, and removes previous successful output",
+          "pass": true
+        },
+        {
+          "name": "latest result real clipboard copy and selection; clipboard denial fallback",
+          "pass": true
+        },
+        {
+          "name": "person ID HTML payload remains text and is rejected as invalid ID",
+          "pass": true
+        },
+        {
+          "name": "pending clipboard completion cannot restore copy permission after an edit",
+          "pass": true
+        },
+        {
+          "name": "date scope visible and fixed; new blank never retains old result",
+          "pass": true
+        },
+        {
+          "name": "recalculation resets previous output selection and scroll to the new result heading",
+          "pass": true
+        }
+      ],
+      "diagnostics": {
+        "consoleErrors": [],
+        "pageErrors": [],
+        "unhandledRejections": [],
+        "externalRequests": []
+      },
+      "diagnosticsPass": true
+    }
+  ]
+}

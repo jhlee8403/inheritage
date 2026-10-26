@@ -1,0 +1,349 @@
+{
+  "format": "pdfjs-legacy-compat-v1",
+  "pdfjsVersion": "6.4.299",
+  "flavor": "official legacy/build",
+  "archiveURL": "https://registry.npmjs.org/pdfjs-dist/-/pdfjs-dist-6.4.299.tgz",
+  "npmIntegrity": "sha512-AVl138zALtfaAPvADulE0PZThbYzCBS79nL4pOSL/6Sm/4AH5A21BD9VHt97OlCuzJuCpmeZtAtkinisF4Vb1g==",
+  "license": "Apache-2.0",
+  "embeddedPolyfills": {
+    "name": "core-js",
+    "version": "3.50.0",
+    "license": "MIT",
+    "scope": "official bundled standard polyfills; no empty Iterator shim"
+  },
+  "files": [
+    {
+      "packagePath": "legacy/build/pdf.mjs",
+      "name": "pdf.mjs",
+      "bytes": 1069549,
+      "sha256": "bc51f4874a66e3853189cb5d50aba4b3096afa83ed433b885d293a3d94583cdc"
+    },
+    {
+      "packagePath": "legacy/build/pdf.worker.mjs",
+      "name": "pdf.worker.mjs",
+      "bytes": 2418244,
+      "sha256": "bb422f60804477de4a0b09091d8347a916a387755ed1cbad24ccaec1d09c78bf"
+    },
+    {
+      "packagePath": "LICENSE",
+      "name": "LICENSE",
+      "bytes": 10174,
+      "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+    },
+    {
+      "name": "core-js-LICENSE",
+      "url": "https://raw.githubusercontent.com/zloirock/core-js/v3.50.0/LICENSE",
+      "bytes": 1134,
+      "sha256": "b87653fff2d44426ab5cd4723cee3b1364dc8d35a0acdf098c54689543123bf8"
+    },
+    {
+      "name": "promise-with-resolvers.js",
+      "bytes": 61603,
+      "sha256": "bfb4138b31a60fa61ee569354a43252b8ab21a9c697a9e1b6e3052fdd62eec24"
+    },
+    {
+      "origin": "streams",
+      "packagePath": "LICENSE",
+      "name": "web-streams-LICENSE",
+      "bytes": 1120,
+      "sha256": "94d0444de8345fb1370316fbe4918a0fe73190f32dcde0e474d3423cf275a95c"
+    },
+    {
+      "origin": "streams",
+      "packagePath": "dist/ponyfill.js",
+      "name": "web-streams-ponyfill.js",
+      "bytes": 63585,
+      "sha256": "27494071fc4da44b4887327f36ba4fd498d250e3c8cde96bf371ae8d7c338e93"
+    }
+  ],
+  "supplement": {
+    "name": "core-js",
+    "version": "3.50.0",
+    "entry": "modules/es.promise.with-resolvers.js",
+    "archiveURL": "https://registry.npmjs.org/core-js/-/core-js-3.50.0.tgz",
+    "npmIntegrity": "sha512-BRWgOLKkFeCgRudR6zrs8p9XJZcE14grzKMMssoYrk6krtuEZ7MTKPIY5RzOnqsEKIR9kst7wNzphttraT+Yqw==",
+    "modules": [
+      {
+        "id": "internals/a-callable.js",
+        "sha256": "7271ae2895236796ca02aee62f3371cdba088a0b081b56abcbba618ba5c9ae28"
+      },
+      {
+        "id": "internals/an-object.js",
+        "sha256": "af8e757769de5cca85d0e753211f60b1b3efe20762bd0dbd9b6ddfe147556858"
+      },
+      {
+        "id": "internals/array-includes.js",
+        "sha256": "36c8508d9c97402ad96ef718734482849d7496bd3c579fc9610766e19cb93baf"
+      },
+      {
+        "id": "internals/classof-raw.js",
+        "sha256": "dfd2770b89482e9f0e4fc439a290df157761f0cf8a77ce5399123fc8da3cdbaa"
+      },
+      {
+        "id": "internals/copy-constructor-properties.js",
+        "sha256": "cdc3add20999a7d6fb35c8376bc9b50f2feeaf61796a397fa464f9c90e975c5b"
+      },
+      {
+        "id": "internals/create-non-enumerable-property.js",
+        "sha256": "bfa936797ed8669560dbe02fa17de9458c9cf0ff6ec96ebbf579250b88299d64"
+      },
+      {
+        "id": "internals/create-property-descriptor.js",
+        "sha256": "9493c088938de273c9749d76d0eed99dead6efa1044613a79871894889435200"
+      },
+      {
+        "id": "internals/define-built-in.js",
+        "sha256": "7df70928211c33e1c56b7169fcf1c01afa809839fe19e8bf7d4159cc81c03745"
+      },
+      {
+        "id": "internals/define-global-property.js",
+        "sha256": "96a3dbb7a1b8632fc2ce37be5bcd49a604b8a374938313ebaaa2a19c0bd79891"
+      },
+      {
+        "id": "internals/descriptors.js",
+        "sha256": "a9172a2bd245ef9dee088d5215fc21cd826e9a129e86346f6fa146f6e244db58"
+      },
+      {
+        "id": "internals/document-create-element.js",
+        "sha256": "4c5d4bf8bb5b737c64b2a961b1c4ec2e04a386d5cfa76f817e9e1a9567a405a6"
+      },
+      {
+        "id": "internals/enum-bug-keys.js",
+        "sha256": "57c521cd58c0463a4d739cc14f6ea0401b6a8582cd26300fe6d60db94c072680"
+      },
+      {
+        "id": "internals/environment-user-agent.js",
+        "sha256": "70dcc8e8a9387d2df1fe23d627d235e2fca2ab90f58d4a4df808810e7de2f0bf"
+      },
+      {
+        "id": "internals/environment-v8-version.js",
+        "sha256": "43c4681d2d2557e564c86677f23c02b1157759d503c0531a689615c227f0eb55"
+      },
+      {
+        "id": "internals/export.js",
+        "sha256": "2fac79d06aaf80b753f304240c9f16a929dcae54ef80c871a3e5ebcc7e683fa9"
+      },
+      {
+        "id": "internals/fails.js",
+        "sha256": "33e4e0204cf4d283f4075c847fc8c6ecad9329a7c320ffec5121741b3bba60b5"
+      },
+      {
+        "id": "internals/function-bind-native.js",
+        "sha256": "9da74872cbd4cf220c610dd74ec5de6580773696af1ad0bddb795c8ec022e7b9"
+      },
+      {
+        "id": "internals/function-call.js",
+        "sha256": "1626b284e74c4bbceea32d1befd00f6e3dd41c829154f7320686ba8af66b31a2"
+      },
+      {
+        "id": "internals/function-name.js",
+        "sha256": "5427ad58144f4db6397e10b683b064c1e05c940deb49416b718129318e0265cf"
+      },
+      {
+        "id": "internals/function-uncurry-this.js",
+        "sha256": "7f6a26e6e3fcbe2e0b15eba902735acf5a3f818e1adb7bc7e10a640301c6240a"
+      },
+      {
+        "id": "internals/get-built-in.js",
+        "sha256": "45cfa392f287d6424058e3f997a3916098e7fe8f12cfa025d079277f2b64fbee"
+      },
+      {
+        "id": "internals/get-method.js",
+        "sha256": "867e914854ff853099cd6ba95f5eb3fc49a1390cec1c1a6367f4cf965c26f6b2"
+      },
+      {
+        "id": "internals/global-this.js",
+        "sha256": "48246f2542635417cf3f8c6bcf99d7a991668ea1284d869671fcb5b63a4af8c8"
+      },
+      {
+        "id": "internals/has-own-property.js",
+        "sha256": "58082c7f8750c0a4c74912a54560ea375831a101dc43e05bbe61079503ea689b"
+      },
+      {
+        "id": "internals/hidden-keys.js",
+        "sha256": "322ee46d71101bed25f260f2e78a419b5472e28d1ba02831ced05c73b44e5bb8"
+      },
+      {
+        "id": "internals/ie8-dom-define.js",
+        "sha256": "1dc5dfcf67501ede76f99ab12826b99f19f6b94e97734eb58a86631e911442c6"
+      },
+      {
+        "id": "internals/indexed-object.js",
+        "sha256": "8ef9ef6fcba2544f290c3c6a1118d1f4e6beac63cfa583d1cfe2ac88911f4169"
+      },
+      {
+        "id": "internals/inspect-source.js",
+        "sha256": "ef4075497622a3c1475b3041a50fb39f8c4eeddc26c14aea2db66ea03663dec8"
+      },
+      {
+        "id": "internals/internal-state.js",
+        "sha256": "72bd626c79e840676152fbd2652e546ae5605da8542b2df0e28756d9e99fef20"
+      },
+      {
+        "id": "internals/is-callable.js",
+        "sha256": "baaf60da97a06f82d3f00c88838b7c3aea33eca7309b65c5f8bf2d8710244529"
+      },
+      {
+        "id": "internals/is-forced.js",
+        "sha256": "aeee987f667f1f9176dd010576661e4676b767eacda1fb3767b9bd7c72c67bfb"
+      },
+      {
+        "id": "internals/is-null-or-undefined.js",
+        "sha256": "720ca187c6cd75515d7192f35d4b7e05d0ae696464f62a11dcd333d1f0072ca0"
+      },
+      {
+        "id": "internals/is-object.js",
+        "sha256": "44fc02801b6f4daa362322f364a9807c4006f1bd7100dbf1f2d0fe7b752c0e5c"
+      },
+      {
+        "id": "internals/is-pure.js",
+        "sha256": "aaa3a1e7c859215256dd78798126f59a3aa38e4d539187119587000e38ec8936"
+      },
+      {
+        "id": "internals/is-symbol.js",
+        "sha256": "c70f1861bf96f11a7cd8c3fc636f75499802e4cdee4ac803e08922087fce58f2"
+      },
+      {
+        "id": "internals/length-of-array-like.js",
+        "sha256": "a258366c44ddd90f808bc00cc593a02b6deca15304fba02cf6c709b14449efb9"
+      },
+      {
+        "id": "internals/make-built-in.js",
+        "sha256": "3f1c4d03781515d2d796f89e3608e2a6bacf0e26859ca57442a662cde680d111"
+      },
+      {
+        "id": "internals/math-trunc.js",
+        "sha256": "8d294fa265f5b7569798c7350104a1d6e6d53154636b316bc85d7cfbd346d230"
+      },
+      {
+        "id": "internals/new-promise-capability.js",
+        "sha256": "dc38f45812497b2a26568a0ba6d751f80d5517f39d5dcbe38418dfe435baa1c3"
+      },
+      {
+        "id": "internals/object-define-property.js",
+        "sha256": "34d42091801b7405547a5fc8210997eaefea065b2b257b64460b1c0432fe16dc"
+      },
+      {
+        "id": "internals/object-get-own-property-descriptor.js",
+        "sha256": "9af72699268ce4085c52da765612ee2581ed78a54520ec8ba18e5341dbef6971"
+      },
+      {
+        "id": "internals/object-get-own-property-names.js",
+        "sha256": "d3727a7c390fc9afda62b5f71f4ad7259434b2dc1e5a3189713150abe74529aa"
+      },
+      {
+        "id": "internals/object-get-own-property-symbols.js",
+        "sha256": "f0f09a16006e03ef040d0db4a6a4e48fc02b312588f8bbc6c0b9d407c6cf304f"
+      },
+      {
+        "id": "internals/object-is-prototype-of.js",
+        "sha256": "c13158baae02d5eaa9224c172e6a03622276200eb66b170f8845d8be5ba9f66a"
+      },
+      {
+        "id": "internals/object-keys-internal.js",
+        "sha256": "e4dbacb776a44e2867c757d992158b80db68b8d7c4c48ec02c8dc79dc89c7816"
+      },
+      {
+        "id": "internals/object-property-is-enumerable.js",
+        "sha256": "731f8738050dbd0f0294b8409982c780d01beb9c6b5f4ad2e1b975c6a8f3b9d4"
+      },
+      {
+        "id": "internals/ordinary-to-primitive.js",
+        "sha256": "b91df043d15b9eb57fdca07f83704022a601aafb128cfbf33cebd66e1183f3f8"
+      },
+      {
+        "id": "internals/own-keys.js",
+        "sha256": "5e702480f39dc7e967ae1a94a7e6b143af3aa8bd83f6c6f95d42c08d92a61490"
+      },
+      {
+        "id": "internals/require-object-coercible.js",
+        "sha256": "9d0e31f19c657e1620b4ca2af22725b53155c6ffd21676b3bd8af9c86d537fb8"
+      },
+      {
+        "id": "internals/shared-key.js",
+        "sha256": "96e28befc4487e8245241a117222d73fda3d56ad898023b35e51201fa10ccac7"
+      },
+      {
+        "id": "internals/shared-store.js",
+        "sha256": "5ca0cdb3c88298b3cbaf2539e1783b460d4e904ae054b592f587294217a94e42"
+      },
+      {
+        "id": "internals/shared.js",
+        "sha256": "dd68ccb29f28e1c1580d229e431a485aee1de3623c51a08a84535b3f1afcb4ea"
+      },
+      {
+        "id": "internals/symbol-constructor-detection.js",
+        "sha256": "c501646872abcf61cfeace6bd277959b157722ee19fd1d1a1fd5f210bbf7e0e1"
+      },
+      {
+        "id": "internals/to-absolute-index.js",
+        "sha256": "2f6d7201c1b6296b2fc6e87130e2ca0784639c5f04297bea1e9aaee1329c6ede"
+      },
+      {
+        "id": "internals/to-indexed-object.js",
+        "sha256": "4621dcfb3e81880504393fa03dacb730c91319f7d64367264c7a1abbeae87caf"
+      },
+      {
+        "id": "internals/to-integer-or-infinity.js",
+        "sha256": "e8490288942e4f6ae3d5831a027f19415d1e6c100183c1971413f4a61c4041ea"
+      },
+      {
+        "id": "internals/to-length.js",
+        "sha256": "a52f76a5e0157eacf581e4d23b053e354ba4611af8052e0a4fa3ed3904e37f8f"
+      },
+      {
+        "id": "internals/to-object.js",
+        "sha256": "9b40b1b6d56f46ad3f09b6a9fffb4a168ac6dcb2840d9d43f71adaf8ea2b7eb3"
+      },
+      {
+        "id": "internals/to-primitive.js",
+        "sha256": "f4315838edece309fcb9caff7321d2e2eaef8ec9dcd7421b9e642b824a4f92b5"
+      },
+      {
+        "id": "internals/to-property-key.js",
+        "sha256": "3967f43a082a39738c3140744236f7ad54179bf1712f7d14b1601625e68a1624"
+      },
+      {
+        "id": "internals/try-to-string.js",
+        "sha256": "4996594ddd158235f24f1e7d7c8aa2ae243df473feaa2e8718e704ba09aaf095"
+      },
+      {
+        "id": "internals/uid.js",
+        "sha256": "70cc7f00c0b3f45975157f98ff604fc035496ff3a4858effdc6f46d5794b930d"
+      },
+      {
+        "id": "internals/use-symbol-as-uid.js",
+        "sha256": "f4ca88a45a1882eabf48b807f5f660e8fd4d81d4a32c024b247e130afd540006"
+      },
+      {
+        "id": "internals/v8-prototype-define-bug.js",
+        "sha256": "e70645e33e4d09ba21d23ff5fe7bc2a0da1cbb7a23311cb88b59110f43fefdcd"
+      },
+      {
+        "id": "internals/weak-map-basic-detection.js",
+        "sha256": "47c6766c5ac2d5302d41dd52d6a258e6dd2a70402990fea212bbb3859138853e"
+      },
+      {
+        "id": "internals/well-known-symbol.js",
+        "sha256": "828b7ed9bd1f844e653ee97c5cff0158a2bae9ea412a5807b813c37116744971"
+      },
+      {
+        "id": "modules/es.promise.with-resolvers.js",
+        "sha256": "19fa7cc65a5c19d8bbeeabd450f4ea4631568cbdb3772a6d7ad92a963d9b7640"
+      }
+    ]
+  },
+  "streamsSupplement": {
+    "name": "web-streams-polyfill",
+    "version": "4.2.0",
+    "license": "MIT",
+    "repository": {
+      "url": "git+https://github.com/MattiasBuelens/web-streams-polyfill.git",
+      "type": "git"
+    },
+    "archiveURL": "https://registry.npmjs.org/web-streams-polyfill/-/web-streams-polyfill-4.2.0.tgz",
+    "npmIntegrity": "sha512-0rYDzGOh9EZpig92umN5g5D/9A1Kff7k0/mzPSSCY8jEQeYkgRMoY7LhbXtUCWzLCMX0TUE9aoHkjFNB7D9pfA==",
+    "condition": "native ReadableStream async iterator absent",
+    "scope": "PDF lexical ReadableStream/WritableStream/TransformStream only; native globals untouched"
+  }
+}

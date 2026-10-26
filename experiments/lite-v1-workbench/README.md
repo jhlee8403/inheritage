@@ -59,3 +59,9 @@ INHERITAGE_LITE_INIT_PROBE=1 INHERITAGE_LITE_RESULTS=results/windows-initializat
 ```
 
 새 시험 결과는 windows-initialization/에 따로 저장한다. CSP/구문 실패용 HTML은 하네스가 generated/init-*.html로 만들며 사용자에게 전달하지 않는다. 과거 browser JSON과 실험 결과를 덮어쓰지 않는다. 시험은 API 부재·초기화 실패를 가공해서 확인하는 것이며 특정 구버전 Windows Edge를 실제 실행한 검증이 아니다.
+
+## 2026-10-26 Edge 104 호환판
+
+회사 사용자에게서 Edge104.0.1293.47 / PDF_WORKER_CODE / `Iterator is not defined`가 확인됐다. 최종 호환판은 **공식 PDF.js4.2.67 legacy main/worker**를 함께 사용한다. 6.4.299 modern 및 같은 버전 legacy의 시험을 새 버전 성공으로 옮기지 않았다. 실제 Mac Chromium104·최신 Chromium·Mac Edge에서 각각25개를 다시 검증했다. 회사 Windows 수정본은 NOT_RUN이다.
+
+개발 재생성 전 `compat/README.md`대로 고정 자원을 준비해야 한다. vendor와 생성 HTML은 Git 제외이며 GitHub clone만으로 배포 파일이 생기는 것은 아니다. 사용자에게는 `generated/lite-v1.html`, NOTICE, 최신 Windows 안내만 전달한다. `edge104-dev/`는 개발 시험 전용으로 전달하지 않는다. C1 원본·법률·truth·OCR 모델/정답은 유지한다. 구버전 PDF.js의 유지보수/보안 한계와 선택 근거는 `docs/inheritance/LITE_V1_EDGE104_COMPATIBILITY_REPORT.md`에 기록했다.

@@ -1,14 +1,16 @@
 import assert from 'node:assert/strict';
 import {fileURLToPath} from 'node:url';
+import {pollPage} from './compat/poll-page.mjs';
 export async function run(page,check,report){
+  const waitFor=(predicate,arg,options)=>report.target==='chromium104'?pollPage(page,predicate,arg,options):page.waitForFunction(predicate,arg,options);
   const original=new URL('../offline-ocr/fixtures/',import.meta.url),generated=new URL('generated/fixtures/',import.meta.url);
   const el=id=>page.locator('#pdf-'+id),field=path=>page.locator(`[data-field="${path}"]`);
-  const pdfState=value=>page.waitForFunction(v=>document.querySelector('#pdf-status').textContent.startsWith(v),value,{timeout:45000});
-  const idle=()=>page.waitForFunction(()=>JSON.parse(document.querySelector('#pdf-details').textContent).pendingCleanup===0&&!document.querySelector('#pdf-ocr').disabled,null,{timeout:5000});
+  const pdfState=async value=>{await waitFor(v=>{const s=document.querySelector('#pdf-status').textContent;return s.startsWith(v)||/^(ERROR|TIMEOUT|INIT_ERROR)/.test(s);},value,{timeout:45000});assert((await el('status').textContent()).startsWith(value),await el('status').textContent());};
+  const idle=()=>waitFor(()=>JSON.parse(document.querySelector('#pdf-details').textContent).pendingCleanup===0&&!document.querySelector('#pdf-ocr').disabled,null,{timeout:5000});
   const select=async(name,base=original)=>{await el('file').setInputFiles(fileURLToPath(new URL(name,base)));await pdfState('NEEDS_REVIEW');await idle();};
   const details=async()=>JSON.parse(await el('details').textContent());
   const ocr=async()=>{await el('ocr').click();await pdfState('NEEDS_REVIEW');await idle();};
-  const c1state=value=>page.waitForFunction(v=>document.querySelector('#status').dataset.state===v,value,{timeout:5000});
+  const c1state=value=>waitFor(v=>document.querySelector('#status').dataset.state===v,value,{timeout:5000});
   const calc=async(value='REVIEW_READY')=>{await page.locator('#calculate').click();await c1state(value);};
   const result=async()=>{const t=await page.locator('#output').inputValue();return JSON.parse(t.slice(t.indexOf('\n{\n')+1));};
   await check('selected text PDF, render and direct NEEDS_REVIEW',async()=>{
@@ -16,6 +18,7 @@ export async function run(page,check,report){
   });
   await check('selected scan PDF, real Blob/WASM/kor OCR candidate',async()=>{
     await select('scan-only.pdf');assert.equal((await el('direct').inputValue()).trim(),'');await ocr();
+    assert(await el('canvas').evaluate(c=>{const data=c.getContext('2d').getImageData(0,0,c.width,c.height).data;for(let i=0;i<data.length;i+=4)if(data[i+3]&&data[i]+data[i+1]+data[i+2]<600)return true;return false;}),'scan must render real nonwhite pixels');
     const text=await el('original').inputValue();assert(/[가-힣]/.test(text));assert.equal(await el('edited').inputValue(),text);report.ocr={candidate:text,diagnostics:await details()};
     for(const stage of ['BLOB_WORKER_BOOTED','RESOURCE_MESSAGE_RECEIVED','CORE_FACTORY_ENTERED','WASM_BYTES_SUPPLIED','WASM_RUNTIME_READY','KOR_BYTES_SUPPLIED'])assert(report.ocr.diagnostics.events.some(e=>e.stage===stage),stage);
     assert.equal(report.ocr.diagnostics.cleanup.state,'PASS');
@@ -38,18 +41,18 @@ export async function run(page,check,report){
   });
   await check('navigation blocks held late OCR completion',async()=>{
     await select('three-pages.pdf',generated);await el('next').click();await pdfState('NEEDS_REVIEW');await idle();
-    await page.evaluate(()=>{__holdNextHash=true;});await el('ocr').click();await page.waitForFunction(()=>__held.length>0);
+    await page.evaluate(()=>{__holdNextHash=true;});await el('ocr').click();await waitFor(()=>__held.length>0);
     await el('next').click();await pdfState('NEEDS_REVIEW');await idle();const before=await el('edited').inputValue();await page.evaluate(()=>__held.shift()());await page.waitForTimeout(100);assert.equal(await el('edited').inputValue(),before);assert.equal(await el('page').textContent(),'3 / 3');
   });
   await check('PDF replacement blocks held old OCR completion',async()=>{
-    await select('scan-only.pdf');await page.evaluate(()=>{__holdNextHash=true;});await el('ocr').click();await page.waitForFunction(()=>__held.length>0);
+    await select('scan-only.pdf');await page.evaluate(()=>{__holdNextHash=true;});await el('ocr').click();await waitFor(()=>__held.length>0);
     await select('text-only.pdf');await page.evaluate(()=>__held.shift()());await page.waitForTimeout(100);assert.equal(await el('original').inputValue(),'');assert((await el('direct').inputValue()).includes('가온새'));
   });
   await check('explicit OCR error clears candidate and releases resources',async()=>{
     await select('scan-only.pdf');await page.evaluate(()=>{__rejectNextHash=true;});await el('ocr').click();await pdfState('ERROR');await idle();assert.equal(await el('original').inputValue(),'');assert.equal(await el('edited').inputValue(),'');assert((await el('status').textContent()).includes('synthetic hash rejection'));
   });
   await check('OCR pipeline hash TIMEOUT, late result cannot publish',async()=>{
-    await page.evaluate(()=>{__holdNextHash=true;});await el('ocr').click();await page.waitForFunction(()=>__held.length>0);await pdfState('TIMEOUT');await idle();assert.equal(await el('original').inputValue(),'');await page.evaluate(()=>__held.shift()());await page.waitForTimeout(100);assert.equal(await el('original').inputValue(),'');assert((await el('status').textContent()).startsWith('TIMEOUT'));
+    await page.evaluate(()=>{__holdNextHash=true;});await el('ocr').click();await waitFor(()=>__held.length>0);await pdfState('TIMEOUT');await idle();assert.equal(await el('original').inputValue(),'');await page.evaluate(()=>__held.shift()());await page.waitForTimeout(100);assert.equal(await el('original').inputValue(),'');assert((await el('status').textContent()).startsWith('TIMEOUT'));
   },12000);
   await check('malformed PDF explicit ERROR',async()=>{await el('file').setInputFiles({name:'broken.pdf',mimeType:'application/pdf',buffer:Buffer.from('%PDF-1.7\n broken fixture')});await pdfState('ERROR');assert.equal(await el('direct').inputValue(),'');});
   await check('file byte limit explicit ERROR before parsing',async()=>{await el('file').setInputFiles({name:'large.pdf',mimeType:'application/pdf',buffer:Buffer.alloc(8*1024*1024+1)});await pdfState('ERROR');assert((await el('status').textContent()).includes('FILE_SIZE_LIMIT'));});
@@ -62,14 +65,14 @@ export async function run(page,check,report){
   await check('C1 UNKNOWN BLOCKED preserves Q',async()=>{await page.locator('[data-sample=spouse]').click();await field('family.spouse.existence').selectOption('UNKNOWN');await calc('BLOCKED');const r=await result();assert.deepEqual(r.allocations,[]);assert.equal(r.unresolved[0].wholeShare.numerator,'1');});
   await check('C1 denominator zero ERROR, no old result or copy',async()=>{await page.locator('[data-sample=spouse]').click();await calc();await field('asset.share.denominator').fill('0');await calc('ERROR');assert.equal(await page.locator('#output').inputValue(),'');assert(await page.locator('#copy').isDisabled());});
   await check('C1 late async calculation blocked by edited revision',async()=>{
-    await page.locator('[data-sample=spouse]').click();await page.evaluate(()=>{__holdNextHash=true;});await page.locator('#calculate').click();await page.waitForFunction(()=>__held.length>0);await field('asset.share.denominator').fill('3');await calc();const text=await page.locator('#output').inputValue();await page.evaluate(()=>__held.shift()());await page.waitForTimeout(100);assert.equal(await page.locator('#output').inputValue(),text);
+    await page.locator('[data-sample=spouse]').click();await page.evaluate(()=>{__holdNextHash=true;});await page.locator('#calculate').click();await waitFor(()=>__held.length>0);await field('asset.share.denominator').fill('3');await calc();const text=await page.locator('#output').inputValue();await page.evaluate(()=>__held.shift()());await page.waitForTimeout(100);assert.equal(await page.locator('#output').inputValue(),text);
   });
   await check('C1 clipboard attempt and manual selection fallback',async()=>{
-    await page.locator('#copy').click();await page.waitForFunction(()=>document.querySelector('#copy-note').textContent.length>0);report.clipboardObservation=await page.locator('#copy-note').textContent();await page.locator('#select').click();assert.equal(await page.locator('#output').evaluate(e=>e.selectionEnd-e.selectionStart),(await page.locator('#output').inputValue()).length);
-    await page.evaluate(()=>{navigator.clipboard.writeText=()=>Promise.reject(Error('synthetic denial'));});await page.locator('#copy').click();await page.waitForFunction(()=>document.querySelector('#copy-note').textContent.includes('자동 복사가 허용되지'));assert((await page.locator('#copy-note').textContent()).includes('Ctrl+C'));
+    await page.locator('#copy').click();await waitFor(()=>document.querySelector('#copy-note').textContent.length>0);report.clipboardObservation=await page.locator('#copy-note').textContent();await page.locator('#select').click();assert.equal(await page.locator('#output').evaluate(e=>e.selectionEnd-e.selectionStart),(await page.locator('#output').inputValue()).length);
+    await page.evaluate(()=>{navigator.clipboard.writeText=()=>Promise.reject(Error('synthetic denial'));});await page.locator('#copy').click();await waitFor(()=>document.querySelector('#copy-note').textContent.includes('자동 복사가 허용되지'));assert((await page.locator('#copy-note').textContent()).includes('Ctrl+C'));
   });
   await check('document close clears source, candidates and owned workers',async()=>{
-    await el('close').click();await pdfState('EMPTY');await page.waitForFunction(()=>JSON.parse(document.querySelector('#pdf-details').textContent).pendingCleanup===0);assert.equal(await el('edited').inputValue(),'');assert.equal(await el('page').textContent(),'0 / 0');assert.equal(await page.evaluate(()=>__workerCount),0);assert.equal(await page.evaluate(()=>__blobCount),0);
+    await el('close').click();await pdfState('EMPTY');await waitFor(()=>JSON.parse(document.querySelector('#pdf-details').textContent).pendingCleanup===0);assert.equal(await el('edited').inputValue(),'');assert.equal(await el('page').textContent(),'0 / 0');assert.equal(await page.evaluate(()=>__workerCount),0);assert.equal(await page.evaluate(()=>__blobCount),0);
   });
   await select('three-pages.pdf',generated);await el('next').click();await pdfState('NEEDS_REVIEW');await idle();await ocr();
 }

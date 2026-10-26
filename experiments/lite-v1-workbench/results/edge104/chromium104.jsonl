@@ -1,0 +1,402 @@
+{"time":"2026-10-26T06:05:28.921Z","stage":"browser launch","state":"START"}
+{"time":"2026-10-26T06:05:29.623Z","stage":"browser launch","state":"PASS"}
+{"time":"2026-10-26T06:05:29.623Z","stage":"browser connect","state":"START"}
+{"time":"2026-10-26T06:05:29.672Z","stage":"browser connect","state":"PASS"}
+{"time":"2026-10-26T06:05:29.672Z","stage":"fresh offline context","state":"START"}
+{"time":"2026-10-26T06:05:29.695Z","stage":"fresh offline context","state":"PASS"}
+{"time":"2026-10-26T06:05:29.696Z","stage":"request guard","state":"START"}
+{"time":"2026-10-26T06:05:29.697Z","stage":"request guard","state":"PASS"}
+{"time":"2026-10-26T06:05:29.699Z","stage":"page creation","state":"START"}
+{"time":"2026-10-26T06:05:29.918Z","stage":"page creation","state":"PASS"}
+{"time":"2026-10-26T06:05:29.918Z","stage":"diagnostic hooks","state":"START"}
+{"time":"2026-10-26T06:05:29.922Z","stage":"diagnostic hooks","state":"PASS"}
+{"time":"2026-10-26T06:05:29.922Z","stage":"file HTML load","state":"START"}
+{"time":"2026-10-26T06:05:30.451Z","stage":"file HTML load","state":"PASS"}
+{"time":"2026-10-26T06:05:30.452Z","stage":"selected text PDF, render and direct NEEDS_REVIEW","state":"START"}
+{"time":"2026-10-26T06:05:45.491Z","stage":"selected text PDF, render and direct NEEDS_REVIEW","state":"TIMEOUT","error":"Error: TIMEOUT: selected text PDF, render and direct NEEDS_REVIEW 15000ms"}
+{"time":"2026-10-26T06:05:45.511Z","stage":"browser disconnect/close","state":"START"}
+{"time":"2026-10-26T06:05:45.524Z","stage":"browser disconnect/close","state":"PASS"}
+{"time":"2026-10-26T06:05:45.524Z","stage":"browser process close","state":"START"}
+{"time":"2026-10-26T06:05:45.639Z","stage":"browser process close","state":"PASS"}
+{"time":"2026-10-26T06:11:08.959Z","stage":"browser launch","state":"START"}
+{"time":"2026-10-26T06:11:09.574Z","stage":"browser launch","state":"PASS"}
+{"time":"2026-10-26T06:11:09.575Z","stage":"browser connect","state":"START"}
+{"time":"2026-10-26T06:11:09.625Z","stage":"browser connect","state":"PASS"}
+{"time":"2026-10-26T06:11:09.625Z","stage":"fresh offline context","state":"START"}
+{"time":"2026-10-26T06:11:09.640Z","stage":"fresh offline context","state":"PASS"}
+{"time":"2026-10-26T06:11:09.641Z","stage":"request guard","state":"START"}
+{"time":"2026-10-26T06:11:09.642Z","stage":"request guard","state":"PASS"}
+{"time":"2026-10-26T06:11:09.642Z","stage":"page creation","state":"START"}
+{"time":"2026-10-26T06:11:09.848Z","stage":"page creation","state":"PASS"}
+{"time":"2026-10-26T06:11:09.849Z","stage":"diagnostic hooks","state":"START"}
+{"time":"2026-10-26T06:11:09.850Z","stage":"diagnostic hooks","state":"PASS"}
+{"time":"2026-10-26T06:11:09.850Z","stage":"file HTML load","state":"START"}
+{"time":"2026-10-26T06:11:10.318Z","stage":"file HTML load","state":"PASS"}
+{"time":"2026-10-26T06:11:10.319Z","stage":"initial state capture","state":"START"}
+{"time":"2026-10-26T06:11:10.323Z","stage":"initial state capture","state":"PASS"}
+{"time":"2026-10-26T06:11:10.323Z","stage":"selected text PDF, render and direct NEEDS_REVIEW","state":"START"}
+{"time":"2026-10-26T06:11:25.325Z","stage":"selected text PDF, render and direct NEEDS_REVIEW","state":"TIMEOUT","error":"Error: TIMEOUT: selected text PDF, render and direct NEEDS_REVIEW 15000ms"}
+{"time":"2026-10-26T06:11:25.328Z","stage":"failure state capture","state":"START"}
+{"time":"2026-10-26T06:11:25.335Z","stage":"failure state capture","state":"PASS"}
+{"time":"2026-10-26T06:11:25.336Z","stage":"browser disconnect/close","state":"START"}
+{"time":"2026-10-26T06:11:25.339Z","stage":"browser disconnect/close","state":"PASS"}
+{"time":"2026-10-26T06:11:25.340Z","stage":"browser process close","state":"START"}
+{"time":"2026-10-26T06:11:25.367Z","stage":"browser process close","state":"PASS"}
+{"time":"2026-10-26T06:15:01.842Z","stage":"browser launch","state":"START"}
+{"time":"2026-10-26T06:15:02.185Z","stage":"browser launch","state":"PASS"}
+{"time":"2026-10-26T06:15:02.185Z","stage":"browser connect","state":"START"}
+{"time":"2026-10-26T06:15:02.222Z","stage":"browser connect","state":"PASS"}
+{"time":"2026-10-26T06:15:02.223Z","stage":"fresh offline context","state":"START"}
+{"time":"2026-10-26T06:15:02.239Z","stage":"fresh offline context","state":"PASS"}
+{"time":"2026-10-26T06:15:02.239Z","stage":"request guard","state":"START"}
+{"time":"2026-10-26T06:15:02.241Z","stage":"request guard","state":"PASS"}
+{"time":"2026-10-26T06:15:02.241Z","stage":"page creation","state":"START"}
+{"time":"2026-10-26T06:15:02.452Z","stage":"page creation","state":"PASS"}
+{"time":"2026-10-26T06:15:02.453Z","stage":"diagnostic hooks","state":"START"}
+{"time":"2026-10-26T06:15:02.454Z","stage":"diagnostic hooks","state":"PASS"}
+{"time":"2026-10-26T06:15:02.454Z","stage":"file HTML load","state":"START"}
+{"time":"2026-10-26T06:15:02.887Z","stage":"file HTML load","state":"PASS"}
+{"time":"2026-10-26T06:15:02.888Z","stage":"initial state capture","state":"START"}
+{"time":"2026-10-26T06:15:02.892Z","stage":"initial state capture","state":"PASS"}
+{"time":"2026-10-26T06:15:02.892Z","stage":"selected text PDF, render and direct NEEDS_REVIEW","state":"START"}
+{"time":"2026-10-26T06:15:17.894Z","stage":"selected text PDF, render and direct NEEDS_REVIEW","state":"TIMEOUT","error":"Error: TIMEOUT: selected text PDF, render and direct NEEDS_REVIEW 15000ms"}
+{"time":"2026-10-26T06:15:17.896Z","stage":"failure state capture","state":"START"}
+{"time":"2026-10-26T06:15:17.901Z","stage":"failure state capture","state":"PASS"}
+{"time":"2026-10-26T06:15:17.902Z","stage":"browser disconnect/close","state":"START"}
+{"time":"2026-10-26T06:15:17.905Z","stage":"browser disconnect/close","state":"PASS"}
+{"time":"2026-10-26T06:15:17.906Z","stage":"browser process close","state":"START"}
+{"time":"2026-10-26T06:15:17.939Z","stage":"browser process close","state":"PASS"}
+{"time":"2026-10-26T06:18:49.324Z","stage":"browser launch","state":"START"}
+{"time":"2026-10-26T06:18:49.662Z","stage":"browser launch","state":"PASS"}
+{"time":"2026-10-26T06:18:49.662Z","stage":"browser connect","state":"START"}
+{"time":"2026-10-26T06:18:49.692Z","stage":"browser connect","state":"PASS"}
+{"time":"2026-10-26T06:18:49.692Z","stage":"fresh offline context","state":"START"}
+{"time":"2026-10-26T06:18:49.713Z","stage":"fresh offline context","state":"PASS"}
+{"time":"2026-10-26T06:18:49.713Z","stage":"request guard","state":"START"}
+{"time":"2026-10-26T06:18:49.715Z","stage":"request guard","state":"PASS"}
+{"time":"2026-10-26T06:18:49.715Z","stage":"page creation","state":"START"}
+{"time":"2026-10-26T06:18:49.907Z","stage":"page creation","state":"PASS"}
+{"time":"2026-10-26T06:18:49.907Z","stage":"diagnostic hooks","state":"START"}
+{"time":"2026-10-26T06:18:49.908Z","stage":"diagnostic hooks","state":"PASS"}
+{"time":"2026-10-26T06:18:49.908Z","stage":"file HTML load","state":"START"}
+{"time":"2026-10-26T06:18:50.416Z","stage":"file HTML load","state":"PASS"}
+{"time":"2026-10-26T06:18:50.417Z","stage":"initial state capture","state":"START"}
+{"time":"2026-10-26T06:18:50.421Z","stage":"initial state capture","state":"PASS"}
+{"time":"2026-10-26T06:18:50.422Z","stage":"selected text PDF, render and direct NEEDS_REVIEW","state":"START"}
+{"time":"2026-10-26T06:18:50.534Z","stage":"selected text PDF, render and direct NEEDS_REVIEW","state":"FAIL","error":"Error: locator.evaluate: TypeError: element.checkVisibility is not a function\n    at computeElementStyleVisibilityVisible (<anonymous>:3159:16)\n    at isElementStyleVisibilityVisible (<anonymous>:3151:18)\n    at computeBox (<anonymous>:3195:8)\n    at isElementVisible (<anonymous>:3201:10)\n    at InjectedScript.elementState (<anonymous>:7561:41)\n    at eval (eval at eval (:7098:24), <anonymous>:3:50)\n    at eval (eval at evaluate (:370:30), <anonymous>:15:22)\n    at UtilityScript.evaluate (<anonymous>:372:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\nCall log:\n\u001b[2m  - waiting for locator('#pdf-canvas')\u001b[22m\n"}
+{"time":"2026-10-26T06:18:50.534Z","stage":"failure state capture","state":"START"}
+{"time":"2026-10-26T06:18:50.535Z","stage":"failure state capture","state":"PASS"}
+{"time":"2026-10-26T06:18:50.535Z","stage":"browser disconnect/close","state":"START"}
+{"time":"2026-10-26T06:18:50.536Z","stage":"browser disconnect/close","state":"PASS"}
+{"time":"2026-10-26T06:18:50.536Z","stage":"browser process close","state":"START"}
+{"time":"2026-10-26T06:18:50.694Z","stage":"browser process close","state":"PASS"}
+{"time":"2026-10-26T06:21:05.496Z","stage":"browser launch","state":"START"}
+{"time":"2026-10-26T06:21:06.242Z","stage":"browser launch","state":"PASS"}
+{"time":"2026-10-26T06:21:06.242Z","stage":"browser connect","state":"START"}
+{"time":"2026-10-26T06:21:06.273Z","stage":"browser connect","state":"PASS"}
+{"time":"2026-10-26T06:21:06.273Z","stage":"fresh offline context","state":"START"}
+{"time":"2026-10-26T06:21:06.290Z","stage":"fresh offline context","state":"PASS"}
+{"time":"2026-10-26T06:21:06.290Z","stage":"request guard","state":"START"}
+{"time":"2026-10-26T06:21:06.291Z","stage":"request guard","state":"PASS"}
+{"time":"2026-10-26T06:21:06.291Z","stage":"page creation","state":"START"}
+{"time":"2026-10-26T06:21:06.505Z","stage":"page creation","state":"PASS"}
+{"time":"2026-10-26T06:21:06.506Z","stage":"diagnostic hooks","state":"START"}
+{"time":"2026-10-26T06:21:06.516Z","stage":"diagnostic hooks","state":"PASS"}
+{"time":"2026-10-26T06:21:06.517Z","stage":"file HTML load","state":"START"}
+{"time":"2026-10-26T06:21:07.036Z","stage":"file HTML load","state":"PASS"}
+{"time":"2026-10-26T06:21:07.036Z","stage":"initial state capture","state":"START"}
+{"time":"2026-10-26T06:21:07.040Z","stage":"initial state capture","state":"PASS"}
+{"time":"2026-10-26T06:21:07.040Z","stage":"selected text PDF, render and direct NEEDS_REVIEW","state":"START"}
+{"time":"2026-10-26T06:21:07.110Z","stage":"selected text PDF, render and direct NEEDS_REVIEW","state":"PASS"}
+{"time":"2026-10-26T06:21:07.110Z","stage":"selected scan PDF, real Blob/WASM/kor OCR candidate","state":"START"}
+{"time":"2026-10-26T06:21:07.129Z","stage":"selected scan PDF, real Blob/WASM/kor OCR candidate","state":"FAIL","error":"Error: page.waitForFunction: EvalError: Refused to evaluate a string as JavaScript because 'unsafe-eval' is not an allowed source of script in the following Content Security Policy directive: \"script-src 'sha256-qscOhUki6Il/+KHTDGvdwvv/bYzZJsT+bnv9ZwQv7Rs=' 'sha256-jm8IZuHIa5L1dg6FaVAJLO6duECHrH5L4P0gGrm6xjA=' 'sha256-ImhTIx485IsoZ17+jNB9cO6ZTEkTXZ92qvUmQ9mqkYA=' 'sha256-uC19jiRqM7nV4wFgA+fzasU4zWHNjSWtscpCrlOQTQ8=' 'sha256-TShjsESAJ7AMtay8VvRHclQuS7zENpGMRCUM4yK50JE=' 'sha256-1pCZ72GxbwxBRnVpjggsjydUFfSIWsrVPk6gRS50PkU=' 'wasm-unsafe-eval'\".\n\n    at eval (<anonymous>)\n    at predicate (eval at evaluate (:192:30), <anonymous>:8:27)\n    at eval (eval at evaluate (:192:30), <anonymous>:22:82)\n    at next (<anonymous>:4035:27)"}
+{"time":"2026-10-26T06:21:07.129Z","stage":"failure state capture","state":"START"}
+{"time":"2026-10-26T06:21:07.130Z","stage":"failure state capture","state":"PASS"}
+{"time":"2026-10-26T06:21:07.131Z","stage":"browser disconnect/close","state":"START"}
+{"time":"2026-10-26T06:21:07.132Z","stage":"browser disconnect/close","state":"PASS"}
+{"time":"2026-10-26T06:21:07.133Z","stage":"browser process close","state":"START"}
+{"time":"2026-10-26T06:21:07.151Z","stage":"browser process close","state":"PASS"}
+{"time":"2026-10-26T06:23:20.526Z","stage":"browser launch","state":"START"}
+{"time":"2026-10-26T06:23:21.140Z","stage":"browser launch","state":"PASS"}
+{"time":"2026-10-26T06:23:21.141Z","stage":"browser connect","state":"START"}
+{"time":"2026-10-26T06:23:21.171Z","stage":"browser connect","state":"PASS"}
+{"time":"2026-10-26T06:23:21.171Z","stage":"fresh offline context","state":"START"}
+{"time":"2026-10-26T06:23:21.186Z","stage":"fresh offline context","state":"PASS"}
+{"time":"2026-10-26T06:23:21.186Z","stage":"request guard","state":"START"}
+{"time":"2026-10-26T06:23:21.187Z","stage":"request guard","state":"PASS"}
+{"time":"2026-10-26T06:23:21.188Z","stage":"page creation","state":"START"}
+{"time":"2026-10-26T06:23:21.563Z","stage":"page creation","state":"PASS"}
+{"time":"2026-10-26T06:23:21.564Z","stage":"diagnostic hooks","state":"START"}
+{"time":"2026-10-26T06:23:21.577Z","stage":"diagnostic hooks","state":"PASS"}
+{"time":"2026-10-26T06:23:21.578Z","stage":"file HTML load","state":"START"}
+{"time":"2026-10-26T06:23:22.056Z","stage":"file HTML load","state":"PASS"}
+{"time":"2026-10-26T06:23:22.057Z","stage":"initial state capture","state":"START"}
+{"time":"2026-10-26T06:23:22.060Z","stage":"initial state capture","state":"PASS"}
+{"time":"2026-10-26T06:23:22.060Z","stage":"selected text PDF, render and direct NEEDS_REVIEW","state":"START"}
+{"time":"2026-10-26T06:23:22.138Z","stage":"selected text PDF, render and direct NEEDS_REVIEW","state":"PASS"}
+{"time":"2026-10-26T06:23:22.138Z","stage":"selected scan PDF, real Blob/WASM/kor OCR candidate","state":"START"}
+{"time":"2026-10-26T06:23:22.625Z","stage":"selected scan PDF, real Blob/WASM/kor OCR candidate","state":"FAIL","error":"AssertionError [ERR_ASSERTION]: ERROR · Error: EMPTY_OCR_CANDIDATE"}
+{"time":"2026-10-26T06:23:22.626Z","stage":"failure state capture","state":"START"}
+{"time":"2026-10-26T06:23:22.626Z","stage":"failure state capture","state":"PASS"}
+{"time":"2026-10-26T06:23:22.627Z","stage":"browser disconnect/close","state":"START"}
+{"time":"2026-10-26T06:23:22.627Z","stage":"browser disconnect/close","state":"PASS"}
+{"time":"2026-10-26T06:23:22.628Z","stage":"browser process close","state":"START"}
+{"time":"2026-10-26T06:23:22.644Z","stage":"browser process close","state":"PASS"}
+{"time":"2026-10-26T06:25:12.378Z","stage":"browser launch","state":"START"}
+{"time":"2026-10-26T06:25:12.690Z","stage":"browser launch","state":"PASS"}
+{"time":"2026-10-26T06:25:12.690Z","stage":"browser connect","state":"START"}
+{"time":"2026-10-26T06:25:12.717Z","stage":"browser connect","state":"PASS"}
+{"time":"2026-10-26T06:25:12.717Z","stage":"fresh offline context","state":"START"}
+{"time":"2026-10-26T06:25:12.729Z","stage":"fresh offline context","state":"PASS"}
+{"time":"2026-10-26T06:25:12.729Z","stage":"request guard","state":"START"}
+{"time":"2026-10-26T06:25:12.731Z","stage":"request guard","state":"PASS"}
+{"time":"2026-10-26T06:25:12.731Z","stage":"page creation","state":"START"}
+{"time":"2026-10-26T06:25:12.910Z","stage":"page creation","state":"PASS"}
+{"time":"2026-10-26T06:25:12.910Z","stage":"diagnostic hooks","state":"START"}
+{"time":"2026-10-26T06:25:12.920Z","stage":"diagnostic hooks","state":"PASS"}
+{"time":"2026-10-26T06:25:12.921Z","stage":"file HTML load","state":"START"}
+{"time":"2026-10-26T06:25:13.361Z","stage":"file HTML load","state":"PASS"}
+{"time":"2026-10-26T06:25:13.361Z","stage":"initial state capture","state":"START"}
+{"time":"2026-10-26T06:25:13.364Z","stage":"initial state capture","state":"PASS"}
+{"time":"2026-10-26T06:25:13.364Z","stage":"selected text PDF, render and direct NEEDS_REVIEW","state":"START"}
+{"time":"2026-10-26T06:25:13.454Z","stage":"selected text PDF, render and direct NEEDS_REVIEW","state":"PASS"}
+{"time":"2026-10-26T06:25:13.454Z","stage":"selected scan PDF, real Blob/WASM/kor OCR candidate","state":"START"}
+{"time":"2026-10-26T06:25:13.999Z","stage":"selected scan PDF, real Blob/WASM/kor OCR candidate","state":"FAIL","error":"AssertionError [ERR_ASSERTION]: ERROR · Error: EMPTY_OCR_CANDIDATE"}
+{"time":"2026-10-26T06:25:13.999Z","stage":"failure state capture","state":"START"}
+{"time":"2026-10-26T06:25:14.008Z","stage":"failure state capture","state":"PASS"}
+{"time":"2026-10-26T06:25:14.072Z","stage":"browser disconnect/close","state":"START"}
+{"time":"2026-10-26T06:25:14.073Z","stage":"browser disconnect/close","state":"PASS"}
+{"time":"2026-10-26T06:25:14.073Z","stage":"browser process close","state":"START"}
+{"time":"2026-10-26T06:25:14.089Z","stage":"browser process close","state":"PASS"}
+{"time":"2026-10-26T06:26:41.386Z","stage":"browser launch","state":"START"}
+{"time":"2026-10-26T06:26:41.702Z","stage":"browser launch","state":"PASS"}
+{"time":"2026-10-26T06:26:41.703Z","stage":"browser connect","state":"START"}
+{"time":"2026-10-26T06:26:41.732Z","stage":"browser connect","state":"PASS"}
+{"time":"2026-10-26T06:26:41.732Z","stage":"fresh offline context","state":"START"}
+{"time":"2026-10-26T06:26:41.749Z","stage":"fresh offline context","state":"PASS"}
+{"time":"2026-10-26T06:26:41.749Z","stage":"request guard","state":"START"}
+{"time":"2026-10-26T06:26:41.750Z","stage":"request guard","state":"PASS"}
+{"time":"2026-10-26T06:26:41.750Z","stage":"page creation","state":"START"}
+{"time":"2026-10-26T06:26:41.957Z","stage":"page creation","state":"PASS"}
+{"time":"2026-10-26T06:26:41.958Z","stage":"diagnostic hooks","state":"START"}
+{"time":"2026-10-26T06:26:41.980Z","stage":"diagnostic hooks","state":"PASS"}
+{"time":"2026-10-26T06:26:41.981Z","stage":"file HTML load","state":"START"}
+{"time":"2026-10-26T06:26:42.415Z","stage":"file HTML load","state":"PASS"}
+{"time":"2026-10-26T06:26:42.415Z","stage":"initial state capture","state":"START"}
+{"time":"2026-10-26T06:26:42.417Z","stage":"initial state capture","state":"PASS"}
+{"time":"2026-10-26T06:26:42.418Z","stage":"selected text PDF, render and direct NEEDS_REVIEW","state":"START"}
+{"time":"2026-10-26T06:26:42.494Z","stage":"selected text PDF, render and direct NEEDS_REVIEW","state":"PASS"}
+{"time":"2026-10-26T06:26:42.494Z","stage":"selected scan PDF, real Blob/WASM/kor OCR candidate","state":"START"}
+{"time":"2026-10-26T06:26:42.973Z","stage":"selected scan PDF, real Blob/WASM/kor OCR candidate","state":"FAIL","error":"AssertionError [ERR_ASSERTION]: ERROR · Error: EMPTY_OCR_CANDIDATE"}
+{"time":"2026-10-26T06:26:42.974Z","stage":"failure state capture","state":"START"}
+{"time":"2026-10-26T06:26:42.982Z","stage":"failure state capture","state":"PASS"}
+{"time":"2026-10-26T06:26:43.052Z","stage":"browser disconnect/close","state":"START"}
+{"time":"2026-10-26T06:26:43.053Z","stage":"browser disconnect/close","state":"PASS"}
+{"time":"2026-10-26T06:26:43.053Z","stage":"browser process close","state":"START"}
+{"time":"2026-10-26T06:26:43.068Z","stage":"browser process close","state":"PASS"}
+{"time":"2026-10-26T06:30:38.477Z","stage":"browser launch","state":"START"}
+{"time":"2026-10-26T06:30:38.834Z","stage":"browser launch","state":"PASS"}
+{"time":"2026-10-26T06:30:38.835Z","stage":"browser connect","state":"START"}
+{"time":"2026-10-26T06:30:38.862Z","stage":"browser connect","state":"PASS"}
+{"time":"2026-10-26T06:30:38.862Z","stage":"fresh offline context","state":"START"}
+{"time":"2026-10-26T06:30:38.879Z","stage":"fresh offline context","state":"PASS"}
+{"time":"2026-10-26T06:30:38.879Z","stage":"request guard","state":"START"}
+{"time":"2026-10-26T06:30:38.881Z","stage":"request guard","state":"PASS"}
+{"time":"2026-10-26T06:30:38.881Z","stage":"page creation","state":"START"}
+{"time":"2026-10-26T06:30:39.061Z","stage":"page creation","state":"PASS"}
+{"time":"2026-10-26T06:30:39.062Z","stage":"diagnostic hooks","state":"START"}
+{"time":"2026-10-26T06:30:39.075Z","stage":"diagnostic hooks","state":"PASS"}
+{"time":"2026-10-26T06:30:39.075Z","stage":"file HTML load","state":"START"}
+{"time":"2026-10-26T06:30:39.528Z","stage":"file HTML load","state":"PASS"}
+{"time":"2026-10-26T06:30:39.529Z","stage":"initial state capture","state":"START"}
+{"time":"2026-10-26T06:30:39.532Z","stage":"initial state capture","state":"PASS"}
+{"time":"2026-10-26T06:30:39.532Z","stage":"selected text PDF, render and direct NEEDS_REVIEW","state":"START"}
+{"time":"2026-10-26T06:30:39.612Z","stage":"selected text PDF, render and direct NEEDS_REVIEW","state":"PASS"}
+{"time":"2026-10-26T06:30:39.612Z","stage":"selected scan PDF, real Blob/WASM/kor OCR candidate","state":"START"}
+{"time":"2026-10-26T06:30:40.093Z","stage":"selected scan PDF, real Blob/WASM/kor OCR candidate","state":"FAIL","error":"AssertionError [ERR_ASSERTION]: ERROR · Error: EMPTY_OCR_CANDIDATE"}
+{"time":"2026-10-26T06:30:40.094Z","stage":"failure state capture","state":"START"}
+{"time":"2026-10-26T06:30:40.102Z","stage":"failure state capture","state":"PASS"}
+{"time":"2026-10-26T06:30:40.175Z","stage":"browser disconnect/close","state":"START"}
+{"time":"2026-10-26T06:30:40.176Z","stage":"browser disconnect/close","state":"PASS"}
+{"time":"2026-10-26T06:30:40.176Z","stage":"browser process close","state":"START"}
+{"time":"2026-10-26T06:30:40.192Z","stage":"browser process close","state":"PASS"}
+{"time":"2026-10-26T06:31:43.237Z","stage":"browser launch","state":"START"}
+{"time":"2026-10-26T06:31:43.525Z","stage":"browser launch","state":"PASS"}
+{"time":"2026-10-26T06:31:43.526Z","stage":"browser connect","state":"START"}
+{"time":"2026-10-26T06:31:43.554Z","stage":"browser connect","state":"PASS"}
+{"time":"2026-10-26T06:31:43.555Z","stage":"fresh offline context","state":"START"}
+{"time":"2026-10-26T06:31:43.569Z","stage":"fresh offline context","state":"PASS"}
+{"time":"2026-10-26T06:31:43.570Z","stage":"request guard","state":"START"}
+{"time":"2026-10-26T06:31:43.571Z","stage":"request guard","state":"PASS"}
+{"time":"2026-10-26T06:31:43.571Z","stage":"page creation","state":"START"}
+{"time":"2026-10-26T06:31:43.728Z","stage":"page creation","state":"PASS"}
+{"time":"2026-10-26T06:31:43.729Z","stage":"diagnostic hooks","state":"START"}
+{"time":"2026-10-26T06:31:43.738Z","stage":"diagnostic hooks","state":"PASS"}
+{"time":"2026-10-26T06:31:43.738Z","stage":"file HTML load","state":"START"}
+{"time":"2026-10-26T06:31:44.124Z","stage":"file HTML load","state":"PASS"}
+{"time":"2026-10-26T06:31:44.124Z","stage":"initial state capture","state":"START"}
+{"time":"2026-10-26T06:31:44.130Z","stage":"initial state capture","state":"PASS"}
+{"time":"2026-10-26T06:31:44.130Z","stage":"selected text PDF, render and direct NEEDS_REVIEW","state":"START"}
+{"time":"2026-10-26T06:31:44.150Z","stage":"selected text PDF, render and direct NEEDS_REVIEW","state":"FAIL","error":"AssertionError [ERR_ASSERTION]: INIT_ERROR · PDF_JS_CODE · ReferenceError: await is not defined\n    at <repo>/experiments/lite-v1-workbench/generated/lite-v1.html:86794:10\n    at <repo>/experiments/lite-v1-workbench/generated/lite-v1.html:86840:2361\n    at <repo>/experiments/lite-v1-workbench/generated/lite-v1.html:86954:3"}
+{"time":"2026-10-26T06:31:44.151Z","stage":"failure state capture","state":"START"}
+{"time":"2026-10-26T06:31:44.160Z","stage":"failure state capture","state":"PASS"}
+{"time":"2026-10-26T06:31:44.232Z","stage":"browser disconnect/close","state":"START"}
+{"time":"2026-10-26T06:31:44.234Z","stage":"browser disconnect/close","state":"PASS"}
+{"time":"2026-10-26T06:31:44.234Z","stage":"browser process close","state":"START"}
+{"time":"2026-10-26T06:31:44.251Z","stage":"browser process close","state":"PASS"}
+{"time":"2026-10-26T06:37:55.539Z","stage":"browser launch","state":"START"}
+{"time":"2026-10-26T06:37:56.286Z","stage":"browser launch","state":"PASS"}
+{"time":"2026-10-26T06:37:56.287Z","stage":"browser connect","state":"START"}
+{"time":"2026-10-26T06:37:56.314Z","stage":"browser connect","state":"PASS"}
+{"time":"2026-10-26T06:37:56.314Z","stage":"fresh offline context","state":"START"}
+{"time":"2026-10-26T06:37:56.327Z","stage":"fresh offline context","state":"PASS"}
+{"time":"2026-10-26T06:37:56.327Z","stage":"request guard","state":"START"}
+{"time":"2026-10-26T06:37:56.328Z","stage":"request guard","state":"PASS"}
+{"time":"2026-10-26T06:37:56.329Z","stage":"page creation","state":"START"}
+{"time":"2026-10-26T06:37:56.524Z","stage":"page creation","state":"PASS"}
+{"time":"2026-10-26T06:37:56.524Z","stage":"diagnostic hooks","state":"START"}
+{"time":"2026-10-26T06:37:56.540Z","stage":"diagnostic hooks","state":"PASS"}
+{"time":"2026-10-26T06:37:56.541Z","stage":"file HTML load","state":"START"}
+{"time":"2026-10-26T06:37:56.996Z","stage":"file HTML load","state":"PASS"}
+{"time":"2026-10-26T06:37:56.996Z","stage":"PDF initialization completion","state":"START"}
+{"time":"2026-10-26T06:37:56.999Z","stage":"PDF initialization completion","state":"PASS"}
+{"time":"2026-10-26T06:37:56.999Z","stage":"initial state capture","state":"START"}
+{"time":"2026-10-26T06:37:57.000Z","stage":"initial state capture","state":"PASS"}
+{"time":"2026-10-26T06:37:57.001Z","stage":"selected text PDF, render and direct NEEDS_REVIEW","state":"START"}
+{"time":"2026-10-26T06:37:57.081Z","stage":"selected text PDF, render and direct NEEDS_REVIEW","state":"PASS"}
+{"time":"2026-10-26T06:37:57.082Z","stage":"selected scan PDF, real Blob/WASM/kor OCR candidate","state":"START"}
+{"time":"2026-10-26T06:37:57.726Z","stage":"selected scan PDF, real Blob/WASM/kor OCR candidate","state":"PASS"}
+{"time":"2026-10-26T06:37:57.726Z","stage":"user candidate editing and quality warning, no C1 auto-fill","state":"START"}
+{"time":"2026-10-26T06:37:57.741Z","stage":"user candidate editing and quality warning, no C1 auto-fill","state":"PASS"}
+{"time":"2026-10-26T06:37:57.741Z","stage":"replacement clears previous document candidate","state":"START"}
+{"time":"2026-10-26T06:37:57.788Z","stage":"replacement clears previous document candidate","state":"PASS"}
+{"time":"2026-10-26T06:37:57.788Z","stage":"three-page selected PDF navigation and per-page edited candidate","state":"START"}
+{"time":"2026-10-26T06:37:57.949Z","stage":"three-page selected PDF navigation and per-page edited candidate","state":"PASS"}
+{"time":"2026-10-26T06:37:57.949Z","stage":"PDF markup remains literal text, no HTML execution","state":"START"}
+{"time":"2026-10-26T06:37:58.051Z","stage":"PDF markup remains literal text, no HTML execution","state":"PASS"}
+{"time":"2026-10-26T06:37:58.051Z","stage":"OCR cancellation after actual worker boot and cleanup","state":"START"}
+{"time":"2026-10-26T06:37:58.625Z","stage":"OCR cancellation after actual worker boot and cleanup","state":"PASS"}
+{"time":"2026-10-26T06:37:58.627Z","stage":"navigation blocks held late OCR completion","state":"START"}
+{"time":"2026-10-26T06:37:59.141Z","stage":"navigation blocks held late OCR completion","state":"PASS"}
+{"time":"2026-10-26T06:37:59.142Z","stage":"PDF replacement blocks held old OCR completion","state":"START"}
+{"time":"2026-10-26T06:37:59.583Z","stage":"PDF replacement blocks held old OCR completion","state":"PASS"}
+{"time":"2026-10-26T06:37:59.584Z","stage":"explicit OCR error clears candidate and releases resources","state":"START"}
+{"time":"2026-10-26T06:37:59.874Z","stage":"explicit OCR error clears candidate and releases resources","state":"PASS"}
+{"time":"2026-10-26T06:37:59.875Z","stage":"OCR pipeline hash TIMEOUT, late result cannot publish","state":"START"}
+{"time":"2026-10-26T06:38:05.273Z","stage":"OCR pipeline hash TIMEOUT, late result cannot publish","state":"PASS"}
+{"time":"2026-10-26T06:38:05.275Z","stage":"malformed PDF explicit ERROR","state":"START"}
+{"time":"2026-10-26T06:38:05.321Z","stage":"malformed PDF explicit ERROR","state":"PASS"}
+{"time":"2026-10-26T06:38:05.322Z","stage":"file byte limit explicit ERROR before parsing","state":"START"}
+{"time":"2026-10-26T06:38:05.984Z","stage":"file byte limit explicit ERROR before parsing","state":"PASS"}
+{"time":"2026-10-26T06:38:05.985Z","stage":"page count limit explicit ERROR","state":"START"}
+{"time":"2026-10-26T06:38:05.991Z","stage":"page count limit explicit ERROR","state":"PASS"}
+{"time":"2026-10-26T06:38:05.991Z","stage":"render pixel limit explicit ERROR before canvas allocation","state":"START"}
+{"time":"2026-10-26T06:38:06.002Z","stage":"render pixel limit explicit ERROR before canvas allocation","state":"PASS"}
+{"time":"2026-10-26T06:38:06.003Z","stage":"integrated C1 spouse","state":"START"}
+{"time":"2026-10-26T06:38:06.070Z","stage":"integrated C1 spouse","state":"PASS"}
+{"time":"2026-10-26T06:38:06.071Z","stage":"integrated C1 parents","state":"START"}
+{"time":"2026-10-26T06:38:06.136Z","stage":"integrated C1 parents","state":"PASS"}
+{"time":"2026-10-26T06:38:06.136Z","stage":"integrated C1 children","state":"START"}
+{"time":"2026-10-26T06:38:06.202Z","stage":"integrated C1 children","state":"PASS"}
+{"time":"2026-10-26T06:38:06.202Z","stage":"C1 exact Q, immediate STALE and copy disabled","state":"START"}
+{"time":"2026-10-26T06:38:06.236Z","stage":"C1 exact Q, immediate STALE and copy disabled","state":"PASS"}
+{"time":"2026-10-26T06:38:06.236Z","stage":"C1 UNKNOWN BLOCKED preserves Q","state":"START"}
+{"time":"2026-10-26T06:38:06.302Z","stage":"C1 UNKNOWN BLOCKED preserves Q","state":"PASS"}
+{"time":"2026-10-26T06:38:06.302Z","stage":"C1 denominator zero ERROR, no old result or copy","state":"START"}
+{"time":"2026-10-26T06:38:06.403Z","stage":"C1 denominator zero ERROR, no old result or copy","state":"PASS"}
+{"time":"2026-10-26T06:38:06.404Z","stage":"C1 late async calculation blocked by edited revision","state":"START"}
+{"time":"2026-10-26T06:38:06.607Z","stage":"C1 late async calculation blocked by edited revision","state":"PASS"}
+{"time":"2026-10-26T06:38:06.608Z","stage":"C1 clipboard attempt and manual selection fallback","state":"START"}
+{"time":"2026-10-26T06:38:06.703Z","stage":"C1 clipboard attempt and manual selection fallback","state":"PASS"}
+{"time":"2026-10-26T06:38:06.704Z","stage":"document close clears source, candidates and owned workers","state":"START"}
+{"time":"2026-10-26T06:38:06.737Z","stage":"document close clears source, candidates and owned workers","state":"PASS"}
+{"time":"2026-10-26T06:38:07.405Z","stage":"promise diagnostics","state":"START"}
+{"time":"2026-10-26T06:38:07.406Z","stage":"promise diagnostics","state":"PASS"}
+{"time":"2026-10-26T06:38:07.407Z","stage":"CSP diagnostics","state":"START"}
+{"time":"2026-10-26T06:38:07.407Z","stage":"CSP diagnostics","state":"PASS"}
+{"time":"2026-10-26T06:38:07.407Z","stage":"zero external requests and console/page/promise/CSP errors","state":"START"}
+{"time":"2026-10-26T06:38:07.408Z","stage":"zero external requests and console/page/promise/CSP errors","state":"PASS"}
+{"time":"2026-10-26T06:38:07.408Z","stage":"screenshot","state":"START"}
+{"time":"2026-10-26T06:38:07.598Z","stage":"screenshot","state":"PASS"}
+{"time":"2026-10-26T06:38:07.598Z","stage":"browser disconnect/close","state":"START"}
+{"time":"2026-10-26T06:38:07.600Z","stage":"browser disconnect/close","state":"PASS"}
+{"time":"2026-10-26T06:38:07.600Z","stage":"browser process close","state":"START"}
+{"time":"2026-10-26T06:38:07.620Z","stage":"browser process close","state":"PASS"}
+{"time":"2026-10-26T06:50:54.376Z","stage":"browser launch","state":"START"}
+{"time":"2026-10-26T06:50:54.752Z","stage":"browser launch","state":"PASS"}
+{"time":"2026-10-26T06:50:54.753Z","stage":"browser connect","state":"START"}
+{"time":"2026-10-26T06:50:54.779Z","stage":"browser connect","state":"PASS"}
+{"time":"2026-10-26T06:50:54.780Z","stage":"fresh offline context","state":"START"}
+{"time":"2026-10-26T06:50:54.795Z","stage":"fresh offline context","state":"PASS"}
+{"time":"2026-10-26T06:50:54.796Z","stage":"request guard","state":"START"}
+{"time":"2026-10-26T06:50:54.797Z","stage":"request guard","state":"PASS"}
+{"time":"2026-10-26T06:50:54.797Z","stage":"page creation","state":"START"}
+{"time":"2026-10-26T06:50:54.994Z","stage":"page creation","state":"PASS"}
+{"time":"2026-10-26T06:50:54.995Z","stage":"diagnostic hooks","state":"START"}
+{"time":"2026-10-26T06:50:55.013Z","stage":"diagnostic hooks","state":"PASS"}
+{"time":"2026-10-26T06:50:55.013Z","stage":"file HTML load","state":"START"}
+{"time":"2026-10-26T06:50:55.439Z","stage":"file HTML load","state":"PASS"}
+{"time":"2026-10-26T06:50:55.440Z","stage":"PDF initialization completion","state":"START"}
+{"time":"2026-10-26T06:50:55.442Z","stage":"PDF initialization completion","state":"PASS"}
+{"time":"2026-10-26T06:50:55.443Z","stage":"initial state capture","state":"START"}
+{"time":"2026-10-26T06:50:55.444Z","stage":"initial state capture","state":"PASS"}
+{"time":"2026-10-26T06:50:55.445Z","stage":"selected text PDF, render and direct NEEDS_REVIEW","state":"START"}
+{"time":"2026-10-26T06:50:55.543Z","stage":"selected text PDF, render and direct NEEDS_REVIEW","state":"PASS"}
+{"time":"2026-10-26T06:50:55.543Z","stage":"selected scan PDF, real Blob/WASM/kor OCR candidate","state":"START"}
+{"time":"2026-10-26T06:50:56.198Z","stage":"selected scan PDF, real Blob/WASM/kor OCR candidate","state":"PASS"}
+{"time":"2026-10-26T06:50:56.198Z","stage":"user candidate editing and quality warning, no C1 auto-fill","state":"START"}
+{"time":"2026-10-26T06:50:56.209Z","stage":"user candidate editing and quality warning, no C1 auto-fill","state":"PASS"}
+{"time":"2026-10-26T06:50:56.210Z","stage":"replacement clears previous document candidate","state":"START"}
+{"time":"2026-10-26T06:50:56.250Z","stage":"replacement clears previous document candidate","state":"PASS"}
+{"time":"2026-10-26T06:50:56.251Z","stage":"three-page selected PDF navigation and per-page edited candidate","state":"START"}
+{"time":"2026-10-26T06:50:56.404Z","stage":"three-page selected PDF navigation and per-page edited candidate","state":"PASS"}
+{"time":"2026-10-26T06:50:56.405Z","stage":"PDF markup remains literal text, no HTML execution","state":"START"}
+{"time":"2026-10-26T06:50:56.508Z","stage":"PDF markup remains literal text, no HTML execution","state":"PASS"}
+{"time":"2026-10-26T06:50:56.509Z","stage":"OCR cancellation after actual worker boot and cleanup","state":"START"}
+{"time":"2026-10-26T06:50:57.105Z","stage":"OCR cancellation after actual worker boot and cleanup","state":"PASS"}
+{"time":"2026-10-26T06:50:57.107Z","stage":"navigation blocks held late OCR completion","state":"START"}
+{"time":"2026-10-26T06:50:57.612Z","stage":"navigation blocks held late OCR completion","state":"PASS"}
+{"time":"2026-10-26T06:50:57.613Z","stage":"PDF replacement blocks held old OCR completion","state":"START"}
+{"time":"2026-10-26T06:50:58.050Z","stage":"PDF replacement blocks held old OCR completion","state":"PASS"}
+{"time":"2026-10-26T06:50:58.051Z","stage":"explicit OCR error clears candidate and releases resources","state":"START"}
+{"time":"2026-10-26T06:50:58.347Z","stage":"explicit OCR error clears candidate and releases resources","state":"PASS"}
+{"time":"2026-10-26T06:50:58.348Z","stage":"OCR pipeline hash TIMEOUT, late result cannot publish","state":"START"}
+{"time":"2026-10-26T06:51:03.749Z","stage":"OCR pipeline hash TIMEOUT, late result cannot publish","state":"PASS"}
+{"time":"2026-10-26T06:51:03.751Z","stage":"malformed PDF explicit ERROR","state":"START"}
+{"time":"2026-10-26T06:51:03.796Z","stage":"malformed PDF explicit ERROR","state":"PASS"}
+{"time":"2026-10-26T06:51:03.797Z","stage":"file byte limit explicit ERROR before parsing","state":"START"}
+{"time":"2026-10-26T06:51:04.486Z","stage":"file byte limit explicit ERROR before parsing","state":"PASS"}
+{"time":"2026-10-26T06:51:04.487Z","stage":"page count limit explicit ERROR","state":"START"}
+{"time":"2026-10-26T06:51:04.522Z","stage":"page count limit explicit ERROR","state":"PASS"}
+{"time":"2026-10-26T06:51:04.523Z","stage":"render pixel limit explicit ERROR before canvas allocation","state":"START"}
+{"time":"2026-10-26T06:51:04.560Z","stage":"render pixel limit explicit ERROR before canvas allocation","state":"PASS"}
+{"time":"2026-10-26T06:51:04.561Z","stage":"integrated C1 spouse","state":"START"}
+{"time":"2026-10-26T06:51:04.608Z","stage":"integrated C1 spouse","state":"PASS"}
+{"time":"2026-10-26T06:51:04.609Z","stage":"integrated C1 parents","state":"START"}
+{"time":"2026-10-26T06:51:04.674Z","stage":"integrated C1 parents","state":"PASS"}
+{"time":"2026-10-26T06:51:04.675Z","stage":"integrated C1 children","state":"START"}
+{"time":"2026-10-26T06:51:04.740Z","stage":"integrated C1 children","state":"PASS"}
+{"time":"2026-10-26T06:51:04.741Z","stage":"C1 exact Q, immediate STALE and copy disabled","state":"START"}
+{"time":"2026-10-26T06:51:04.775Z","stage":"C1 exact Q, immediate STALE and copy disabled","state":"PASS"}
+{"time":"2026-10-26T06:51:04.775Z","stage":"C1 UNKNOWN BLOCKED preserves Q","state":"START"}
+{"time":"2026-10-26T06:51:04.841Z","stage":"C1 UNKNOWN BLOCKED preserves Q","state":"PASS"}
+{"time":"2026-10-26T06:51:04.841Z","stage":"C1 denominator zero ERROR, no old result or copy","state":"START"}
+{"time":"2026-10-26T06:51:04.944Z","stage":"C1 denominator zero ERROR, no old result or copy","state":"PASS"}
+{"time":"2026-10-26T06:51:04.944Z","stage":"C1 late async calculation blocked by edited revision","state":"START"}
+{"time":"2026-10-26T06:51:05.143Z","stage":"C1 late async calculation blocked by edited revision","state":"PASS"}
+{"time":"2026-10-26T06:51:05.144Z","stage":"C1 clipboard attempt and manual selection fallback","state":"START"}
+{"time":"2026-10-26T06:51:05.223Z","stage":"C1 clipboard attempt and manual selection fallback","state":"PASS"}
+{"time":"2026-10-26T06:51:05.224Z","stage":"document close clears source, candidates and owned workers","state":"START"}
+{"time":"2026-10-26T06:51:05.261Z","stage":"document close clears source, candidates and owned workers","state":"PASS"}
+{"time":"2026-10-26T06:51:05.890Z","stage":"promise diagnostics","state":"START"}
+{"time":"2026-10-26T06:51:05.890Z","stage":"promise diagnostics","state":"PASS"}
+{"time":"2026-10-26T06:51:05.891Z","stage":"CSP diagnostics","state":"START"}
+{"time":"2026-10-26T06:51:05.891Z","stage":"CSP diagnostics","state":"PASS"}
+{"time":"2026-10-26T06:51:05.891Z","stage":"zero external requests and console/page/promise/CSP errors","state":"START"}
+{"time":"2026-10-26T06:51:05.892Z","stage":"zero external requests and console/page/promise/CSP errors","state":"PASS"}
+{"time":"2026-10-26T06:51:05.892Z","stage":"screenshot","state":"START"}
+{"time":"2026-10-26T06:51:06.074Z","stage":"screenshot","state":"PASS"}
+{"time":"2026-10-26T06:51:06.075Z","stage":"browser disconnect/close","state":"START"}
+{"time":"2026-10-26T06:51:06.077Z","stage":"browser disconnect/close","state":"PASS"}
+{"time":"2026-10-26T06:51:06.077Z","stage":"browser process close","state":"START"}
+{"time":"2026-10-26T06:51:06.102Z","stage":"browser process close","state":"PASS"}

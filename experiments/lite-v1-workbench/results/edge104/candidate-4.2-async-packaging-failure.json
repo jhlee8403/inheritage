@@ -1,0 +1,176 @@
+{
+  "playwrightModule": "<repo>/experiments/lite-v1-workbench/generated/edge104-dev/playwright124/package/index.js",
+  "target": "chromium104",
+  "started": "2026-10-26T06:31:43.232Z",
+  "windows": "NOT_RUN",
+  "offline": "fresh context, empty cache, browser offline emulation; physical disconnection NOT_RUN",
+  "checks": [
+    {
+      "name": "selected text PDF, render and direct NEEDS_REVIEW",
+      "state": "FAIL",
+      "error": "AssertionError [ERR_ASSERTION]: INIT_ERROR · PDF_JS_CODE · ReferenceError: await is not defined\n    at <repo>/experiments/lite-v1-workbench/generated/lite-v1.html:86794:10\n    at <repo>/experiments/lite-v1-workbench/generated/lite-v1.html:86840:2361\n    at <repo>/experiments/lite-v1-workbench/generated/lite-v1.html:86954:3"
+    }
+  ],
+  "stages": [
+    {
+      "time": "2026-10-26T06:31:43.237Z",
+      "stage": "browser launch",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-26T06:31:43.525Z",
+      "stage": "browser launch",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-26T06:31:43.526Z",
+      "stage": "browser connect",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-26T06:31:43.554Z",
+      "stage": "browser connect",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-26T06:31:43.555Z",
+      "stage": "fresh offline context",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-26T06:31:43.569Z",
+      "stage": "fresh offline context",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-26T06:31:43.570Z",
+      "stage": "request guard",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-26T06:31:43.571Z",
+      "stage": "request guard",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-26T06:31:43.571Z",
+      "stage": "page creation",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-26T06:31:43.728Z",
+      "stage": "page creation",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-26T06:31:43.729Z",
+      "stage": "diagnostic hooks",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-26T06:31:43.738Z",
+      "stage": "diagnostic hooks",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-26T06:31:43.738Z",
+      "stage": "file HTML load",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-26T06:31:44.124Z",
+      "stage": "file HTML load",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-26T06:31:44.124Z",
+      "stage": "initial state capture",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-26T06:31:44.130Z",
+      "stage": "initial state capture",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-26T06:31:44.130Z",
+      "stage": "selected text PDF, render and direct NEEDS_REVIEW",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-26T06:31:44.150Z",
+      "stage": "selected text PDF, render and direct NEEDS_REVIEW",
+      "state": "FAIL",
+      "error": "AssertionError [ERR_ASSERTION]: INIT_ERROR · PDF_JS_CODE · ReferenceError: await is not defined\n    at <repo>/experiments/lite-v1-workbench/generated/lite-v1.html:86794:10\n    at <repo>/experiments/lite-v1-workbench/generated/lite-v1.html:86840:2361\n    at <repo>/experiments/lite-v1-workbench/generated/lite-v1.html:86954:3"
+    },
+    {
+      "time": "2026-10-26T06:31:44.151Z",
+      "stage": "failure state capture",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-26T06:31:44.160Z",
+      "stage": "failure state capture",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-26T06:31:44.232Z",
+      "stage": "browser disconnect/close",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-26T06:31:44.234Z",
+      "stage": "browser disconnect/close",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-26T06:31:44.234Z",
+      "stage": "browser process close",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-26T06:31:44.251Z",
+      "stage": "browser process close",
+      "state": "PASS"
+    }
+  ],
+  "diagnostics": {
+    "consoleErrors": [],
+    "pageErrors": [],
+    "externalRequests": [],
+    "unhandledRejections": [],
+    "cspViolations": []
+  },
+  "artifact": {
+    "sha256": "e4ce6cb565cc2894d43aabf72db5984069d838b16b798baa10cdf60d3789ef52",
+    "bytes": 9477703,
+    "pdfjs": "4.2.67"
+  },
+  "browserPid": 7380,
+  "version": "104.0.5112.48",
+  "requests": [
+    "<repo>/experiments/lite-v1-workbench/generated/lite-v1.html"
+  ],
+  "consoleWarnings": [],
+  "initialization": {
+    "pdf": "PDF 초기화: FAILED · PDF_JS_CODE · ReferenceError: await is not defined\n    at <repo>/experiments/lite-v1-workbench/generated/lite-v1.html:86794:10\n    at <repo>/experiments/lite-v1-workbench/generated/lite-v1.html:86840:2361\n    at <repo>/experiments/lite-v1-workbench/generated/lite-v1.html:86954:3",
+    "c1": "C1 초기화: READY · C1_SCRIPT",
+    "details": "{\n  \"initialization\": {\n    \"state\": \"FAILED\",\n    \"stage\": \"PDF_JS_CODE\",\n    \"error\": \"ReferenceError: await is not defined\\n    at <repo>/experiments/lite-v1-workbench/generated/lite-v1.html:86794:10\\n    at <repo>/experiments/lite-v1-workbench/generated/lite-v1.html:86840:2361\\n    at <repo>/experiments/lite-v1-workbench/generated/lite-v1.html:86954:3\"\n  },\n  \"environment\": {\n    \"userAgent\": \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/104.0.5112.48 Safari/537.36\",\n    \"protocol\": \"file:\",\n    \"capabilities\": {\n      \"iteratorAPI\": false,\n      \"readableStreamAsyncIterator\": false,\n      \"iteratorJoin\": false,\n      \"textDecoder\": true,\n      \"textEncoder\": true,\n      \"promiseWithResolvers\": false,\n      \"promiseTry\": false,\n      \"mapGetOrInsertComputed\": false,\n      \"urlParse\": false,\n      \"uint8ToHex\": false,\n      \"uint8FromBase64\": false,\n      \"mathSumPrecise\": false,\n      \"workerAPI\": true,\n      \"wasmAPI\": true,\n      \"sha256API\": true,\n      \"fileAPI\": true,\n      \"canvas2d\": true,\n      \"secureContext\": true\n    },\n    \"pdfjs\": \"4.2.67 official legacy (core-js 3.37.0); no extra runtime shims\",\n    \"note\": \"API presence is not worker/WASM policy success. Company Edge 104 acceptance NOT_RUN.\"\n  }\n}"
+  },
+  "fatal": "AssertionError [ERR_ASSERTION]: INIT_ERROR · PDF_JS_CODE · ReferenceError: await is not defined\n    at <repo>/experiments/lite-v1-workbench/generated/lite-v1.html:86794:10\n    at <repo>/experiments/lite-v1-workbench/generated/lite-v1.html:86840:2361\n    at <repo>/experiments/lite-v1-workbench/generated/lite-v1.html:86954:3\n    at pdfState (<repo>/experiments/lite-v1-workbench/test-suite.mjs:8:195)\n    at async select (<repo>/experiments/lite-v1-workbench/test-suite.mjs:10:110)\n    at async <repo>/experiments/lite-v1-workbench/test-suite.mjs:17:5\n    at async step (<repo>/experiments/lite-v1-workbench/test-browser.mjs:31:19)\n    at async check (<repo>/experiments/lite-v1-workbench/test-browser.mjs:35:44)\n    at async run (<repo>/experiments/lite-v1-workbench/test-suite.mjs:16:3)\n    at async <repo>/experiments/lite-v1-workbench/test-browser.mjs:71:3",
+  "failureState": {
+    "status": "INIT_ERROR · PDF_JS_CODE · ReferenceError: await is not defined\n    at <repo>/experiments/lite-v1-workbench/generated/lite-v1.html:86794:10\n    at <repo>/experiments/lite-v1-workbench/generated/lite-v1.html:86840:2361\n    at <repo>/experiments/lite-v1-workbench/generated/lite-v1.html:86954:3",
+    "details": "{\n  \"initialization\": {\n    \"state\": \"FAILED\",\n    \"stage\": \"PDF_JS_CODE\",\n    \"error\": \"ReferenceError: await is not defined\\n    at <repo>/experiments/lite-v1-workbench/generated/lite-v1.html:86794:10\\n    at <repo>/experiments/lite-v1-workbench/generated/lite-v1.html:86840:2361\\n    at <repo>/experiments/lite-v1-workbench/generated/lite-v1.html:86954:3\"\n  },\n  \"environment\": {\n    \"userAgent\": \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/104.0.5112.48 Safari/537.36\",\n    \"protocol\": \"file:\",\n    \"capabilities\": {\n      \"iteratorAPI\": false,\n      \"readableStreamAsyncIterator\": false,\n      \"iteratorJoin\": false,\n      \"textDecoder\": true,\n      \"textEncoder\": true,\n      \"promiseWithResolvers\": false,\n      \"promiseTry\": false,\n      \"mapGetOrInsertComputed\": false,\n      \"urlParse\": false,\n      \"uint8ToHex\": false,\n      \"uint8FromBase64\": false,\n      \"mathSumPrecise\": false,\n      \"workerAPI\": true,\n      \"wasmAPI\": true,\n      \"sha256API\": true,\n      \"fileAPI\": true,\n      \"canvas2d\": true,\n      \"secureContext\": true\n    },\n    \"pdfjs\": \"4.2.67 official legacy (core-js 3.37.0); no extra runtime shims\",\n    \"note\": \"API presence is not worker/WASM policy success. Company Edge 104 acceptance NOT_RUN.\"\n  }\n}",
+    "canvas": {
+      "width": 300,
+      "height": 150,
+      "dark": 0
+    }
+  },
+  "finished": "2026-10-26T06:31:44.251Z",
+  "counts": {
+    "pass": 0,
+    "fail": 1,
+    "notRun": 24
+  }
+}

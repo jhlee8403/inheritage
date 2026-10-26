@@ -1,0 +1,222 @@
+{
+  "playwrightModule": "<repo>/experiments/lite-v1-workbench/generated/edge104-dev/playwright124/package/index.js",
+  "target": "chromium104",
+  "started": "2026-10-26T06:40:50.061Z",
+  "windows": "NOT_RUN",
+  "offline": "fresh context, empty cache, browser offline emulation; physical disconnection NOT_RUN",
+  "checks": [
+    {
+      "name": "modern 6.4.299 reproduces Iterator failure before PDF app",
+      "state": "PASS"
+    },
+    {
+      "name": "C1 still calculates exact shares with PDF initialization failed",
+      "state": "PASS"
+    },
+    {
+      "name": "zero external requests and console/page/promise/CSP errors",
+      "state": "PASS"
+    }
+  ],
+  "stages": [
+    {
+      "time": "2026-10-26T06:40:50.066Z",
+      "stage": "browser launch",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-26T06:40:50.374Z",
+      "stage": "browser launch",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-26T06:40:50.375Z",
+      "stage": "browser connect",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-26T06:40:50.405Z",
+      "stage": "browser connect",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-26T06:40:50.405Z",
+      "stage": "fresh offline context",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-26T06:40:50.420Z",
+      "stage": "fresh offline context",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-26T06:40:50.420Z",
+      "stage": "request guard",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-26T06:40:50.421Z",
+      "stage": "request guard",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-26T06:40:50.422Z",
+      "stage": "page creation",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-26T06:40:50.617Z",
+      "stage": "page creation",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-26T06:40:50.618Z",
+      "stage": "diagnostic hooks",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-26T06:40:50.632Z",
+      "stage": "diagnostic hooks",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-26T06:40:50.633Z",
+      "stage": "file HTML load",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-26T06:40:51.013Z",
+      "stage": "file HTML load",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-26T06:40:51.015Z",
+      "stage": "PDF initialization completion",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-26T06:40:51.030Z",
+      "stage": "PDF initialization completion",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-26T06:40:51.031Z",
+      "stage": "initial state capture",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-26T06:40:51.042Z",
+      "stage": "initial state capture",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-26T06:40:51.042Z",
+      "stage": "modern 6.4.299 reproduces Iterator failure before PDF app",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-26T06:40:51.076Z",
+      "stage": "modern 6.4.299 reproduces Iterator failure before PDF app",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-26T06:40:51.076Z",
+      "stage": "C1 still calculates exact shares with PDF initialization failed",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-26T06:40:51.167Z",
+      "stage": "C1 still calculates exact shares with PDF initialization failed",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-26T06:40:51.168Z",
+      "stage": "promise diagnostics",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-26T06:40:51.169Z",
+      "stage": "promise diagnostics",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-26T06:40:51.169Z",
+      "stage": "CSP diagnostics",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-26T06:40:51.171Z",
+      "stage": "CSP diagnostics",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-26T06:40:51.171Z",
+      "stage": "zero external requests and console/page/promise/CSP errors",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-26T06:40:51.171Z",
+      "stage": "zero external requests and console/page/promise/CSP errors",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-26T06:40:51.171Z",
+      "stage": "screenshot",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-26T06:40:51.462Z",
+      "stage": "screenshot",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-26T06:40:51.462Z",
+      "stage": "browser disconnect/close",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-26T06:40:51.463Z",
+      "stage": "browser disconnect/close",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-26T06:40:51.463Z",
+      "stage": "browser process close",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-26T06:40:51.478Z",
+      "stage": "browser process close",
+      "state": "PASS"
+    }
+  ],
+  "diagnostics": {
+    "consoleErrors": [],
+    "pageErrors": [],
+    "externalRequests": [],
+    "unhandledRejections": [],
+    "cspViolations": []
+  },
+  "artifact": {
+    "sha256": "125488543edc23f6c1e709143f6ac2e503a2a8a2b244a7dd64cbe66b94b0956b",
+    "bytes": 9474553,
+    "pdfjs": "6.4.299"
+  },
+  "browserPid": 7872,
+  "version": "104.0.5112.48",
+  "requests": [
+    "<repo>/experiments/lite-v1-workbench/generated/edge104-dev/modern-probe.html"
+  ],
+  "consoleWarnings": [],
+  "initialization": {
+    "pdf": "PDF 초기화: FAILED · PDF_WORKER_CODE · ReferenceError: Iterator is not defined\n    at <repo>/experiments/lite-v1-workbench/generated/edge104-dev/modern-probe.html:1674:1\n    at <repo>/experiments/lite-v1-workbench/generated/edge104-dev/modern-probe.html:65796:56\n    at <repo>/experiments/lite-v1-workbench/generated/edge104-dev/modern-probe.html:94119:3",
+    "c1": "C1 초기화: READY · C1_SCRIPT",
+    "details": "{\n  \"initialization\": {\n    \"state\": \"FAILED\",\n    \"stage\": \"PDF_WORKER_CODE\",\n    \"error\": \"ReferenceError: Iterator is not defined\\n    at <repo>/experiments/lite-v1-workbench/generated/edge104-dev/modern-probe.html:1674:1\\n    at <repo>/experiments/lite-v1-workbench/generated/edge104-dev/modern-probe.html:65796:56\\n    at <repo>/experiments/lite-v1-workbench/generated/edge104-dev/modern-probe.html:94119:3\"\n  },\n  \"environment\": {\n    \"userAgent\": \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/104.0.5112.48 Safari/537.36\",\n    \"protocol\": \"file:\",\n    \"capabilities\": {\n      \"iteratorAPI\": false,\n      \"readableStreamAsyncIterator\": false,\n      \"iteratorJoin\": false,\n      \"textDecoder\": true,\n      \"textEncoder\": true,\n      \"promiseWithResolvers\": false,\n      \"promiseTry\": false,\n      \"mapGetOrInsertComputed\": false,\n      \"urlParse\": false,\n      \"uint8ToHex\": false,\n      \"uint8FromBase64\": false,\n      \"mathSumPrecise\": false,\n      \"workerAPI\": true,\n      \"wasmAPI\": true,\n      \"sha256API\": true,\n      \"fileAPI\": true,\n      \"canvas2d\": true,\n      \"secureContext\": true\n    },\n    \"pdfjs\": \"6.4.299 modern controlled reproduction; not deliverable\",\n    \"note\": \"API presence is not worker/WASM policy success. Company Edge 104 acceptance NOT_RUN.\"\n  }\n}"
+  },
+  "finished": "2026-10-26T06:40:51.478Z",
+  "counts": {
+    "pass": 3,
+    "fail": 0,
+    "notRun": 0
+  }
+}

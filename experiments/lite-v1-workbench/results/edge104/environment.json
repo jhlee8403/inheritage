@@ -1,0 +1,33 @@
+{
+  "node": "24.22.0",
+  "hostOS": "macOS",
+  "architecture": "arm64",
+  "chromium104": {
+    "version": "104.0.5112.48",
+    "revision": "1015",
+    "metadataURL": "https://raw.githubusercontent.com/microsoft/playwright/v1.24.2/packages/playwright-core/browsers.json",
+    "archiveURL": "https://playwright-akamai.azureedge.net/builds/chromium/1015/chromium-mac-arm64.zip",
+    "bytes": 121299680,
+    "observedSha256": "8b62b3aff2a65134f8cea33f1830e0c7f5436928c4525d91a087011bc84ef3a4",
+    "isolated": true,
+    "companyWindows": "NOT_RUN"
+  },
+  "driver": {
+    "name": "playwright-core",
+    "version": "1.24.2",
+    "archiveURL": "https://registry.npmjs.org/playwright-core/-/playwright-core-1.24.2.tgz",
+    "npmIntegrity": "sha512-zfAoDoPY/0sDLsgSgLZwWmSCevIg1ym7CppBwllguVBNiHeixZkc1AdMuYUPZC6AdEYc4CxWEyLMBTw2YcmRrA=="
+  },
+  "failedBrowserDownloadAttempts": [
+    {
+      "url": "https://playwright.azureedge.net/builds/chromium/1015/chromium-mac-arm64.zip",
+      "http": 400,
+      "exit": 22
+    },
+    {
+      "url": "https://cdn.playwright.dev/dbazure/download/playwright/builds/chromium/1015/chromium-mac-arm64.zip",
+      "http": 400,
+      "exit": 22
+    }
+  ]
+}

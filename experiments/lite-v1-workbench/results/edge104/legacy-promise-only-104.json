@@ -1,0 +1,164 @@
+{
+  "target": "chromium104",
+  "started": "2026-10-26T06:15:01.842Z",
+  "windows": "NOT_RUN",
+  "offline": "fresh context, empty cache, browser offline emulation; physical disconnection NOT_RUN",
+  "checks": [
+    {
+      "name": "selected text PDF, render and direct NEEDS_REVIEW",
+      "state": "FAIL",
+      "error": "Error: TIMEOUT: selected text PDF, render and direct NEEDS_REVIEW 15000ms"
+    }
+  ],
+  "stages": [
+    {
+      "time": "2026-10-26T06:15:01.842Z",
+      "stage": "browser launch",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-26T06:15:02.185Z",
+      "stage": "browser launch",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-26T06:15:02.185Z",
+      "stage": "browser connect",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-26T06:15:02.222Z",
+      "stage": "browser connect",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-26T06:15:02.223Z",
+      "stage": "fresh offline context",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-26T06:15:02.239Z",
+      "stage": "fresh offline context",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-26T06:15:02.239Z",
+      "stage": "request guard",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-26T06:15:02.241Z",
+      "stage": "request guard",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-26T06:15:02.241Z",
+      "stage": "page creation",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-26T06:15:02.452Z",
+      "stage": "page creation",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-26T06:15:02.453Z",
+      "stage": "diagnostic hooks",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-26T06:15:02.454Z",
+      "stage": "diagnostic hooks",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-26T06:15:02.454Z",
+      "stage": "file HTML load",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-26T06:15:02.887Z",
+      "stage": "file HTML load",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-26T06:15:02.888Z",
+      "stage": "initial state capture",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-26T06:15:02.892Z",
+      "stage": "initial state capture",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-26T06:15:02.892Z",
+      "stage": "selected text PDF, render and direct NEEDS_REVIEW",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-26T06:15:17.894Z",
+      "stage": "selected text PDF, render and direct NEEDS_REVIEW",
+      "state": "TIMEOUT",
+      "error": "Error: TIMEOUT: selected text PDF, render and direct NEEDS_REVIEW 15000ms"
+    },
+    {
+      "time": "2026-10-26T06:15:17.896Z",
+      "stage": "failure state capture",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-26T06:15:17.901Z",
+      "stage": "failure state capture",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-26T06:15:17.902Z",
+      "stage": "browser disconnect/close",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-26T06:15:17.905Z",
+      "stage": "browser disconnect/close",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-26T06:15:17.906Z",
+      "stage": "browser process close",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-26T06:15:17.939Z",
+      "stage": "browser process close",
+      "state": "PASS"
+    }
+  ],
+  "diagnostics": {
+    "consoleErrors": [],
+    "pageErrors": [],
+    "externalRequests": [],
+    "unhandledRejections": [],
+    "cspViolations": []
+  },
+  "browserPid": 6058,
+  "version": "104.0.5112.48",
+  "requests": [
+    "<repo>/experiments/lite-v1-workbench/generated/lite-v1.html"
+  ],
+  "initialization": {
+    "pdf": "PDF 초기화: READY · PDF_APP_DIAGNOSTICS_COMPLETE",
+    "c1": "C1 초기화: READY · C1_SCRIPT",
+    "details": "{\n  \"initialization\": {\n    \"state\": \"RUNNING\",\n    \"stage\": \"PDF_APP_DIAGNOSTICS_COMPLETE\",\n    \"error\": null\n  },\n  \"environment\": {\n    \"userAgent\": \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/104.0.5112.48 Safari/537.36\",\n    \"protocol\": \"file:\",\n    \"capabilities\": {\n      \"iteratorAPI\": false,\n      \"iteratorJoin\": false,\n      \"textDecoder\": true,\n      \"textEncoder\": true,\n      \"promiseWithResolvers\": false,\n      \"promiseTry\": false,\n      \"mapGetOrInsertComputed\": false,\n      \"urlParse\": false,\n      \"uint8ToHex\": false,\n      \"uint8FromBase64\": false,\n      \"mathSumPrecise\": false,\n      \"workerAPI\": true,\n      \"wasmAPI\": true,\n      \"sha256API\": true,\n      \"fileAPI\": true,\n      \"canvas2d\": true,\n      \"secureContext\": true\n    },\n    \"pdfjs\": \"6.4.299 official legacy + core-js 3.50.0 Promise.withResolvers\",\n    \"note\": \"API presence is not worker/WASM policy success. Company Edge 104 acceptance NOT_RUN.\"\n  }\n}"
+  },
+  "fatal": "Error: TIMEOUT: selected text PDF, render and direct NEEDS_REVIEW 15000ms\n    at Timeout.<anonymous> (<repo>/experiments/lite-v1-workbench/test-browser.mjs:27:123)\n    at listOnTimeout (node:internal/timers:685:17)\n    at process.processTimers (node:internal/timers:618:7)",
+  "failureState": {
+    "status": "ERROR · TypeError: readableStream is not async iterable",
+    "details": "{\n  \"kind\": \"PDF_OPEN\",\n  \"state\": \"ERROR\",\n  \"events\": [\n    {\n      \"stage\": \"previous PDF release\",\n      \"state\": \"START\",\n      \"ms\": 0\n    },\n    {\n      \"stage\": \"previous PDF release\",\n      \"state\": \"PASS\",\n      \"ms\": 0\n    },\n    {\n      \"stage\": \"previous operation cleanup\",\n      \"state\": \"START\",\n      \"ms\": 0\n    },\n    {\n      \"stage\": \"previous operation cleanup\",\n      \"state\": \"PASS\",\n      \"ms\": 0\n    },\n    {\n      \"stage\": \"File API read\",\n      \"state\": \"START\",\n      \"ms\": 1\n    },\n    {\n      \"stage\": \"File API read\",\n      \"state\": \"PASS\",\n      \"ms\": 2\n    },\n    {\n      \"stage\": \"PDF open\",\n      \"state\": \"START\",\n      \"ms\": 4\n    },\n    {\n      \"stage\": \"PDF open\",\n      \"state\": \"PASS\",\n      \"ms\": 7\n    },\n    {\n      \"stage\": \"PDF page\",\n      \"state\": \"START\",\n      \"ms\": 7\n    },\n    {\n      \"stage\": \"PDF page\",\n      \"state\": \"PASS\",\n      \"ms\": 7\n    },\n    {\n      \"stage\": \"PDF render\",\n      \"state\": \"START\",\n      \"ms\": 9\n    },\n    {\n      \"stage\": \"PDF render\",\n      \"state\": \"PASS\",\n      \"ms\": 28\n    },\n    {\n      \"stage\": \"PDF direct text\",\n      \"state\": \"START\",\n      \"ms\": 28\n    },\n    {\n      \"stage\": \"PDF direct text\",\n      \"state\": \"FAIL\",\n      \"ms\": 28,\n      \"error\": \"TypeError: readableStream is not async iterable\"\n    }\n  ],\n  \"page\": 1,\n  \"pages\": 1,\n  \"pendingCleanup\": 0,\n  \"error\": \"TypeError: readableStream is not async iterable\\n    at PDFPageProxy.getTextContent (<repo>/experiments/lite-v1-workbench/generated/lite-v1.html:95600:31)\\n    at renderPage (<repo>/experiments/lite-v1-workbench/generated/lite-v1.html:107968:33)\\n    at async <repo>/experiments/lite-v1-workbench/generated/lite-v1.html:107987:5\\n    at async execute (<repo>/experiments/lite-v1-workbench/generated/lite-v1.html:107955:7)\",\n  \"cleanup\": {\n    \"state\": \"PASS\",\n    \"errors\": []\n  }\n}"
+  },
+  "finished": "2026-10-26T06:15:17.940Z",
+  "counts": {
+    "pass": 0,
+    "fail": 1,
+    "notRun": 24
+  }
+}

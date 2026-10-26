@@ -1,16 +1,56 @@
 {
-  "instructionsSha256": "41dc1c1c6c6891f958c1b592dbb3d9abbbd8fe3f5438fb155eab7fcb22cad58d",
+  "instructionsSha256": "091dbe7f4de7e90e0e556e3b258428662c7592bc1957054704bab36c1f4b62f9",
   "notice": {
-    "bytes": 44247,
-    "sha256": "b2f64bf866df353e0ad039b2dce993e3f7a6f78f6abc942e42d5052dfee7ddc8"
+    "bytes": 55485,
+    "sha256": "9c62f532ebb5cbc02c00426d1145a7a798a7fe1abb111c7f35bee6f281e23e68"
   },
   "format": "lite-v1-integrated-v1",
-  "baseline": "ffb88aeac9582f700b1997fae40546c0becbd2b3",
+  "baseline": "8d33fb1d7fa5c2a7218ca848cdfe66e43cbe8df6",
+  "pdfCompatibility": {
+    "format": "pdfjs-legacy-compat-v1",
+    "pdfjsVersion": "4.2.67",
+    "flavor": "official legacy/build",
+    "archiveURL": "https://registry.npmjs.org/pdfjs-dist/-/pdfjs-dist-4.2.67.tgz",
+    "npmIntegrity": "sha512-rJmuBDFpD7cqC8WIkQUEClyB4UAH05K4AsyewToMTp2gSy3Rrx8c1ydAVqlJlGv3yZSOrhEERQU/4ScQQFlLHA==",
+    "license": "Apache-2.0",
+    "embeddedPolyfills": {
+      "name": "core-js",
+      "version": "3.37.0",
+      "license": "MIT",
+      "scope": "unaltered official PDF.js legacy bundle; no additional runtime shims"
+    },
+    "files": [
+      {
+        "packagePath": "legacy/build/pdf.mjs",
+        "name": "pdf.mjs",
+        "bytes": 800420,
+        "sha256": "07be4253f45a55454e8f463c6ee82c7e1addb27c8a25eaaa1d2b1d880d6f49cc"
+      },
+      {
+        "packagePath": "legacy/build/pdf.worker.mjs",
+        "name": "pdf.worker.mjs",
+        "bytes": 2294364,
+        "sha256": "03f4de3e477f4e19a39a2a85c226c32510c2b6c37f2b71ec5f446e4b4b07baeb"
+      },
+      {
+        "packagePath": "LICENSE",
+        "name": "LICENSE",
+        "bytes": 10174,
+        "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+      },
+      {
+        "name": "core-js-LICENSE",
+        "url": "https://raw.githubusercontent.com/zloirock/core-js/v3.37.0/LICENSE",
+        "bytes": 1064,
+        "sha256": "51aff0fa92ac49e01ce6ba0fed992b0a34f8afe15203dd5f38c43f9e88b0167b"
+      }
+    ]
+  },
   "output": "generated/lite-v1.html",
-  "bytes": 9473096,
-  "sha256": "23a1099a737ff7c8b91a6fcfe0f2f9c51551d419f98bc7ea4c4bc8698579fa1e",
+  "bytes": 9477720,
+  "sha256": "2963016205768fdca0e6bdbf5b2711f3a32218edf4202b42349f158ad844581c",
   "versions": {
-    "pdfjs": "6.4.299",
+    "pdfjs": "4.2.67",
     "tesseract": "7.0.0",
     "core": "7.0.0"
   },
@@ -19,8 +59,8 @@
   "scripts": [
     {
       "index": 0,
-      "cspSha256": "KziomwILKnn+tiA+ve5VTmgWkr3lDFPQcq8ID23f/K4=",
-      "bytes": 4562
+      "cspSha256": "SJ+SXpqtTQQs+Kq+hQhIFs0Z2A1H8aGoBG6KsiGcof8=",
+      "bytes": 5022
     },
     {
       "index": 1,
@@ -44,30 +84,30 @@
     },
     {
       "index": 5,
-      "cspSha256": "OBOwOCD7euIG6CkwzC01B7iIGhR6sxYT6Fb2l+WV4ms=",
-      "bytes": 9415783
+      "cspSha256": "/aPd2cGOYCUP3b6PYvKYzOUE6SSeiE73BnCaV9UJ7Cs=",
+      "bytes": 9419947
     }
   ],
   "sources": {
-    "initialization": "2b38a89b020b2a79feb6203ebdee554e681692bde50c53d072af080f6ddffcae",
+    "initialization": "489f925e9aad4d042cf8aabe85084816cd19d80d47f1a1a8046e8ab2219ca1ff",
     "app": "50d7356286650175dac5f87cc825e5b2a002e44aab9e930a7e0886b31233adab",
     "view": "fa4365f47530e703baaac0d0f1c0243f8933c37f40e7409fe13e8050f756edef",
-    "builder": "55895575044dbc73386eb2960248471fba12f57d8bfc20a5ae1337ad0d611241",
+    "builder": "c593c01f48c99484fece35bbe69408f45beba7399dcebfc98ac699d2182eb062",
     "workerAdapter": "eb3b37117264d6f66f0fab0d879d3875eec049886836f4e94ddb0d144649050f",
     "pocBuilder": "5334ffee078cdfe10908c534e25ab0026992aeb79e0d07f6db9c5cbebbc57269"
   },
   "resources": [
     {
       "key": "pdfjs",
-      "path": "public/vendor/pdfjs/pdf.mjs",
-      "bytes": 860818,
-      "sha256": "dd13af821c9c3e1778653340d6539a1ba07bc56cba40073a4c727864cf0c232a"
+      "path": "compat/vendor/pdf.mjs",
+      "bytes": 800420,
+      "sha256": "07be4253f45a55454e8f463c6ee82c7e1addb27c8a25eaaa1d2b1d880d6f49cc"
     },
     {
       "key": "pdfWorker",
-      "path": "public/vendor/pdfjs/pdf.worker.mjs",
-      "bytes": 2229713,
-      "sha256": "07ceb740d746e5d9012fcf9f27d5c7dea09f7d2f5e74f5c8109e5787551a2333"
+      "path": "compat/vendor/pdf.worker.mjs",
+      "bytes": 2294364,
+      "sha256": "03f4de3e477f4e19a39a2a85c226c32510c2b6c37f2b71ec5f446e4b4b07baeb"
     },
     {
       "key": "tesseract",

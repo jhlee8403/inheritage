@@ -1,0 +1,702 @@
+{
+  "playwrightModule": "<repo>/experiments/offline-ocr/node_modules/playwright/index.mjs",
+  "target": "chromium",
+  "started": "2026-10-26T06:43:00.740Z",
+  "windows": "NOT_RUN",
+  "offline": "fresh context, empty cache, browser offline emulation; physical disconnection NOT_RUN",
+  "checks": [
+    {
+      "name": "selected text PDF, render and direct NEEDS_REVIEW",
+      "state": "PASS"
+    },
+    {
+      "name": "selected scan PDF, real Blob/WASM/kor OCR candidate",
+      "state": "PASS"
+    },
+    {
+      "name": "user candidate editing and quality warning, no C1 auto-fill",
+      "state": "PASS"
+    },
+    {
+      "name": "replacement clears previous document candidate",
+      "state": "PASS"
+    },
+    {
+      "name": "three-page selected PDF navigation and per-page edited candidate",
+      "state": "PASS"
+    },
+    {
+      "name": "PDF markup remains literal text, no HTML execution",
+      "state": "PASS"
+    },
+    {
+      "name": "OCR cancellation after actual worker boot and cleanup",
+      "state": "PASS"
+    },
+    {
+      "name": "navigation blocks held late OCR completion",
+      "state": "PASS"
+    },
+    {
+      "name": "PDF replacement blocks held old OCR completion",
+      "state": "PASS"
+    },
+    {
+      "name": "explicit OCR error clears candidate and releases resources",
+      "state": "PASS"
+    },
+    {
+      "name": "OCR pipeline hash TIMEOUT, late result cannot publish",
+      "state": "PASS"
+    },
+    {
+      "name": "malformed PDF explicit ERROR",
+      "state": "PASS"
+    },
+    {
+      "name": "file byte limit explicit ERROR before parsing",
+      "state": "PASS"
+    },
+    {
+      "name": "page count limit explicit ERROR",
+      "state": "PASS"
+    },
+    {
+      "name": "render pixel limit explicit ERROR before canvas allocation",
+      "state": "PASS"
+    },
+    {
+      "name": "integrated C1 spouse",
+      "state": "PASS"
+    },
+    {
+      "name": "integrated C1 parents",
+      "state": "PASS"
+    },
+    {
+      "name": "integrated C1 children",
+      "state": "PASS"
+    },
+    {
+      "name": "C1 exact Q, immediate STALE and copy disabled",
+      "state": "PASS"
+    },
+    {
+      "name": "C1 UNKNOWN BLOCKED preserves Q",
+      "state": "PASS"
+    },
+    {
+      "name": "C1 denominator zero ERROR, no old result or copy",
+      "state": "PASS"
+    },
+    {
+      "name": "C1 late async calculation blocked by edited revision",
+      "state": "PASS"
+    },
+    {
+      "name": "C1 clipboard attempt and manual selection fallback",
+      "state": "PASS"
+    },
+    {
+      "name": "document close clears source, candidates and owned workers",
+      "state": "PASS"
+    },
+    {
+      "name": "zero external requests and console/page/promise/CSP errors",
+      "state": "PASS"
+    }
+  ],
+  "stages": [
+    {
+      "time": "2026-10-26T06:43:00.756Z",
+      "stage": "browser launch",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-26T06:43:01.186Z",
+      "stage": "browser launch",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-26T06:43:01.187Z",
+      "stage": "browser connect",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-26T06:43:01.242Z",
+      "stage": "browser connect",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-26T06:43:01.242Z",
+      "stage": "fresh offline context",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-26T06:43:01.247Z",
+      "stage": "fresh offline context",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-26T06:43:01.247Z",
+      "stage": "request guard",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-26T06:43:01.248Z",
+      "stage": "request guard",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-26T06:43:01.248Z",
+      "stage": "page creation",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-26T06:43:01.441Z",
+      "stage": "page creation",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-26T06:43:01.442Z",
+      "stage": "diagnostic hooks",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-26T06:43:01.444Z",
+      "stage": "diagnostic hooks",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-26T06:43:01.444Z",
+      "stage": "file HTML load",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-26T06:43:01.780Z",
+      "stage": "file HTML load",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-26T06:43:01.780Z",
+      "stage": "PDF initialization completion",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-26T06:43:01.793Z",
+      "stage": "PDF initialization completion",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-26T06:43:01.794Z",
+      "stage": "initial state capture",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-26T06:43:01.802Z",
+      "stage": "initial state capture",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-26T06:43:01.803Z",
+      "stage": "selected text PDF, render and direct NEEDS_REVIEW",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-26T06:43:01.938Z",
+      "stage": "selected text PDF, render and direct NEEDS_REVIEW",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-26T06:43:01.939Z",
+      "stage": "selected scan PDF, real Blob/WASM/kor OCR candidate",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-26T06:43:02.526Z",
+      "stage": "selected scan PDF, real Blob/WASM/kor OCR candidate",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-26T06:43:02.526Z",
+      "stage": "user candidate editing and quality warning, no C1 auto-fill",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-26T06:43:02.542Z",
+      "stage": "user candidate editing and quality warning, no C1 auto-fill",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-26T06:43:02.542Z",
+      "stage": "replacement clears previous document candidate",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-26T06:43:02.560Z",
+      "stage": "replacement clears previous document candidate",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-26T06:43:02.560Z",
+      "stage": "three-page selected PDF navigation and per-page edited candidate",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-26T06:43:02.704Z",
+      "stage": "three-page selected PDF navigation and per-page edited candidate",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-26T06:43:02.704Z",
+      "stage": "PDF markup remains literal text, no HTML execution",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-26T06:43:02.810Z",
+      "stage": "PDF markup remains literal text, no HTML execution",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-26T06:43:02.810Z",
+      "stage": "OCR cancellation after actual worker boot and cleanup",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-26T06:43:03.271Z",
+      "stage": "OCR cancellation after actual worker boot and cleanup",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-26T06:43:03.271Z",
+      "stage": "navigation blocks held late OCR completion",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-26T06:43:03.675Z",
+      "stage": "navigation blocks held late OCR completion",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-26T06:43:03.676Z",
+      "stage": "PDF replacement blocks held old OCR completion",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-26T06:43:04.027Z",
+      "stage": "PDF replacement blocks held old OCR completion",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-26T06:43:04.028Z",
+      "stage": "explicit OCR error clears candidate and releases resources",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-26T06:43:04.246Z",
+      "stage": "explicit OCR error clears candidate and releases resources",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-26T06:43:04.246Z",
+      "stage": "OCR pipeline hash TIMEOUT, late result cannot publish",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-26T06:43:09.543Z",
+      "stage": "OCR pipeline hash TIMEOUT, late result cannot publish",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-26T06:43:09.545Z",
+      "stage": "malformed PDF explicit ERROR",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-26T06:43:09.570Z",
+      "stage": "malformed PDF explicit ERROR",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-26T06:43:09.571Z",
+      "stage": "file byte limit explicit ERROR before parsing",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-26T06:43:10.036Z",
+      "stage": "file byte limit explicit ERROR before parsing",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-26T06:43:10.037Z",
+      "stage": "page count limit explicit ERROR",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-26T06:43:10.043Z",
+      "stage": "page count limit explicit ERROR",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-26T06:43:10.044Z",
+      "stage": "render pixel limit explicit ERROR before canvas allocation",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-26T06:43:10.054Z",
+      "stage": "render pixel limit explicit ERROR before canvas allocation",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-26T06:43:10.054Z",
+      "stage": "integrated C1 spouse",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-26T06:43:10.124Z",
+      "stage": "integrated C1 spouse",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-26T06:43:10.124Z",
+      "stage": "integrated C1 parents",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-26T06:43:10.187Z",
+      "stage": "integrated C1 parents",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-26T06:43:10.188Z",
+      "stage": "integrated C1 children",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-26T06:43:10.255Z",
+      "stage": "integrated C1 children",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-26T06:43:10.255Z",
+      "stage": "C1 exact Q, immediate STALE and copy disabled",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-26T06:43:10.288Z",
+      "stage": "C1 exact Q, immediate STALE and copy disabled",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-26T06:43:10.288Z",
+      "stage": "C1 UNKNOWN BLOCKED preserves Q",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-26T06:43:10.354Z",
+      "stage": "C1 UNKNOWN BLOCKED preserves Q",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-26T06:43:10.355Z",
+      "stage": "C1 denominator zero ERROR, no old result or copy",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-26T06:43:10.454Z",
+      "stage": "C1 denominator zero ERROR, no old result or copy",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-26T06:43:10.455Z",
+      "stage": "C1 late async calculation blocked by edited revision",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-26T06:43:10.661Z",
+      "stage": "C1 late async calculation blocked by edited revision",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-26T06:43:10.662Z",
+      "stage": "C1 clipboard attempt and manual selection fallback",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-26T06:43:10.786Z",
+      "stage": "C1 clipboard attempt and manual selection fallback",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-26T06:43:10.786Z",
+      "stage": "document close clears source, candidates and owned workers",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-26T06:43:10.822Z",
+      "stage": "document close clears source, candidates and owned workers",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-26T06:43:11.352Z",
+      "stage": "promise diagnostics",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-26T06:43:11.353Z",
+      "stage": "promise diagnostics",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-26T06:43:11.353Z",
+      "stage": "CSP diagnostics",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-26T06:43:11.354Z",
+      "stage": "CSP diagnostics",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-26T06:43:11.354Z",
+      "stage": "zero external requests and console/page/promise/CSP errors",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-26T06:43:11.354Z",
+      "stage": "zero external requests and console/page/promise/CSP errors",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-26T06:43:11.354Z",
+      "stage": "screenshot",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-26T06:43:11.495Z",
+      "stage": "screenshot",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-26T06:43:11.495Z",
+      "stage": "browser disconnect/close",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-26T06:43:11.497Z",
+      "stage": "browser disconnect/close",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-26T06:43:11.498Z",
+      "stage": "browser process close",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-26T06:43:11.519Z",
+      "stage": "browser process close",
+      "state": "PASS"
+    }
+  ],
+  "diagnostics": {
+    "consoleErrors": [],
+    "pageErrors": [],
+    "externalRequests": [],
+    "unhandledRejections": [],
+    "cspViolations": []
+  },
+  "artifact": {
+    "sha256": "2963016205768fdca0e6bdbf5b2711f3a32218edf4202b42349f158ad844581c",
+    "bytes": 9477720,
+    "pdfjs": "4.2.67"
+  },
+  "browserPid": 8009,
+  "version": "156.0.8078.4",
+  "requests": [
+    "<repo>/experiments/lite-v1-workbench/generated/lite-v1.html"
+  ],
+  "consoleWarnings": [],
+  "initialization": {
+    "pdf": "PDF 초기화: READY · PDF_APP_DIAGNOSTICS_COMPLETE",
+    "c1": "C1 초기화: READY · C1_SCRIPT",
+    "details": "{\n  \"initialization\": {\n    \"state\": \"READY\",\n    \"stage\": \"PDF_APP_DIAGNOSTICS_COMPLETE\",\n    \"error\": null\n  },\n  \"environment\": {\n    \"userAgent\": \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36\",\n    \"protocol\": \"file:\",\n    \"capabilities\": {\n      \"iteratorAPI\": true,\n      \"readableStreamAsyncIterator\": true,\n      \"iteratorJoin\": true,\n      \"textDecoder\": true,\n      \"textEncoder\": true,\n      \"promiseWithResolvers\": true,\n      \"promiseTry\": true,\n      \"mapGetOrInsertComputed\": true,\n      \"urlParse\": true,\n      \"uint8ToHex\": true,\n      \"uint8FromBase64\": true,\n      \"mathSumPrecise\": true,\n      \"workerAPI\": true,\n      \"wasmAPI\": true,\n      \"sha256API\": true,\n      \"fileAPI\": true,\n      \"canvas2d\": true,\n      \"secureContext\": true\n    },\n    \"pdfjs\": \"4.2.67 official legacy (core-js 3.37.0); no extra runtime shims\",\n    \"note\": \"API presence is not worker/WASM policy success. Company Edge 104 acceptance NOT_RUN.\",\n    \"capabilitiesAfterPdf\": {\n      \"iteratorAPI\": true,\n      \"readableStreamAsyncIterator\": true,\n      \"iteratorJoin\": true,\n      \"textDecoder\": true,\n      \"textEncoder\": true,\n      \"promiseWithResolvers\": true,\n      \"promiseTry\": true,\n      \"mapGetOrInsertComputed\": true,\n      \"urlParse\": true,\n      \"uint8ToHex\": true,\n      \"uint8FromBase64\": true,\n      \"mathSumPrecise\": true,\n      \"workerAPI\": true,\n      \"wasmAPI\": true,\n      \"sha256API\": true,\n      \"fileAPI\": true,\n      \"canvas2d\": true,\n      \"secureContext\": true\n    }\n  }\n}"
+  },
+  "ocr": {
+    "candidate": "54111 16 0다1651 02\n\n날짜: 2002-03-04\n관계: 배우자\n번호: 23456 789\n\n완전 가공 자료 / 실제 사건 아님\n",
+    "diagnostics": {
+      "kind": "OCR",
+      "state": "NEEDS_REVIEW",
+      "events": [
+        {
+          "stage": "resource SHA-256",
+          "state": "START",
+          "ms": 165
+        },
+        {
+          "stage": "resource SHA-256",
+          "state": "PASS",
+          "ms": 165
+        },
+        {
+          "stage": "worker/core/WASM/kor initialize",
+          "state": "START",
+          "ms": 167
+        },
+        {
+          "stage": "BLOB_WORKER_BOOTED",
+          "state": "PROGRESS",
+          "ms": 175,
+          "progress": 1
+        },
+        {
+          "stage": "RESOURCE_MESSAGE_RECEIVED",
+          "state": "PROGRESS",
+          "ms": 178,
+          "progress": 1
+        },
+        {
+          "stage": "initializing tesseract",
+          "state": "PROGRESS",
+          "ms": 178,
+          "progress": 0
+        },
+        {
+          "stage": "CORE_FACTORY_ENTERED",
+          "state": "PROGRESS",
+          "ms": 178,
+          "progress": 1
+        },
+        {
+          "stage": "WASM_BYTES_SUPPLIED",
+          "state": "PROGRESS",
+          "ms": 178,
+          "progress": 1
+        },
+        {
+          "stage": "WASM_RUNTIME_READY",
+          "state": "PROGRESS",
+          "ms": 188,
+          "progress": 1
+        },
+        {
+          "stage": "initializing tesseract",
+          "state": "PROGRESS",
+          "ms": 188,
+          "progress": 1
+        },
+        {
+          "stage": "loading language traineddata",
+          "state": "PROGRESS",
+          "ms": 188,
+          "progress": 0
+        },
+        {
+          "stage": "KOR_BYTES_SUPPLIED",
+          "state": "PROGRESS",
+          "ms": 188,
+          "progress": 1
+        },
+        {
+          "stage": "loading language traineddata",
+          "state": "PROGRESS",
+          "ms": 189,
+          "progress": 0.5
+        },
+        {
+          "stage": "loading language traineddata",
+          "state": "PROGRESS",
+          "ms": 190,
+          "progress": 1
+        },
+        {
+          "stage": "initializing api",
+          "state": "PROGRESS",
+          "ms": 190,
+          "progress": 0
+        },
+        {
+          "stage": "initializing api",
+          "state": "PROGRESS",
+          "ms": 216,
+          "progress": 1
+        },
+        {
+          "stage": "worker/core/WASM/kor initialize",
+          "state": "PASS",
+          "ms": 216
+        },
+        {
+          "stage": "OCR parameters",
+          "state": "START",
+          "ms": 216
+        },
+        {
+          "stage": "OCR parameters",
+          "state": "PASS",
+          "ms": 216
+        },
+        {
+          "stage": "recognize",
+          "state": "START",
+          "ms": 217
+        },
+        {
+          "stage": "recognizing text",
+          "state": "PROGRESS",
+          "ms": 371,
+          "progress": 0
+        },
+        {
+          "stage": "recognizing text",
+          "state": "PROGRESS",
+          "ms": 413,
+          "progress": 0.14285714285714285
+        },
+        {
+          "stage": "recognizing text",
+          "state": "PROGRESS",
+          "ms": 428,
+          "progress": 0.2857142857142857
+        },
+        {
+          "stage": "recognizing text",
+          "state": "PROGRESS",
+          "ms": 438,
+          "progress": 0.42857142857142855
+        },
+        {
+          "stage": "recognizing text",
+          "state": "PROGRESS",
+          "ms": 450,
+          "progress": 0.5714285714285714
+        },
+        {
+          "stage": "recognizing text",
+          "state": "PROGRESS",
+          "ms": 472,
+          "progress": 1
+        },
+        {
+          "stage": "recognize",
+          "state": "PASS",
+          "ms": 474
+        }
+      ],
+      "page": 1,
+      "pages": 1,
+      "pendingCleanup": 0,
+      "confidence": 68,
+      "cleanup": {
+        "state": "PASS",
+        "errors": []
+      }
+    }
+  },
+  "clipboardObservation": "자동 복사가 허용되지 않았습니다. 결과 텍스트 선택 후 Edge의 복사 메뉴 또는 Ctrl+C (Mac: Command+C)로 복사하세요.",
+  "finished": "2026-10-26T06:43:11.520Z",
+  "counts": {
+    "pass": 25,
+    "fail": 0,
+    "notRun": 0
+  }
+}

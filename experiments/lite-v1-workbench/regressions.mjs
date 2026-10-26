@@ -2,7 +2,7 @@
 import {spawn} from 'node:child_process';
 import {openSync,closeSync,readFileSync,writeFileSync} from 'node:fs';
 import {fileURLToPath} from 'node:url';
-const root=fileURLToPath(new URL('../../',import.meta.url)),results=new URL('results/',import.meta.url);
+const root=fileURLToPath(new URL('../../',import.meta.url)),results=new URL(process.env.INHERITAGE_LITE_RESULTS??'results/',import.meta.url);
 const suites=[['c1-browser','packages/inheritance-engine/test/browser/run.mjs'],['m2-browser','packages/inheritance-engine/test/browser/run-m2.mjs'],['c1-file','experiments/c1-offline-file-prototype/test/browser-file.mjs'],['c1-workbench','experiments/inheritance-calculator/test/browser.mjs']];
 const summary=[];
 for(const [name,script] of suites){

@@ -10,6 +10,9 @@
   function canvasAvailable() { try { return !!document.createElement('canvas').getContext('2d'); } catch (error) { return false; } }
   function capabilities() {
     return {
+      iteratorAPI: typeof window.Iterator === 'function',
+      readableStreamAsyncIterator: typeof ReadableStream === 'function' && typeof ReadableStream.prototype[Symbol.asyncIterator] === 'function',
+      iteratorJoin: typeof window.Iterator === 'function' && typeof window.Iterator.prototype.join === 'function',
       textDecoder: typeof window.TextDecoder === 'function',
       textEncoder: typeof window.TextEncoder === 'function',
       promiseWithResolvers: typeof Promise.withResolvers === 'function',
@@ -28,13 +31,14 @@
     };
   }
   var environment = {userAgent: navigator.userAgent, protocol: location.protocol,
-    capabilities: capabilities(), note: 'API presence is not worker/WASM policy success. Windows cause unconfirmed.'};
+    capabilities: capabilities(), pdfjs: '4.2.67 official legacy (core-js 3.37.0); no extra runtime shims',
+    note: 'API presence is not worker/WASM policy success. Company Edge 104 acceptance NOT_RUN.'};
   function paint(area) {
     var r = records[area], node = document.getElementById(area + '-init-status');
     if (node) node.textContent = area.toUpperCase() + ' 초기화: ' + r.state + ' · ' + r.stage + (r.error ? ' · ' + r.error : '');
     var detail = document.getElementById(area + '-init-details');
     if (detail) detail.textContent = JSON.stringify({area: area, initialization: r, environment: environment}, null, 2);
-    if (area === 'pdf' && r.state !== 'READY') {
+    if (area === 'pdf') {
       document.getElementById('pdf-details').textContent = JSON.stringify({initialization: r, environment: environment}, null, 2);
       if (r.state === 'FAILED' || r.state === 'TIMEOUT') {
         document.getElementById('pdf-status').textContent = 'INIT_ERROR · ' + r.stage + ' · ' + (r.error || '원인 미확정');
@@ -58,6 +62,7 @@
     stage: function (area, name) { records[area].stage = name; paint(area); },
     ready: function (area) {
       var r = records[area]; if (r.state === 'FAILED' || r.state === 'TIMEOUT') return;
+      if (area === 'pdf') environment.capabilitiesAfterPdf = capabilities();
       clearTimeout(timers[area]); r.state = 'READY'; paint(area);
       if (area === 'pdf') document.getElementById('pdf-file').disabled = false;
     },

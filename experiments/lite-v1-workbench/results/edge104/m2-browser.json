@@ -1,0 +1,328 @@
+{
+  "node": "v24.22.0",
+  "edge": "/Applications/Microsoft Edge.app/Contents/MacOS/Microsoft Edge",
+  "browsers": [
+    {
+      "name": "Chromium",
+      "version": "156.0.8078.4",
+      "results": [
+        {
+          "name": "separate public M2 browser module imports",
+          "pass": true
+        },
+        {
+          "name": "M2_REPRESENTATION complete facts remain pending",
+          "pass": true
+        },
+        {
+          "name": "M2_SUCCESSIVE complete facts remain pending",
+          "pass": true
+        },
+        {
+          "name": "raw duplicate escaped keys reject before overwrite",
+          "pass": true
+        },
+        {
+          "name": "invalid Q is InputError, no fake unresolved",
+          "pass": true
+        },
+        {
+          "name": "missing facts record differs from incomplete facts",
+          "pass": true
+        },
+        {
+          "name": "truth omission/forgery and injected approval cannot bypass",
+          "pass": true
+        },
+        {
+          "name": "cycles and technical double consumption reject",
+          "pass": true
+        },
+        {
+          "name": "future E2 policy is not activated",
+          "pass": true
+        },
+        {
+          "name": "M2-S01/S02 snapshot retains BLOCKED, whole Q and immutable dependencies",
+          "pass": true
+        },
+        {
+          "name": "M2-S03 object key order is canonical; array order is significant",
+          "pass": true
+        },
+        {
+          "name": "M2-S01/S02 facts, relations, events, deaths, date, Q, asset, law and truth invalidate without revision change",
+          "pass": true
+        },
+        {
+          "name": "M2-S04 public API captures input once even when original changes during digest",
+          "pass": true
+        },
+        {
+          "name": "M2-S02 engine, schema, contract, policy, rule, law and approval dependencies invalidate",
+          "pass": true
+        },
+        {
+          "name": "M2-S04 input and dependency copies are pinned before first await",
+          "pass": true
+        },
+        {
+          "name": "M2-S05 refresh captures changed input before caller restores it; STALE never revives",
+          "pass": true
+        },
+        {
+          "name": "M2-S05 overlapping refresh cannot revive a snapshot invalidated by another completion",
+          "pass": true
+        },
+        {
+          "name": "M2 schema/ownership rejects C1, JSON restoration and forged results; approval override rejected",
+          "pass": true
+        },
+        {
+          "name": "M2-S08 invalid new input immediately clears published result; caller mutation cannot alter session-owned input",
+          "pass": true
+        },
+        {
+          "name": "M2-S07/S08 session input edit immediately clears current result and late success",
+          "pass": true
+        },
+        {
+          "name": "M2-S07 newer success wins over older success or older error",
+          "pass": true
+        },
+        {
+          "name": "M2-S07/S08 cancel and dependency notification suppress pending completion",
+          "pass": true
+        },
+        {
+          "name": "M2-S07 runtime dependency change during await and after publication invalidates session",
+          "pass": true
+        },
+        {
+          "name": "M2-S08 missing/failed/malformed Web Crypto publishes no result and raises SnapshotError",
+          "pass": true
+        },
+        {
+          "name": "M2-S06 Node/browser SHA-256 equality",
+          "pass": true
+        },
+        {
+          "name": "review: refresh input failure invalidates original reference and session publication",
+          "pass": true
+        },
+        {
+          "name": "review: refresh hash failure invalidates original reference without masking SnapshotError",
+          "pass": true
+        },
+        {
+          "name": "review: refresh failure defeats an older pending unchanged refresh",
+          "pass": true
+        },
+        {
+          "name": "review: foreign snapshot rejected without reading attacker accessor",
+          "pass": true
+        },
+        {
+          "name": "review: custom array prototype rejected at JSON object boundary",
+          "pass": true
+        },
+        {
+          "name": "review: raw prototype keys, escaped duplicates and nested approval fields cannot bypass policy",
+          "pass": true
+        },
+        {
+          "name": "review: object attributes/symbols and raw invalid types remain strict InputError",
+          "pass": true
+        },
+        {
+          "name": "review: technical ledger differently named alias still cannot consume one inflow twice",
+          "pass": true
+        }
+      ],
+      "pass": 33,
+      "fail": 0,
+      "skipped": 0,
+      "s0": {
+        "pass": 9,
+        "fail": 0
+      },
+      "s1": {
+        "pass": 16,
+        "fail": 0
+      },
+      "review": {
+        "pass": 8,
+        "fail": 0
+      },
+      "diagnostics": {
+        "consoleErrors": [],
+        "pageErrors": [],
+        "unhandledRejections": [],
+        "externalRequests": [],
+        "calculationRequests": []
+      },
+      "diagnosticsPass": true
+    },
+    {
+      "name": "Mac Microsoft Edge",
+      "version": "156.0.4314.42",
+      "results": [
+        {
+          "name": "separate public M2 browser module imports",
+          "pass": true
+        },
+        {
+          "name": "M2_REPRESENTATION complete facts remain pending",
+          "pass": true
+        },
+        {
+          "name": "M2_SUCCESSIVE complete facts remain pending",
+          "pass": true
+        },
+        {
+          "name": "raw duplicate escaped keys reject before overwrite",
+          "pass": true
+        },
+        {
+          "name": "invalid Q is InputError, no fake unresolved",
+          "pass": true
+        },
+        {
+          "name": "missing facts record differs from incomplete facts",
+          "pass": true
+        },
+        {
+          "name": "truth omission/forgery and injected approval cannot bypass",
+          "pass": true
+        },
+        {
+          "name": "cycles and technical double consumption reject",
+          "pass": true
+        },
+        {
+          "name": "future E2 policy is not activated",
+          "pass": true
+        },
+        {
+          "name": "M2-S01/S02 snapshot retains BLOCKED, whole Q and immutable dependencies",
+          "pass": true
+        },
+        {
+          "name": "M2-S03 object key order is canonical; array order is significant",
+          "pass": true
+        },
+        {
+          "name": "M2-S01/S02 facts, relations, events, deaths, date, Q, asset, law and truth invalidate without revision change",
+          "pass": true
+        },
+        {
+          "name": "M2-S04 public API captures input once even when original changes during digest",
+          "pass": true
+        },
+        {
+          "name": "M2-S02 engine, schema, contract, policy, rule, law and approval dependencies invalidate",
+          "pass": true
+        },
+        {
+          "name": "M2-S04 input and dependency copies are pinned before first await",
+          "pass": true
+        },
+        {
+          "name": "M2-S05 refresh captures changed input before caller restores it; STALE never revives",
+          "pass": true
+        },
+        {
+          "name": "M2-S05 overlapping refresh cannot revive a snapshot invalidated by another completion",
+          "pass": true
+        },
+        {
+          "name": "M2 schema/ownership rejects C1, JSON restoration and forged results; approval override rejected",
+          "pass": true
+        },
+        {
+          "name": "M2-S08 invalid new input immediately clears published result; caller mutation cannot alter session-owned input",
+          "pass": true
+        },
+        {
+          "name": "M2-S07/S08 session input edit immediately clears current result and late success",
+          "pass": true
+        },
+        {
+          "name": "M2-S07 newer success wins over older success or older error",
+          "pass": true
+        },
+        {
+          "name": "M2-S07/S08 cancel and dependency notification suppress pending completion",
+          "pass": true
+        },
+        {
+          "name": "M2-S07 runtime dependency change during await and after publication invalidates session",
+          "pass": true
+        },
+        {
+          "name": "M2-S08 missing/failed/malformed Web Crypto publishes no result and raises SnapshotError",
+          "pass": true
+        },
+        {
+          "name": "M2-S06 Node/browser SHA-256 equality",
+          "pass": true
+        },
+        {
+          "name": "review: refresh input failure invalidates original reference and session publication",
+          "pass": true
+        },
+        {
+          "name": "review: refresh hash failure invalidates original reference without masking SnapshotError",
+          "pass": true
+        },
+        {
+          "name": "review: refresh failure defeats an older pending unchanged refresh",
+          "pass": true
+        },
+        {
+          "name": "review: foreign snapshot rejected without reading attacker accessor",
+          "pass": true
+        },
+        {
+          "name": "review: custom array prototype rejected at JSON object boundary",
+          "pass": true
+        },
+        {
+          "name": "review: raw prototype keys, escaped duplicates and nested approval fields cannot bypass policy",
+          "pass": true
+        },
+        {
+          "name": "review: object attributes/symbols and raw invalid types remain strict InputError",
+          "pass": true
+        },
+        {
+          "name": "review: technical ledger differently named alias still cannot consume one inflow twice",
+          "pass": true
+        }
+      ],
+      "pass": 33,
+      "fail": 0,
+      "skipped": 0,
+      "s0": {
+        "pass": 9,
+        "fail": 0
+      },
+      "s1": {
+        "pass": 16,
+        "fail": 0
+      },
+      "review": {
+        "pass": 8,
+        "fail": 0
+      },
+      "diagnostics": {
+        "consoleErrors": [],
+        "pageErrors": [],
+        "unhandledRejections": [],
+        "externalRequests": [],
+        "calculationRequests": []
+      },
+      "diagnosticsPass": true
+    }
+  ]
+}

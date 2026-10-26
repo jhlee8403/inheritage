@@ -1,0 +1,80 @@
+{"time":"2026-10-26T06:44:03.163Z","stage":"browser launch","state":"START"}
+{"time":"2026-10-26T06:44:03.389Z","stage":"browser launch","state":"PASS"}
+{"time":"2026-10-26T06:44:03.389Z","stage":"browser connect","state":"START"}
+{"time":"2026-10-26T06:44:03.412Z","stage":"browser connect","state":"PASS"}
+{"time":"2026-10-26T06:44:03.412Z","stage":"fresh offline context","state":"START"}
+{"time":"2026-10-26T06:44:03.418Z","stage":"fresh offline context","state":"PASS"}
+{"time":"2026-10-26T06:44:03.418Z","stage":"request guard","state":"START"}
+{"time":"2026-10-26T06:44:03.419Z","stage":"request guard","state":"PASS"}
+{"time":"2026-10-26T06:44:03.419Z","stage":"page creation","state":"START"}
+{"time":"2026-10-26T06:44:03.606Z","stage":"page creation","state":"PASS"}
+{"time":"2026-10-26T06:44:03.607Z","stage":"remove modern APIs in isolated test context","state":"START"}
+{"time":"2026-10-26T06:44:03.608Z","stage":"remove modern APIs in isolated test context","state":"PASS"}
+{"time":"2026-10-26T06:44:03.608Z","stage":"diagnostic hooks","state":"START"}
+{"time":"2026-10-26T06:44:03.609Z","stage":"diagnostic hooks","state":"PASS"}
+{"time":"2026-10-26T06:44:03.609Z","stage":"file HTML load","state":"START"}
+{"time":"2026-10-26T06:44:03.893Z","stage":"file HTML load","state":"PASS"}
+{"time":"2026-10-26T06:44:03.893Z","stage":"PDF initialization completion","state":"START"}
+{"time":"2026-10-26T06:44:03.903Z","stage":"PDF initialization completion","state":"PASS"}
+{"time":"2026-10-26T06:44:03.903Z","stage":"initial state capture","state":"START"}
+{"time":"2026-10-26T06:44:03.905Z","stage":"initial state capture","state":"PASS"}
+{"time":"2026-10-26T06:44:03.905Z","stage":"selected text PDF, render and direct NEEDS_REVIEW","state":"START"}
+{"time":"2026-10-26T06:44:03.997Z","stage":"selected text PDF, render and direct NEEDS_REVIEW","state":"PASS"}
+{"time":"2026-10-26T06:44:03.997Z","stage":"selected scan PDF, real Blob/WASM/kor OCR candidate","state":"START"}
+{"time":"2026-10-26T06:44:04.546Z","stage":"selected scan PDF, real Blob/WASM/kor OCR candidate","state":"PASS"}
+{"time":"2026-10-26T06:44:04.546Z","stage":"user candidate editing and quality warning, no C1 auto-fill","state":"START"}
+{"time":"2026-10-26T06:44:04.565Z","stage":"user candidate editing and quality warning, no C1 auto-fill","state":"PASS"}
+{"time":"2026-10-26T06:44:04.565Z","stage":"replacement clears previous document candidate","state":"START"}
+{"time":"2026-10-26T06:44:04.591Z","stage":"replacement clears previous document candidate","state":"PASS"}
+{"time":"2026-10-26T06:44:04.592Z","stage":"three-page selected PDF navigation and per-page edited candidate","state":"START"}
+{"time":"2026-10-26T06:44:04.705Z","stage":"three-page selected PDF navigation and per-page edited candidate","state":"PASS"}
+{"time":"2026-10-26T06:44:04.706Z","stage":"PDF markup remains literal text, no HTML execution","state":"START"}
+{"time":"2026-10-26T06:44:04.810Z","stage":"PDF markup remains literal text, no HTML execution","state":"PASS"}
+{"time":"2026-10-26T06:44:04.810Z","stage":"OCR cancellation after actual worker boot and cleanup","state":"START"}
+{"time":"2026-10-26T06:44:05.281Z","stage":"OCR cancellation after actual worker boot and cleanup","state":"PASS"}
+{"time":"2026-10-26T06:44:05.283Z","stage":"navigation blocks held late OCR completion","state":"START"}
+{"time":"2026-10-26T06:44:05.709Z","stage":"navigation blocks held late OCR completion","state":"PASS"}
+{"time":"2026-10-26T06:44:05.709Z","stage":"PDF replacement blocks held old OCR completion","state":"START"}
+{"time":"2026-10-26T06:44:06.058Z","stage":"PDF replacement blocks held old OCR completion","state":"PASS"}
+{"time":"2026-10-26T06:44:06.059Z","stage":"explicit OCR error clears candidate and releases resources","state":"START"}
+{"time":"2026-10-26T06:44:06.261Z","stage":"explicit OCR error clears candidate and releases resources","state":"PASS"}
+{"time":"2026-10-26T06:44:06.262Z","stage":"OCR pipeline hash TIMEOUT, late result cannot publish","state":"START"}
+{"time":"2026-10-26T06:44:11.553Z","stage":"OCR pipeline hash TIMEOUT, late result cannot publish","state":"PASS"}
+{"time":"2026-10-26T06:44:11.555Z","stage":"malformed PDF explicit ERROR","state":"START"}
+{"time":"2026-10-26T06:44:11.575Z","stage":"malformed PDF explicit ERROR","state":"PASS"}
+{"time":"2026-10-26T06:44:11.575Z","stage":"file byte limit explicit ERROR before parsing","state":"START"}
+{"time":"2026-10-26T06:44:12.055Z","stage":"file byte limit explicit ERROR before parsing","state":"PASS"}
+{"time":"2026-10-26T06:44:12.055Z","stage":"page count limit explicit ERROR","state":"START"}
+{"time":"2026-10-26T06:44:12.062Z","stage":"page count limit explicit ERROR","state":"PASS"}
+{"time":"2026-10-26T06:44:12.062Z","stage":"render pixel limit explicit ERROR before canvas allocation","state":"START"}
+{"time":"2026-10-26T06:44:12.072Z","stage":"render pixel limit explicit ERROR before canvas allocation","state":"PASS"}
+{"time":"2026-10-26T06:44:12.072Z","stage":"integrated C1 spouse","state":"START"}
+{"time":"2026-10-26T06:44:12.143Z","stage":"integrated C1 spouse","state":"PASS"}
+{"time":"2026-10-26T06:44:12.143Z","stage":"integrated C1 parents","state":"START"}
+{"time":"2026-10-26T06:44:12.206Z","stage":"integrated C1 parents","state":"PASS"}
+{"time":"2026-10-26T06:44:12.207Z","stage":"integrated C1 children","state":"START"}
+{"time":"2026-10-26T06:44:12.273Z","stage":"integrated C1 children","state":"PASS"}
+{"time":"2026-10-26T06:44:12.274Z","stage":"C1 exact Q, immediate STALE and copy disabled","state":"START"}
+{"time":"2026-10-26T06:44:12.306Z","stage":"C1 exact Q, immediate STALE and copy disabled","state":"PASS"}
+{"time":"2026-10-26T06:44:12.307Z","stage":"C1 UNKNOWN BLOCKED preserves Q","state":"START"}
+{"time":"2026-10-26T06:44:12.373Z","stage":"C1 UNKNOWN BLOCKED preserves Q","state":"PASS"}
+{"time":"2026-10-26T06:44:12.373Z","stage":"C1 denominator zero ERROR, no old result or copy","state":"START"}
+{"time":"2026-10-26T06:44:12.473Z","stage":"C1 denominator zero ERROR, no old result or copy","state":"PASS"}
+{"time":"2026-10-26T06:44:12.474Z","stage":"C1 late async calculation blocked by edited revision","state":"START"}
+{"time":"2026-10-26T06:44:12.680Z","stage":"C1 late async calculation blocked by edited revision","state":"PASS"}
+{"time":"2026-10-26T06:44:12.681Z","stage":"C1 clipboard attempt and manual selection fallback","state":"START"}
+{"time":"2026-10-26T06:44:12.805Z","stage":"C1 clipboard attempt and manual selection fallback","state":"PASS"}
+{"time":"2026-10-26T06:44:12.805Z","stage":"document close clears source, candidates and owned workers","state":"START"}
+{"time":"2026-10-26T06:44:12.841Z","stage":"document close clears source, candidates and owned workers","state":"PASS"}
+{"time":"2026-10-26T06:44:13.372Z","stage":"promise diagnostics","state":"START"}
+{"time":"2026-10-26T06:44:13.373Z","stage":"promise diagnostics","state":"PASS"}
+{"time":"2026-10-26T06:44:13.373Z","stage":"CSP diagnostics","state":"START"}
+{"time":"2026-10-26T06:44:13.373Z","stage":"CSP diagnostics","state":"PASS"}
+{"time":"2026-10-26T06:44:13.373Z","stage":"zero external requests and console/page/promise/CSP errors","state":"START"}
+{"time":"2026-10-26T06:44:13.374Z","stage":"zero external requests and console/page/promise/CSP errors","state":"PASS"}
+{"time":"2026-10-26T06:44:13.374Z","stage":"screenshot","state":"START"}
+{"time":"2026-10-26T06:44:13.506Z","stage":"screenshot","state":"PASS"}
+{"time":"2026-10-26T06:44:13.506Z","stage":"browser disconnect/close","state":"START"}
+{"time":"2026-10-26T06:44:13.507Z","stage":"browser disconnect/close","state":"PASS"}
+{"time":"2026-10-26T06:44:13.508Z","stage":"browser process close","state":"START"}
+{"time":"2026-10-26T06:44:13.530Z","stage":"browser process close","state":"PASS"}

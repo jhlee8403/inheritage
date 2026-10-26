@@ -1,0 +1,98 @@
+[
+  {
+    "name": "c1-browser",
+    "command": "node packages/inheritance-engine/test/browser/run.mjs",
+    "exit": 0,
+    "timeout": false,
+    "results": [
+      {
+        "name": "Chromium",
+        "version": "156.0.8078.4",
+        "pass": 20,
+        "fail": 0,
+        "skipped": 0,
+        "diagnosticsPass": true
+      },
+      {
+        "name": "Microsoft Edge",
+        "version": "156.0.4314.42",
+        "pass": 20,
+        "fail": 0,
+        "skipped": 0,
+        "diagnosticsPass": true
+      }
+    ]
+  },
+  {
+    "name": "m2-browser",
+    "command": "node packages/inheritance-engine/test/browser/run-m2.mjs",
+    "exit": 0,
+    "timeout": false,
+    "results": [
+      {
+        "name": "Chromium",
+        "version": "156.0.8078.4",
+        "pass": 33,
+        "fail": 0,
+        "skipped": 0,
+        "diagnosticsPass": true
+      },
+      {
+        "name": "Mac Microsoft Edge",
+        "version": "156.0.4314.42",
+        "pass": 33,
+        "fail": 0,
+        "skipped": 0,
+        "diagnosticsPass": true
+      }
+    ]
+  },
+  {
+    "name": "c1-file",
+    "command": "node experiments/c1-offline-file-prototype/test/browser-file.mjs",
+    "exit": 0,
+    "timeout": false,
+    "results": [
+      {
+        "name": "Chromium",
+        "version": "156.0.8078.4",
+        "pass": 17,
+        "fail": 0,
+        "skipped": 0,
+        "diagnosticsPass": true
+      },
+      {
+        "name": "Mac Microsoft Edge",
+        "version": "156.0.4314.42",
+        "pass": 17,
+        "fail": 0,
+        "skipped": 0,
+        "diagnosticsPass": true
+      }
+    ]
+  },
+  {
+    "name": "c1-workbench",
+    "command": "node experiments/inheritance-calculator/test/browser.mjs",
+    "exit": 0,
+    "timeout": false,
+    "results": [
+      {
+        "name": "Chromium",
+        "version": "156.0.8078.4",
+        "pass": 18,
+        "fail": 0,
+        "skipped": 0,
+        "diagnosticsPass": true
+      },
+      {
+        "name": "Mac Microsoft Edge",
+        "version": "156.0.4314.42",
+        "pass": 18,
+        "fail": 0,
+        "skipped": 0,
+        "diagnosticsPass": true
+      }
+    ]
+  }
+]

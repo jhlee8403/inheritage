@@ -1,0 +1,189 @@
+{
+  "playwrightModule": "<repo>/experiments/lite-v1-workbench/generated/edge104-dev/playwright124/package/index.js",
+  "target": "chromium104",
+  "started": "2026-10-26T06:25:12.378Z",
+  "windows": "NOT_RUN",
+  "offline": "fresh context, empty cache, browser offline emulation; physical disconnection NOT_RUN",
+  "checks": [
+    {
+      "name": "selected text PDF, render and direct NEEDS_REVIEW",
+      "state": "PASS"
+    },
+    {
+      "name": "selected scan PDF, real Blob/WASM/kor OCR candidate",
+      "state": "FAIL",
+      "error": "AssertionError [ERR_ASSERTION]: ERROR · Error: EMPTY_OCR_CANDIDATE"
+    }
+  ],
+  "stages": [
+    {
+      "time": "2026-10-26T06:25:12.378Z",
+      "stage": "browser launch",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-26T06:25:12.690Z",
+      "stage": "browser launch",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-26T06:25:12.690Z",
+      "stage": "browser connect",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-26T06:25:12.717Z",
+      "stage": "browser connect",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-26T06:25:12.717Z",
+      "stage": "fresh offline context",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-26T06:25:12.729Z",
+      "stage": "fresh offline context",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-26T06:25:12.729Z",
+      "stage": "request guard",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-26T06:25:12.731Z",
+      "stage": "request guard",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-26T06:25:12.731Z",
+      "stage": "page creation",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-26T06:25:12.910Z",
+      "stage": "page creation",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-26T06:25:12.910Z",
+      "stage": "diagnostic hooks",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-26T06:25:12.920Z",
+      "stage": "diagnostic hooks",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-26T06:25:12.921Z",
+      "stage": "file HTML load",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-26T06:25:13.361Z",
+      "stage": "file HTML load",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-26T06:25:13.361Z",
+      "stage": "initial state capture",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-26T06:25:13.364Z",
+      "stage": "initial state capture",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-26T06:25:13.364Z",
+      "stage": "selected text PDF, render and direct NEEDS_REVIEW",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-26T06:25:13.454Z",
+      "stage": "selected text PDF, render and direct NEEDS_REVIEW",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-26T06:25:13.454Z",
+      "stage": "selected scan PDF, real Blob/WASM/kor OCR candidate",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-26T06:25:13.999Z",
+      "stage": "selected scan PDF, real Blob/WASM/kor OCR candidate",
+      "state": "FAIL",
+      "error": "AssertionError [ERR_ASSERTION]: ERROR · Error: EMPTY_OCR_CANDIDATE"
+    },
+    {
+      "time": "2026-10-26T06:25:13.999Z",
+      "stage": "failure state capture",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-26T06:25:14.008Z",
+      "stage": "failure state capture",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-26T06:25:14.072Z",
+      "stage": "browser disconnect/close",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-26T06:25:14.073Z",
+      "stage": "browser disconnect/close",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-26T06:25:14.073Z",
+      "stage": "browser process close",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-26T06:25:14.089Z",
+      "stage": "browser process close",
+      "state": "PASS"
+    }
+  ],
+  "diagnostics": {
+    "consoleErrors": [],
+    "pageErrors": [],
+    "externalRequests": [],
+    "unhandledRejections": [],
+    "cspViolations": []
+  },
+  "browserPid": 7054,
+  "version": "104.0.5112.48",
+  "requests": [
+    "<repo>/experiments/lite-v1-workbench/generated/lite-v1.html"
+  ],
+  "consoleWarnings": [
+    "Warning: Setting up fake worker.",
+    "Warning: UnknownErrorException: Ensure that the `standardFontDataUrl` API parameter is provided.",
+    "Warning: UnknownErrorException: Ensure that the `standardFontDataUrl` API parameter is provided."
+  ],
+  "initialization": {
+    "pdf": "PDF 초기화: READY · PDF_APP_DIAGNOSTICS_COMPLETE",
+    "c1": "C1 초기화: READY · C1_SCRIPT",
+    "details": "{\n  \"initialization\": {\n    \"state\": \"READY\",\n    \"stage\": \"PDF_APP_DIAGNOSTICS_COMPLETE\",\n    \"error\": null\n  },\n  \"environment\": {\n    \"userAgent\": \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/104.0.5112.48 Safari/537.36\",\n    \"protocol\": \"file:\",\n    \"capabilities\": {\n      \"iteratorAPI\": false,\n      \"readableStreamAsyncIterator\": false,\n      \"iteratorJoin\": false,\n      \"textDecoder\": true,\n      \"textEncoder\": true,\n      \"promiseWithResolvers\": false,\n      \"promiseTry\": false,\n      \"mapGetOrInsertComputed\": false,\n      \"urlParse\": false,\n      \"uint8ToHex\": false,\n      \"uint8FromBase64\": false,\n      \"mathSumPrecise\": false,\n      \"workerAPI\": true,\n      \"wasmAPI\": true,\n      \"sha256API\": true,\n      \"fileAPI\": true,\n      \"canvas2d\": true,\n      \"secureContext\": true\n    },\n    \"pdfjs\": \"6.4.299 official legacy + core-js 3.50.0 + PDF-local streams 4.2.0\",\n    \"note\": \"API presence is not worker/WASM policy success. Company Edge 104 acceptance NOT_RUN.\",\n    \"capabilitiesAfterPdf\": {\n      \"iteratorAPI\": true,\n      \"readableStreamAsyncIterator\": false,\n      \"iteratorJoin\": true,\n      \"textDecoder\": true,\n      \"textEncoder\": true,\n      \"promiseWithResolvers\": true,\n      \"promiseTry\": true,\n      \"mapGetOrInsertComputed\": true,\n      \"urlParse\": true,\n      \"uint8ToHex\": true,\n      \"uint8FromBase64\": true,\n      \"mathSumPrecise\": true,\n      \"workerAPI\": true,\n      \"wasmAPI\": true,\n      \"sha256API\": true,\n      \"fileAPI\": true,\n      \"canvas2d\": true,\n      \"secureContext\": true\n    }\n  }\n}"
+  },
+  "fatal": "AssertionError [ERR_ASSERTION]: ERROR · Error: EMPTY_OCR_CANDIDATE\n    at pdfState (<repo>/experiments/lite-v1-workbench/test-suite.mjs:8:195)\n    at async ocr (<repo>/experiments/lite-v1-workbench/test-suite.mjs:12:47)\n    at async <repo>/experiments/lite-v1-workbench/test-suite.mjs:20:93\n    at async step (<repo>/experiments/lite-v1-workbench/test-browser.mjs:30:19)\n    at async check (<repo>/experiments/lite-v1-workbench/test-browser.mjs:34:44)\n    at async run (<repo>/experiments/lite-v1-workbench/test-suite.mjs:19:3)\n    at async <repo>/experiments/lite-v1-workbench/test-browser.mjs:67:3",
+  "failureState": {
+    "status": "ERROR · Error: EMPTY_OCR_CANDIDATE",
+    "details": "{\n  \"kind\": \"OCR\",\n  \"state\": \"ERROR\",\n  \"events\": [\n    {\n      \"stage\": \"resource SHA-256\",\n      \"state\": \"START\",\n      \"ms\": 257\n    },\n    {\n      \"stage\": \"resource SHA-256\",\n      \"state\": \"PASS\",\n      \"ms\": 260\n    },\n    {\n      \"stage\": \"worker/core/WASM/kor initialize\",\n      \"state\": \"START\",\n      \"ms\": 264\n    },\n    {\n      \"stage\": \"BLOB_WORKER_BOOTED\",\n      \"state\": \"PROGRESS\",\n      \"ms\": 270,\n      \"progress\": 1\n    },\n    {\n      \"stage\": \"RESOURCE_MESSAGE_RECEIVED\",\n      \"state\": \"PROGRESS\",\n      \"ms\": 272,\n      \"progress\": 1\n    },\n    {\n      \"stage\": \"initializing tesseract\",\n      \"state\": \"PROGRESS\",\n      \"ms\": 273,\n      \"progress\": 0\n    },\n    {\n      \"stage\": \"CORE_FACTORY_ENTERED\",\n      \"state\": \"PROGRESS\",\n      \"ms\": 273,\n      \"progress\": 1\n    },\n    {\n      \"stage\": \"WASM_BYTES_SUPPLIED\",\n      \"state\": \"PROGRESS\",\n      \"ms\": 273,\n      \"progress\": 1\n    },\n    {\n      \"stage\": \"WASM_RUNTIME_READY\",\n      \"state\": \"PROGRESS\",\n      \"ms\": 317,\n      \"progress\": 1\n    },\n    {\n      \"stage\": \"initializing tesseract\",\n      \"state\": \"PROGRESS\",\n      \"ms\": 317,\n      \"progress\": 1\n    },\n    {\n      \"stage\": \"loading language traineddata\",\n      \"state\": \"PROGRESS\",\n      \"ms\": 317,\n      \"progress\": 0\n    },\n    {\n      \"stage\": \"KOR_BYTES_SUPPLIED\",\n      \"state\": \"PROGRESS\",\n      \"ms\": 317,\n      \"progress\": 1\n    },\n    {\n      \"stage\": \"loading language traineddata\",\n      \"state\": \"PROGRESS\",\n      \"ms\": 318,\n      \"progress\": 0.5\n    },\n    {\n      \"stage\": \"loading language traineddata\",\n      \"state\": \"PROGRESS\",\n      \"ms\": 318,\n      \"progress\": 1\n    },\n    {\n      \"stage\": \"initializing api\",\n      \"state\": \"PROGRESS\",\n      \"ms\": 318,\n      \"progress\": 0\n    },\n    {\n      \"stage\": \"initializing api\",\n      \"state\": \"PROGRESS\",\n      \"ms\": 338,\n      \"progress\": 1\n    },\n    {\n      \"stage\": \"worker/core/WASM/kor initialize\",\n      \"state\": \"PASS\",\n      \"ms\": 338\n    },\n    {\n      \"stage\": \"OCR parameters\",\n      \"state\": \"START\",\n      \"ms\": 338\n    },\n    {\n      \"stage\": \"OCR parameters\",\n      \"state\": \"PASS\",\n      \"ms\": 339\n    },\n    {\n      \"stage\": \"recognize\",\n      \"state\": \"START\",\n      \"ms\": 340\n    },\n    {\n      \"stage\": \"recognize\",\n      \"state\": \"PASS\",\n      \"ms\": 447\n    }\n  ],\n  \"page\": 1,\n  \"pages\": 1,\n  \"pendingCleanup\": 0,\n  \"error\": \"Error: EMPTY_OCR_CANDIDATE\\n    at <repo>/experiments/lite-v1-workbench/generated/lite-v1.html:108024:55\\n    at async execute (<repo>/experiments/lite-v1-workbench/generated/lite-v1.html:107969:7)\",\n  \"cleanup\": {\n    \"state\": \"PASS\",\n    \"errors\": []\n  }\n}",
+    "canvas": {
+      "width": 1190,
+      "height": 1684,
+      "dark": 0
+    }
+  },
+  "finished": "2026-10-26T06:25:14.089Z",
+  "counts": {
+    "pass": 1,
+    "fail": 1,
+    "notRun": 23
+  }
+}

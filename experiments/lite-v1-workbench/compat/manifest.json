@@ -1,0 +1,40 @@
+{
+  "format": "pdfjs-legacy-compat-v1",
+  "pdfjsVersion": "4.2.67",
+  "flavor": "official legacy/build",
+  "archiveURL": "https://registry.npmjs.org/pdfjs-dist/-/pdfjs-dist-4.2.67.tgz",
+  "npmIntegrity": "sha512-rJmuBDFpD7cqC8WIkQUEClyB4UAH05K4AsyewToMTp2gSy3Rrx8c1ydAVqlJlGv3yZSOrhEERQU/4ScQQFlLHA==",
+  "license": "Apache-2.0",
+  "embeddedPolyfills": {
+    "name": "core-js",
+    "version": "3.37.0",
+    "license": "MIT",
+    "scope": "unaltered official PDF.js legacy bundle; no additional runtime shims"
+  },
+  "files": [
+    {
+      "packagePath": "legacy/build/pdf.mjs",
+      "name": "pdf.mjs",
+      "bytes": 800420,
+      "sha256": "07be4253f45a55454e8f463c6ee82c7e1addb27c8a25eaaa1d2b1d880d6f49cc"
+    },
+    {
+      "packagePath": "legacy/build/pdf.worker.mjs",
+      "name": "pdf.worker.mjs",
+      "bytes": 2294364,
+      "sha256": "03f4de3e477f4e19a39a2a85c226c32510c2b6c37f2b71ec5f446e4b4b07baeb"
+    },
+    {
+      "packagePath": "LICENSE",
+      "name": "LICENSE",
+      "bytes": 10174,
+      "sha256": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+    },
+    {
+      "name": "core-js-LICENSE",
+      "url": "https://raw.githubusercontent.com/zloirock/core-js/v3.37.0/LICENSE",
+      "bytes": 1064,
+      "sha256": "51aff0fa92ac49e01ce6ba0fed992b0a34f8afe15203dd5f38c43f9e88b0167b"
+    }
+  ]
+}

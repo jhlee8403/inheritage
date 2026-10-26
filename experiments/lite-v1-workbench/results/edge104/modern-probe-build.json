@@ -1,0 +1,16 @@
+{
+  "pdfjs": "6.4.299",
+  "inputs": [
+    {
+      "path": "public/vendor/pdfjs/pdf.worker.mjs",
+      "sha256": "07ceb740d746e5d9012fcf9f27d5c7dea09f7d2f5e74f5c8109e5787551a2333"
+    },
+    {
+      "path": "public/vendor/pdfjs/pdf.mjs",
+      "sha256": "dd13af821c9c3e1778653340d6539a1ba07bc56cba40073a4c727864cf0c232a"
+    }
+  ],
+  "bytes": 9474553,
+  "sha256": "125488543edc23f6c1e709143f6ac2e503a2a8a2b244a7dd64cbe66b94b0956b",
+  "notDeliverable": true
+}

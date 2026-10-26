@@ -1,0 +1,164 @@
+{
+  "target": "chromium104",
+  "started": "2026-10-26T06:18:49.324Z",
+  "windows": "NOT_RUN",
+  "offline": "fresh context, empty cache, browser offline emulation; physical disconnection NOT_RUN",
+  "checks": [
+    {
+      "name": "selected text PDF, render and direct NEEDS_REVIEW",
+      "state": "FAIL",
+      "error": "Error: locator.evaluate: TypeError: element.checkVisibility is not a function\n    at computeElementStyleVisibilityVisible (<anonymous>:3159:16)\n    at isElementStyleVisibilityVisible (<anonymous>:3151:18)\n    at computeBox (<anonymous>:3195:8)\n    at isElementVisible (<anonymous>:3201:10)\n    at InjectedScript.elementState (<anonymous>:7561:41)\n    at eval (eval at eval (:7098:24), <anonymous>:3:50)\n    at eval (eval at evaluate (:370:30), <anonymous>:15:22)\n    at UtilityScript.evaluate (<anonymous>:372:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\nCall log:\n\u001b[2m  - waiting for locator('#pdf-canvas')\u001b[22m\n"
+    }
+  ],
+  "stages": [
+    {
+      "time": "2026-10-26T06:18:49.324Z",
+      "stage": "browser launch",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-26T06:18:49.662Z",
+      "stage": "browser launch",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-26T06:18:49.662Z",
+      "stage": "browser connect",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-26T06:18:49.692Z",
+      "stage": "browser connect",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-26T06:18:49.692Z",
+      "stage": "fresh offline context",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-26T06:18:49.713Z",
+      "stage": "fresh offline context",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-26T06:18:49.713Z",
+      "stage": "request guard",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-26T06:18:49.715Z",
+      "stage": "request guard",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-26T06:18:49.715Z",
+      "stage": "page creation",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-26T06:18:49.907Z",
+      "stage": "page creation",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-26T06:18:49.907Z",
+      "stage": "diagnostic hooks",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-26T06:18:49.908Z",
+      "stage": "diagnostic hooks",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-26T06:18:49.908Z",
+      "stage": "file HTML load",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-26T06:18:50.416Z",
+      "stage": "file HTML load",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-26T06:18:50.417Z",
+      "stage": "initial state capture",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-26T06:18:50.421Z",
+      "stage": "initial state capture",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-26T06:18:50.422Z",
+      "stage": "selected text PDF, render and direct NEEDS_REVIEW",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-26T06:18:50.534Z",
+      "stage": "selected text PDF, render and direct NEEDS_REVIEW",
+      "state": "FAIL",
+      "error": "Error: locator.evaluate: TypeError: element.checkVisibility is not a function\n    at computeElementStyleVisibilityVisible (<anonymous>:3159:16)\n    at isElementStyleVisibilityVisible (<anonymous>:3151:18)\n    at computeBox (<anonymous>:3195:8)\n    at isElementVisible (<anonymous>:3201:10)\n    at InjectedScript.elementState (<anonymous>:7561:41)\n    at eval (eval at eval (:7098:24), <anonymous>:3:50)\n    at eval (eval at evaluate (:370:30), <anonymous>:15:22)\n    at UtilityScript.evaluate (<anonymous>:372:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\nCall log:\n\u001b[2m  - waiting for locator('#pdf-canvas')\u001b[22m\n"
+    },
+    {
+      "time": "2026-10-26T06:18:50.534Z",
+      "stage": "failure state capture",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-26T06:18:50.535Z",
+      "stage": "failure state capture",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-26T06:18:50.535Z",
+      "stage": "browser disconnect/close",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-26T06:18:50.536Z",
+      "stage": "browser disconnect/close",
+      "state": "PASS"
+    },
+    {
+      "time": "2026-10-26T06:18:50.536Z",
+      "stage": "browser process close",
+      "state": "START"
+    },
+    {
+      "time": "2026-10-26T06:18:50.694Z",
+      "stage": "browser process close",
+      "state": "PASS"
+    }
+  ],
+  "diagnostics": {
+    "consoleErrors": [],
+    "pageErrors": [],
+    "externalRequests": [],
+    "unhandledRejections": [],
+    "cspViolations": []
+  },
+  "browserPid": 6628,
+  "version": "104.0.5112.48",
+  "requests": [
+    "<repo>/experiments/lite-v1-workbench/generated/lite-v1.html"
+  ],
+  "initialization": {
+    "pdf": "PDF 초기화: READY · PDF_APP_DIAGNOSTICS_COMPLETE",
+    "c1": "C1 초기화: READY · C1_SCRIPT",
+    "details": "{\n  \"initialization\": {\n    \"state\": \"READY\",\n    \"stage\": \"PDF_APP_DIAGNOSTICS_COMPLETE\",\n    \"error\": null\n  },\n  \"environment\": {\n    \"userAgent\": \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/104.0.5112.48 Safari/537.36\",\n    \"protocol\": \"file:\",\n    \"capabilities\": {\n      \"iteratorAPI\": false,\n      \"readableStreamAsyncIterator\": false,\n      \"iteratorJoin\": false,\n      \"textDecoder\": true,\n      \"textEncoder\": true,\n      \"promiseWithResolvers\": false,\n      \"promiseTry\": false,\n      \"mapGetOrInsertComputed\": false,\n      \"urlParse\": false,\n      \"uint8ToHex\": false,\n      \"uint8FromBase64\": false,\n      \"mathSumPrecise\": false,\n      \"workerAPI\": true,\n      \"wasmAPI\": true,\n      \"sha256API\": true,\n      \"fileAPI\": true,\n      \"canvas2d\": true,\n      \"secureContext\": true\n    },\n    \"pdfjs\": \"6.4.299 official legacy + core-js 3.50.0 + PDF-local streams 4.2.0\",\n    \"note\": \"API presence is not worker/WASM policy success. Company Edge 104 acceptance NOT_RUN.\",\n    \"capabilitiesAfterPdf\": {\n      \"iteratorAPI\": true,\n      \"readableStreamAsyncIterator\": false,\n      \"iteratorJoin\": true,\n      \"textDecoder\": true,\n      \"textEncoder\": true,\n      \"promiseWithResolvers\": true,\n      \"promiseTry\": true,\n      \"mapGetOrInsertComputed\": true,\n      \"urlParse\": true,\n      \"uint8ToHex\": true,\n      \"uint8FromBase64\": true,\n      \"mathSumPrecise\": true,\n      \"workerAPI\": true,\n      \"wasmAPI\": true,\n      \"sha256API\": true,\n      \"fileAPI\": true,\n      \"canvas2d\": true,\n      \"secureContext\": true\n    }\n  }\n}"
+  },
+  "fatal": "locator.evaluate: TypeError: element.checkVisibility is not a function\n    at computeElementStyleVisibilityVisible (<anonymous>:3159:16)\n    at isElementStyleVisibilityVisible (<anonymous>:3151:18)\n    at computeBox (<anonymous>:3195:8)\n    at isElementVisible (<anonymous>:3201:10)\n    at InjectedScript.elementState (<anonymous>:7561:41)\n    at eval (eval at eval (:7098:24), <anonymous>:3:50)\n    at eval (eval at evaluate (:370:30), <anonymous>:15:22)\n    at UtilityScript.evaluate (<anonymous>:372:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\nCall log:\n\u001b[2m  - waiting for locator('#pdf-canvas')\u001b[22m\n\n    at <repo>/experiments/lite-v1-workbench/test-suite.mjs:15:172\n    at async step (<repo>/experiments/lite-v1-workbench/test-browser.mjs:27:19)\n    at async check (<repo>/experiments/lite-v1-workbench/test-browser.mjs:31:44)\n    at async run (<repo>/experiments/lite-v1-workbench/test-suite.mjs:14:3)\n    at async <repo>/experiments/lite-v1-workbench/test-browser.mjs:64:3",
+  "failureState": {
+    "status": "NEEDS_REVIEW · 직접 추출 후보 · 법률 사실 미확정",
+    "details": "{\n  \"kind\": \"PDF_OPEN\",\n  \"state\": \"NEEDS_REVIEW\",\n  \"events\": [\n    {\n      \"stage\": \"previous PDF release\",\n      \"state\": \"START\",\n      \"ms\": 1\n    },\n    {\n      \"stage\": \"previous PDF release\",\n      \"state\": \"PASS\",\n      \"ms\": 1\n    },\n    {\n      \"stage\": \"previous operation cleanup\",\n      \"state\": \"START\",\n      \"ms\": 1\n    },\n    {\n      \"stage\": \"previous operation cleanup\",\n      \"state\": \"PASS\",\n      \"ms\": 1\n    },\n    {\n      \"stage\": \"File API read\",\n      \"state\": \"START\",\n      \"ms\": 1\n    },\n    {\n      \"stage\": \"File API read\",\n      \"state\": \"PASS\",\n      \"ms\": 2\n    },\n    {\n      \"stage\": \"PDF open\",\n      \"state\": \"START\",\n      \"ms\": 3\n    },\n    {\n      \"stage\": \"PDF open\",\n      \"state\": \"PASS\",\n      \"ms\": 7\n    },\n    {\n      \"stage\": \"PDF page\",\n      \"state\": \"START\",\n      \"ms\": 7\n    },\n    {\n      \"stage\": \"PDF page\",\n      \"state\": \"PASS\",\n      \"ms\": 7\n    },\n    {\n      \"stage\": \"PDF render\",\n      \"state\": \"START\",\n      \"ms\": 8\n    },\n    {\n      \"stage\": \"PDF render\",\n      \"state\": \"PASS\",\n      \"ms\": 24\n    },\n    {\n      \"stage\": \"PDF direct text\",\n      \"state\": \"START\",\n      \"ms\": 24\n    },\n    {\n      \"stage\": \"PDF direct text\",\n      \"state\": \"PASS\",\n      \"ms\": 33\n    }\n  ],\n  \"page\": 1,\n  \"pages\": 1,\n  \"pendingCleanup\": 0,\n  \"cleanup\": {\n    \"state\": \"PASS\",\n    \"errors\": []\n  }\n}"
+  },
+  "finished": "2026-10-26T06:18:50.695Z",
+  "counts": {
+    "pass": 0,
+    "fail": 1,
+    "notRun": 24
+  }
+}
